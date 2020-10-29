@@ -1,0 +1,20 @@
+{
+  "name": "square-typescript-axios",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "PLJNS <me@pljns.com>",
+  "license": "MIT",
+  "scripts": {
+    "generate": "rm -rf src; openapi-generator-cli generate -i connect-api-specification/api.json -c config.json -g typescript-axios -o src --skip-validate-spec",
+    "build": "tsc --outDir dist/",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.0.3",
+    "@types/node": "^14.14.6",
+    "typescript": "^4.0.5"
+  }
+}

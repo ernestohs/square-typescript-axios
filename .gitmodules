@@ -1,0 +1,3 @@
+[submodule "connect-api-specification"]
+	path = connect-api-specification
+	url = git@github.com:square/connect-api-specification.git
