@@ -1,12 +1,14 @@
 {
   "name": "square-typescript-axios",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "author": "PLJNS <me@pljns.com>",
   "license": "MIT",
   "scripts": {
     "generate": "rm -rf src; openapi-generator-cli generate -i connect-api-specification/api.json -c config.json -g typescript-axios -o src --skip-validate-spec",
-    "build": "tsc --outDir dist/",
+    "build": "yarn generate; cd ./src/; yarn install; cd ..; tsc -p ./src/tsconfig.json --outDir dist/; rm -rf src",
+    "clean": "rm -rf src; rm -rf dist",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {

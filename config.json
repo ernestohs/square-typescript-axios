@@ -1,5 +1,5 @@
 {
-    "npmName": "square-typescript-fetch",
+    "npmName": "square-typescript-axios",
     "useSingleRequestParameter": false,
     "typescriptThreePlus": true
   }
