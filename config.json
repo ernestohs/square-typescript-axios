@@ -1,5 +1,8 @@
 {
     "npmName": "square-typescript-axios",
     "useSingleRequestParameter": false,
-    "typescriptThreePlus": true
+    "typescriptThreePlus": true,
+    "withSeparateModelsAndApi": true,
+    "apiPackage": "api",
+    "modelPackage": "models" 
   }
