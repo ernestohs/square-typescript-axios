@@ -28,14 +28,16 @@ export class TimeRange {
      * @type {string}
      * @memberof TimeRange
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     start_at?: string;
     /**
      * A datetime value in RFC 3339 format indicating when the time range ends.
      * @type {string}
      * @memberof TimeRange
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_at?: string;
 }
 

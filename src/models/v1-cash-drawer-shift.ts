@@ -31,133 +31,151 @@ export class V1CashDrawerShift {
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The shift\'s current state. See [V1CashDrawerShiftEventType](#type-v1cashdrawershifteventtype) for possible values
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     event_type?: string;
     /**
      * The time when the shift began, in ISO 8601 format.
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     opened_at?: string;
     /**
      * The time when the shift ended, in ISO 8601 format.
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ended_at?: string;
     /**
      * The time when the shift was closed, in ISO 8601 format.
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     closed_at?: string;
     /**
      * The IDs of all employees that were logged into Square Register at some point during the cash drawer shift.
      * @type {Array<string>}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
     employee_ids?: Array<string>;
     /**
      * The ID of the employee that started the cash drawer shift.
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     opening_employee_id?: string;
     /**
      * The ID of the employee that ended the cash drawer shift.
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ending_employee_id?: string;
     /**
      * The ID of the employee that closed the cash drawer shift by auditing the cash drawer\'s contents.
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     closing_employee_id?: string;
     /**
      * A description of the cash drawer shift.
      * @type {string}
      * @memberof V1CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     starting_cash_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     cash_payment_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     cash_refunds_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     cash_paid_in_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     cash_paid_out_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     expected_cash_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     closed_cash_money?: V1Money;
     /**
      * 
      * @type {Device}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => Device) 
+    
+    @Field(() => Device, { nullable: true })
     device?: Device;
     /**
      * All of the events (payments, refunds, and so on) that involved the cash drawer during the shift.
      * @type {Array<V1CashDrawerEvent>}
      * @memberof V1CashDrawerShift
      */
-    @Field(() => [V1CashDrawerEvent]) 
+    
+    @Field(() => [V1CashDrawerEvent], { nullable: true })
     events?: Array<V1CashDrawerEvent>;
 }
 

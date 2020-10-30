@@ -28,21 +28,24 @@ export class LoyaltyEventDeleteReward {
      * @type {string}
      * @memberof LoyaltyEventDeleteReward
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     loyalty_program_id: string;
     /**
      * The ID of the deleted `loyalty reward`. This field is returned only if the event source is `LOYALTY_API`.
      * @type {string}
      * @memberof LoyaltyEventDeleteReward
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reward_id?: string;
     /**
      * The number of points returned to the loyalty account.
      * @type {number}
      * @memberof LoyaltyEventDeleteReward
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     points: number;
 }
 

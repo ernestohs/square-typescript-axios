@@ -28,7 +28,7 @@ export class DeleteLoyaltyRewardResponse {
      * @type {Array<Error>}
      * @memberof DeleteLoyaltyRewardResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

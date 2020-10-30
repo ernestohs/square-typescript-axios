@@ -31,105 +31,119 @@ export class V1Merchant {
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The name associated with the merchant account.
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The email address associated with the merchant account.
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     email?: string;
     /**
      * Indicates whether the merchant account corresponds to a single-location account (LOCATION) or a business account (BUSINESS). This value is almost always LOCATION. See [V1MerchantAccountType](#type-v1merchantaccounttype) for possible values
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     account_type?: string;
     /**
      * Capabilities that are enabled for the merchant\'s Square account. Capabilities that are not listed in this array are not enabled for the account.
      * @type {Array<string>}
      * @memberof V1Merchant
      */
-    @Field() 
+    
     account_capabilities?: Array<string>;
     /**
      * The country associated with the merchant account, in ISO 3166-1-alpha-2 format.
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     country_code?: string;
     /**
      * The language associated with the merchant account, in BCP 47 format.
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     language_code?: string;
     /**
      * The currency associated with the merchant account, in ISO 4217 format. For example, the currency code for US dollars is USD.
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     currency_code?: string;
     /**
      * The name of the merchant\'s business.
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     business_name?: string;
     /**
      * 
      * @type {Address}
      * @memberof V1Merchant
      */
-    @Field(() => Address) 
+    
+    @Field(() => Address, { nullable: true })
     business_address?: Address;
     /**
      * 
      * @type {V1PhoneNumber}
      * @memberof V1Merchant
      */
-    @Field(() => V1PhoneNumber) 
+    
+    @Field(() => V1PhoneNumber, { nullable: true })
     business_phone?: V1PhoneNumber;
     /**
      * The type of business operated by the merchant. See [V1MerchantBusinessType](#type-v1merchantbusinesstype) for possible values
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     business_type?: string;
     /**
      * 
      * @type {Address}
      * @memberof V1Merchant
      */
-    @Field(() => Address) 
+    
+    @Field(() => Address, { nullable: true })
     shipping_address?: Address;
     /**
      * 
      * @type {V1MerchantLocationDetails}
      * @memberof V1Merchant
      */
-    @Field(() => V1MerchantLocationDetails) 
+    
+    @Field(() => V1MerchantLocationDetails, { nullable: true })
     location_details?: V1MerchantLocationDetails;
     /**
      * The URL of the merchant\'s online store.
      * @type {string}
      * @memberof V1Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     market_url?: string;
 }
 

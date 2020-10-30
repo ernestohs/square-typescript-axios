@@ -29,35 +29,40 @@ export class LoyaltyProgramRewardTier {
      * @type {string}
      * @memberof LoyaltyProgramRewardTier
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     id: string;
     /**
      * The points exchanged for the reward tier.
      * @type {number}
      * @memberof LoyaltyProgramRewardTier
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     points: number;
     /**
      * The name of the reward tier.
      * @type {string}
      * @memberof LoyaltyProgramRewardTier
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     name: string;
     /**
      * 
      * @type {LoyaltyProgramRewardDefinition}
      * @memberof LoyaltyProgramRewardTier
      */
-    @Field(() => LoyaltyProgramRewardDefinition) 
+    
+    @Field(() => LoyaltyProgramRewardDefinition, { nullable: false })
     definition: LoyaltyProgramRewardDefinition;
     /**
      * The timestamp when the reward tier was created, in RFC 3339 format.
      * @type {string}
      * @memberof LoyaltyProgramRewardTier
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     created_at: string;
 }
 

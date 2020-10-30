@@ -28,21 +28,24 @@ export class ListCashDrawerShiftEventsRequest {
      * @type {string}
      * @memberof ListCashDrawerShiftEventsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
     /**
      * Number of resources to be returned in a page of results (200 by default, 1000 max).
      * @type {number}
      * @memberof ListCashDrawerShiftEventsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * Opaque cursor for fetching the next page of results.
      * @type {string}
      * @memberof ListCashDrawerShiftEventsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

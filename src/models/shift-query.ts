@@ -30,14 +30,16 @@ export class ShiftQuery {
      * @type {ShiftFilter}
      * @memberof ShiftQuery
      */
-    @Field(() => ShiftFilter) 
+    
+    @Field(() => ShiftFilter, { nullable: true })
     filter?: ShiftFilter;
     /**
      * 
      * @type {ShiftSort}
      * @memberof ShiftQuery
      */
-    @Field(() => ShiftSort) 
+    
+    @Field(() => ShiftSort, { nullable: true })
     sort?: ShiftSort;
 }
 

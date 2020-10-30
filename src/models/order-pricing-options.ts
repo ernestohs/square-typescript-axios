@@ -28,7 +28,8 @@ export class OrderPricingOptions {
      * @type {boolean}
      * @memberof OrderPricingOptions
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     auto_apply_discounts?: boolean;
 }
 

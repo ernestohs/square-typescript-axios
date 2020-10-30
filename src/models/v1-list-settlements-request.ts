@@ -28,42 +28,48 @@ export class V1ListSettlementsRequest {
      * @type {string}
      * @memberof V1ListSettlementsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order?: string;
     /**
      * The beginning of the requested reporting period, in ISO 8601 format. If this value is before January 1, 2013 (2013-01-01T00:00:00Z), this endpoint returns an error. Default value: The current time minus one year.
      * @type {string}
      * @memberof V1ListSettlementsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     begin_time?: string;
     /**
      * The end of the requested reporting period, in ISO 8601 format. If this value is more than one year greater than begin_time, this endpoint returns an error. Default value: The current time.
      * @type {string}
      * @memberof V1ListSettlementsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_time?: string;
     /**
      * The maximum number of settlements to return in a single response. This value cannot exceed 200.
      * @type {number}
      * @memberof V1ListSettlementsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * Provide this parameter to retrieve only settlements with a particular status (SENT or FAILED). See [V1ListSettlementsRequestStatus](#type-v1listsettlementsrequeststatus) for possible values
      * @type {string}
      * @memberof V1ListSettlementsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * A pagination cursor to retrieve the next set of results for your original query to the endpoint.
      * @type {string}
      * @memberof V1ListSettlementsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     batch_token?: string;
 }
 

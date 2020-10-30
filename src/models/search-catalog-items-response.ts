@@ -29,28 +29,30 @@ export class SearchCatalogItemsResponse {
      * @type {Array<Error>}
      * @memberof SearchCatalogItemsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * Returned items matching the specified query expressions.
      * @type {Array<CatalogObject>}
      * @memberof SearchCatalogItemsResponse
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: true })
     items?: Array<CatalogObject>;
     /**
      * Pagination token used in the next request to return more of the search result.
      * @type {string}
      * @memberof SearchCatalogItemsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Ids of returned item variations matching the specified query expression.
      * @type {Array<string>}
      * @memberof SearchCatalogItemsResponse
      */
-    @Field() 
+    
     matched_variation_ids?: Array<string>;
 }
 

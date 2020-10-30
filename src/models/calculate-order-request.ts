@@ -30,14 +30,16 @@ export class CalculateOrderRequest {
      * @type {Order}
      * @memberof CalculateOrderRequest
      */
-    @Field(() => Order) 
+    
+    @Field(() => Order, { nullable: false })
     order: Order;
     /**
      * Identifies one or more loyalty reward tiers to apply during order calculation. The discounts defined by the reward tiers are added to the order only to preview the effect of applying the specified reward(s). The reward(s) do not correspond to actual redemptions, that is, no `reward`s are created. Therefore, the reward `id`s are random strings used only to reference the reward tier.
      * @type {Array<OrderReward>}
      * @memberof CalculateOrderRequest
      */
-    @Field(() => [OrderReward]) 
+    
+    @Field(() => [OrderReward], { nullable: true })
     proposed_rewards?: Array<OrderReward>;
 }
 

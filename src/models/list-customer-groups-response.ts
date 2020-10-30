@@ -29,21 +29,23 @@ export class ListCustomerGroupsResponse {
      * @type {Array<Error>}
      * @memberof ListCustomerGroupsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * A list of customer groups belonging to the current merchant.
      * @type {Array<CustomerGroup>}
      * @memberof ListCustomerGroupsResponse
      */
-    @Field(() => [CustomerGroup]) 
+    
+    @Field(() => [CustomerGroup], { nullable: true })
     groups?: Array<CustomerGroup>;
     /**
      * A pagination cursor to retrieve the next set of results for your original query to the endpoint. This value is present only if the request succeeded and additional results are available.  See the [Pagination guide](https://developer.squareup.com/docs/working-with-apis/pagination) for more information.
      * @type {string}
      * @memberof ListCustomerGroupsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

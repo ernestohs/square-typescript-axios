@@ -28,7 +28,7 @@ export class CatalogQueryItemsForModifierList {
      * @type {Array<string>}
      * @memberof CatalogQueryItemsForModifierList
      */
-    @Field() 
+    
     modifier_list_ids: Array<string>;
 }
 

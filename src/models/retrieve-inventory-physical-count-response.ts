@@ -29,14 +29,15 @@ export class RetrieveInventoryPhysicalCountResponse {
      * @type {Array<Error>}
      * @memberof RetrieveInventoryPhysicalCountResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {InventoryPhysicalCount}
      * @memberof RetrieveInventoryPhysicalCountResponse
      */
-    @Field(() => InventoryPhysicalCount) 
+    
+    @Field(() => InventoryPhysicalCount, { nullable: true })
     count?: InventoryPhysicalCount;
 }
 

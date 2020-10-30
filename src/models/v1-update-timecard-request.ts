@@ -29,7 +29,8 @@ export class V1UpdateTimecardRequest {
      * @type {V1Timecard}
      * @memberof V1UpdateTimecardRequest
      */
-    @Field(() => V1Timecard) 
+    
+    @Field(() => V1Timecard, { nullable: false })
     body: V1Timecard;
 }
 

@@ -28,28 +28,32 @@ export class ModelError {
      * @type {string}
      * @memberof ModelError
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     category: string;
     /**
      * The specific code of the error. See `ErrorCode` for possible values See [ErrorCode](#type-errorcode) for possible values
      * @type {string}
      * @memberof ModelError
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     code: string;
     /**
      * A human-readable description of the error for debugging purposes.
      * @type {string}
      * @memberof ModelError
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     detail?: string;
     /**
      * The name of the field provided in the original request (if any) that the error pertains to.
      * @type {string}
      * @memberof ModelError
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     field?: string;
 }
 

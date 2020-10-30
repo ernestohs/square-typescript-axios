@@ -29,7 +29,8 @@ export class V1ListBankAccountsResponse {
      * @type {Array<V1BankAccount>}
      * @memberof V1ListBankAccountsResponse
      */
-    @Field(() => [V1BankAccount]) 
+    
+    @Field(() => [V1BankAccount], { nullable: true })
     items?: Array<V1BankAccount>;
 }
 

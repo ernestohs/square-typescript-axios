@@ -28,14 +28,16 @@ export class ShiftSort {
      * @type {string}
      * @memberof ShiftSort
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     field?: string;
     /**
      * The order in which results are returned. Defaults to DESC. See [SortOrder](#type-sortorder) for possible values
      * @type {string}
      * @memberof ShiftSort
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order?: string;
 }
 

@@ -28,35 +28,40 @@ export class InvoicePaymentReminder {
      * @type {string}
      * @memberof InvoicePaymentReminder
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * The number of days before (a negative number) or after (a positive number) the payment request `due_date` when the reminder is sent. For example, -3 indicates that the reminder should be sent 3 days before the payment request `due_date`.
      * @type {number}
      * @memberof InvoicePaymentReminder
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     relative_scheduled_days?: number;
     /**
      * The reminder message.
      * @type {string}
      * @memberof InvoicePaymentReminder
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     message?: string;
     /**
      * The status of the reminder. See [InvoicePaymentReminderStatus](#type-invoicepaymentreminderstatus) for possible values
      * @type {string}
      * @memberof InvoicePaymentReminder
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * If sent, the timestamp when the reminder was sent, in RFC 3339 format.
      * @type {string}
      * @memberof InvoicePaymentReminder
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sent_at?: string;
 }
 

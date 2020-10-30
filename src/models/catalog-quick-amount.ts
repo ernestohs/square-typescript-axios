@@ -29,28 +29,32 @@ export class CatalogQuickAmount {
      * @type {string}
      * @memberof CatalogQuickAmount
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     type: string;
     /**
      * 
      * @type {Money}
      * @memberof CatalogQuickAmount
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: false })
     amount: Money;
     /**
      * Describes the ranking of the Quick Amount provided by machine learning model, in the range [0, 100]. MANUAL type amount will always have score = 100.
      * @type {number}
      * @memberof CatalogQuickAmount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     score?: number;
     /**
      * The order in which this Quick Amount should be displayed.
      * @type {number}
      * @memberof CatalogQuickAmount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ordinal?: number;
 }
 

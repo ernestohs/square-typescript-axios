@@ -28,28 +28,32 @@ export class LoyaltyAccountMapping {
      * @type {string}
      * @memberof LoyaltyAccountMapping
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The type of mapping. See [LoyaltyAccountMappingType](#type-loyaltyaccountmappingtype) for possible values
      * @type {string}
      * @memberof LoyaltyAccountMapping
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     type: string;
     /**
      * The phone number, in E.164 format. For example, \"+14155551111\".
      * @type {string}
      * @memberof LoyaltyAccountMapping
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     value: string;
     /**
      * The timestamp when the mapping was created, in RFC 3339 format.
      * @type {string}
      * @memberof LoyaltyAccountMapping
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
 }
 

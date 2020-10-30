@@ -28,21 +28,21 @@ export class FilterValue {
      * @type {Array<string>}
      * @memberof FilterValue
      */
-    @Field() 
+    
     all?: Array<string>;
     /**
      * A list of terms where at least one of them must be present on the field of the resource.
      * @type {Array<string>}
      * @memberof FilterValue
      */
-    @Field() 
+    
     any?: Array<string>;
     /**
      * A list of terms that must not be present on the field the resource
      * @type {Array<string>}
      * @memberof FilterValue
      */
-    @Field() 
+    
     none?: Array<string>;
 }
 

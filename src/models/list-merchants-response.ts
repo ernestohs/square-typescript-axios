@@ -29,21 +29,23 @@ export class ListMerchantsResponse {
      * @type {Array<Error>}
      * @memberof ListMerchantsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The requested `Merchant` entities.
      * @type {Array<Merchant>}
      * @memberof ListMerchantsResponse
      */
-    @Field(() => [Merchant]) 
+    
+    @Field(() => [Merchant], { nullable: true })
     merchant?: Array<Merchant>;
     /**
      * If the  response is truncated, the cursor to use in next  request to fetch next set of objects.
      * @type {number}
      * @memberof ListMerchantsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: number;
 }
 

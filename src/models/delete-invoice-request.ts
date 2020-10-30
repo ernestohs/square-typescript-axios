@@ -28,7 +28,8 @@ export class DeleteInvoiceRequest {
      * @type {number}
      * @memberof DeleteInvoiceRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     version?: number;
 }
 

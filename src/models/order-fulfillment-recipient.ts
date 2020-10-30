@@ -29,35 +29,40 @@ export class OrderFulfillmentRecipient {
      * @type {string}
      * @memberof OrderFulfillmentRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     customer_id?: string;
     /**
      * The display name of the fulfillment recipient.  If provided, overrides the value pulled from the customer profile indicated by `customer_id`.
      * @type {string}
      * @memberof OrderFulfillmentRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     display_name?: string;
     /**
      * The email address of the fulfillment recipient.  If provided, overrides the value pulled from the customer profile indicated by `customer_id`.
      * @type {string}
      * @memberof OrderFulfillmentRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     email_address?: string;
     /**
      * The phone number of the fulfillment recipient.  If provided, overrides the value pulled from the customer profile indicated by `customer_id`.
      * @type {string}
      * @memberof OrderFulfillmentRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     phone_number?: string;
     /**
      * 
      * @type {Address}
      * @memberof OrderFulfillmentRecipient
      */
-    @Field(() => Address) 
+    
+    @Field(() => Address, { nullable: true })
     address?: Address;
 }
 

@@ -28,21 +28,24 @@ export class V1Category {
      * @type {string}
      * @memberof V1Category
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The category\'s name.
      * @type {string}
      * @memberof V1Category
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The ID of the CatalogObject in the Connect v2 API. Objects that are shared across multiple locations share the same v2 ID.
      * @type {string}
      * @memberof V1Category
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     v2_id?: string;
 }
 

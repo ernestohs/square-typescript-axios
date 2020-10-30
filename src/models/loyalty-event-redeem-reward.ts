@@ -28,21 +28,24 @@ export class LoyaltyEventRedeemReward {
      * @type {string}
      * @memberof LoyaltyEventRedeemReward
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     loyalty_program_id: string;
     /**
      * The ID of the redeemed `loyalty reward`. This field is returned only if the event source is `LOYALTY_API`.
      * @type {string}
      * @memberof LoyaltyEventRedeemReward
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reward_id?: string;
     /**
      * The ID of the `order` that redeemed the reward. This field is returned only if the Orders API is used to process orders.
      * @type {string}
      * @memberof LoyaltyEventRedeemReward
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order_id?: string;
 }
 

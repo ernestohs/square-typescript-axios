@@ -29,7 +29,8 @@ export class UpdateWorkweekConfigRequest {
      * @type {WorkweekConfig}
      * @memberof UpdateWorkweekConfigRequest
      */
-    @Field(() => WorkweekConfig) 
+    
+    @Field(() => WorkweekConfig, { nullable: false })
     workweek_config: WorkweekConfig;
 }
 

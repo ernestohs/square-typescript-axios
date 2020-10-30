@@ -28,14 +28,16 @@ export class SearchLoyaltyRewardsRequestLoyaltyRewardQuery {
      * @type {string}
      * @memberof SearchLoyaltyRewardsRequestLoyaltyRewardQuery
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     loyalty_account_id: string;
     /**
      * The status of the loyalty reward. See [LoyaltyRewardStatus](#type-loyaltyrewardstatus) for possible values
      * @type {string}
      * @memberof SearchLoyaltyRewardsRequestLoyaltyRewardQuery
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
 }
 

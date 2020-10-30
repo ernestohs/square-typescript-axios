@@ -28,7 +28,8 @@ export class OrderSource {
      * @type {string}
      * @memberof OrderSource
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
 }
 

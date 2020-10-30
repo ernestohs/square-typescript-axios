@@ -29,7 +29,8 @@ export class V1CreateModifierListRequest {
      * @type {V1ModifierList}
      * @memberof V1CreateModifierListRequest
      */
-    @Field(() => V1ModifierList) 
+    
+    @Field(() => V1ModifierList, { nullable: true })
     body?: V1ModifierList;
 }
 

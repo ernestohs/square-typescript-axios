@@ -29,35 +29,40 @@ export class OrderMoneyAmounts {
      * @type {Money}
      * @memberof OrderMoneyAmounts
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     total_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderMoneyAmounts
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     tax_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderMoneyAmounts
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     discount_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderMoneyAmounts
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     tip_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderMoneyAmounts
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     service_charge_money?: Money;
 }
 

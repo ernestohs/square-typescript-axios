@@ -28,14 +28,16 @@ export class CatalogQueryPrefix {
      * @type {string}
      * @memberof CatalogQueryPrefix
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     attribute_name: string;
     /**
      * The desired prefix of the search attribute value.
      * @type {string}
      * @memberof CatalogQueryPrefix
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     attribute_prefix: string;
 }
 

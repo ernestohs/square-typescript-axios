@@ -29,21 +29,23 @@ export class BatchRetrieveCatalogObjectsResponse {
      * @type {Array<Error>}
      * @memberof BatchRetrieveCatalogObjectsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * A list of `CatalogObject`s returned.
      * @type {Array<CatalogObject>}
      * @memberof BatchRetrieveCatalogObjectsResponse
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: true })
     objects?: Array<CatalogObject>;
     /**
      * A list of `CatalogObject`s referenced by the object in the `objects` field.
      * @type {Array<CatalogObject>}
      * @memberof BatchRetrieveCatalogObjectsResponse
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: true })
     related_objects?: Array<CatalogObject>;
 }
 

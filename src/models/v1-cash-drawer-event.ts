@@ -29,42 +29,48 @@ export class V1CashDrawerEvent {
      * @type {string}
      * @memberof V1CashDrawerEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The ID of the employee that created the event.
      * @type {string}
      * @memberof V1CashDrawerEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     employee_id?: string;
     /**
      * The type of event that occurred. See [V1CashDrawerEventEventType](#type-v1cashdrawereventeventtype) for possible values
      * @type {string}
      * @memberof V1CashDrawerEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     event_type?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CashDrawerEvent
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     event_money?: V1Money;
     /**
      * The time when the event occurred, in ISO 8601 format.
      * @type {string}
      * @memberof V1CashDrawerEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * An optional description of the event, entered by the employee that created it.
      * @type {string}
      * @memberof V1CashDrawerEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
 }
 

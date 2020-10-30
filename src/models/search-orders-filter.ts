@@ -33,35 +33,40 @@ export class SearchOrdersFilter {
      * @type {SearchOrdersStateFilter}
      * @memberof SearchOrdersFilter
      */
-    @Field(() => SearchOrdersStateFilter) 
+    
+    @Field(() => SearchOrdersStateFilter, { nullable: true })
     state_filter?: SearchOrdersStateFilter;
     /**
      * 
      * @type {SearchOrdersDateTimeFilter}
      * @memberof SearchOrdersFilter
      */
-    @Field(() => SearchOrdersDateTimeFilter) 
+    
+    @Field(() => SearchOrdersDateTimeFilter, { nullable: true })
     date_time_filter?: SearchOrdersDateTimeFilter;
     /**
      * 
      * @type {SearchOrdersFulfillmentFilter}
      * @memberof SearchOrdersFilter
      */
-    @Field(() => SearchOrdersFulfillmentFilter) 
+    
+    @Field(() => SearchOrdersFulfillmentFilter, { nullable: true })
     fulfillment_filter?: SearchOrdersFulfillmentFilter;
     /**
      * 
      * @type {SearchOrdersSourceFilter}
      * @memberof SearchOrdersFilter
      */
-    @Field(() => SearchOrdersSourceFilter) 
+    
+    @Field(() => SearchOrdersSourceFilter, { nullable: true })
     source_filter?: SearchOrdersSourceFilter;
     /**
      * 
      * @type {SearchOrdersCustomerFilter}
      * @memberof SearchOrdersFilter
      */
-    @Field(() => SearchOrdersCustomerFilter) 
+    
+    @Field(() => SearchOrdersCustomerFilter, { nullable: true })
     customer_filter?: SearchOrdersCustomerFilter;
 }
 

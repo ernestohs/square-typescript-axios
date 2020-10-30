@@ -28,28 +28,32 @@ export class DisputeEvidence {
      * @type {string}
      * @memberof DisputeEvidence
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     evidence_id?: string;
     /**
      * The ID of the dispute the evidence is associated with.
      * @type {string}
      * @memberof DisputeEvidence
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     dispute_id?: string;
     /**
      * The time when the next action is due, in RFC 3339 format.
      * @type {string}
      * @memberof DisputeEvidence
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uploaded_at?: string;
     /**
      * The type of the evidence. See [DisputeEvidenceType](#type-disputeevidencetype) for possible values
      * @type {string}
      * @memberof DisputeEvidence
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     evidence_type?: string;
 }
 

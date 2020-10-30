@@ -29,7 +29,8 @@ export class V1ListRefundsResponse {
      * @type {Array<V1Refund>}
      * @memberof V1ListRefundsResponse
      */
-    @Field(() => [V1Refund]) 
+    
+    @Field(() => [V1Refund], { nullable: true })
     items?: Array<V1Refund>;
 }
 

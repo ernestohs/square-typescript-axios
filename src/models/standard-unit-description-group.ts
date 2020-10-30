@@ -29,14 +29,16 @@ export class StandardUnitDescriptionGroup {
      * @type {Array<StandardUnitDescription>}
      * @memberof StandardUnitDescriptionGroup
      */
-    @Field(() => [StandardUnitDescription]) 
+    
+    @Field(() => [StandardUnitDescription], { nullable: true })
     standard_unit_descriptions?: Array<StandardUnitDescription>;
     /**
      * IETF language tag.
      * @type {string}
      * @memberof StandardUnitDescriptionGroup
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     language_code?: string;
 }
 

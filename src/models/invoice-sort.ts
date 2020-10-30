@@ -28,14 +28,16 @@ export class InvoiceSort {
      * @type {string}
      * @memberof InvoiceSort
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     field: string;
     /**
      * The order to use for sorting the results. See [SortOrder](#type-sortorder) for possible values
      * @type {string}
      * @memberof InvoiceSort
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order?: string;
 }
 

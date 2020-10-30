@@ -29,21 +29,24 @@ export class OrderLineItemAppliedTax {
      * @type {string}
      * @memberof OrderLineItemAppliedTax
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * The `uid` of the tax for which this applied tax represents.  Must reference a tax present in the `order.taxes` field.  This field is immutable. To change which taxes apply to a line item, delete and add new `OrderLineItemAppliedTax`s.
      * @type {string}
      * @memberof OrderLineItemAppliedTax
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     tax_uid: string;
     /**
      * 
      * @type {Money}
      * @memberof OrderLineItemAppliedTax
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     applied_money?: Money;
 }
 

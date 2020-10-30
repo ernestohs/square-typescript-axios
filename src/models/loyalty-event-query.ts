@@ -29,7 +29,8 @@ export class LoyaltyEventQuery {
      * @type {LoyaltyEventFilter}
      * @memberof LoyaltyEventQuery
      */
-    @Field(() => LoyaltyEventFilter) 
+    
+    @Field(() => LoyaltyEventFilter, { nullable: true })
     filter?: LoyaltyEventFilter;
 }
 

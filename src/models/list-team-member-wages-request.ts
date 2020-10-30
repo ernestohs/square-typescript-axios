@@ -28,21 +28,24 @@ export class ListTeamMemberWagesRequest {
      * @type {string}
      * @memberof ListTeamMemberWagesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     team_member_id?: string;
     /**
      * Maximum number of Team Member Wages to return per page. Can range between 1 and 200. The default is the maximum at 200.
      * @type {number}
      * @memberof ListTeamMemberWagesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * Pointer to the next page of Employee Wage results to fetch.
      * @type {string}
      * @memberof ListTeamMemberWagesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

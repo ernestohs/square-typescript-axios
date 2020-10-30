@@ -29,21 +29,24 @@ export class CreateOrderRequest {
      * @type {Order}
      * @memberof CreateOrderRequest
      */
-    @Field(() => Order) 
+    
+    @Field(() => Order, { nullable: true })
     order?: Order;
     /**
      * The ID of the business location to associate the order with.
      * @type {string}
      * @memberof CreateOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * A value you specify that uniquely identifies this order among orders you\'ve created.  If you\'re unsure whether a particular order was created successfully, you can reattempt it with the same idempotency key without worrying about creating duplicate orders.  See [Idempotency](https://developer.squareup.com/docs/basics/api101/idempotency) for more information.
      * @type {string}
      * @memberof CreateOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
 }
 

@@ -28,7 +28,7 @@ export class DeleteBreakTypeResponse {
      * @type {Array<Error>}
      * @memberof DeleteBreakTypeResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

@@ -29,28 +29,32 @@ export class CreateRefundRequest {
      * @type {string}
      * @memberof CreateRefundRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * The ID of the tender to refund.  A ``Transaction`` has one or more `tenders` (i.e., methods of payment) associated with it, and you refund each tender separately with the Connect API.
      * @type {string}
      * @memberof CreateRefundRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     tender_id: string;
     /**
      * A description of the reason for the refund.  Default value: `Refund via API`
      * @type {string}
      * @memberof CreateRefundRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reason?: string;
     /**
      * 
      * @type {Money}
      * @memberof CreateRefundRequest
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: false })
     amount_money: Money;
 }
 

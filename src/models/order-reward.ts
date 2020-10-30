@@ -28,14 +28,16 @@ export class OrderReward {
      * @type {string}
      * @memberof OrderReward
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     id: string;
     /**
      * The identifier of the reward tier corresponding to this reward.
      * @type {string}
      * @memberof OrderReward
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     reward_tier_id: string;
 }
 

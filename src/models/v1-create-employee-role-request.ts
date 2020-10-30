@@ -29,7 +29,8 @@ export class V1CreateEmployeeRoleRequest {
      * @type {V1EmployeeRole}
      * @memberof V1CreateEmployeeRoleRequest
      */
-    @Field(() => V1EmployeeRole) 
+    
+    @Field(() => V1EmployeeRole, { nullable: true })
     employee_role?: V1EmployeeRole;
 }
 

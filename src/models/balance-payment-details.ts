@@ -28,14 +28,16 @@ export class BalancePaymentDetails {
      * @type {string}
      * @memberof BalancePaymentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     account_id?: string;
     /**
      * The balance payment’s current state. Can be `COMPLETED` or `FAILED`.
      * @type {string}
      * @memberof BalancePaymentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
 }
 

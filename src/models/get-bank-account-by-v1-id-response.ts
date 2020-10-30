@@ -29,14 +29,15 @@ export class GetBankAccountByV1IdResponse {
      * @type {Array<Error>}
      * @memberof GetBankAccountByV1IdResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {BankAccount}
      * @memberof GetBankAccountByV1IdResponse
      */
-    @Field(() => BankAccount) 
+    
+    @Field(() => BankAccount, { nullable: true })
     bank_account?: BankAccount;
 }
 

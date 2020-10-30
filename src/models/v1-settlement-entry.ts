@@ -29,28 +29,32 @@ export class V1SettlementEntry {
      * @type {string}
      * @memberof V1SettlementEntry
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     payment_id?: string;
     /**
      * The settlement\'s current status. See [V1SettlementEntryType](#type-v1settlemententrytype) for possible values
      * @type {string}
      * @memberof V1SettlementEntry
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1SettlementEntry
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     amount_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1SettlementEntry
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     fee_money?: V1Money;
 }
 

@@ -28,21 +28,24 @@ export class LoyaltyEventAdjustPoints {
      * @type {string}
      * @memberof LoyaltyEventAdjustPoints
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     loyalty_program_id?: string;
     /**
      * The number of points added or removed.
      * @type {number}
      * @memberof LoyaltyEventAdjustPoints
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     points: number;
     /**
      * The reason for the adjustment of points.
      * @type {string}
      * @memberof LoyaltyEventAdjustPoints
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reason?: string;
 }
 

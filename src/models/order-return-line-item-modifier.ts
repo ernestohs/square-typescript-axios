@@ -29,42 +29,48 @@ export class OrderReturnLineItemModifier {
      * @type {string}
      * @memberof OrderReturnLineItemModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * `uid` of the Modifier from the LineItem from the Order which contains the original sale of this line item modifier.
      * @type {string}
      * @memberof OrderReturnLineItemModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     source_modifier_uid?: string;
     /**
      * The catalog object id referencing `CatalogModifier`.
      * @type {string}
      * @memberof OrderReturnLineItemModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_object_id?: string;
     /**
      * The name of the item modifier.
      * @type {string}
      * @memberof OrderReturnLineItemModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnLineItemModifier
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     base_price_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnLineItemModifier
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     total_price_money?: Money;
 }
 

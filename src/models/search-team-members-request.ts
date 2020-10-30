@@ -29,21 +29,24 @@ export class SearchTeamMembersRequest {
      * @type {SearchTeamMembersQuery}
      * @memberof SearchTeamMembersRequest
      */
-    @Field(() => SearchTeamMembersQuery) 
+    
+    @Field(() => SearchTeamMembersQuery, { nullable: true })
     query?: SearchTeamMembersQuery;
     /**
      * The maximum number of `TeamMember` objects in a page (25 by default).
      * @type {number}
      * @memberof SearchTeamMembersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * The opaque cursor for fetching the next page. Read about [pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination) with Square APIs for more information.
      * @type {string}
      * @memberof SearchTeamMembersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

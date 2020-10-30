@@ -29,7 +29,8 @@ export class LoyaltyEventDateTimeFilter {
      * @type {TimeRange}
      * @memberof LoyaltyEventDateTimeFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: false })
     created_at: TimeRange;
 }
 

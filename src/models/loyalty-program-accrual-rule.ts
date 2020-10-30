@@ -29,35 +29,40 @@ export class LoyaltyProgramAccrualRule {
      * @type {string}
      * @memberof LoyaltyProgramAccrualRule
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     accrual_type: string;
     /**
      * The number of points that  buyers earn based on the `accrual_type`.
      * @type {number}
      * @memberof LoyaltyProgramAccrualRule
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     points?: number;
     /**
      * 
      * @type {Money}
      * @memberof LoyaltyProgramAccrualRule
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     visit_minimum_amount_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof LoyaltyProgramAccrualRule
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     spend_amount_money?: Money;
     /**
      * The ID of the `catalog object` to purchase to earn the number of points defined by the rule. This is either an item variation or a category, depending on the type. This is defined on `ITEM_VARIATION` rules and `CATEGORY` rules.
      * @type {string}
      * @memberof LoyaltyProgramAccrualRule
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_object_id?: string;
 }
 

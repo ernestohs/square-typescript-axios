@@ -29,7 +29,8 @@ export class V1ListModifierListsResponse {
      * @type {Array<V1ModifierList>}
      * @memberof V1ListModifierListsResponse
      */
-    @Field(() => [V1ModifierList]) 
+    
+    @Field(() => [V1ModifierList], { nullable: true })
     items?: Array<V1ModifierList>;
 }
 

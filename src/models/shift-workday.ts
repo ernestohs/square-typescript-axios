@@ -29,21 +29,24 @@ export class ShiftWorkday {
      * @type {DateRange}
      * @memberof ShiftWorkday
      */
-    @Field(() => DateRange) 
+    
+    @Field(() => DateRange, { nullable: true })
     date_range?: DateRange;
     /**
      * The strategy on which the dates are applied. See [ShiftWorkdayMatcher](#type-shiftworkdaymatcher) for possible values
      * @type {string}
      * @memberof ShiftWorkday
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     match_shifts_by?: string;
     /**
      * Location-specific timezones convert workdays to datetime filters. Every location included in the query must have a timezone, or this field must be provided as a fallback. Format: the IANA timezone database identifier for the relevant timezone.
      * @type {string}
      * @memberof ShiftWorkday
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     default_timezone?: string;
 }
 

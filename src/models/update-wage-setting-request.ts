@@ -29,7 +29,8 @@ export class UpdateWageSettingRequest {
      * @type {WageSetting}
      * @memberof UpdateWageSettingRequest
      */
-    @Field(() => WageSetting) 
+    
+    @Field(() => WageSetting, { nullable: false })
     wage_setting: WageSetting;
 }
 

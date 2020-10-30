@@ -28,105 +28,120 @@ export class Address {
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     address_line_1?: string;
     /**
      * The second line of the address, if any.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     address_line_2?: string;
     /**
      * The third line of the address, if any.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     address_line_3?: string;
     /**
      * The city or town of the address.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     locality?: string;
     /**
      * A civil region within the address\'s `locality`, if any.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sublocality?: string;
     /**
      * A civil region within the address\'s `sublocality`, if any.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sublocality_2?: string;
     /**
      * A civil region within the address\'s `sublocality_2`, if any.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sublocality_3?: string;
     /**
      * A civil entity within the address\'s country. In the US, this is the state.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     administrative_district_level_1?: string;
     /**
      * A civil entity within the address\'s `administrative_district_level_1`. In the US, this is the county.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     administrative_district_level_2?: string;
     /**
      * A civil entity within the address\'s `administrative_district_level_2`, if any.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     administrative_district_level_3?: string;
     /**
      * The address\'s postal code.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     postal_code?: string;
     /**
      * The address\'s country, in ISO 3166-1-alpha-2 format. See [Country](#type-country) for possible values
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     country?: string;
     /**
      * Optional first name when it\'s representing recipient.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     first_name?: string;
     /**
      * Optional last name when it\'s representing recipient.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     last_name?: string;
     /**
      * Optional organization name when it\'s representing recipient.
      * @type {string}
      * @memberof Address
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     organization?: string;
 }
 

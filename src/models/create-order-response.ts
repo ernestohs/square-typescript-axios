@@ -29,14 +29,15 @@ export class CreateOrderResponse {
      * @type {Order}
      * @memberof CreateOrderResponse
      */
-    @Field(() => Order) 
+    
+    @Field(() => Order, { nullable: true })
     order?: Order;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof CreateOrderResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

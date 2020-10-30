@@ -29,14 +29,15 @@ export class CreateTerminalCheckoutResponse {
      * @type {Array<Error>}
      * @memberof CreateTerminalCheckoutResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {TerminalCheckout}
      * @memberof CreateTerminalCheckoutResponse
      */
-    @Field(() => TerminalCheckout) 
+    
+    @Field(() => TerminalCheckout, { nullable: true })
     checkout?: TerminalCheckout;
 }
 

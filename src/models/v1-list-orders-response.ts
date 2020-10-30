@@ -29,7 +29,8 @@ export class V1ListOrdersResponse {
      * @type {Array<V1Order>}
      * @memberof V1ListOrdersResponse
      */
-    @Field(() => [V1Order]) 
+    
+    @Field(() => [V1Order], { nullable: true })
     items?: Array<V1Order>;
 }
 

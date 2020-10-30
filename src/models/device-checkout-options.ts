@@ -29,21 +29,24 @@ export class DeviceCheckoutOptions {
      * @type {string}
      * @memberof DeviceCheckoutOptions
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     device_id: string;
     /**
      * Instruct the device to skip the receipt screen. Defaults to false.
      * @type {boolean}
      * @memberof DeviceCheckoutOptions
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     skip_receipt_screen?: boolean;
     /**
      * 
      * @type {TipSettings}
      * @memberof DeviceCheckoutOptions
      */
-    @Field(() => TipSettings) 
+    
+    @Field(() => TipSettings, { nullable: true })
     tip_settings?: TipSettings;
 }
 

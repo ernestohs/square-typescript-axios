@@ -29,42 +29,48 @@ export class CashDrawerShiftEvent {
      * @type {string}
      * @memberof CashDrawerShiftEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The ID of the employee that created the event.
      * @type {string}
      * @memberof CashDrawerShiftEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     employee_id?: string;
     /**
      * The type of cash drawer shift event. See [CashDrawerEventType](#type-cashdrawereventtype) for possible values
      * @type {string}
      * @memberof CashDrawerShiftEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     event_type?: string;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShiftEvent
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     event_money?: Money;
     /**
      * The event time in ISO 8601 format.
      * @type {string}
      * @memberof CashDrawerShiftEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * An optional description of the event, entered by the employee that created the event.
      * @type {string}
      * @memberof CashDrawerShiftEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
 }
 

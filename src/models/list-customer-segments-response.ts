@@ -29,21 +29,23 @@ export class ListCustomerSegmentsResponse {
      * @type {Array<Error>}
      * @memberof ListCustomerSegmentsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The list of customer segments belonging to the associated Square account.
      * @type {Array<CustomerSegment>}
      * @memberof ListCustomerSegmentsResponse
      */
-    @Field(() => [CustomerSegment]) 
+    
+    @Field(() => [CustomerSegment], { nullable: true })
     segments?: Array<CustomerSegment>;
     /**
      * A pagination cursor to be used in subsequent calls to __ListCustomerSegments__ to retrieve the next set of query results. Only present only if the request succeeded and additional results are available.  See the [Pagination guide](https://developer.squareup.com/docs/docs/working-with-apis/pagination) for more information.
      * @type {string}
      * @memberof ListCustomerSegmentsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

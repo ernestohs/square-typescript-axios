@@ -28,49 +28,56 @@ export class ObtainTokenRequest {
      * @type {string}
      * @memberof ObtainTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     client_id: string;
     /**
      * The Square-issued application secret for your application, available from the [application dashboard](https://connect.squareup.com/apps).
      * @type {string}
      * @memberof ObtainTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     client_secret: string;
     /**
      * The authorization code to exchange. This is required if `grant_type` is set to `authorization_code`, to indicate that the application wants to exchange an authorization code for an OAuth access token.
      * @type {string}
      * @memberof ObtainTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     code?: string;
     /**
      * The redirect URL assigned in the [application dashboard](https://connect.squareup.com/apps).
      * @type {string}
      * @memberof ObtainTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     redirect_uri?: string;
     /**
      * Specifies the method to request an OAuth access token. Valid values are: `authorization_code`, `refresh_token`, and `migration_token`
      * @type {string}
      * @memberof ObtainTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     grant_type: string;
     /**
      * A valid refresh token for generating a new OAuth access token. A valid refresh token is required if `grant_type` is set to `refresh_token` , to indicate the application wants a replacement for an expired OAuth access token.
      * @type {string}
      * @memberof ObtainTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     refresh_token?: string;
     /**
      * Legacy OAuth access token obtained using a Connect API version prior to 2019-03-13. This parameter is required if `grant_type` is set to `migration_token` to indicate that the application wants to get a replacement OAuth access token. The response also returns a refresh token. For more information, see [Migrate to Using Refresh Tokens](https://developer.squareup.com/docs/authz/oauth/migration).
      * @type {string}
      * @memberof ObtainTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     migration_token?: string;
 }
 

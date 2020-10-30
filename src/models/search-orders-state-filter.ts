@@ -28,7 +28,7 @@ export class SearchOrdersStateFilter {
      * @type {Array<string>}
      * @memberof SearchOrdersStateFilter
      */
-    @Field() 
+    
     states: Array<string>;
 }
 

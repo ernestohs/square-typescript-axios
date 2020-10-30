@@ -28,21 +28,24 @@ export class ListBankAccountsRequest {
      * @type {string}
      * @memberof ListBankAccountsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Upper limit on the number of bank accounts to return in the response.  Currently, 1000 is the largest supported limit. You can specify a limit  of up to 1000 bank accounts. This is also the default limit.
      * @type {number}
      * @memberof ListBankAccountsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * Location ID. You can specify this optional filter  to retrieve only the linked bank accounts belonging to a specific location.
      * @type {string}
      * @memberof ListBankAccountsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
 }
 

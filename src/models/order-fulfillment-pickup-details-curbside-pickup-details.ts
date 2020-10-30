@@ -28,14 +28,16 @@ export class OrderFulfillmentPickupDetailsCurbsidePickupDetails {
      * @type {string}
      * @memberof OrderFulfillmentPickupDetailsCurbsidePickupDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     curbside_details?: string;
     /**
      * The [timestamp](#workingwithdates) in RFC 3339 timestamp format, e.g., \"2016-09-04T23:59:33.123Z\", indicating when the buyer arrived and is waiting for pickup.
      * @type {string}
      * @memberof OrderFulfillmentPickupDetailsCurbsidePickupDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     buyer_arrived_at?: string;
 }
 

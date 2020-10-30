@@ -28,28 +28,32 @@ export class CustomerGroup {
      * @type {string}
      * @memberof CustomerGroup
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * Name of the customer group.
      * @type {string}
      * @memberof CustomerGroup
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     name: string;
     /**
      * The timestamp when the customer group was created, in RFC 3339 format.
      * @type {string}
      * @memberof CustomerGroup
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The timesamp when the customer group was last updated, in RFC 3339 format.
      * @type {string}
      * @memberof CustomerGroup
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

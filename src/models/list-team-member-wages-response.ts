@@ -29,21 +29,23 @@ export class ListTeamMemberWagesResponse {
      * @type {Array<TeamMemberWage>}
      * @memberof ListTeamMemberWagesResponse
      */
-    @Field(() => [TeamMemberWage]) 
+    
+    @Field(() => [TeamMemberWage], { nullable: true })
     team_member_wages?: Array<TeamMemberWage>;
     /**
      * Value supplied in the subsequent request to fetch the next next page of Team Member Wage results.
      * @type {string}
      * @memberof ListTeamMemberWagesResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof ListTeamMemberWagesResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

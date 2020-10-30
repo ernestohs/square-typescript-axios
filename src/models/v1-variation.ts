@@ -29,84 +29,96 @@ export class V1Variation {
      * @type {string}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The item variation\'s name.
      * @type {string}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The ID of the variation\'s associated item.
      * @type {string}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     item_id?: string;
     /**
      * Indicates the variation\'s list position when displayed in Square Point of Sale and the merchant dashboard. If more than one variation for the same item has the same ordinal value, those variations are displayed in alphabetical order
      * @type {number}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ordinal?: number;
     /**
      * Indicates whether the item variation\'s price is fixed or determined at the time of sale. See [V1VariationPricingType](#type-v1variationpricingtype) for possible values
      * @type {string}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     pricing_type?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Variation
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     price_money?: V1Money;
     /**
      * The item variation\'s SKU, if any.
      * @type {string}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sku?: string;
     /**
      * If true, inventory tracking is active for the variation.
      * @type {boolean}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     track_inventory?: boolean;
     /**
      * Indicates whether the item variation displays an alert when its inventory quantity is less than or equal to its inventory_alert_threshold. See [V1VariationInventoryAlertType](#type-v1variationinventoryalerttype) for possible values
      * @type {string}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     inventory_alert_type?: string;
     /**
      * If the inventory quantity for the variation is less than or equal to this value and inventory_alert_type is LOW_QUANTITY, the variation displays an alert in the merchant dashboard.
      * @type {number}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     inventory_alert_threshold?: number;
     /**
      * Arbitrary metadata associated with the variation. Cannot exceed 255 characters.
      * @type {string}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     user_data?: string;
     /**
      * The ID of the CatalogObject in the Connect v2 API. Objects that are shared across multiple locations share the same v2 ID.
      * @type {string}
      * @memberof V1Variation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     v2_id?: string;
 }
 

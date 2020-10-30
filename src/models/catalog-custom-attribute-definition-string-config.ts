@@ -28,7 +28,8 @@ export class CatalogCustomAttributeDefinitionStringConfig {
      * @type {boolean}
      * @memberof CatalogCustomAttributeDefinitionStringConfig
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     enforce_uniqueness?: boolean;
 }
 

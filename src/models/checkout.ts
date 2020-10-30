@@ -31,70 +31,80 @@ export class Checkout {
      * @type {string}
      * @memberof Checkout
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The URL that the buyer\'s browser should be redirected to after the checkout is completed.
      * @type {string}
      * @memberof Checkout
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     checkout_page_url?: string;
     /**
      * If `true`, Square Checkout will collect shipping information on your behalf and store that information with the transaction information in your Square Dashboard.  Default: `false`.
      * @type {boolean}
      * @memberof Checkout
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ask_for_shipping_address?: boolean;
     /**
      * The email address to display on the Square Checkout confirmation page and confirmation email that the buyer can use to contact the merchant.  If this value is not set, the confirmation page and email will display the primary email address associated with the merchant\'s Square account.  Default: none; only exists if explicitly set.
      * @type {string}
      * @memberof Checkout
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     merchant_support_email?: string;
     /**
      * If provided, the buyer\'s email is pre-populated on the checkout page as an editable text field.  Default: none; only exists if explicitly set.
      * @type {string}
      * @memberof Checkout
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     pre_populate_buyer_email?: string;
     /**
      * 
      * @type {Address}
      * @memberof Checkout
      */
-    @Field(() => Address) 
+    
+    @Field(() => Address, { nullable: true })
     pre_populate_shipping_address?: Address;
     /**
      * The URL to redirect to after checkout is completed with `checkoutId`, Square\'s `orderId`, `transactionId`, and `referenceId` appended as URL parameters. For example, if the provided redirect_url is `http://www.example.com/order-complete`, a successful transaction redirects the customer to:  `http://www.example.com/order-complete?checkoutId=xxxxxx&orderId=xxxxxx&referenceId=xxxxxx&transactionId=xxxxxx`  If you do not provide a redirect URL, Square Checkout will display an order confirmation page on your behalf; however Square strongly recommends that you provide a redirect URL so you can verify the transaction results and finalize the order through your existing/normal confirmation workflow.
      * @type {string}
      * @memberof Checkout
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     redirect_url?: string;
     /**
      * 
      * @type {Order}
      * @memberof Checkout
      */
-    @Field(() => Order) 
+    
+    @Field(() => Order, { nullable: true })
     order?: Order;
     /**
      * The time when the checkout was created, in RFC 3339 format.
      * @type {string}
      * @memberof Checkout
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * Additional recipients (other than the merchant) receiving a portion of this checkout. For example, fees assessed on the purchase by a third party integration.
      * @type {Array<AdditionalRecipient>}
      * @memberof Checkout
      */
-    @Field(() => [AdditionalRecipient]) 
+    
+    @Field(() => [AdditionalRecipient], { nullable: true })
     additional_recipients?: Array<AdditionalRecipient>;
 }
 

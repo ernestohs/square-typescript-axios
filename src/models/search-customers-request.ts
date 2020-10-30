@@ -29,21 +29,24 @@ export class SearchCustomersRequest {
      * @type {string}
      * @memberof SearchCustomersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * A limit on the number of results to be returned in a single page. The limit is advisory - the implementation may return more or fewer results. If the supplied limit is negative, zero, or is higher than the maximum limit of 100, it will be ignored.
      * @type {number}
      * @memberof SearchCustomersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * 
      * @type {CustomerQuery}
      * @memberof SearchCustomersRequest
      */
-    @Field(() => CustomerQuery) 
+    
+    @Field(() => CustomerQuery, { nullable: true })
     query?: CustomerQuery;
 }
 

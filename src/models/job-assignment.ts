@@ -29,35 +29,40 @@ export class JobAssignment {
      * @type {string}
      * @memberof JobAssignment
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     job_title: string;
     /**
      * The current pay type for the job assignment used to calculate the pay amount in a pay period. See [JobAssignmentPayType](#type-jobassignmentpaytype) for possible values
      * @type {string}
      * @memberof JobAssignment
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     pay_type: string;
     /**
      * 
      * @type {Money}
      * @memberof JobAssignment
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     hourly_rate?: Money;
     /**
      * 
      * @type {Money}
      * @memberof JobAssignment
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     annual_rate?: Money;
     /**
      * The planned hours per week for the job. Set if the job `PayType` is `SALARY`.
      * @type {number}
      * @memberof JobAssignment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     weekly_hours?: number;
 }
 

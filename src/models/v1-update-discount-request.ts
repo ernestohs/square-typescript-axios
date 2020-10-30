@@ -29,7 +29,8 @@ export class V1UpdateDiscountRequest {
      * @type {V1Discount}
      * @memberof V1UpdateDiscountRequest
      */
-    @Field(() => V1Discount) 
+    
+    @Field(() => V1Discount, { nullable: false })
     body: V1Discount;
 }
 

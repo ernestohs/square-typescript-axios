@@ -29,63 +29,72 @@ export class CashDrawerShiftSummary {
      * @type {string}
      * @memberof CashDrawerShiftSummary
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The shift current state. See [CashDrawerShiftState](#type-cashdrawershiftstate) for possible values
      * @type {string}
      * @memberof CashDrawerShiftSummary
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     state?: string;
     /**
      * The shift start time in ISO 8601 format.
      * @type {string}
      * @memberof CashDrawerShiftSummary
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     opened_at?: string;
     /**
      * The shift end time in ISO 8601 format.
      * @type {string}
      * @memberof CashDrawerShiftSummary
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ended_at?: string;
     /**
      * The shift close time in ISO 8601 format.
      * @type {string}
      * @memberof CashDrawerShiftSummary
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     closed_at?: string;
     /**
      * An employee free-text description of a cash drawer shift.
      * @type {string}
      * @memberof CashDrawerShiftSummary
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShiftSummary
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     opened_cash_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShiftSummary
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     expected_cash_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShiftSummary
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     closed_cash_money?: Money;
 }
 

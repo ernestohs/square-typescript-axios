@@ -29,14 +29,15 @@ export class RetrieveDisputeResponse {
      * @type {Array<Error>}
      * @memberof RetrieveDisputeResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {Dispute}
      * @memberof RetrieveDisputeResponse
      */
-    @Field(() => Dispute) 
+    
+    @Field(() => Dispute, { nullable: true })
     dispute?: Dispute;
 }
 

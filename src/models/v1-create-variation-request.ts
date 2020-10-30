@@ -29,7 +29,8 @@ export class V1CreateVariationRequest {
      * @type {V1Variation}
      * @memberof V1CreateVariationRequest
      */
-    @Field(() => V1Variation) 
+    
+    @Field(() => V1Variation, { nullable: true })
     body?: V1Variation;
 }
 

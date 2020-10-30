@@ -29,21 +29,23 @@ export class ListRefundsResponse {
      * @type {Array<Error>}
      * @memberof ListRefundsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * An array of refunds that match your query.
      * @type {Array<Refund>}
      * @memberof ListRefundsResponse
      */
-    @Field(() => [Refund]) 
+    
+    @Field(() => [Refund], { nullable: true })
     refunds?: Array<Refund>;
     /**
      * A pagination cursor for retrieving the next set of results, if any remain. Provide this value as the `cursor` parameter in a subsequent request to this endpoint.  See [Paginating results](#paginatingresults) for more information.
      * @type {string}
      * @memberof ListRefundsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

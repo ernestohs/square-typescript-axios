@@ -28,14 +28,16 @@ export class LoyaltyProgramTerminology {
      * @type {string}
      * @memberof LoyaltyProgramTerminology
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     one: string;
     /**
      * A plural unit for point (for example, 10 points is called 10 stars).
      * @type {string}
      * @memberof LoyaltyProgramTerminology
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     other: string;
 }
 

@@ -28,7 +28,8 @@ export class PaymentOptions {
      * @type {boolean}
      * @memberof PaymentOptions
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     autocomplete?: boolean;
 }
 

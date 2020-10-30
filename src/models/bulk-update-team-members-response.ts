@@ -29,14 +29,14 @@ export class BulkUpdateTeamMembersResponse {
      * @type {{ [key: string]: UpdateTeamMemberResponse; }}
      * @memberof BulkUpdateTeamMembersResponse
      */
-    @Field() 
+    
     team_members?: { [key: string]: UpdateTeamMemberResponse; };
     /**
      * The errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof BulkUpdateTeamMembersResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

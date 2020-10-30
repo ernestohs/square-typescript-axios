@@ -29,35 +29,40 @@ export class RefundPaymentRequest {
      * @type {string}
      * @memberof RefundPaymentRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * 
      * @type {Money}
      * @memberof RefundPaymentRequest
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: false })
     amount_money: Money;
     /**
      * 
      * @type {Money}
      * @memberof RefundPaymentRequest
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     app_fee_money?: Money;
     /**
      * Unique ID of the payment being refunded.
      * @type {string}
      * @memberof RefundPaymentRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     payment_id: string;
     /**
      * A description of the reason for the refund.
      * @type {string}
      * @memberof RefundPaymentRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reason?: string;
 }
 

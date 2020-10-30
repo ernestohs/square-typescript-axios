@@ -33,119 +33,136 @@ export class V1Item {
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The item\'s name.
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The item\'s description.
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
     /**
      * The item\'s type. This value is NORMAL for almost all items. See [V1ItemType](#type-v1itemtype) for possible values
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * The color of the discount\'s display label in Square Point of Sale, if not the default color. The default color is 9da2a6. See [V1ItemColor](#type-v1itemcolor) for possible values
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     color?: string;
     /**
      * The text of the item\'s display label in Square Point of Sale. Only up to the first five characters of the string are used.
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     abbreviation?: string;
     /**
      * Indicates whether the item is viewable from the merchant\'s online store (PUBLIC) or PRIVATE. See [V1ItemVisibility](#type-v1itemvisibility) for possible values
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     visibility?: string;
     /**
      * If true, the item can be added to shipping orders from the merchant\'s online store.
      * @type {boolean}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     available_online?: boolean;
     /**
      * 
      * @type {V1ItemImage}
      * @memberof V1Item
      */
-    @Field(() => V1ItemImage) 
+    
+    @Field(() => V1ItemImage, { nullable: true })
     master_image?: V1ItemImage;
     /**
      * 
      * @type {V1Category}
      * @memberof V1Item
      */
-    @Field(() => V1Category) 
+    
+    @Field(() => V1Category, { nullable: true })
     category?: V1Category;
     /**
      * The item\'s variations. You must specify at least one variation.
      * @type {Array<V1Variation>}
      * @memberof V1Item
      */
-    @Field(() => [V1Variation]) 
+    
+    @Field(() => [V1Variation], { nullable: true })
     variations?: Array<V1Variation>;
     /**
      * The modifier lists that apply to the item, if any.
      * @type {Array<V1ModifierList>}
      * @memberof V1Item
      */
-    @Field(() => [V1ModifierList]) 
+    
+    @Field(() => [V1ModifierList], { nullable: true })
     modifier_lists?: Array<V1ModifierList>;
     /**
      * The fees that apply to the item, if any.
      * @type {Array<V1Fee>}
      * @memberof V1Item
      */
-    @Field(() => [V1Fee]) 
+    
+    @Field(() => [V1Fee], { nullable: true })
     fees?: Array<V1Fee>;
     /**
      * Deprecated. This field is not used.
      * @type {boolean}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     taxable?: boolean;
     /**
      * The ID of the item\'s category, if any.
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     category_id?: string;
     /**
      * If true, the item can be added to pickup orders from the merchant\'s online store. Default value: false
      * @type {boolean}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     available_for_pickup?: boolean;
     /**
      * The ID of the CatalogObject in the Connect v2 API. Objects that are shared across multiple locations share the same v2 ID.
      * @type {string}
      * @memberof V1Item
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     v2_id?: string;
 }
 

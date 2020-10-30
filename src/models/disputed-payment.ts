@@ -28,7 +28,8 @@ export class DisputedPayment {
      * @type {string}
      * @memberof DisputedPayment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     payment_id?: string;
 }
 

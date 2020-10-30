@@ -30,14 +30,16 @@ export class TerminalRefundQuery {
      * @type {TerminalRefundQueryFilter}
      * @memberof TerminalRefundQuery
      */
-    @Field(() => TerminalRefundQueryFilter) 
+    
+    @Field(() => TerminalRefundQueryFilter, { nullable: true })
     filter?: TerminalRefundQueryFilter;
     /**
      * 
      * @type {TerminalRefundQuerySort}
      * @memberof TerminalRefundQuery
      */
-    @Field(() => TerminalRefundQuerySort) 
+    
+    @Field(() => TerminalRefundQuerySort, { nullable: true })
     sort?: TerminalRefundQuerySort;
 }
 

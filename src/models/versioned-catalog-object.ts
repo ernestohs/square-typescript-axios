@@ -28,14 +28,16 @@ export class VersionedCatalogObject {
      * @type {string}
      * @memberof VersionedCatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     object_id?: string;
     /**
      * The version of the object.
      * @type {number}
      * @memberof VersionedCatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_version?: number;
 }
 

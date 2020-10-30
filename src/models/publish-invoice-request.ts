@@ -28,14 +28,16 @@ export class PublishInvoiceRequest {
      * @type {number}
      * @memberof PublishInvoiceRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     version: number;
     /**
      * A unique string that identifies the `PublishInvoice` request. If you do not  provide `idempotency_key` (or provide an empty string as the value), the endpoint  treats each request as independent.  For more information, see [Idempotency](https://developer.squareup.com/docs/docs/working-with-apis/idempotency).
      * @type {string}
      * @memberof PublishInvoiceRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
 }
 

@@ -29,21 +29,24 @@ export class CatalogQuickAmountsSettings {
      * @type {string}
      * @memberof CatalogQuickAmountsSettings
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     option: string;
     /**
      * Represents location\'s eligibility for auto amounts The boolean should be consistent with whether there are AUTO amounts in the `amounts`.
      * @type {boolean}
      * @memberof CatalogQuickAmountsSettings
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     eligible_for_auto_amounts?: boolean;
     /**
      * Represents a set of Quick Amounts at this location.
      * @type {Array<CatalogQuickAmount>}
      * @memberof CatalogQuickAmountsSettings
      */
-    @Field(() => [CatalogQuickAmount]) 
+    
+    @Field(() => [CatalogQuickAmount], { nullable: true })
     amounts?: Array<CatalogQuickAmount>;
 }
 

@@ -28,14 +28,16 @@ export class LoyaltyEventOther {
      * @type {string}
      * @memberof LoyaltyEventOther
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     loyalty_program_id: string;
     /**
      * The number of points added or removed.
      * @type {number}
      * @memberof LoyaltyEventOther
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     points: number;
 }
 

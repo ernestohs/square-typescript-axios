@@ -29,14 +29,16 @@ export class CreateLoyaltyAccountRequest {
      * @type {LoyaltyAccount}
      * @memberof CreateLoyaltyAccountRequest
      */
-    @Field(() => LoyaltyAccount) 
+    
+    @Field(() => LoyaltyAccount, { nullable: false })
     loyalty_account: LoyaltyAccount;
     /**
      * A unique string that identifies this `CreateLoyaltyAccount` request.  Keys can be any valid string, but must be unique for every request.
      * @type {string}
      * @memberof CreateLoyaltyAccountRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
 }
 

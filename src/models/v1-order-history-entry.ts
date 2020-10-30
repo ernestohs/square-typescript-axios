@@ -28,14 +28,16 @@ export class V1OrderHistoryEntry {
      * @type {string}
      * @memberof V1OrderHistoryEntry
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     action?: string;
     /**
      * The time when the action was performed, in ISO 8601 format.
      * @type {string}
      * @memberof V1OrderHistoryEntry
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
 }
 

@@ -28,14 +28,15 @@ export class RegisterDomainResponse {
      * @type {Array<Error>}
      * @memberof RegisterDomainResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * Status of the domain registration.  See `RegisterDomainResponseStatus` for possible values. See [RegisterDomainResponseStatus](#type-registerdomainresponsestatus) for possible values
      * @type {string}
      * @memberof RegisterDomainResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
 }
 

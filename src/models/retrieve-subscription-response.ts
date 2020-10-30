@@ -29,14 +29,15 @@ export class RetrieveSubscriptionResponse {
      * @type {Array<Error>}
      * @memberof RetrieveSubscriptionResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {Subscription}
      * @memberof RetrieveSubscriptionResponse
      */
-    @Field(() => Subscription) 
+    
+    @Field(() => Subscription, { nullable: true })
     subscription?: Subscription;
 }
 

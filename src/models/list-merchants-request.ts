@@ -28,7 +28,8 @@ export class ListMerchantsRequest {
      * @type {number}
      * @memberof ListMerchantsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: number;
 }
 

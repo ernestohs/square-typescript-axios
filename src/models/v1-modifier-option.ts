@@ -29,49 +29,56 @@ export class V1ModifierOption {
      * @type {string}
      * @memberof V1ModifierOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The modifier option\'s name.
      * @type {string}
      * @memberof V1ModifierOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1ModifierOption
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     price_money?: V1Money;
     /**
      * If true, the modifier option is the default option in a modifier list for which selection_type is SINGLE.
      * @type {boolean}
      * @memberof V1ModifierOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     on_by_default?: boolean;
     /**
      * Indicates the modifier option\'s list position when displayed in Square Point of Sale and the merchant dashboard. If more than one modifier option in the same modifier list has the same ordinal value, those options are displayed in alphabetical order.
      * @type {number}
      * @memberof V1ModifierOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ordinal?: number;
     /**
      * The ID of the modifier list the option belongs to.
      * @type {string}
      * @memberof V1ModifierOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     modifier_list_id?: string;
     /**
      * The ID of the CatalogObject in the Connect v2 API. Objects that are shared across multiple locations share the same v2 ID.
      * @type {string}
      * @memberof V1ModifierOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     v2_id?: string;
 }
 

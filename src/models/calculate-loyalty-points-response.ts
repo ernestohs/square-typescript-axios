@@ -28,14 +28,15 @@ export class CalculateLoyaltyPointsResponse {
      * @type {Array<Error>}
      * @memberof CalculateLoyaltyPointsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The points that the buyer can earn from a specified purchase.
      * @type {number}
      * @memberof CalculateLoyaltyPointsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     points?: number;
 }
 

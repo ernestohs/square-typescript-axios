@@ -28,7 +28,8 @@ export class CreateMobileAuthorizationCodeRequest {
      * @type {string}
      * @memberof CreateMobileAuthorizationCodeRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
 }
 

@@ -29,28 +29,32 @@ export class CatalogModifierList {
      * @type {string}
      * @memberof CatalogModifierList
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * Determines where this modifier list appears in a list of `CatalogModifierList` values.
      * @type {number}
      * @memberof CatalogModifierList
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ordinal?: number;
     /**
      * Indicates whether multiple options from the modifier list can be applied to a single `CatalogItem`. See [CatalogModifierListSelectionType](#type-catalogmodifierlistselectiontype) for possible values
      * @type {string}
      * @memberof CatalogModifierList
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     selection_type?: string;
     /**
      * The options included in the `CatalogModifierList`. You must include at least one `CatalogModifier`. Each CatalogObject must have type `MODIFIER` and contain `CatalogModifier` data.
      * @type {Array<CatalogObject>}
      * @memberof CatalogModifierList
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: true })
     modifiers?: Array<CatalogObject>;
 }
 

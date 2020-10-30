@@ -29,7 +29,8 @@ export class V1CreateCategoryRequest {
      * @type {V1Category}
      * @memberof V1CreateCategoryRequest
      */
-    @Field(() => V1Category) 
+    
+    @Field(() => V1Category, { nullable: true })
     body?: V1Category;
 }
 

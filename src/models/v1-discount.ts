@@ -29,56 +29,64 @@ export class V1Discount {
      * @type {string}
      * @memberof V1Discount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The discount\'s name.
      * @type {string}
      * @memberof V1Discount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The rate of the discount, as a string representation of a decimal number. A value of 0.07 corresponds to a rate of 7%. This rate is 0 if discount_type is VARIABLE_PERCENTAGE.
      * @type {string}
      * @memberof V1Discount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     rate?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Discount
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     amount_money?: V1Money;
     /**
      * Indicates whether the discount is a FIXED value or entered at the time of sale. See [V1DiscountDiscountType](#type-v1discountdiscounttype) for possible values
      * @type {string}
      * @memberof V1Discount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     discount_type?: string;
     /**
      * Indicates whether a mobile staff member needs to enter their PIN to apply the discount to a payment.
      * @type {boolean}
      * @memberof V1Discount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     pin_required?: boolean;
     /**
      * The color of the discount\'s display label in Square Point of Sale, if not the default color. The default color is 9da2a6. See [V1DiscountColor](#type-v1discountcolor) for possible values
      * @type {string}
      * @memberof V1Discount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     color?: string;
     /**
      * The ID of the CatalogObject in the Connect v2 API. Objects that are shared across multiple locations share the same v2 ID.
      * @type {string}
      * @memberof V1Discount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     v2_id?: string;
 }
 

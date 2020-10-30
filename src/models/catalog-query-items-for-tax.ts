@@ -28,7 +28,7 @@ export class CatalogQueryItemsForTax {
      * @type {Array<string>}
      * @memberof CatalogQueryItemsForTax
      */
-    @Field() 
+    
     tax_ids: Array<string>;
 }
 

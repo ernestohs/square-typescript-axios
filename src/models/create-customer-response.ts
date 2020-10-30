@@ -29,14 +29,15 @@ export class CreateCustomerResponse {
      * @type {Array<Error>}
      * @memberof CreateCustomerResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {Customer}
      * @memberof CreateCustomerResponse
      */
-    @Field(() => Customer) 
+    
+    @Field(() => Customer, { nullable: true })
     customer?: Customer;
 }
 

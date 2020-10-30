@@ -30,126 +30,143 @@ export class CashDrawerShift {
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The shift current state. See [CashDrawerShiftState](#type-cashdrawershiftstate) for possible values
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     state?: string;
     /**
      * The time when the shift began, in ISO 8601 format.
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     opened_at?: string;
     /**
      * The time when the shift ended, in ISO 8601 format.
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ended_at?: string;
     /**
      * The time when the shift was closed, in ISO 8601 format.
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     closed_at?: string;
     /**
      * The IDs of all employees that were logged into Square Point of Sale at any point while the cash drawer shift was open.
      * @type {Array<string>}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
     employee_ids?: Array<string>;
     /**
      * The ID of the employee that started the cash drawer shift.
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     opening_employee_id?: string;
     /**
      * The ID of the employee that ended the cash drawer shift.
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ending_employee_id?: string;
     /**
      * The ID of the employee that closed the cash drawer shift by auditing the cash drawer contents.
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     closing_employee_id?: string;
     /**
      * The free-form text description of a cash drawer by an employee.
      * @type {string}
      * @memberof CashDrawerShift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShift
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     opened_cash_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShift
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     cash_payment_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShift
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     cash_refunds_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShift
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     cash_paid_in_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShift
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     cash_paid_out_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShift
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     expected_cash_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof CashDrawerShift
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     closed_cash_money?: Money;
     /**
      * 
      * @type {CashDrawerDevice}
      * @memberof CashDrawerShift
      */
-    @Field(() => CashDrawerDevice) 
+    
+    @Field(() => CashDrawerDevice, { nullable: true })
     device?: CashDrawerDevice;
 }
 

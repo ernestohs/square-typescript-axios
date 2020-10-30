@@ -28,14 +28,16 @@ export class ListWorkweekConfigsRequest {
      * @type {number}
      * @memberof ListWorkweekConfigsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * Pointer to the next page of Workweek Config results to fetch.
      * @type {string}
      * @memberof ListWorkweekConfigsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

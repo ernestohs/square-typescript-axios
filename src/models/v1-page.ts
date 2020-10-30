@@ -29,28 +29,32 @@ export class V1Page {
      * @type {string}
      * @memberof V1Page
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The page\'s name, if any.
      * @type {string}
      * @memberof V1Page
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The page\'s position in the merchant\'s list of pages. Always an integer between 0 and 6, inclusive.
      * @type {number}
      * @memberof V1Page
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     page_index?: number;
     /**
      * The cells included on the page.
      * @type {Array<V1PageCell>}
      * @memberof V1Page
      */
-    @Field(() => [V1PageCell]) 
+    
+    @Field(() => [V1PageCell], { nullable: true })
     cells?: Array<V1PageCell>;
 }
 

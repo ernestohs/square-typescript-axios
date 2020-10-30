@@ -28,14 +28,16 @@ export class CatalogModifierOverride {
      * @type {string}
      * @memberof CatalogModifierOverride
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     modifier_id: string;
     /**
      * If `true`, this `CatalogModifier` should be selected by default for this `CatalogItem`.
      * @type {boolean}
      * @memberof CatalogModifierOverride
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     on_by_default?: boolean;
 }
 

@@ -29,7 +29,8 @@ export class V1ListTimecardEventsResponse {
      * @type {Array<V1TimecardEvent>}
      * @memberof V1ListTimecardEventsResponse
      */
-    @Field(() => [V1TimecardEvent]) 
+    
+    @Field(() => [V1TimecardEvent], { nullable: true })
     items?: Array<V1TimecardEvent>;
 }
 

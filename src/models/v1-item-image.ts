@@ -28,14 +28,16 @@ export class V1ItemImage {
      * @type {string}
      * @memberof V1ItemImage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The image\'s publicly accessible URL.
      * @type {string}
      * @memberof V1ItemImage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     url?: string;
 }
 

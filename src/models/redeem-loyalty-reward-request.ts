@@ -28,14 +28,16 @@ export class RedeemLoyaltyRewardRequest {
      * @type {string}
      * @memberof RedeemLoyaltyRewardRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * The ID of the `location` where the reward is redeemed.
      * @type {string}
      * @memberof RedeemLoyaltyRewardRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
 }
 

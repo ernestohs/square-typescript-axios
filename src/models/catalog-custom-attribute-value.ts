@@ -28,56 +28,63 @@ export class CatalogCustomAttributeValue {
      * @type {string}
      * @memberof CatalogCustomAttributeValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The string value of the custom attribute.  Populated if `type` = `STRING`.
      * @type {string}
      * @memberof CatalogCustomAttributeValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     string_value?: string;
     /**
      * __Read-only.__ The id of the `CatalogCustomAttributeDefinition` this value belongs to.
      * @type {string}
      * @memberof CatalogCustomAttributeValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     custom_attribute_definition_id?: string;
     /**
      * __Read-only.__ A copy of type from the associated `CatalogCustomAttributeDefinition`. See [CatalogCustomAttributeDefinitionType](#type-catalogcustomattributedefinitiontype) for possible values
      * @type {string}
      * @memberof CatalogCustomAttributeValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * Populated if `type` = `NUMBER`. Contains a string representation of a decimal number, using a `.` as the decimal separator.
      * @type {string}
      * @memberof CatalogCustomAttributeValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     number_value?: string;
     /**
      * A `true` or `false` value. Populated if `type` = `BOOLEAN`.
      * @type {boolean}
      * @memberof CatalogCustomAttributeValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     boolean_value?: boolean;
     /**
      * One or more choices from `allowed_selections`. Populated if `type` = `SELECTION`.
      * @type {Array<string>}
      * @memberof CatalogCustomAttributeValue
      */
-    @Field() 
+    
     selection_uid_values?: Array<string>;
     /**
      * __Read-only.__ A copy of key from the associated `CatalogCustomAttributeDefinition`.
      * @type {string}
      * @memberof CatalogCustomAttributeValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     key?: string;
 }
 

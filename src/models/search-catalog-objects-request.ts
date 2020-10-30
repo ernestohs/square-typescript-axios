@@ -29,49 +29,55 @@ export class SearchCatalogObjectsRequest {
      * @type {string}
      * @memberof SearchCatalogObjectsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * The desired set of object types to appear in the search results. The legal values are taken from the CatalogObjectType enum: `\"ITEM\"`, `\"ITEM_VARIATION\"`, `\"CATEGORY\"`, `\"DISCOUNT\"`, `\"TAX\"`, `\"MODIFIER\"`, or `\"MODIFIER_LIST\"`. See [CatalogObjectType](#type-catalogobjecttype) for possible values
      * @type {Array<string>}
      * @memberof SearchCatalogObjectsRequest
      */
-    @Field() 
+    
     object_types?: Array<string>;
     /**
      * If `true`, deleted objects will be included in the results. Deleted objects will have their `is_deleted` field set to `true`.
      * @type {boolean}
      * @memberof SearchCatalogObjectsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     include_deleted_objects?: boolean;
     /**
      * If `true`, the response will include additional objects that are related to the requested object, as follows:  If a CatalogItem is returned in the object field of the response, its associated CatalogCategory, CatalogTax objects, CatalogImage objects and CatalogModifierList objects will be included in the `related_objects` field of the response.  If a CatalogItemVariation is returned in the object field of the response, its parent CatalogItem will be included in the `related_objects` field of the response.
      * @type {boolean}
      * @memberof SearchCatalogObjectsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     include_related_objects?: boolean;
     /**
      * Return objects modified after this [timestamp](https://developer.squareup.com/docs/build-basics/working-with-dates), in RFC 3339 format, e.g., `2016-09-04T23:59:33.123Z`. The timestamp is exclusive - objects with a timestamp equal to `begin_time` will not be included in the response.
      * @type {string}
      * @memberof SearchCatalogObjectsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     begin_time?: string;
     /**
      * 
      * @type {CatalogQuery}
      * @memberof SearchCatalogObjectsRequest
      */
-    @Field(() => CatalogQuery) 
+    
+    @Field(() => CatalogQuery, { nullable: true })
     query?: CatalogQuery;
     /**
      * A limit on the number of results to be returned in a single page. The limit is advisory - the implementation may return more or fewer results. If the supplied limit is negative, zero, or is higher than the maximum limit of 1,000, it will be ignored.
      * @type {number}
      * @memberof SearchCatalogObjectsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
 }
 

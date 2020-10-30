@@ -29,63 +29,68 @@ export class SearchCatalogItemsRequest {
      * @type {string}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     text_filter?: string;
     /**
      * The category id query expression to return items containing the specified category IDs.
      * @type {Array<string>}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field() 
+    
     category_ids?: Array<string>;
     /**
      * The stock-level query expression to return item variations with the specified stock levels. See [SearchCatalogItemsRequestStockLevel](#type-searchcatalogitemsrequeststocklevel) for possible values
      * @type {Array<string>}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field() 
+    
     stock_levels?: Array<string>;
     /**
      * The enabled-location query expression to return items and item variations having specified enabled locations.
      * @type {Array<string>}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field() 
+    
     enabled_location_ids?: Array<string>;
     /**
      * The pagination token, returned in the previous response, used to fetch the next batch of pending results.
      * @type {string}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * The maximum number of results to return per page. The default value is 100.
      * @type {number}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * The order to sort the results by item names. The default sort order is ascending (`ASC`). See [SortOrder](#type-sortorder) for possible values
      * @type {string}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sort_order?: string;
     /**
      * The product types query expression to return items or item variations having the specified product types. See [CatalogItemProductType](#type-catalogitemproducttype) for possible values
      * @type {Array<string>}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field() 
+    
     product_types?: Array<string>;
     /**
      * The customer-attribute filter to return items or item variations matching the specified custom attribute expressions. A maximum number of 10 custom attribute expressions are supported in a single call to the `SearchCatalogItems` endpoint.
      * @type {Array<CustomAttributeFilter>}
      * @memberof SearchCatalogItemsRequest
      */
-    @Field(() => [CustomAttributeFilter]) 
+    
+    @Field(() => [CustomAttributeFilter], { nullable: true })
     custom_attribute_filters?: Array<CustomAttributeFilter>;
 }
 

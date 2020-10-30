@@ -28,35 +28,40 @@ export class V1TimecardEvent {
      * @type {string}
      * @memberof V1TimecardEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The ID of the timecard to list events for. See [V1TimecardEventEventType](#type-v1timecardeventeventtype) for possible values
      * @type {string}
      * @memberof V1TimecardEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     event_type?: string;
     /**
      * The time the employee clocked in, in ISO 8601 format.
      * @type {string}
      * @memberof V1TimecardEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     clockin_time?: string;
     /**
      * The time the employee clocked out, in ISO 8601 format.
      * @type {string}
      * @memberof V1TimecardEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     clockout_time?: string;
     /**
      * The time when the event was created, in ISO 8601 format.
      * @type {string}
      * @memberof V1TimecardEvent
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
 }
 

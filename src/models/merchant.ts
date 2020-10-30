@@ -28,49 +28,56 @@ export class Merchant {
      * @type {string}
      * @memberof Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The business name of the merchant.
      * @type {string}
      * @memberof Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     business_name?: string;
     /**
      * The country code associated with the merchant account, in ISO 3166 format. See [Country](#type-country) for possible values
      * @type {string}
      * @memberof Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     country: string;
     /**
      * The language code associated with the merchant account, in BCP 47 format.
      * @type {string}
      * @memberof Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     language_code?: string;
     /**
      * The currency associated with the merchant account, in ISO 4217 format. See [Currency](#type-currency) for possible values
      * @type {string}
      * @memberof Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     currency?: string;
     /**
      * The merchant status, active or inactive. See [MerchantStatus](#type-merchantstatus) for possible values
      * @type {string}
      * @memberof Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * The ID of the main `Location` for this merchant.
      * @type {string}
      * @memberof Merchant
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     main_location_id?: string;
 }
 

@@ -30,84 +30,96 @@ export class OrderReturnServiceCharge {
      * @type {string}
      * @memberof OrderReturnServiceCharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * `uid` of the Service Charge from the Order containing the original charge of the service charge. `source_service_charge_uid` is `null` for unlinked returns.
      * @type {string}
      * @memberof OrderReturnServiceCharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     source_service_charge_uid?: string;
     /**
      * The name of the service charge.
      * @type {string}
      * @memberof OrderReturnServiceCharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The catalog object ID of the associated `CatalogServiceCharge`.
      * @type {string}
      * @memberof OrderReturnServiceCharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_object_id?: string;
     /**
      * The percentage of the service charge, as a string representation of a decimal number. For example, a value of `\"7.25\"` corresponds to a percentage of 7.25%.  Exactly one of `percentage` or `amount_money` should be set.
      * @type {string}
      * @memberof OrderReturnServiceCharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     percentage?: string;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnServiceCharge
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     amount_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnServiceCharge
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     applied_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnServiceCharge
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     total_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnServiceCharge
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     total_tax_money?: Money;
     /**
      * The calculation phase after which to apply the service charge. See [OrderServiceChargeCalculationPhase](#type-orderservicechargecalculationphase) for possible values
      * @type {string}
      * @memberof OrderReturnServiceCharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     calculation_phase?: string;
     /**
      * Indicates whether the surcharge can be taxed. Service charges calculated in the `TOTAL_PHASE` cannot be marked as taxable.
      * @type {boolean}
      * @memberof OrderReturnServiceCharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     taxable?: boolean;
     /**
      * The list of references to `OrderReturnTax` entities applied to the `OrderReturnServiceCharge`. Each `OrderLineItemAppliedTax` has a `tax_uid` that references the `uid` of a top-level `OrderReturnTax` that is being applied to the `OrderReturnServiceCharge`. On reads, the amount applied is populated.
      * @type {Array<OrderLineItemAppliedTax>}
      * @memberof OrderReturnServiceCharge
      */
-    @Field(() => [OrderLineItemAppliedTax]) 
+    
+    @Field(() => [OrderLineItemAppliedTax], { nullable: true })
     applied_taxes?: Array<OrderLineItemAppliedTax>;
 }
 

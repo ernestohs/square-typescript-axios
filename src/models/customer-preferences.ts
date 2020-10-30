@@ -28,7 +28,8 @@ export class CustomerPreferences {
      * @type {boolean}
      * @memberof CustomerPreferences
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     email_unsubscribed?: boolean;
 }
 

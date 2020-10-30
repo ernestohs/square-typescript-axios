@@ -30,14 +30,16 @@ export class CustomerQuery {
      * @type {CustomerFilter}
      * @memberof CustomerQuery
      */
-    @Field(() => CustomerFilter) 
+    
+    @Field(() => CustomerFilter, { nullable: true })
     filter?: CustomerFilter;
     /**
      * 
      * @type {CustomerSort}
      * @memberof CustomerQuery
      */
-    @Field(() => CustomerSort) 
+    
+    @Field(() => CustomerSort, { nullable: true })
     sort?: CustomerSort;
 }
 

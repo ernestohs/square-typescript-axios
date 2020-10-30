@@ -29,21 +29,24 @@ export class OrderLineItemAppliedDiscount {
      * @type {string}
      * @memberof OrderLineItemAppliedDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * The `uid` of the discount the applied discount represents. Must reference a discount present in the `order.discounts` field.  This field is immutable. To change which discounts apply to a line item, you must delete the discount and re-add it as a new `OrderLineItemAppliedDiscount`.
      * @type {string}
      * @memberof OrderLineItemAppliedDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     discount_uid: string;
     /**
      * 
      * @type {Money}
      * @memberof OrderLineItemAppliedDiscount
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     applied_money?: Money;
 }
 

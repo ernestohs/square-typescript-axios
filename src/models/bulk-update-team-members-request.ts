@@ -29,7 +29,7 @@ export class BulkUpdateTeamMembersRequest {
      * @type {{ [key: string]: UpdateTeamMemberRequest; }}
      * @memberof BulkUpdateTeamMembersRequest
      */
-    @Field() 
+    
     team_members: { [key: string]: UpdateTeamMemberRequest; };
 }
 

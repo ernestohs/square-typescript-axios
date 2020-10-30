@@ -28,7 +28,8 @@ export class V1MerchantLocationDetails {
      * @type {string}
      * @memberof V1MerchantLocationDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     nickname?: string;
 }
 

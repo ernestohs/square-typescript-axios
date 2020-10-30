@@ -29,14 +29,16 @@ export class CreateBreakTypeRequest {
      * @type {string}
      * @memberof CreateBreakTypeRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
     /**
      * 
      * @type {BreakType}
      * @memberof CreateBreakTypeRequest
      */
-    @Field(() => BreakType) 
+    
+    @Field(() => BreakType, { nullable: false })
     break_type: BreakType;
 }
 

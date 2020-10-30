@@ -28,14 +28,15 @@ export class SearchTeamMembersFilter {
      * @type {Array<string>}
      * @memberof SearchTeamMembersFilter
      */
-    @Field() 
+    
     location_ids?: Array<string>;
     /**
      * When present, filter by team members who match the given status. When empty, include team members of all statuses. See [TeamMemberStatus](#type-teammemberstatus) for possible values
      * @type {string}
      * @memberof SearchTeamMembersFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
 }
 

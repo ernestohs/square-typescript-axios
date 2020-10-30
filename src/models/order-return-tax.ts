@@ -29,56 +29,64 @@ export class OrderReturnTax {
      * @type {string}
      * @memberof OrderReturnTax
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * `uid` of the Tax from the Order which contains the original charge of this tax.
      * @type {string}
      * @memberof OrderReturnTax
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     source_tax_uid?: string;
     /**
      * The catalog object id referencing `CatalogTax`.
      * @type {string}
      * @memberof OrderReturnTax
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_object_id?: string;
     /**
      * The tax\'s name.
      * @type {string}
      * @memberof OrderReturnTax
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * Indicates the calculation method used to apply the tax. See [OrderLineItemTaxType](#type-orderlineitemtaxtype) for possible values
      * @type {string}
      * @memberof OrderReturnTax
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * The percentage of the tax, as a string representation of a decimal number. For example, a value of `\"7.25\"` corresponds to a percentage of 7.25%.
      * @type {string}
      * @memberof OrderReturnTax
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     percentage?: string;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnTax
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     applied_money?: Money;
     /**
      * Indicates the level at which the `OrderReturnTax` applies. For `ORDER` scoped taxes, Square generates references in `applied_taxes` on all `OrderReturnLineItem`s. For `LINE_ITEM` scoped taxes, the tax will only apply to `OrderReturnLineItem`s with references in their `applied_discounts` field. See [OrderLineItemTaxScope](#type-orderlineitemtaxscope) for possible values
      * @type {string}
      * @memberof OrderReturnTax
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     scope?: string;
 }
 

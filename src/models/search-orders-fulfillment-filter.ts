@@ -28,14 +28,14 @@ export class SearchOrdersFulfillmentFilter {
      * @type {Array<string>}
      * @memberof SearchOrdersFulfillmentFilter
      */
-    @Field() 
+    
     fulfillment_types?: Array<string>;
     /**
      * List of `fulfillment states` to filter for. Will return orders if any of its fulfillments match any of the fulfillment states listed in this field. See [OrderFulfillmentState](#type-orderfulfillmentstate) for possible values
      * @type {Array<string>}
      * @memberof SearchOrdersFulfillmentFilter
      */
-    @Field() 
+    
     fulfillment_states?: Array<string>;
 }
 

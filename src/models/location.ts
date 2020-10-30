@@ -31,182 +31,207 @@ export class Location {
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The name of the location. This information appears in the dashboard as the nickname.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * 
      * @type {Address}
      * @memberof Location
      */
-    @Field(() => Address) 
+    
+    @Field(() => Address, { nullable: true })
     address?: Address;
     /**
      * The [IANA Timezone](https://www.iana.org/time-zones) identifier for the timezone of the location.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     timezone?: string;
     /**
      * The Square features that are enabled for the location. See `LocationCapability` for possible values. See [LocationCapability](#type-locationcapability) for possible values
      * @type {Array<string>}
      * @memberof Location
      */
-    @Field() 
+    
     capabilities?: Array<string>;
     /**
      * The status of the location, either active or inactive. See [LocationStatus](#type-locationstatus) for possible values
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * The time when the location was created, in RFC 3339 format.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The ID of the merchant that owns the location.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     merchant_id?: string;
     /**
      * The country of the location, in ISO 3166-1-alpha-2 format.  See `Country` for possible values. See [Country](#type-country) for possible values
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     country?: string;
     /**
      * The language associated with the location, in [BCP 47 format](https://tools.ietf.org/html/bcp47#appendix-A).
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     language_code?: string;
     /**
      * The currency used for all transactions at this location, in ISO 4217 format. See `Currency` for possible values. See [Currency](#type-currency) for possible values
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     currency?: string;
     /**
      * The phone number of the location in human readable format.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     phone_number?: string;
     /**
      * The business name of the location This is the name visible to the customers of the location. For example, this name appears on customer receipts.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     business_name?: string;
     /**
      * The type of the location, either physical or mobile. See [LocationType](#type-locationtype) for possible values
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * The website URL of the location.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     website_url?: string;
     /**
      * 
      * @type {BusinessHours}
      * @memberof Location
      */
-    @Field(() => BusinessHours) 
+    
+    @Field(() => BusinessHours, { nullable: true })
     business_hours?: BusinessHours;
     /**
      * The email of the location. This email is visible to the customers of the location. For example, the email appears on customer receipts.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     business_email?: string;
     /**
      * The description of the location.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
     /**
      * The Twitter username of the location without the \'&#64;\' symbol.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     twitter_username?: string;
     /**
      * The Instagram username of the location without the \'&#64;\' symbol.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     instagram_username?: string;
     /**
      * The Facebook profile URL of the location. The URL should begin with \'facebook.com/\'.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     facebook_url?: string;
     /**
      * 
      * @type {Coordinates}
      * @memberof Location
      */
-    @Field(() => Coordinates) 
+    
+    @Field(() => Coordinates, { nullable: true })
     coordinates?: Coordinates;
     /**
      * The URL of the logo image for the location. The Seller must choose this logo in the Seller dashboard (Receipts section) for the logo to appear on transactions (such as receipts, invoices) that Square generates on behalf of the Seller. This image should have an aspect ratio close to 1:1 and is recommended to be at least 200x200 pixels.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     logo_url?: string;
     /**
      * The URL of the Point of Sale background image for the location.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     pos_background_url?: string;
     /**
      * The merchant category code (MCC) of the location, as standardized by ISO 18245. The MCC describes the kind of goods or services sold at the location.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     mcc?: string;
     /**
      * The URL of a full-format logo image for the location. The Seller must choose this logo in the Seller dashboard (Receipts section) for the logo to appear on transactions (such as receipts, invoices) that Square generates on behalf of the Seller. This image can have an aspect ratio of 2:1 or greater and is recommended to be at least 1280x648 pixels.
      * @type {string}
      * @memberof Location
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     full_format_logo_url?: string;
 }
 

@@ -28,28 +28,32 @@ export class RevokeTokenRequest {
      * @type {string}
      * @memberof RevokeTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     client_id?: string;
     /**
      * The access token of the merchant whose token you want to revoke. Do not provide a value for merchant_id if you provide this parameter.
      * @type {string}
      * @memberof RevokeTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     access_token?: string;
     /**
      * The ID of the merchant whose token you want to revoke. Do not provide a value for access_token if you provide this parameter.
      * @type {string}
      * @memberof RevokeTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     merchant_id?: string;
     /**
      * If `true`, terminate the given single access token, but do not terminate the entire authorization. Default: `false`
      * @type {boolean}
      * @memberof RevokeTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     revoke_only_access_token?: boolean;
 }
 

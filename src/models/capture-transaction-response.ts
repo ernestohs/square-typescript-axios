@@ -28,7 +28,7 @@ export class CaptureTransactionResponse {
      * @type {Array<Error>}
      * @memberof CaptureTransactionResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

@@ -28,21 +28,24 @@ export class V1ListCashDrawerShiftsRequest {
      * @type {string}
      * @memberof V1ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order?: string;
     /**
      * The beginning of the requested reporting period, in ISO 8601 format. Default value: The current time minus 90 days.
      * @type {string}
      * @memberof V1ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     begin_time?: string;
     /**
      * The beginning of the requested reporting period, in ISO 8601 format. Default value: The current time.
      * @type {string}
      * @memberof V1ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_time?: string;
 }
 

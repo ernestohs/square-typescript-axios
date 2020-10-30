@@ -29,21 +29,23 @@ export class RetrieveCatalogObjectResponse {
      * @type {Array<Error>}
      * @memberof RetrieveCatalogObjectResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {CatalogObject}
      * @memberof RetrieveCatalogObjectResponse
      */
-    @Field(() => CatalogObject) 
+    
+    @Field(() => CatalogObject, { nullable: true })
     object?: CatalogObject;
     /**
      * A list of `CatalogObject`s referenced by the object in the `object` field.
      * @type {Array<CatalogObject>}
      * @memberof RetrieveCatalogObjectResponse
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: true })
     related_objects?: Array<CatalogObject>;
 }
 

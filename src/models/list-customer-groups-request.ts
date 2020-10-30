@@ -28,7 +28,8 @@ export class ListCustomerGroupsRequest {
      * @type {string}
      * @memberof ListCustomerGroupsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

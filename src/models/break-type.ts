@@ -28,56 +28,64 @@ export class BreakType {
      * @type {string}
      * @memberof BreakType
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The ID of the business location this type of break applies to.
      * @type {string}
      * @memberof BreakType
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
     /**
      * A human-readable name for this type of break. Will be displayed to employees in Square products.
      * @type {string}
      * @memberof BreakType
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     break_name: string;
     /**
      * Format: RFC-3339 P[n]Y[n]M[n]DT[n]H[n]M[n]S. The expected length of this break. Precision below minutes is truncated.
      * @type {string}
      * @memberof BreakType
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     expected_duration: string;
     /**
      * Whether this break counts towards time worked for compensation purposes.
      * @type {boolean}
      * @memberof BreakType
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     is_paid: boolean;
     /**
      * Used for resolving concurrency issues; request will fail if version provided does not match server version at time of request. If a value is not provided, Square\'s servers execute a \"blind\" write; potentially overwriting another writer\'s data.
      * @type {number}
      * @memberof BreakType
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     version?: number;
     /**
      * A read-only timestamp in RFC 3339 format.
      * @type {string}
      * @memberof BreakType
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * A read-only timestamp in RFC 3339 format.
      * @type {string}
      * @memberof BreakType
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

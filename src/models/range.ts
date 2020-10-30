@@ -28,14 +28,16 @@ export class Range {
      * @type {string}
      * @memberof Range
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     min?: string;
     /**
      * The upper bound of the number range.
      * @type {string}
      * @memberof Range
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     max?: string;
 }
 

@@ -28,21 +28,24 @@ export class CatalogQuerySortedAttribute {
      * @type {string}
      * @memberof CatalogQuerySortedAttribute
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     attribute_name: string;
     /**
      * The first attribute value to be returned by the query. Ascending sorts will return only objects with this value or greater, while descending sorts will return only objects with this value or less. If unset, start at the beginning (for ascending sorts) or end (for descending sorts).
      * @type {string}
      * @memberof CatalogQuerySortedAttribute
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     initial_attribute_value?: string;
     /**
      * The desired sort order, `\"ASC\"` (ascending) or `\"DESC\"` (descending). See [SortOrder](#type-sortorder) for possible values
      * @type {string}
      * @memberof CatalogQuerySortedAttribute
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sort_order?: string;
 }
 

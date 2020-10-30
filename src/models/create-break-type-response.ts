@@ -29,14 +29,15 @@ export class CreateBreakTypeResponse {
      * @type {BreakType}
      * @memberof CreateBreakTypeResponse
      */
-    @Field(() => BreakType) 
+    
+    @Field(() => BreakType, { nullable: true })
     break_type?: BreakType;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof CreateBreakTypeResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

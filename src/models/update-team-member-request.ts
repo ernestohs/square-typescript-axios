@@ -29,7 +29,8 @@ export class UpdateTeamMemberRequest {
      * @type {TeamMember}
      * @memberof UpdateTeamMemberRequest
      */
-    @Field(() => TeamMember) 
+    
+    @Field(() => TeamMember, { nullable: true })
     team_member?: TeamMember;
 }
 

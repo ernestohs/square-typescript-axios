@@ -28,14 +28,16 @@ export class CatalogIdMapping {
      * @type {string}
      * @memberof CatalogIdMapping
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     client_object_id?: string;
     /**
      * The permanent ID for the CatalogObject created by the server.
      * @type {string}
      * @memberof CatalogIdMapping
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     object_id?: string;
 }
 

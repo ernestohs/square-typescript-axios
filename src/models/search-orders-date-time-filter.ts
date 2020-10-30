@@ -29,21 +29,24 @@ export class SearchOrdersDateTimeFilter {
      * @type {TimeRange}
      * @memberof SearchOrdersDateTimeFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     created_at?: TimeRange;
     /**
      * 
      * @type {TimeRange}
      * @memberof SearchOrdersDateTimeFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     updated_at?: TimeRange;
     /**
      * 
      * @type {TimeRange}
      * @memberof SearchOrdersDateTimeFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     closed_at?: TimeRange;
 }
 

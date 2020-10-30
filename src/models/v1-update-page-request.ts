@@ -29,7 +29,8 @@ export class V1UpdatePageRequest {
      * @type {V1Page}
      * @memberof V1UpdatePageRequest
      */
-    @Field(() => V1Page) 
+    
+    @Field(() => V1Page, { nullable: false })
     body: V1Page;
 }
 

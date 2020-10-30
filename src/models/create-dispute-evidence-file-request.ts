@@ -28,21 +28,24 @@ export class CreateDisputeEvidenceFileRequest {
      * @type {string}
      * @memberof CreateDisputeEvidenceFileRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * The type of evidence you are uploading. See [DisputeEvidenceType](#type-disputeevidencetype) for possible values
      * @type {string}
      * @memberof CreateDisputeEvidenceFileRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     evidence_type?: string;
     /**
      * The MIME type of the uploaded file. One of image/heic, image/heif, image/jpeg, application/pdf,  image/png, image/tiff.
      * @type {string}
      * @memberof CreateDisputeEvidenceFileRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     content_type?: string;
 }
 

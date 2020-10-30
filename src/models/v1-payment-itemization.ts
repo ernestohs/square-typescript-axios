@@ -33,98 +33,112 @@ export class V1PaymentItemization {
      * @type {string}
      * @memberof V1PaymentItemization
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The quantity of the item purchased. This can be a decimal value.
      * @type {number}
      * @memberof V1PaymentItemization
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     quantity?: number;
     /**
      * The type of purchase that the itemization represents, such as an ITEM or CUSTOM_AMOUNT See [V1PaymentItemizationItemizationType](#type-v1paymentitemizationitemizationtype) for possible values
      * @type {string}
      * @memberof V1PaymentItemization
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     itemization_type?: string;
     /**
      * 
      * @type {V1PaymentItemDetail}
      * @memberof V1PaymentItemization
      */
-    @Field(() => V1PaymentItemDetail) 
+    
+    @Field(() => V1PaymentItemDetail, { nullable: true })
     item_detail?: V1PaymentItemDetail;
     /**
      * Notes entered by the merchant about the item at the time of payment, if any.
      * @type {string}
      * @memberof V1PaymentItemization
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     notes?: string;
     /**
      * The name of the item variation purchased, if any.
      * @type {string}
      * @memberof V1PaymentItemization
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     item_variation_name?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentItemization
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     total_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentItemization
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     single_quantity_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentItemization
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     gross_sales_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentItemization
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     discount_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentItemization
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     net_sales_money?: V1Money;
     /**
      * All taxes applied to this itemization.
      * @type {Array<V1PaymentTax>}
      * @memberof V1PaymentItemization
      */
-    @Field(() => [V1PaymentTax]) 
+    
+    @Field(() => [V1PaymentTax], { nullable: true })
     taxes?: Array<V1PaymentTax>;
     /**
      * All discounts applied to this itemization.
      * @type {Array<V1PaymentDiscount>}
      * @memberof V1PaymentItemization
      */
-    @Field(() => [V1PaymentDiscount]) 
+    
+    @Field(() => [V1PaymentDiscount], { nullable: true })
     discounts?: Array<V1PaymentDiscount>;
     /**
      * All modifier options applied to this itemization.
      * @type {Array<V1PaymentModifier>}
      * @memberof V1PaymentItemization
      */
-    @Field(() => [V1PaymentModifier]) 
+    
+    @Field(() => [V1PaymentModifier], { nullable: true })
     modifiers?: Array<V1PaymentModifier>;
 }
 

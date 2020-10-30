@@ -29,14 +29,15 @@ export class RetrieveCashDrawerShiftResponse {
      * @type {CashDrawerShift}
      * @memberof RetrieveCashDrawerShiftResponse
      */
-    @Field(() => CashDrawerShift) 
+    
+    @Field(() => CashDrawerShift, { nullable: true })
     cash_drawer_shift?: CashDrawerShift;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof RetrieveCashDrawerShiftResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

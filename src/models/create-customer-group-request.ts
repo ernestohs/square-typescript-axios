@@ -29,14 +29,16 @@ export class CreateCustomerGroupRequest {
      * @type {string}
      * @memberof CreateCustomerGroupRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
     /**
      * 
      * @type {CustomerGroup}
      * @memberof CreateCustomerGroupRequest
      */
-    @Field(() => CustomerGroup) 
+    
+    @Field(() => CustomerGroup, { nullable: false })
     group: CustomerGroup;
 }
 

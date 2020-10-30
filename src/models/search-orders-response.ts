@@ -30,28 +30,31 @@ export class SearchOrdersResponse {
      * @type {Array<OrderEntry>}
      * @memberof SearchOrdersResponse
      */
-    @Field(() => [OrderEntry]) 
+    
+    @Field(() => [OrderEntry], { nullable: true })
     order_entries?: Array<OrderEntry>;
     /**
      * List of `Order` objects that match query conditions. Populated only if `return_entries` in the request is set to `false`.
      * @type {Array<Order>}
      * @memberof SearchOrdersResponse
      */
-    @Field(() => [Order]) 
+    
+    @Field(() => [Order], { nullable: true })
     orders?: Array<Order>;
     /**
      * The pagination cursor to be used in a subsequent request. If unset, this is the final response. See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
      * @type {string}
      * @memberof SearchOrdersResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * `Errors` encountered during the search.
      * @type {Array<Error>}
      * @memberof SearchOrdersResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

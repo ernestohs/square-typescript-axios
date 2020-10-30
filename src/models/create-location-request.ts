@@ -29,7 +29,8 @@ export class CreateLocationRequest {
      * @type {Location}
      * @memberof CreateLocationRequest
      */
-    @Field(() => Location) 
+    
+    @Field(() => Location, { nullable: true })
     location?: Location;
 }
 

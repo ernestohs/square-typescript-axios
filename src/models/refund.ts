@@ -30,70 +30,80 @@ export class Refund {
      * @type {string}
      * @memberof Refund
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     id: string;
     /**
      * The ID of the refund\'s associated location.
      * @type {string}
      * @memberof Refund
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
     /**
      * The ID of the transaction that the refunded tender is part of.
      * @type {string}
      * @memberof Refund
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     transaction_id: string;
     /**
      * The ID of the refunded tender.
      * @type {string}
      * @memberof Refund
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     tender_id: string;
     /**
      * The timestamp for when the refund was created, in RFC 3339 format.
      * @type {string}
      * @memberof Refund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The reason for the refund being issued.
      * @type {string}
      * @memberof Refund
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     reason: string;
     /**
      * 
      * @type {Money}
      * @memberof Refund
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: false })
     amount_money: Money;
     /**
      * The current status of the refund (`PENDING`, `APPROVED`, `REJECTED`, or `FAILED`). See [RefundStatus](#type-refundstatus) for possible values
      * @type {string}
      * @memberof Refund
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     status: string;
     /**
      * 
      * @type {Money}
      * @memberof Refund
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     processing_fee_money?: Money;
     /**
      * Additional recipients (other than the merchant) receiving a portion of this refund. For example, fees assessed on a refund of a purchase by a third party integration.
      * @type {Array<AdditionalRecipient>}
      * @memberof Refund
      */
-    @Field(() => [AdditionalRecipient]) 
+    
+    @Field(() => [AdditionalRecipient], { nullable: true })
     additional_recipients?: Array<AdditionalRecipient>;
 }
 

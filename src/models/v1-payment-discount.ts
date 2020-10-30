@@ -29,21 +29,24 @@ export class V1PaymentDiscount {
      * @type {string}
      * @memberof V1PaymentDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentDiscount
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     applied_money?: V1Money;
     /**
      * The ID of the applied discount, if available. Discounts applied in older versions of Square Register might not have an ID.
      * @type {string}
      * @memberof V1PaymentDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     discount_id?: string;
 }
 

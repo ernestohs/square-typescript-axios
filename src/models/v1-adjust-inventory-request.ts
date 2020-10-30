@@ -28,21 +28,24 @@ export class V1AdjustInventoryRequest {
      * @type {number}
      * @memberof V1AdjustInventoryRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     quantity_delta?: number;
     /**
      * The reason for the inventory adjustment. See [V1AdjustInventoryRequestAdjustmentType](#type-v1adjustinventoryrequestadjustmenttype) for possible values
      * @type {string}
      * @memberof V1AdjustInventoryRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     adjustment_type?: string;
     /**
      * A note about the inventory adjustment.
      * @type {string}
      * @memberof V1AdjustInventoryRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     memo?: string;
 }
 

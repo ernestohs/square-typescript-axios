@@ -28,70 +28,78 @@ export class V1Employee {
      * @type {string}
      * @memberof V1Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The employee\'s first name.
      * @type {string}
      * @memberof V1Employee
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     first_name: string;
     /**
      * The employee\'s last name.
      * @type {string}
      * @memberof V1Employee
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     last_name: string;
     /**
      * The ids of the employee\'s associated roles. Currently, you can specify only one or zero roles per employee.
      * @type {Array<string>}
      * @memberof V1Employee
      */
-    @Field() 
+    
     role_ids?: Array<string>;
     /**
      * The IDs of the locations the employee is allowed to clock in at.
      * @type {Array<string>}
      * @memberof V1Employee
      */
-    @Field() 
+    
     authorized_location_ids?: Array<string>;
     /**
      * The employee\'s email address.
      * @type {string}
      * @memberof V1Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     email?: string;
     /**
      * CWhether the employee is ACTIVE or INACTIVE. Inactive employees cannot sign in to Square Register.Merchants update this field from the Square Dashboard. See [V1EmployeeStatus](#type-v1employeestatus) for possible values
      * @type {string}
      * @memberof V1Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * An ID the merchant can set to associate the employee with an entity in another system.
      * @type {string}
      * @memberof V1Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     external_id?: string;
     /**
      * The time when the employee entity was created, in ISO 8601 format.
      * @type {string}
      * @memberof V1Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The time when the employee entity was most recently updated, in ISO 8601 format.
      * @type {string}
      * @memberof V1Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

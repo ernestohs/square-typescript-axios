@@ -29,21 +29,23 @@ export class RetrieveInventoryChangesResponse {
      * @type {Array<Error>}
      * @memberof RetrieveInventoryChangesResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The set of inventory changes for the requested object and locations.
      * @type {Array<InventoryChange>}
      * @memberof RetrieveInventoryChangesResponse
      */
-    @Field(() => [InventoryChange]) 
+    
+    @Field(() => [InventoryChange], { nullable: true })
     changes?: Array<InventoryChange>;
     /**
      * The pagination cursor to be used in a subsequent request. If unset, this is the final response.  See the [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination) guide for more information.
      * @type {string}
      * @memberof RetrieveInventoryChangesResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

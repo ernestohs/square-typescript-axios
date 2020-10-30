@@ -29,7 +29,8 @@ export class UpdateLocationRequest {
      * @type {Location}
      * @memberof UpdateLocationRequest
      */
-    @Field(() => Location) 
+    
+    @Field(() => Location, { nullable: true })
     location?: Location;
 }
 

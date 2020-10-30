@@ -29,14 +29,15 @@ export class CancelInvoiceResponse {
      * @type {Invoice}
      * @memberof CancelInvoiceResponse
      */
-    @Field(() => Invoice) 
+    
+    @Field(() => Invoice, { nullable: true })
     invoice?: Invoice;
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}
      * @memberof CancelInvoiceResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

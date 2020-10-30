@@ -28,7 +28,8 @@ export class TerminalCheckoutQuerySort {
      * @type {string}
      * @memberof TerminalCheckoutQuerySort
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sort_order?: string;
 }
 

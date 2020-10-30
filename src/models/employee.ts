@@ -28,70 +28,79 @@ export class Employee {
      * @type {string}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The employee\'s first name.
      * @type {string}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     first_name?: string;
     /**
      * The employee\'s last name.
      * @type {string}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     last_name?: string;
     /**
      * The employee\'s email address
      * @type {string}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     email?: string;
     /**
      * The employee\'s phone number in E.164 format, i.e. \"+12125554250\"
      * @type {string}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     phone_number?: string;
     /**
      * A list of location IDs where this employee has access to.
      * @type {Array<string>}
      * @memberof Employee
      */
-    @Field() 
+    
     location_ids?: Array<string>;
     /**
      * Specifies the status of the employees being fetched. See [EmployeeStatus](#type-employeestatus) for possible values
      * @type {string}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * Whether this employee is the owner of the merchant. Each merchant has one owner employee, and that employee has full authority over the account.
      * @type {boolean}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     is_owner?: boolean;
     /**
      * A read-only timestamp in RFC 3339 format.
      * @type {string}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * A read-only timestamp in RFC 3339 format.
      * @type {string}
      * @memberof Employee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

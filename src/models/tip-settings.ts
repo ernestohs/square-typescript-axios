@@ -28,21 +28,24 @@ export class TipSettings {
      * @type {boolean}
      * @memberof TipSettings
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     allow_tipping?: boolean;
     /**
      * Indicates whether tip options should be presented on their own screen before presenting the signature screen during card payment. Defaults to false.
      * @type {boolean}
      * @memberof TipSettings
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     separate_tip_screen?: boolean;
     /**
      * Indicates whether custom tip amounts are allowed during the checkout flow. Defaults to false.
      * @type {boolean}
      * @memberof TipSettings
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     custom_tip_field?: boolean;
 }
 

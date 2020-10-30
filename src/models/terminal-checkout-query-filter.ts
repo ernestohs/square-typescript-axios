@@ -29,21 +29,24 @@ export class TerminalCheckoutQueryFilter {
      * @type {string}
      * @memberof TerminalCheckoutQueryFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     device_id?: string;
     /**
      * 
      * @type {TimeRange}
      * @memberof TerminalCheckoutQueryFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     created_at?: TimeRange;
     /**
      * Filtered results with the desired status of the `TerminalCheckout` Options: PENDING, IN\\_PROGRESS, CANCELED, COMPLETED
      * @type {string}
      * @memberof TerminalCheckoutQueryFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
 }
 

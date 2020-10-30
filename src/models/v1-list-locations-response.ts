@@ -29,7 +29,8 @@ export class V1ListLocationsResponse {
      * @type {Array<V1Merchant>}
      * @memberof V1ListLocationsResponse
      */
-    @Field(() => [V1Merchant]) 
+    
+    @Field(() => [V1Merchant], { nullable: true })
     items?: Array<V1Merchant>;
 }
 

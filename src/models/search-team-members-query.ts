@@ -29,7 +29,8 @@ export class SearchTeamMembersQuery {
      * @type {SearchTeamMembersFilter}
      * @memberof SearchTeamMembersQuery
      */
-    @Field(() => SearchTeamMembersFilter) 
+    
+    @Field(() => SearchTeamMembersFilter, { nullable: true })
     filter?: SearchTeamMembersFilter;
 }
 

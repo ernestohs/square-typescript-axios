@@ -33,119 +33,136 @@ export class OrderReturnLineItem {
      * @type {string}
      * @memberof OrderReturnLineItem
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * `uid` of the LineItem in the original sale Order.
      * @type {string}
      * @memberof OrderReturnLineItem
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     source_line_item_uid?: string;
     /**
      * The name of the line item.
      * @type {string}
      * @memberof OrderReturnLineItem
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The quantity returned, formatted as a decimal number. For example: `\"3\"`.  Line items with a `quantity_unit` can have non-integer quantities. For example: `\"1.70000\"`.
      * @type {string}
      * @memberof OrderReturnLineItem
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     quantity: string;
     /**
      * 
      * @type {OrderQuantityUnit}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => OrderQuantityUnit) 
+    
+    @Field(() => OrderQuantityUnit, { nullable: true })
     quantity_unit?: OrderQuantityUnit;
     /**
      * The note of the returned line item.
      * @type {string}
      * @memberof OrderReturnLineItem
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     note?: string;
     /**
      * The `CatalogItemVariation` id applied to this returned line item.
      * @type {string}
      * @memberof OrderReturnLineItem
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_object_id?: string;
     /**
      * The name of the variation applied to this returned line item.
      * @type {string}
      * @memberof OrderReturnLineItem
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     variation_name?: string;
     /**
      * The `CatalogModifier`s applied to this line item.
      * @type {Array<OrderReturnLineItemModifier>}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => [OrderReturnLineItemModifier]) 
+    
+    @Field(() => [OrderReturnLineItemModifier], { nullable: true })
     return_modifiers?: Array<OrderReturnLineItemModifier>;
     /**
      * The list of references to `OrderReturnTax` entities applied to the returned line item. Each `OrderLineItemAppliedTax` has a `tax_uid` that references the `uid` of a top-level `OrderReturnTax` applied to the returned line item. On reads, the amount applied is populated.
      * @type {Array<OrderLineItemAppliedTax>}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => [OrderLineItemAppliedTax]) 
+    
+    @Field(() => [OrderLineItemAppliedTax], { nullable: true })
     applied_taxes?: Array<OrderLineItemAppliedTax>;
     /**
      * The list of references to `OrderReturnDiscount` entities applied to the returned line item. Each `OrderLineItemAppliedDiscount` has a `discount_uid` that references the `uid` of a top-level `OrderReturnDiscount` applied to the returned line item. On reads, the amount applied is populated.
      * @type {Array<OrderLineItemAppliedDiscount>}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => [OrderLineItemAppliedDiscount]) 
+    
+    @Field(() => [OrderLineItemAppliedDiscount], { nullable: true })
     applied_discounts?: Array<OrderLineItemAppliedDiscount>;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     base_price_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     variation_total_price_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     gross_return_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     total_tax_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     total_discount_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnLineItem
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     total_money?: Money;
 }
 

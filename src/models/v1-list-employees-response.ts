@@ -29,7 +29,8 @@ export class V1ListEmployeesResponse {
      * @type {Array<V1Employee>}
      * @memberof V1ListEmployeesResponse
      */
-    @Field(() => [V1Employee]) 
+    
+    @Field(() => [V1Employee], { nullable: true })
     items?: Array<V1Employee>;
 }
 

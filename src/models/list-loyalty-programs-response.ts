@@ -29,14 +29,15 @@ export class ListLoyaltyProgramsResponse {
      * @type {Array<Error>}
      * @memberof ListLoyaltyProgramsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * A list of `LoyaltyProgram` for the merchant.
      * @type {Array<LoyaltyProgram>}
      * @memberof ListLoyaltyProgramsResponse
      */
-    @Field(() => [LoyaltyProgram]) 
+    
+    @Field(() => [LoyaltyProgram], { nullable: true })
     programs?: Array<LoyaltyProgram>;
 }
 

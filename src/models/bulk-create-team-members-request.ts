@@ -29,7 +29,7 @@ export class BulkCreateTeamMembersRequest {
      * @type {{ [key: string]: CreateTeamMemberRequest; }}
      * @memberof BulkCreateTeamMembersRequest
      */
-    @Field() 
+    
     team_members: { [key: string]: CreateTeamMemberRequest; };
 }
 

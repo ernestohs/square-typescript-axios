@@ -29,14 +29,16 @@ export class CreateTerminalRefundRequest {
      * @type {string}
      * @memberof CreateTerminalRefundRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * 
      * @type {TerminalRefund}
      * @memberof CreateTerminalRefundRequest
      */
-    @Field(() => TerminalRefund) 
+    
+    @Field(() => TerminalRefund, { nullable: true })
     refund?: TerminalRefund;
 }
 

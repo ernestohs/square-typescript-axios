@@ -29,21 +29,23 @@ export class ListDeviceCodesResponse {
      * @type {Array<Error>}
      * @memberof ListDeviceCodesResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The queried DeviceCode.
      * @type {Array<DeviceCode>}
      * @memberof ListDeviceCodesResponse
      */
-    @Field(() => [DeviceCode]) 
+    
+    @Field(() => [DeviceCode], { nullable: true })
     device_codes?: Array<DeviceCode>;
     /**
      * A pagination cursor to retrieve the next set of results for your original query to the endpoint. This value is present only if the request succeeded and additional results are available.  See [Paginating results](#paginatingresults) for more information.
      * @type {string}
      * @memberof ListDeviceCodesResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

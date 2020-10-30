@@ -28,21 +28,24 @@ export class SourceApplication {
      * @type {string}
      * @memberof SourceApplication
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     product?: string;
     /**
      * Read-only Square ID assigned to the application. Only used for `Product` type `EXTERNAL_API`.
      * @type {string}
      * @memberof SourceApplication
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     application_id?: string;
     /**
      * Read-only display name assigned to the application (e.g. `\"Custom Application\"`, `\"Square POS 4.74 for Android\"`).
      * @type {string}
      * @memberof SourceApplication
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
 }
 

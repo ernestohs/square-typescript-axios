@@ -29,21 +29,23 @@ export class ListWorkweekConfigsResponse {
      * @type {Array<WorkweekConfig>}
      * @memberof ListWorkweekConfigsResponse
      */
-    @Field(() => [WorkweekConfig]) 
+    
+    @Field(() => [WorkweekConfig], { nullable: true })
     workweek_configs?: Array<WorkweekConfig>;
     /**
      * Value supplied in the subsequent request to fetch the next page of Employee Wage results.
      * @type {string}
      * @memberof ListWorkweekConfigsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof ListWorkweekConfigsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

@@ -29,14 +29,15 @@ export class RetrieveInventoryAdjustmentResponse {
      * @type {Array<Error>}
      * @memberof RetrieveInventoryAdjustmentResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {InventoryAdjustment}
      * @memberof RetrieveInventoryAdjustmentResponse
      */
-    @Field(() => InventoryAdjustment) 
+    
+    @Field(() => InventoryAdjustment, { nullable: true })
     adjustment?: InventoryAdjustment;
 }
 

@@ -29,21 +29,23 @@ export class SearchLoyaltyAccountsResponse {
      * @type {Array<Error>}
      * @memberof SearchLoyaltyAccountsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The loyalty accounts that met the search criteria,   in order of creation date.
      * @type {Array<LoyaltyAccount>}
      * @memberof SearchLoyaltyAccountsResponse
      */
-    @Field(() => [LoyaltyAccount]) 
+    
+    @Field(() => [LoyaltyAccount], { nullable: true })
     loyalty_accounts?: Array<LoyaltyAccount>;
     /**
      * The pagination cursor to use in a subsequent  request. If empty, this is the final response. For more information,  see [Pagination](https://developer.squareup.com/docs/docs/basics/api101/pagination).
      * @type {string}
      * @memberof SearchLoyaltyAccountsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

@@ -29,14 +29,15 @@ export class BatchRetrieveOrdersResponse {
      * @type {Array<Order>}
      * @memberof BatchRetrieveOrdersResponse
      */
-    @Field(() => [Order]) 
+    
+    @Field(() => [Order], { nullable: true })
     orders?: Array<Order>;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof BatchRetrieveOrdersResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

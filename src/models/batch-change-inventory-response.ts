@@ -29,14 +29,15 @@ export class BatchChangeInventoryResponse {
      * @type {Array<Error>}
      * @memberof BatchChangeInventoryResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The current counts for all objects referenced in the request.
      * @type {Array<InventoryCount>}
      * @memberof BatchChangeInventoryResponse
      */
-    @Field(() => [InventoryCount]) 
+    
+    @Field(() => [InventoryCount], { nullable: true })
     counts?: Array<InventoryCount>;
 }
 

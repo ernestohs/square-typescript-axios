@@ -29,14 +29,16 @@ export class CreateShiftRequest {
      * @type {string}
      * @memberof CreateShiftRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
     /**
      * 
      * @type {Shift}
      * @memberof CreateShiftRequest
      */
-    @Field(() => Shift) 
+    
+    @Field(() => Shift, { nullable: false })
     shift: Shift;
 }
 

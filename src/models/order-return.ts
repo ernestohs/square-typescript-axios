@@ -34,56 +34,64 @@ export class OrderReturn {
      * @type {string}
      * @memberof OrderReturn
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * Order which contains the original sale of these returned line items. This will be unset for unlinked returns.
      * @type {string}
      * @memberof OrderReturn
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     source_order_id?: string;
     /**
      * Collection of line items which are being returned.
      * @type {Array<OrderReturnLineItem>}
      * @memberof OrderReturn
      */
-    @Field(() => [OrderReturnLineItem]) 
+    
+    @Field(() => [OrderReturnLineItem], { nullable: true })
     return_line_items?: Array<OrderReturnLineItem>;
     /**
      * Collection of service charges which are being returned.
      * @type {Array<OrderReturnServiceCharge>}
      * @memberof OrderReturn
      */
-    @Field(() => [OrderReturnServiceCharge]) 
+    
+    @Field(() => [OrderReturnServiceCharge], { nullable: true })
     return_service_charges?: Array<OrderReturnServiceCharge>;
     /**
      * Collection of references to taxes being returned for an order, including the total applied tax amount to be returned. The taxes must reference a top-level tax ID from the source order.
      * @type {Array<OrderReturnTax>}
      * @memberof OrderReturn
      */
-    @Field(() => [OrderReturnTax]) 
+    
+    @Field(() => [OrderReturnTax], { nullable: true })
     return_taxes?: Array<OrderReturnTax>;
     /**
      * Collection of references to discounts being returned for an order, including the total applied discount amount to be returned. The discounts must reference a top-level discount ID from the source order.
      * @type {Array<OrderReturnDiscount>}
      * @memberof OrderReturn
      */
-    @Field(() => [OrderReturnDiscount]) 
+    
+    @Field(() => [OrderReturnDiscount], { nullable: true })
     return_discounts?: Array<OrderReturnDiscount>;
     /**
      * 
      * @type {OrderRoundingAdjustment}
      * @memberof OrderReturn
      */
-    @Field(() => OrderRoundingAdjustment) 
+    
+    @Field(() => OrderRoundingAdjustment, { nullable: true })
     rounding_adjustment?: OrderRoundingAdjustment;
     /**
      * 
      * @type {OrderMoneyAmounts}
      * @memberof OrderReturn
      */
-    @Field(() => OrderMoneyAmounts) 
+    
+    @Field(() => OrderMoneyAmounts, { nullable: true })
     return_amounts?: OrderMoneyAmounts;
 }
 

@@ -29,28 +29,32 @@ export class TeamMemberWage {
      * @type {string}
      * @memberof TeamMemberWage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The `Team Member` that this wage is assigned to.
      * @type {string}
      * @memberof TeamMemberWage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     team_member_id?: string;
     /**
      * The job title that this wage relates to.
      * @type {string}
      * @memberof TeamMemberWage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     title?: string;
     /**
      * 
      * @type {Money}
      * @memberof TeamMemberWage
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     hourly_rate?: Money;
 }
 

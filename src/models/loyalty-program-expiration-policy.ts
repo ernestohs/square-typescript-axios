@@ -28,7 +28,8 @@ export class LoyaltyProgramExpirationPolicy {
      * @type {string}
      * @memberof LoyaltyProgramExpirationPolicy
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     expiration_duration: string;
 }
 

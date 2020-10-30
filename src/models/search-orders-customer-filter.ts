@@ -28,7 +28,7 @@ export class SearchOrdersCustomerFilter {
      * @type {Array<string>}
      * @memberof SearchOrdersCustomerFilter
      */
-    @Field() 
+    
     customer_ids?: Array<string>;
 }
 

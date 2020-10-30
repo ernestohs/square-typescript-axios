@@ -29,7 +29,8 @@ export class V1UpdateEmployeeRequest {
      * @type {V1Employee}
      * @memberof V1UpdateEmployeeRequest
      */
-    @Field(() => V1Employee) 
+    
+    @Field(() => V1Employee, { nullable: false })
     body: V1Employee;
 }
 

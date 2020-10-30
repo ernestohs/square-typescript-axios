@@ -29,7 +29,8 @@ export class CatalogObjectBatch {
      * @type {Array<CatalogObject>}
      * @memberof CatalogObjectBatch
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: false })
     objects: Array<CatalogObject>;
 }
 

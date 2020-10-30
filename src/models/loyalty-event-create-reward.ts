@@ -28,21 +28,24 @@ export class LoyaltyEventCreateReward {
      * @type {string}
      * @memberof LoyaltyEventCreateReward
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     loyalty_program_id: string;
     /**
      * The Square-assigned ID of the created `loyalty reward`. This field is returned only if the event source is `LOYALTY_API`.
      * @type {string}
      * @memberof LoyaltyEventCreateReward
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reward_id?: string;
     /**
      * The loyalty points used to create the reward.
      * @type {number}
      * @memberof LoyaltyEventCreateReward
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     points: number;
 }
 

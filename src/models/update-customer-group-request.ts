@@ -29,7 +29,8 @@ export class UpdateCustomerGroupRequest {
      * @type {CustomerGroup}
      * @memberof UpdateCustomerGroupRequest
      */
-    @Field(() => CustomerGroup) 
+    
+    @Field(() => CustomerGroup, { nullable: false })
     group: CustomerGroup;
 }
 

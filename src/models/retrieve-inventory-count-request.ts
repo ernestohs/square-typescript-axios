@@ -28,14 +28,16 @@ export class RetrieveInventoryCountRequest {
      * @type {string}
      * @memberof RetrieveInventoryCountRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_ids?: string;
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for the original query.  See the [Pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination) guide for more information.
      * @type {string}
      * @memberof RetrieveInventoryCountRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

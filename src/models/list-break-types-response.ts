@@ -29,21 +29,23 @@ export class ListBreakTypesResponse {
      * @type {Array<BreakType>}
      * @memberof ListBreakTypesResponse
      */
-    @Field(() => [BreakType]) 
+    
+    @Field(() => [BreakType], { nullable: true })
     break_types?: Array<BreakType>;
     /**
      * Value supplied in the subsequent request to fetch the next next page of Break Type results.
      * @type {string}
      * @memberof ListBreakTypesResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof ListBreakTypesResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

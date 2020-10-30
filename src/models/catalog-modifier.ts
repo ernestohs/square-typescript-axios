@@ -29,28 +29,32 @@ export class CatalogModifier {
      * @type {string}
      * @memberof CatalogModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * 
      * @type {Money}
      * @memberof CatalogModifier
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     price_money?: Money;
     /**
      * Determines where this `CatalogModifier` appears in the `CatalogModifierList`.
      * @type {number}
      * @memberof CatalogModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ordinal?: number;
     /**
      * The ID of the `CatalogModifierList` associated with this modifier.
      * @type {string}
      * @memberof CatalogModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     modifier_list_id?: string;
 }
 

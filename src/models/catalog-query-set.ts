@@ -28,14 +28,15 @@ export class CatalogQuerySet {
      * @type {string}
      * @memberof CatalogQuerySet
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     attribute_name: string;
     /**
      * The desired values of the search attribute. Matching of the attribute values is exact and case insensitive. A maximum of 250 values may be searched in a request.
      * @type {Array<string>}
      * @memberof CatalogQuerySet
      */
-    @Field() 
+    
     attribute_values: Array<string>;
 }
 

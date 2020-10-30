@@ -29,14 +29,16 @@ export class CalculateLoyaltyPointsRequest {
      * @type {string}
      * @memberof CalculateLoyaltyPointsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order_id?: string;
     /**
      * 
      * @type {Money}
      * @memberof CalculateLoyaltyPointsRequest
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     transaction_amount_money?: Money;
 }
 

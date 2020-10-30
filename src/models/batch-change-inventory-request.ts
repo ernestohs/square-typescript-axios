@@ -29,21 +29,24 @@ export class BatchChangeInventoryRequest {
      * @type {string}
      * @memberof BatchChangeInventoryRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
     /**
      * The set of physical counts and inventory adjustments to be made. Changes are applied based on the client-supplied timestamp and may be sent out of order.
      * @type {Array<InventoryChange>}
      * @memberof BatchChangeInventoryRequest
      */
-    @Field(() => [InventoryChange]) 
+    
+    @Field(() => [InventoryChange], { nullable: true })
     changes?: Array<InventoryChange>;
     /**
      * Indicates whether the current physical count should be ignored if the quantity is unchanged since the last physical count. Default: `true`.
      * @type {boolean}
      * @memberof BatchChangeInventoryRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ignore_unchanged_counts?: boolean;
 }
 

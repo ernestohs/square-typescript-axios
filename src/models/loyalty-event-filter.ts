@@ -33,35 +33,40 @@ export class LoyaltyEventFilter {
      * @type {LoyaltyEventLoyaltyAccountFilter}
      * @memberof LoyaltyEventFilter
      */
-    @Field(() => LoyaltyEventLoyaltyAccountFilter) 
+    
+    @Field(() => LoyaltyEventLoyaltyAccountFilter, { nullable: true })
     loyalty_account_filter?: LoyaltyEventLoyaltyAccountFilter;
     /**
      * 
      * @type {LoyaltyEventTypeFilter}
      * @memberof LoyaltyEventFilter
      */
-    @Field(() => LoyaltyEventTypeFilter) 
+    
+    @Field(() => LoyaltyEventTypeFilter, { nullable: true })
     type_filter?: LoyaltyEventTypeFilter;
     /**
      * 
      * @type {LoyaltyEventDateTimeFilter}
      * @memberof LoyaltyEventFilter
      */
-    @Field(() => LoyaltyEventDateTimeFilter) 
+    
+    @Field(() => LoyaltyEventDateTimeFilter, { nullable: true })
     date_time_filter?: LoyaltyEventDateTimeFilter;
     /**
      * 
      * @type {LoyaltyEventLocationFilter}
      * @memberof LoyaltyEventFilter
      */
-    @Field(() => LoyaltyEventLocationFilter) 
+    
+    @Field(() => LoyaltyEventLocationFilter, { nullable: true })
     location_filter?: LoyaltyEventLocationFilter;
     /**
      * 
      * @type {LoyaltyEventOrderFilter}
      * @memberof LoyaltyEventFilter
      */
-    @Field(() => LoyaltyEventOrderFilter) 
+    
+    @Field(() => LoyaltyEventOrderFilter, { nullable: true })
     order_filter?: LoyaltyEventOrderFilter;
 }
 

@@ -29,7 +29,8 @@ export class V1CreateItemRequest {
      * @type {V1Item}
      * @memberof V1CreateItemRequest
      */
-    @Field(() => V1Item) 
+    
+    @Field(() => V1Item, { nullable: true })
     body?: V1Item;
 }
 

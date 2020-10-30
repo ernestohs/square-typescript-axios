@@ -28,14 +28,14 @@ export class InvoiceFilter {
      * @type {Array<string>}
      * @memberof InvoiceFilter
      */
-    @Field() 
+    
     location_ids: Array<string>;
     /**
      * Limits the search to the specified customers, within the specified locations.  Specifying a customer is optional. In the current implementation,  a maximum of one customer can be specified.
      * @type {Array<string>}
      * @memberof InvoiceFilter
      */
-    @Field() 
+    
     customer_ids?: Array<string>;
 }
 

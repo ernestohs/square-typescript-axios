@@ -29,14 +29,16 @@ export class CreateDeviceCodeRequest {
      * @type {string}
      * @memberof CreateDeviceCodeRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * 
      * @type {DeviceCode}
      * @memberof CreateDeviceCodeRequest
      */
-    @Field(() => DeviceCode) 
+    
+    @Field(() => DeviceCode, { nullable: false })
     device_code: DeviceCode;
 }
 

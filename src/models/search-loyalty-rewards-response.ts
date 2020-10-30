@@ -29,21 +29,23 @@ export class SearchLoyaltyRewardsResponse {
      * @type {Array<Error>}
      * @memberof SearchLoyaltyRewardsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The loyalty rewards that satisfy the search criteria. These are returned in descending order by `updated_at`.
      * @type {Array<LoyaltyReward>}
      * @memberof SearchLoyaltyRewardsResponse
      */
-    @Field(() => [LoyaltyReward]) 
+    
+    @Field(() => [LoyaltyReward], { nullable: true })
     rewards?: Array<LoyaltyReward>;
     /**
      * The pagination cursor to be used in a subsequent  request. If empty, this is the final response.
      * @type {string}
      * @memberof SearchLoyaltyRewardsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

@@ -28,14 +28,16 @@ export class Money {
      * @type {number}
      * @memberof Money
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     amount?: number;
     /**
      * The type of currency, in __ISO 4217 format__. For example, the currency code for US dollars is `USD`.  See `Currency` for possible values. See [Currency](#type-currency) for possible values
      * @type {string}
      * @memberof Money
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     currency?: string;
 }
 

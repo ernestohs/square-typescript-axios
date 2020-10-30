@@ -28,7 +28,7 @@ export class CatalogQueryText {
      * @type {Array<string>}
      * @memberof CatalogQueryText
      */
-    @Field() 
+    
     keywords: Array<string>;
 }
 

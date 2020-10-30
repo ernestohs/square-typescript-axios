@@ -28,7 +28,7 @@ export class LoyaltyEventLocationFilter {
      * @type {Array<string>}
      * @memberof LoyaltyEventLocationFilter
      */
-    @Field() 
+    
     location_ids: Array<string>;
 }
 

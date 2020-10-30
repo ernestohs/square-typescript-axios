@@ -30,49 +30,53 @@ export class ShiftFilter {
      * @type {Array<string>}
      * @memberof ShiftFilter
      */
-    @Field() 
+    
     location_ids: Array<string>;
     /**
      * Fetch shifts for the specified employees. DEPRECATED at version 2020-08-26. Use `team_member_ids` instead
      * @type {Array<string>}
      * @memberof ShiftFilter
      */
-    @Field() 
+    
     employee_ids?: Array<string>;
     /**
      * Fetch a `Shift` instance by `Shift.status`. See [ShiftFilterStatus](#type-shiftfilterstatus) for possible values
      * @type {string}
      * @memberof ShiftFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * 
      * @type {TimeRange}
      * @memberof ShiftFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     start?: TimeRange;
     /**
      * 
      * @type {TimeRange}
      * @memberof ShiftFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     end?: TimeRange;
     /**
      * 
      * @type {ShiftWorkday}
      * @memberof ShiftFilter
      */
-    @Field(() => ShiftWorkday) 
+    
+    @Field(() => ShiftWorkday, { nullable: true })
     workday?: ShiftWorkday;
     /**
      * Fetch shifts for the specified team members. Replaced `employee_ids` at version \"2020-08-26\"
      * @type {Array<string>}
      * @memberof ShiftFilter
      */
-    @Field() 
+    
     team_member_ids: Array<string>;
 }
 

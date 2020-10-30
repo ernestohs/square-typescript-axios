@@ -28,84 +28,96 @@ export class V1Timecard {
      * @type {string}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The ID of the employee the timecard is associated with.
      * @type {string}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     employee_id: string;
     /**
      * If true, the timecard was deleted by the merchant, and it is no longer valid.
      * @type {boolean}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     deleted?: boolean;
     /**
      * The clock-in time for the timecard, in ISO 8601 format.
      * @type {string}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     clockin_time?: string;
     /**
      * The clock-out time for the timecard, in ISO 8601 format. Provide this value only if importing timecard information from another system.
      * @type {string}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     clockout_time?: string;
     /**
      * The ID of the location the employee clocked in from. We strongly reccomend providing a clockin_location_id. Square uses the clockin_location_id to determine a timecard’s timezone and overtime rules.
      * @type {string}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     clockin_location_id?: string;
     /**
      * The ID of the location the employee clocked out from. Provide this value only if importing timecard information from another system.
      * @type {string}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     clockout_location_id?: string;
     /**
      * The time when the timecard was created, in ISO 8601 format.
      * @type {string}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The time when the timecard was most recently updated, in ISO 8601 format.
      * @type {string}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
     /**
      * The total number of regular (non-overtime) seconds worked in the timecard.
      * @type {number}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     regular_seconds_worked?: number;
     /**
      * The total number of overtime seconds worked in the timecard.
      * @type {number}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     overtime_seconds_worked?: number;
     /**
      * The total number of doubletime seconds worked in the timecard.
      * @type {number}
      * @memberof V1Timecard
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     doubletime_seconds_worked?: number;
 }
 

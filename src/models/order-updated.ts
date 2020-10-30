@@ -28,42 +28,48 @@ export class OrderUpdated {
      * @type {string}
      * @memberof OrderUpdated
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order_id?: string;
     /**
      * Version number which is incremented each time an update is committed to the order. Orders that were not created through the API will not include a version and thus cannot be updated.  [Read more about working with versions](https://developer.squareup.com/docs/docs/orders-api/manage-orders#update-orders)
      * @type {number}
      * @memberof OrderUpdated
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     version?: number;
     /**
      * The ID of the merchant location this order is associated with.
      * @type {string}
      * @memberof OrderUpdated
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * The state of the order. See [OrderState](#type-orderstate) for possible values
      * @type {string}
      * @memberof OrderUpdated
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     state?: string;
     /**
      * Timestamp for when the order was created in RFC 3339 format.
      * @type {string}
      * @memberof OrderUpdated
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * Timestamp for when the order was last updated in RFC 3339 format.
      * @type {string}
      * @memberof OrderUpdated
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

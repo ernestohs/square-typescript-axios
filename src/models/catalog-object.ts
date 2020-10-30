@@ -47,196 +47,221 @@ export class CatalogObject {
      * @type {string}
      * @memberof CatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     type: string;
     /**
      * An identifier to reference this object in the catalog. When a new `CatalogObject` is inserted, the client should set the id to a temporary identifier starting with a \"`#`\" character. Other objects being inserted or updated within the same request may use this identifier to refer to the new object.  When the server receives the new object, it will supply a unique identifier that replaces the temporary identifier for all future references.
      * @type {string}
      * @memberof CatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     id: string;
     /**
      * Last modification [timestamp](https://developer.squareup.com/docs/build-basics/working-with-dates) in RFC 3339 format, e.g., `\"2016-08-15T23:59:33.123Z\"` would indicate the UTC time (denoted by `Z`) of August 15, 2016 at 23:59:33 and 123 milliseconds.
      * @type {string}
      * @memberof CatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
     /**
      * The version of the object. When updating an object, the version supplied must match the version in the database, otherwise the write will be rejected as conflicting.
      * @type {number}
      * @memberof CatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     version?: number;
     /**
      * If `true`, the object has been deleted from the database. Must be `false` for new objects being inserted. When deleted, the `updated_at` field will equal the deletion time.
      * @type {boolean}
      * @memberof CatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     is_deleted?: boolean;
     /**
      * A map (key-value pairs) of application-defined custom attribute values. The value of a key-value pair is a `CatalogCustomAttributeValue` object. The key is the `key` attribute value defined in the associated `CatalogCustomAttributeDefinition` object defined by the application making the request.  If the `CatalogCustomAttributeDefinition` object is defined by another application, the `CatalogCustomAttributeDefinition`\'s key attribute value is prefixed by the defining application ID. For example, if the `CatalogCustomAttributeDefinition` has a `key` attribute of `\"cocoa_brand\"` and the defining application ID is `\"abcd1234\"`, the key in the map is `\"abcd1234:cocoa_brand\"` if the application making the request is different from the application defining the custom attribute definition. Otherwise, the key used in the map is simply `\"cocoa_brand\"`.  Application-defined custom attributes that are set at a global (location-independent) level. Custom attribute values are intended to store additional information about a catalog object or associations with an entity in another system. Do not use custom attributes to store any sensitive information (personally identifiable information, card details, etc.).
      * @type {{ [key: string]: CatalogCustomAttributeValue; }}
      * @memberof CatalogObject
      */
-    @Field() 
+    
     custom_attribute_values?: { [key: string]: CatalogCustomAttributeValue; };
     /**
      * The Connect v1 IDs for this object at each location where it is present, where they differ from the object\'s Connect V2 ID. The field will only be present for objects that have been created or modified by legacy APIs.
      * @type {Array<CatalogV1Id>}
      * @memberof CatalogObject
      */
-    @Field(() => [CatalogV1Id]) 
+    
+    @Field(() => [CatalogV1Id], { nullable: true })
     catalog_v1_ids?: Array<CatalogV1Id>;
     /**
      * If `true`, this object is present at all locations (including future locations), except where specified in the `absent_at_location_ids` field. If `false`, this object is not present at any locations (including future locations), except where specified in the `present_at_location_ids` field. If not specified, defaults to `true`.
      * @type {boolean}
      * @memberof CatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     present_at_all_locations?: boolean;
     /**
      * A list of locations where the object is present, even if `present_at_all_locations` is `false`.
      * @type {Array<string>}
      * @memberof CatalogObject
      */
-    @Field() 
+    
     present_at_location_ids?: Array<string>;
     /**
      * A list of locations where the object is not present, even if `present_at_all_locations` is `true`.
      * @type {Array<string>}
      * @memberof CatalogObject
      */
-    @Field() 
+    
     absent_at_location_ids?: Array<string>;
     /**
      * Identifies the `CatalogImage` attached to this `CatalogObject`.
      * @type {string}
      * @memberof CatalogObject
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     image_id?: string;
     /**
      * 
      * @type {CatalogItem}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogItem) 
+    
+    @Field(() => CatalogItem, { nullable: true })
     item_data?: CatalogItem;
     /**
      * 
      * @type {CatalogCategory}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogCategory) 
+    
+    @Field(() => CatalogCategory, { nullable: true })
     category_data?: CatalogCategory;
     /**
      * 
      * @type {CatalogItemVariation}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogItemVariation) 
+    
+    @Field(() => CatalogItemVariation, { nullable: true })
     item_variation_data?: CatalogItemVariation;
     /**
      * 
      * @type {CatalogTax}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogTax) 
+    
+    @Field(() => CatalogTax, { nullable: true })
     tax_data?: CatalogTax;
     /**
      * 
      * @type {CatalogDiscount}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogDiscount) 
+    
+    @Field(() => CatalogDiscount, { nullable: true })
     discount_data?: CatalogDiscount;
     /**
      * 
      * @type {CatalogModifierList}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogModifierList) 
+    
+    @Field(() => CatalogModifierList, { nullable: true })
     modifier_list_data?: CatalogModifierList;
     /**
      * 
      * @type {CatalogModifier}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogModifier) 
+    
+    @Field(() => CatalogModifier, { nullable: true })
     modifier_data?: CatalogModifier;
     /**
      * 
      * @type {CatalogTimePeriod}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogTimePeriod) 
+    
+    @Field(() => CatalogTimePeriod, { nullable: true })
     time_period_data?: CatalogTimePeriod;
     /**
      * 
      * @type {CatalogProductSet}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogProductSet) 
+    
+    @Field(() => CatalogProductSet, { nullable: true })
     product_set_data?: CatalogProductSet;
     /**
      * 
      * @type {CatalogPricingRule}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogPricingRule) 
+    
+    @Field(() => CatalogPricingRule, { nullable: true })
     pricing_rule_data?: CatalogPricingRule;
     /**
      * 
      * @type {CatalogImage}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogImage) 
+    
+    @Field(() => CatalogImage, { nullable: true })
     image_data?: CatalogImage;
     /**
      * 
      * @type {CatalogMeasurementUnit}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogMeasurementUnit) 
+    
+    @Field(() => CatalogMeasurementUnit, { nullable: true })
     measurement_unit_data?: CatalogMeasurementUnit;
     /**
      * 
      * @type {CatalogSubscriptionPlan}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogSubscriptionPlan) 
+    
+    @Field(() => CatalogSubscriptionPlan, { nullable: true })
     subscription_plan_data?: CatalogSubscriptionPlan;
     /**
      * 
      * @type {CatalogItemOption}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogItemOption) 
+    
+    @Field(() => CatalogItemOption, { nullable: true })
     item_option_data?: CatalogItemOption;
     /**
      * 
      * @type {CatalogItemOptionValue}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogItemOptionValue) 
+    
+    @Field(() => CatalogItemOptionValue, { nullable: true })
     item_option_value_data?: CatalogItemOptionValue;
     /**
      * 
      * @type {CatalogCustomAttributeDefinition}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogCustomAttributeDefinition) 
+    
+    @Field(() => CatalogCustomAttributeDefinition, { nullable: true })
     custom_attribute_definition_data?: CatalogCustomAttributeDefinition;
     /**
      * 
      * @type {CatalogQuickAmountsSettings}
      * @memberof CatalogObject
      */
-    @Field(() => CatalogQuickAmountsSettings) 
+    
+    @Field(() => CatalogQuickAmountsSettings, { nullable: true })
     quick_amounts_settings_data?: CatalogQuickAmountsSettings;
 }
 

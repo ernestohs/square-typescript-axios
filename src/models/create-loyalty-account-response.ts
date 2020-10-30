@@ -29,14 +29,15 @@ export class CreateLoyaltyAccountResponse {
      * @type {Array<Error>}
      * @memberof CreateLoyaltyAccountResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {LoyaltyAccount}
      * @memberof CreateLoyaltyAccountResponse
      */
-    @Field(() => LoyaltyAccount) 
+    
+    @Field(() => LoyaltyAccount, { nullable: true })
     loyalty_account?: LoyaltyAccount;
 }
 

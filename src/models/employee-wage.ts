@@ -29,28 +29,32 @@ export class EmployeeWage {
      * @type {string}
      * @memberof EmployeeWage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The `Employee` that this wage is assigned to.
      * @type {string}
      * @memberof EmployeeWage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     employee_id?: string;
     /**
      * The job title that this wage relates to.
      * @type {string}
      * @memberof EmployeeWage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     title?: string;
     /**
      * 
      * @type {Money}
      * @memberof EmployeeWage
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     hourly_rate?: Money;
 }
 

@@ -28,14 +28,16 @@ export class CustomerGroupInfo {
      * @type {string}
      * @memberof CustomerGroupInfo
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     id: string;
     /**
      * The name of the Customer Group.
      * @type {string}
      * @memberof CustomerGroupInfo
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     name: string;
 }
 

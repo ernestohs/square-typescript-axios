@@ -29,21 +29,23 @@ export class SearchCustomersResponse {
      * @type {Array<Error>}
      * @memberof SearchCustomersResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * An array of `Customer` objects that match a query.
      * @type {Array<Customer>}
      * @memberof SearchCustomersResponse
      */
-    @Field(() => [Customer]) 
+    
+    @Field(() => [Customer], { nullable: true })
     customers?: Array<Customer>;
     /**
      * A pagination cursor that can be used during subsequent calls to SearchCustomers to retrieve the next set of results associated with the original query. Pagination cursors are only present when a request succeeds and additional results are available.  See the [Pagination guide](https://developer.squareup.com/docs/working-with-apis/pagination) for more information.
      * @type {string}
      * @memberof SearchCustomersResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

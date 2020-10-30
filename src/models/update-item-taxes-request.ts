@@ -28,21 +28,21 @@ export class UpdateItemTaxesRequest {
      * @type {Array<string>}
      * @memberof UpdateItemTaxesRequest
      */
-    @Field() 
+    
     item_ids: Array<string>;
     /**
      * IDs of the CatalogTax objects to enable.
      * @type {Array<string>}
      * @memberof UpdateItemTaxesRequest
      */
-    @Field() 
+    
     taxes_to_enable?: Array<string>;
     /**
      * IDs of the CatalogTax objects to disable.
      * @type {Array<string>}
      * @memberof UpdateItemTaxesRequest
      */
-    @Field() 
+    
     taxes_to_disable?: Array<string>;
 }
 

@@ -29,7 +29,8 @@ export class V1CreatePageRequest {
      * @type {V1Page}
      * @memberof V1CreatePageRequest
      */
-    @Field(() => V1Page) 
+    
+    @Field(() => V1Page, { nullable: true })
     body?: V1Page;
 }
 

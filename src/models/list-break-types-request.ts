@@ -28,21 +28,24 @@ export class ListBreakTypesRequest {
      * @type {string}
      * @memberof ListBreakTypesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * Maximum number of Break Types to return per page. Can range between 1 and 200. The default is the maximum at 200.
      * @type {number}
      * @memberof ListBreakTypesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * Pointer to the next page of Break Type results to fetch.
      * @type {string}
      * @memberof ListBreakTypesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

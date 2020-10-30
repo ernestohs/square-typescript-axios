@@ -29,21 +29,24 @@ export class OrderRoundingAdjustment {
      * @type {string}
      * @memberof OrderRoundingAdjustment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * The name of the rounding adjustment from the original sale Order.
      * @type {string}
      * @memberof OrderRoundingAdjustment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * 
      * @type {Money}
      * @memberof OrderRoundingAdjustment
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     amount_money?: Money;
 }
 

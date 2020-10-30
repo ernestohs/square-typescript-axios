@@ -28,14 +28,16 @@ export class V1UpdateModifierListRequest {
      * @type {string}
      * @memberof V1UpdateModifierListRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * Indicates whether multiple options from the modifier list can be applied to a single item. See [V1UpdateModifierListRequestSelectionType](#type-v1updatemodifierlistrequestselectiontype) for possible values
      * @type {string}
      * @memberof V1UpdateModifierListRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     selection_type?: string;
 }
 

@@ -29,21 +29,23 @@ export class SearchInvoicesResponse {
      * @type {Array<Invoice>}
      * @memberof SearchInvoicesResponse
      */
-    @Field(() => [Invoice]) 
+    
+    @Field(() => [Invoice], { nullable: true })
     invoices?: Array<Invoice>;
     /**
      * When a response is truncated, it includes a cursor that you can use in a  subsequent request to fetch the next set of invoices. If empty, this is the final  response.  For more information, see [Pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination).
      * @type {string}
      * @memberof SearchInvoicesResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}
      * @memberof SearchInvoicesResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

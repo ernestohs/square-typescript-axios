@@ -29,7 +29,8 @@ export class BusinessHours {
      * @type {Array<BusinessHoursPeriod>}
      * @memberof BusinessHours
      */
-    @Field(() => [BusinessHoursPeriod]) 
+    
+    @Field(() => [BusinessHoursPeriod], { nullable: true })
     periods?: Array<BusinessHoursPeriod>;
 }
 

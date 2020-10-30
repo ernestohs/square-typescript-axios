@@ -29,14 +29,15 @@ export class UpdateInvoiceResponse {
      * @type {Invoice}
      * @memberof UpdateInvoiceResponse
      */
-    @Field(() => Invoice) 
+    
+    @Field(() => Invoice, { nullable: true })
     invoice?: Invoice;
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}
      * @memberof UpdateInvoiceResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

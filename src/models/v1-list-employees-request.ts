@@ -28,63 +28,72 @@ export class V1ListEmployeesRequest {
      * @type {string}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order?: string;
     /**
      * If filtering results by their updated_at field, the beginning of the requested reporting period, in ISO 8601 format
      * @type {string}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     begin_updated_at?: string;
     /**
      * If filtering results by there updated_at field, the end of the requested reporting period, in ISO 8601 format.
      * @type {string}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_updated_at?: string;
     /**
      * If filtering results by their created_at field, the beginning of the requested reporting period, in ISO 8601 format.
      * @type {string}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     begin_created_at?: string;
     /**
      * If filtering results by their created_at field, the end of the requested reporting period, in ISO 8601 format.
      * @type {string}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_created_at?: string;
     /**
      * If provided, the endpoint returns only employee entities with the specified status (ACTIVE or INACTIVE). See [V1ListEmployeesRequestStatus](#type-v1listemployeesrequeststatus) for possible values
      * @type {string}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * If provided, the endpoint returns only employee entities with the specified external_id.
      * @type {string}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     external_id?: string;
     /**
      * The maximum integer number of employee entities to return in a single response. Default 100, maximum 200.
      * @type {number}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * A pagination cursor to retrieve the next set of results for your original query to the endpoint.
      * @type {string}
      * @memberof V1ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     batch_token?: string;
 }
 

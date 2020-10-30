@@ -28,42 +28,48 @@ export class RenewTokenResponse {
      * @type {string}
      * @memberof RenewTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     access_token?: string;
     /**
      * This value is always _bearer_.
      * @type {string}
      * @memberof RenewTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     token_type?: string;
     /**
      * The date when access_token expires, in [ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm) format.
      * @type {string}
      * @memberof RenewTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     expires_at?: string;
     /**
      * The ID of the authorizing merchant\'s business.
      * @type {string}
      * @memberof RenewTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     merchant_id?: string;
     /**
      * __LEGACY FIELD__. The ID of the merchant subscription associated with the authorization. Only present if the merchant signed up for a subscription during authorization..
      * @type {string}
      * @memberof RenewTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     subscription_id?: string;
     /**
      * __LEGACY FIELD__. The ID of the subscription plan the merchant signed up for. Only present if the merchant signed up for a subscription during authorization.
      * @type {string}
      * @memberof RenewTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     plan_id?: string;
 }
 

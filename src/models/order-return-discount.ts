@@ -29,63 +29,72 @@ export class OrderReturnDiscount {
      * @type {string}
      * @memberof OrderReturnDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * `uid` of the Discount from the Order which contains the original application of this discount.
      * @type {string}
      * @memberof OrderReturnDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     source_discount_uid?: string;
     /**
      * The catalog object id referencing `CatalogDiscount`.
      * @type {string}
      * @memberof OrderReturnDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_object_id?: string;
     /**
      * The discount\'s name.
      * @type {string}
      * @memberof OrderReturnDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The type of the discount. If it is created by API, it would be either `FIXED_PERCENTAGE` or `FIXED_AMOUNT`.  Discounts that don\'t reference a catalog object ID must have a type of `FIXED_PERCENTAGE` or `FIXED_AMOUNT`. See [OrderLineItemDiscountType](#type-orderlineitemdiscounttype) for possible values
      * @type {string}
      * @memberof OrderReturnDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * The percentage of the tax, as a string representation of a decimal number. A value of `7.25` corresponds to a percentage of 7.25%.  `percentage` is not set for amount-based discounts.
      * @type {string}
      * @memberof OrderReturnDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     percentage?: string;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnDiscount
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     amount_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof OrderReturnDiscount
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     applied_money?: Money;
     /**
      * Indicates the level at which the `OrderReturnDiscount` applies. For `ORDER` scoped discounts, the server will generate references in `applied_discounts` on all `OrderReturnLineItem`s. For `LINE_ITEM` scoped discounts, the discount will only apply to `OrderReturnLineItem`s with references in their `applied_discounts` field. See [OrderLineItemDiscountScope](#type-orderlineitemdiscountscope) for possible values
      * @type {string}
      * @memberof OrderReturnDiscount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     scope?: string;
 }
 

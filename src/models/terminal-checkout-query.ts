@@ -30,14 +30,16 @@ export class TerminalCheckoutQuery {
      * @type {TerminalCheckoutQueryFilter}
      * @memberof TerminalCheckoutQuery
      */
-    @Field(() => TerminalCheckoutQueryFilter) 
+    
+    @Field(() => TerminalCheckoutQueryFilter, { nullable: true })
     filter?: TerminalCheckoutQueryFilter;
     /**
      * 
      * @type {TerminalCheckoutQuerySort}
      * @memberof TerminalCheckoutQuery
      */
-    @Field(() => TerminalCheckoutQuerySort) 
+    
+    @Field(() => TerminalCheckoutQuerySort, { nullable: true })
     sort?: TerminalCheckoutQuerySort;
 }
 

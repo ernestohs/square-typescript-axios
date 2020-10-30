@@ -29,21 +29,23 @@ export class BatchRetrieveInventoryCountsResponse {
      * @type {Array<Error>}
      * @memberof BatchRetrieveInventoryCountsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The current calculated inventory counts for the requested objects and locations.
      * @type {Array<InventoryCount>}
      * @memberof BatchRetrieveInventoryCountsResponse
      */
-    @Field(() => [InventoryCount]) 
+    
+    @Field(() => [InventoryCount], { nullable: true })
     counts?: Array<InventoryCount>;
     /**
      * The pagination cursor to be used in a subsequent request. If unset, this is the final response.  See the [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination) guide for more information.
      * @type {string}
      * @memberof BatchRetrieveInventoryCountsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

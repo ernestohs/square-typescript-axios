@@ -29,14 +29,16 @@ export class CatalogCustomAttributeDefinitionSelectionConfig {
      * @type {number}
      * @memberof CatalogCustomAttributeDefinitionSelectionConfig
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     max_allowed_selections?: number;
     /**
      * The set of valid `CatalogCustomAttributeSelections`. Up to a maximum of 100 selections can be defined. Can be modified.
      * @type {Array<CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection>}
      * @memberof CatalogCustomAttributeDefinitionSelectionConfig
      */
-    @Field(() => [CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection]) 
+    
+    @Field(() => [CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection], { nullable: true })
     allowed_selections?: Array<CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection>;
 }
 

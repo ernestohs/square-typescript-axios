@@ -30,21 +30,23 @@ export class UpsertCatalogObjectResponse {
      * @type {Array<Error>}
      * @memberof UpsertCatalogObjectResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {CatalogObject}
      * @memberof UpsertCatalogObjectResponse
      */
-    @Field(() => CatalogObject) 
+    
+    @Field(() => CatalogObject, { nullable: true })
     catalog_object?: CatalogObject;
     /**
      * The mapping between client and server IDs for this upsert.
      * @type {Array<CatalogIdMapping>}
      * @memberof UpsertCatalogObjectResponse
      */
-    @Field(() => [CatalogIdMapping]) 
+    
+    @Field(() => [CatalogIdMapping], { nullable: true })
     id_mappings?: Array<CatalogIdMapping>;
 }
 

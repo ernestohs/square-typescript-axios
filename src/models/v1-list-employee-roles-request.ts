@@ -28,21 +28,24 @@ export class V1ListEmployeeRolesRequest {
      * @type {string}
      * @memberof V1ListEmployeeRolesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order?: string;
     /**
      * The maximum integer number of employee entities to return in a single response. Default 100, maximum 200.
      * @type {number}
      * @memberof V1ListEmployeeRolesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * A pagination cursor to retrieve the next set of results for your original query to the endpoint.
      * @type {string}
      * @memberof V1ListEmployeeRolesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     batch_token?: string;
 }
 

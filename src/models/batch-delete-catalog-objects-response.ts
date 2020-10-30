@@ -28,21 +28,22 @@ export class BatchDeleteCatalogObjectsResponse {
      * @type {Array<Error>}
      * @memberof BatchDeleteCatalogObjectsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The IDs of all CatalogObjects deleted by this request.
      * @type {Array<string>}
      * @memberof BatchDeleteCatalogObjectsResponse
      */
-    @Field() 
+    
     deleted_object_ids?: Array<string>;
     /**
      * The database [timestamp](https://developer.squareup.com/docs/build-basics/working-with-dates) of this deletion in RFC 3339 format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof BatchDeleteCatalogObjectsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     deleted_at?: string;
 }
 

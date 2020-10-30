@@ -30,77 +30,88 @@ export class PaymentRefund {
      * @type {string}
      * @memberof PaymentRefund
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     id: string;
     /**
      * The refund\'s status: - `PENDING` - awaiting approval - `COMPLETED` - successfully completed - `REJECTED` - the refund was rejected - `FAILED` - an error occurred
      * @type {string}
      * @memberof PaymentRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * Location ID associated with the payment this refund is attached to.
      * @type {string}
      * @memberof PaymentRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * 
      * @type {Money}
      * @memberof PaymentRefund
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: false })
     amount_money: Money;
     /**
      * 
      * @type {Money}
      * @memberof PaymentRefund
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     app_fee_money?: Money;
     /**
      * Processing fees and fee adjustments assessed by Square on this refund.
      * @type {Array<ProcessingFee>}
      * @memberof PaymentRefund
      */
-    @Field(() => [ProcessingFee]) 
+    
+    @Field(() => [ProcessingFee], { nullable: true })
     processing_fee?: Array<ProcessingFee>;
     /**
      * The ID of the payment assocated with this refund.
      * @type {string}
      * @memberof PaymentRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     payment_id?: string;
     /**
      * The ID of the order associated with the refund.
      * @type {string}
      * @memberof PaymentRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order_id?: string;
     /**
      * The reason for the refund.
      * @type {string}
      * @memberof PaymentRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reason?: string;
     /**
      * Timestamp of when the refund was created, in RFC 3339 format.
      * @type {string}
      * @memberof PaymentRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * Timestamp of when the refund was last updated, in RFC 3339 format.
      * @type {string}
      * @memberof PaymentRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

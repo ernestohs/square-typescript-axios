@@ -29,21 +29,23 @@ export class UpdateInvoiceRequest {
      * @type {Invoice}
      * @memberof UpdateInvoiceRequest
      */
-    @Field(() => Invoice) 
+    
+    @Field(() => Invoice, { nullable: false })
     invoice: Invoice;
     /**
      * A unique string that identifies the `UpdateInvoice` request. If you do not provide `idempotency_key` (or provide an empty string as the value), the endpoint treats each request as independent.  For more information, see [Idempotency](https://developer.squareup.com/docs/docs/working-with-apis/idempotency).
      * @type {string}
      * @memberof UpdateInvoiceRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
     /**
      * List of fields to clear. For examples, see [Update an invoice](https://developer.squareup.com/docs/docs/invoices-api/overview#update-an-invoice).
      * @type {Array<string>}
      * @memberof UpdateInvoiceRequest
      */
-    @Field() 
+    
     fields_to_clear?: Array<string>;
 }
 

@@ -29,14 +29,15 @@ export class CancelTerminalRefundResponse {
      * @type {Array<Error>}
      * @memberof CancelTerminalRefundResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {TerminalRefund}
      * @memberof CancelTerminalRefundResponse
      */
-    @Field(() => TerminalRefund) 
+    
+    @Field(() => TerminalRefund, { nullable: true })
     refund?: TerminalRefund;
 }
 

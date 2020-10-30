@@ -29,7 +29,8 @@ export class V1ListInventoryResponse {
      * @type {Array<V1InventoryEntry>}
      * @memberof V1ListInventoryResponse
      */
-    @Field(() => [V1InventoryEntry]) 
+    
+    @Field(() => [V1InventoryEntry], { nullable: true })
     items?: Array<V1InventoryEntry>;
 }
 

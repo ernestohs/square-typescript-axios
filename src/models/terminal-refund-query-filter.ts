@@ -29,21 +29,24 @@ export class TerminalRefundQueryFilter {
      * @type {string}
      * @memberof TerminalRefundQueryFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     device_id?: string;
     /**
      * 
      * @type {TimeRange}
      * @memberof TerminalRefundQueryFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     created_at?: TimeRange;
     /**
      * Filtered results with the desired status of the `TerminalRefund` Options: `PENDING`, `IN\\_PROGRESS`, `CANCEL\\_REQUESTED`, `CANCELED`, `COMPLETED`
      * @type {string}
      * @memberof TerminalRefundQueryFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
 }
 

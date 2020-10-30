@@ -28,28 +28,32 @@ export class CustomerSegment {
      * @type {string}
      * @memberof CustomerSegment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * Name of the segment.
      * @type {string}
      * @memberof CustomerSegment
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     name: string;
     /**
      * The timestamp when the segment was created, in RFC 3339 format.
      * @type {string}
      * @memberof CustomerSegment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The timestamp when the segment was last updated, in RFC 3339 format.
      * @type {string}
      * @memberof CustomerSegment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

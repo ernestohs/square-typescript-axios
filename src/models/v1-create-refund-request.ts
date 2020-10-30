@@ -29,35 +29,40 @@ export class V1CreateRefundRequest {
      * @type {string}
      * @memberof V1CreateRefundRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     payment_id: string;
     /**
      * TThe type of refund (FULL or PARTIAL). See [V1CreateRefundRequestType](#type-v1createrefundrequesttype) for possible values
      * @type {string}
      * @memberof V1CreateRefundRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     type: string;
     /**
      * The reason for the refund.
      * @type {string}
      * @memberof V1CreateRefundRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     reason: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1CreateRefundRequest
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     refunded_money?: V1Money;
     /**
      * An optional key to ensure idempotence if you issue the same PARTIAL refund request more than once.
      * @type {string}
      * @memberof V1CreateRefundRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     request_idempotence_key?: string;
 }
 

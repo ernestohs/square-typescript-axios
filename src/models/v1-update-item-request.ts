@@ -29,7 +29,8 @@ export class V1UpdateItemRequest {
      * @type {V1Item}
      * @memberof V1UpdateItemRequest
      */
-    @Field(() => V1Item) 
+    
+    @Field(() => V1Item, { nullable: false })
     body: V1Item;
 }
 

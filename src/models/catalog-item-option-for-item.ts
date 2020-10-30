@@ -28,7 +28,8 @@ export class CatalogItemOptionForItem {
      * @type {string}
      * @memberof CatalogItemOptionForItem
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     item_option_id?: string;
 }
 

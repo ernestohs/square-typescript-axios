@@ -29,14 +29,15 @@ export class SearchLoyaltyAccountsRequestLoyaltyAccountQuery {
      * @type {Array<LoyaltyAccountMapping>}
      * @memberof SearchLoyaltyAccountsRequestLoyaltyAccountQuery
      */
-    @Field(() => [LoyaltyAccountMapping]) 
+    
+    @Field(() => [LoyaltyAccountMapping], { nullable: true })
     mappings?: Array<LoyaltyAccountMapping>;
     /**
      * The set of customer IDs to use in the loyalty account search.    This cannot be combined with `mappings`.    Max: 30 customer IDs
      * @type {Array<string>}
      * @memberof SearchLoyaltyAccountsRequestLoyaltyAccountQuery
      */
-    @Field() 
+    
     customer_ids?: Array<string>;
 }
 

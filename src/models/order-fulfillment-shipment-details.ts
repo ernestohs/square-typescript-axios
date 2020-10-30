@@ -29,105 +29,120 @@ export class OrderFulfillmentShipmentDetails {
      * @type {OrderFulfillmentRecipient}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field(() => OrderFulfillmentRecipient) 
+    
+    @Field(() => OrderFulfillmentRecipient, { nullable: true })
     recipient?: OrderFulfillmentRecipient;
     /**
      * The shipping carrier being used to ship this fulfillment e.g. UPS, FedEx, USPS, etc.
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     carrier?: string;
     /**
      * A note with additional information for the shipping carrier.
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     shipping_note?: string;
     /**
      * A description of the type of shipping product purchased from the carrier. e.g. First Class, Priority, Express
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     shipping_type?: string;
     /**
      * The reference number provided by the carrier to track the shipment\'s progress.
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     tracking_number?: string;
     /**
      * A link to the tracking webpage on the carrier\'s website.
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     tracking_url?: string;
     /**
      * The [timestamp](#workingwithdates) indicating when the shipment was requested. Must be in RFC 3339 timestamp format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     placed_at?: string;
     /**
      * The [timestamp](#workingwithdates) indicating when this fulfillment was moved to the `RESERVED` state. Indicates that preparation of this shipment has begun. Must be in RFC 3339 timestamp format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     in_progress_at?: string;
     /**
      * The [timestamp](#workingwithdates) indicating when this fulfillment was moved to the `PREPARED` state. Indicates that the fulfillment is packaged. Must be in RFC 3339 timestamp format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     packaged_at?: string;
     /**
      * The [timestamp](#workingwithdates) indicating when the shipment is expected to be delivered to the shipping carrier. Must be in RFC 3339 timestamp format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     expected_shipped_at?: string;
     /**
      * The [timestamp](#workingwithdates) indicating when this fulfillment was moved to the `COMPLETED`state. Indicates that the fulfillment has been given to the shipping carrier. Must be in RFC 3339 timestamp format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     shipped_at?: string;
     /**
      * The [timestamp](#workingwithdates) indicating the shipment was canceled. Must be in RFC 3339 timestamp format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     canceled_at?: string;
     /**
      * A description of why the shipment was canceled.
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cancel_reason?: string;
     /**
      * The [timestamp](#workingwithdates) indicating when the shipment failed to be completed. Must be in RFC 3339 timestamp format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     failed_at?: string;
     /**
      * A description of why the shipment failed to be completed.
      * @type {string}
      * @memberof OrderFulfillmentShipmentDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     failure_reason?: string;
 }
 

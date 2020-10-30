@@ -29,7 +29,8 @@ export class V1UpdateFeeRequest {
      * @type {V1Fee}
      * @memberof V1UpdateFeeRequest
      */
-    @Field(() => V1Fee) 
+    
+    @Field(() => V1Fee, { nullable: false })
     body: V1Fee;
 }
 

@@ -29,7 +29,8 @@ export class UpdateSubscriptionRequest {
      * @type {Subscription}
      * @memberof UpdateSubscriptionRequest
      */
-    @Field(() => Subscription) 
+    
+    @Field(() => Subscription, { nullable: true })
     subscription?: Subscription;
 }
 

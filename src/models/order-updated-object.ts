@@ -29,7 +29,8 @@ export class OrderUpdatedObject {
      * @type {OrderUpdated}
      * @memberof OrderUpdatedObject
      */
-    @Field(() => OrderUpdated) 
+    
+    @Field(() => OrderUpdated, { nullable: true })
     order_updated?: OrderUpdated;
 }
 

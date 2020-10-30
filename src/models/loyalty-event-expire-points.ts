@@ -28,14 +28,16 @@ export class LoyaltyEventExpirePoints {
      * @type {string}
      * @memberof LoyaltyEventExpirePoints
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     loyalty_program_id: string;
     /**
      * The number of points expired.
      * @type {number}
      * @memberof LoyaltyEventExpirePoints
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     points: number;
 }
 

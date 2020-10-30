@@ -29,21 +29,23 @@ export class SearchTeamMembersResponse {
      * @type {Array<TeamMember>}
      * @memberof SearchTeamMembersResponse
      */
-    @Field(() => [TeamMember]) 
+    
+    @Field(() => [TeamMember], { nullable: true })
     team_members?: Array<TeamMember>;
     /**
      * The opaque cursor for fetching the next page. Read about [pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination) with Square APIs for more information.
      * @type {string}
      * @memberof SearchTeamMembersResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * The errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof SearchTeamMembersResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

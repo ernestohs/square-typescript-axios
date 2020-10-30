@@ -29,49 +29,56 @@ export class InvoiceRecipient {
      * @type {string}
      * @memberof InvoiceRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     customer_id?: string;
     /**
      * The recipient\'s given (that is, first) name.
      * @type {string}
      * @memberof InvoiceRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     given_name?: string;
     /**
      * The recipient\'s family (that is, last) name.
      * @type {string}
      * @memberof InvoiceRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     family_name?: string;
     /**
      * The recipient\'s email address.
      * @type {string}
      * @memberof InvoiceRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     email_address?: string;
     /**
      * 
      * @type {Address}
      * @memberof InvoiceRecipient
      */
-    @Field(() => Address) 
+    
+    @Field(() => Address, { nullable: true })
     address?: Address;
     /**
      * The recipient\'s phone number.
      * @type {string}
      * @memberof InvoiceRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     phone_number?: string;
     /**
      * The name of the recipient\'s company.
      * @type {string}
      * @memberof InvoiceRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     company_name?: string;
 }
 

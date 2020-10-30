@@ -32,49 +32,56 @@ export class CustomerFilter {
      * @type {CustomerCreationSourceFilter}
      * @memberof CustomerFilter
      */
-    @Field(() => CustomerCreationSourceFilter) 
+    
+    @Field(() => CustomerCreationSourceFilter, { nullable: true })
     creation_source?: CustomerCreationSourceFilter;
     /**
      * 
      * @type {TimeRange}
      * @memberof CustomerFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     created_at?: TimeRange;
     /**
      * 
      * @type {TimeRange}
      * @memberof CustomerFilter
      */
-    @Field(() => TimeRange) 
+    
+    @Field(() => TimeRange, { nullable: true })
     updated_at?: TimeRange;
     /**
      * 
      * @type {CustomerTextFilter}
      * @memberof CustomerFilter
      */
-    @Field(() => CustomerTextFilter) 
+    
+    @Field(() => CustomerTextFilter, { nullable: true })
     email_address?: CustomerTextFilter;
     /**
      * 
      * @type {CustomerTextFilter}
      * @memberof CustomerFilter
      */
-    @Field(() => CustomerTextFilter) 
+    
+    @Field(() => CustomerTextFilter, { nullable: true })
     phone_number?: CustomerTextFilter;
     /**
      * 
      * @type {CustomerTextFilter}
      * @memberof CustomerFilter
      */
-    @Field(() => CustomerTextFilter) 
+    
+    @Field(() => CustomerTextFilter, { nullable: true })
     reference_id?: CustomerTextFilter;
     /**
      * 
      * @type {FilterValue}
      * @memberof CustomerFilter
      */
-    @Field(() => FilterValue) 
+    
+    @Field(() => FilterValue, { nullable: true })
     group_ids?: FilterValue;
 }
 

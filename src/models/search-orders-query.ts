@@ -30,14 +30,16 @@ export class SearchOrdersQuery {
      * @type {SearchOrdersFilter}
      * @memberof SearchOrdersQuery
      */
-    @Field(() => SearchOrdersFilter) 
+    
+    @Field(() => SearchOrdersFilter, { nullable: true })
     filter?: SearchOrdersFilter;
     /**
      * 
      * @type {SearchOrdersSort}
      * @memberof SearchOrdersQuery
      */
-    @Field(() => SearchOrdersSort) 
+    
+    @Field(() => SearchOrdersSort, { nullable: true })
     sort?: SearchOrdersSort;
 }
 

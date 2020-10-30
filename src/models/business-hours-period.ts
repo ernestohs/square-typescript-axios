@@ -28,21 +28,24 @@ export class BusinessHoursPeriod {
      * @type {string}
      * @memberof BusinessHoursPeriod
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     day_of_week?: string;
     /**
      * The start time of a business hours period, specified in local time using partial-time RFC 3339 format.
      * @type {string}
      * @memberof BusinessHoursPeriod
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     start_local_time?: string;
     /**
      * The end time of a business hours period, specified in local time using partial-time RFC 3339 format.
      * @type {string}
      * @memberof BusinessHoursPeriod
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_local_time?: string;
 }
 

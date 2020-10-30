@@ -29,21 +29,23 @@ export class ListCustomersResponse {
      * @type {Array<Error>}
      * @memberof ListCustomersResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * An array of `Customer` objects that match the provided query.
      * @type {Array<Customer>}
      * @memberof ListCustomersResponse
      */
-    @Field(() => [Customer]) 
+    
+    @Field(() => [Customer], { nullable: true })
     customers?: Array<Customer>;
     /**
      * A pagination cursor to retrieve the next set of results for the original query. Only present if the request succeeded and additional results are available.  See the [Pagination guide](https://developer.squareup.com/docs/working-with-apis/pagination) for more information.
      * @type {string}
      * @memberof ListCustomersResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

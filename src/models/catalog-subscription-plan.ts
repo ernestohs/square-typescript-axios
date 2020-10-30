@@ -29,14 +29,16 @@ export class CatalogSubscriptionPlan {
      * @type {string}
      * @memberof CatalogSubscriptionPlan
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * A list of SubscriptionPhase containing the `SubscriptionPhase` for this plan.
      * @type {Array<SubscriptionPhase>}
      * @memberof CatalogSubscriptionPlan
      */
-    @Field(() => [SubscriptionPhase]) 
+    
+    @Field(() => [SubscriptionPhase], { nullable: true })
     phases?: Array<SubscriptionPhase>;
 }
 

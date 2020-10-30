@@ -29,14 +29,15 @@ export class RetrieveTransactionResponse {
      * @type {Array<Error>}
      * @memberof RetrieveTransactionResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {Transaction}
      * @memberof RetrieveTransactionResponse
      */
-    @Field(() => Transaction) 
+    
+    @Field(() => Transaction, { nullable: true })
     transaction?: Transaction;
 }
 

@@ -30,42 +30,48 @@ export class V1Settlement {
      * @type {string}
      * @memberof V1Settlement
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The settlement\'s current status. See [V1SettlementStatus](#type-v1settlementstatus) for possible values
      * @type {string}
      * @memberof V1Settlement
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Settlement
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     total_money?: V1Money;
     /**
      * The time when the settlement was submitted for deposit or withdrawal, in ISO 8601 format.
      * @type {string}
      * @memberof V1Settlement
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     initiated_at?: string;
     /**
      * The Square-issued unique identifier for the bank account associated with the settlement.
      * @type {string}
      * @memberof V1Settlement
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     bank_account_id?: string;
     /**
      * The entries included in this settlement.
      * @type {Array<V1SettlementEntry>}
      * @memberof V1Settlement
      */
-    @Field(() => [V1SettlementEntry]) 
+    
+    @Field(() => [V1SettlementEntry], { nullable: true })
     entries?: Array<V1SettlementEntry>;
 }
 

@@ -28,35 +28,40 @@ export class CatalogItemOptionValue {
      * @type {string}
      * @memberof CatalogItemOptionValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     item_option_id?: string;
     /**
      * Name of this item option value. This is a searchable attribute for use in applicable query filters.
      * @type {string}
      * @memberof CatalogItemOptionValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * A human-readable description for the option value. This is a searchable attribute for use in applicable query filters.
      * @type {string}
      * @memberof CatalogItemOptionValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
     /**
      * The HTML-supported hex color for the item option (e.g., \"#ff8d4e85\"). Only displayed if `show_colors` is enabled on the parent `ItemOption`. When left unset, `color` defaults to white (\"#ffffff\") when `show_colors` is enabled on the parent `ItemOption`.
      * @type {string}
      * @memberof CatalogItemOptionValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     color?: string;
     /**
      * Determines where this option value appears in a list of option values.
      * @type {number}
      * @memberof CatalogItemOptionValue
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     ordinal?: number;
 }
 

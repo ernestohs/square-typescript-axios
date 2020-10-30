@@ -30,14 +30,16 @@ export class InvoiceQuery {
      * @type {InvoiceFilter}
      * @memberof InvoiceQuery
      */
-    @Field(() => InvoiceFilter) 
+    
+    @Field(() => InvoiceFilter, { nullable: false })
     filter: InvoiceFilter;
     /**
      * 
      * @type {InvoiceSort}
      * @memberof InvoiceQuery
      */
-    @Field(() => InvoiceSort) 
+    
+    @Field(() => InvoiceSort, { nullable: true })
     sort?: InvoiceSort;
 }
 

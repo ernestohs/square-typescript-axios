@@ -28,7 +28,8 @@ export class RevokeTokenResponse {
      * @type {boolean}
      * @memberof RevokeTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     success?: boolean;
 }
 

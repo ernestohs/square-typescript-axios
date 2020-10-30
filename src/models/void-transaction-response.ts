@@ -28,7 +28,7 @@ export class VoidTransactionResponse {
      * @type {Array<Error>}
      * @memberof VoidTransactionResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

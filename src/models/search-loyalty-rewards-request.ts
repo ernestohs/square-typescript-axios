@@ -29,21 +29,24 @@ export class SearchLoyaltyRewardsRequest {
      * @type {SearchLoyaltyRewardsRequestLoyaltyRewardQuery}
      * @memberof SearchLoyaltyRewardsRequest
      */
-    @Field(() => SearchLoyaltyRewardsRequestLoyaltyRewardQuery) 
+    
+    @Field(() => SearchLoyaltyRewardsRequestLoyaltyRewardQuery, { nullable: true })
     query?: SearchLoyaltyRewardsRequestLoyaltyRewardQuery;
     /**
      * The maximum number of results to return in the response.
      * @type {number}
      * @memberof SearchLoyaltyRewardsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * A pagination cursor returned by a previous call to  this endpoint. Provide this to retrieve the next set of  results for the original query. For more information,  see [Pagination](https://developer.squareup.com/docs/docs/basics/api101/pagination).
      * @type {string}
      * @memberof SearchLoyaltyRewardsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

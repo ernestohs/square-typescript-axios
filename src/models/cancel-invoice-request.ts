@@ -28,7 +28,8 @@ export class CancelInvoiceRequest {
      * @type {number}
      * @memberof CancelInvoiceRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     version: number;
 }
 

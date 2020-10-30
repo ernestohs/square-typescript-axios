@@ -29,21 +29,24 @@ export class StandardUnitDescription {
      * @type {MeasurementUnit}
      * @memberof StandardUnitDescription
      */
-    @Field(() => MeasurementUnit) 
+    
+    @Field(() => MeasurementUnit, { nullable: true })
     unit?: MeasurementUnit;
     /**
      * UI display name of the measurement unit. For example, \'Pound\'.
      * @type {string}
      * @memberof StandardUnitDescription
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * UI display abbreviation for the measurement unit. For example, \'lb\'.
      * @type {string}
      * @memberof StandardUnitDescription
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     abbreviation?: string;
 }
 

@@ -29,7 +29,8 @@ export class UpdateShiftRequest {
      * @type {Shift}
      * @memberof UpdateShiftRequest
      */
-    @Field(() => Shift) 
+    
+    @Field(() => Shift, { nullable: false })
     shift: Shift;
 }
 

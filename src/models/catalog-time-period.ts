@@ -28,7 +28,8 @@ export class CatalogTimePeriod {
      * @type {string}
      * @memberof CatalogTimePeriod
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     event?: string;
 }
 

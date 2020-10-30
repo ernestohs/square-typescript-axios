@@ -29,14 +29,16 @@ export class UpsertCatalogObjectRequest {
      * @type {string}
      * @memberof UpsertCatalogObjectRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * 
      * @type {CatalogObject}
      * @memberof UpsertCatalogObjectRequest
      */
-    @Field(() => CatalogObject) 
+    
+    @Field(() => CatalogObject, { nullable: false })
     object: CatalogObject;
 }
 

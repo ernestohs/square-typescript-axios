@@ -28,42 +28,47 @@ export class V1EmployeeRole {
      * @type {string}
      * @memberof V1EmployeeRole
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The role\'s merchant-defined name.
      * @type {string}
      * @memberof V1EmployeeRole
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     name: string;
     /**
      * The role\'s permissions. See [V1EmployeeRolePermissions](#type-v1employeerolepermissions) for possible values
      * @type {Array<string>}
      * @memberof V1EmployeeRole
      */
-    @Field() 
+    
     permissions: Array<string>;
     /**
      * If true, employees with this role have all permissions, regardless of the values indicated in permissions.
      * @type {boolean}
      * @memberof V1EmployeeRole
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     is_owner?: boolean;
     /**
      * The time when the employee entity was created, in ISO 8601 format. Is set by Square when the Role is created.
      * @type {string}
      * @memberof V1EmployeeRole
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The time when the employee entity was most recently updated, in ISO 8601 format. Is set by Square when the Role updated.
      * @type {string}
      * @memberof V1EmployeeRole
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

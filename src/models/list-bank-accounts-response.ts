@@ -29,21 +29,23 @@ export class ListBankAccountsResponse {
      * @type {Array<Error>}
      * @memberof ListBankAccountsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * List of BankAccounts associated with this account.
      * @type {Array<BankAccount>}
      * @memberof ListBankAccountsResponse
      */
-    @Field(() => [BankAccount]) 
+    
+    @Field(() => [BankAccount], { nullable: true })
     bank_accounts?: Array<BankAccount>;
     /**
      * When a response is truncated, it includes a cursor that you can  use in a subsequent request to fetch next set of bank accounts. If empty, this is the final response.  For more information, see [Pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination).
      * @type {string}
      * @memberof ListBankAccountsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

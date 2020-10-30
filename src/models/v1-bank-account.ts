@@ -28,56 +28,64 @@ export class V1BankAccount {
      * @type {string}
      * @memberof V1BankAccount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The Square-issued ID of the merchant associated with the bank account.
      * @type {string}
      * @memberof V1BankAccount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     merchant_id?: string;
     /**
      * The name of the bank that manages the account.
      * @type {string}
      * @memberof V1BankAccount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     bank_name?: string;
     /**
      * The name associated with the bank account.
      * @type {string}
      * @memberof V1BankAccount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The bank account\'s routing number.
      * @type {string}
      * @memberof V1BankAccount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     routing_number?: string;
     /**
      * The last few digits of the bank account number.
      * @type {string}
      * @memberof V1BankAccount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     account_number_suffix?: string;
     /**
      * The currency code of the currency associated with the bank account, in ISO 4217 format. For example, the currency code for US dollars is USD.
      * @type {string}
      * @memberof V1BankAccount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     currency_code?: string;
     /**
      * The bank account\'s type (for example, savings or checking). See [V1BankAccountType](#type-v1bankaccounttype) for possible values
      * @type {string}
      * @memberof V1BankAccount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
 }
 

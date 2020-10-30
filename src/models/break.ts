@@ -28,49 +28,56 @@ export class Break {
      * @type {string}
      * @memberof Break
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * RFC 3339; follows same timezone info as `Shift`. Precision up to the minute is respected; seconds are truncated.
      * @type {string}
      * @memberof Break
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     start_at: string;
     /**
      * RFC 3339; follows same timezone info as `Shift`. Precision up to the minute is respected; seconds are truncated.
      * @type {string}
      * @memberof Break
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_at?: string;
     /**
      * The `BreakType` this `Break` was templated on.
      * @type {string}
      * @memberof Break
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     break_type_id: string;
     /**
      * A human-readable name.
      * @type {string}
      * @memberof Break
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     name: string;
     /**
      * Format: RFC-3339 P[n]Y[n]M[n]DT[n]H[n]M[n]S. The expected length of the break.
      * @type {string}
      * @memberof Break
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     expected_duration: string;
     /**
      * Whether this break counts towards time worked for compensation purposes.
      * @type {boolean}
      * @memberof Break
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     is_paid: boolean;
 }
 

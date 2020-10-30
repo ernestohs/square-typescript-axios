@@ -29,21 +29,23 @@ export class SearchLoyaltyEventsResponse {
      * @type {Array<Error>}
      * @memberof SearchLoyaltyEventsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The loyalty events that satisfy the search criteria.
      * @type {Array<LoyaltyEvent>}
      * @memberof SearchLoyaltyEventsResponse
      */
-    @Field(() => [LoyaltyEvent]) 
+    
+    @Field(() => [LoyaltyEvent], { nullable: true })
     events?: Array<LoyaltyEvent>;
     /**
      * The pagination cursor to be used in a subsequent  request. If empty, this is the final response.  For more information,  see [Pagination](https://developer.squareup.com/docs/docs/basics/api101/pagination).
      * @type {string}
      * @memberof SearchLoyaltyEventsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

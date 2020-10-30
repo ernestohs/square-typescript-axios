@@ -28,14 +28,16 @@ export class CatalogV1Id {
      * @type {string}
      * @memberof CatalogV1Id
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_v1_id?: string;
     /**
      * The ID of the `Location` this Connect V1 ID is associated with.
      * @type {string}
      * @memberof CatalogV1Id
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
 }
 

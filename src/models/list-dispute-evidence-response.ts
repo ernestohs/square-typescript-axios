@@ -29,14 +29,15 @@ export class ListDisputeEvidenceResponse {
      * @type {Array<DisputeEvidence>}
      * @memberof ListDisputeEvidenceResponse
      */
-    @Field(() => [DisputeEvidence]) 
+    
+    @Field(() => [DisputeEvidence], { nullable: true })
     evidence?: Array<DisputeEvidence>;
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}
      * @memberof ListDisputeEvidenceResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

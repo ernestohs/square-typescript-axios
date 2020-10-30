@@ -28,21 +28,23 @@ export class PayOrderRequest {
      * @type {string}
      * @memberof PayOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * The version of the order being paid. If not supplied, the latest version will be paid.
      * @type {number}
      * @memberof PayOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order_version?: number;
     /**
      * The IDs of the `payments` to collect. The payment total must match the order total.
      * @type {Array<string>}
      * @memberof PayOrderRequest
      */
-    @Field() 
+    
     payment_ids?: Array<string>;
 }
 

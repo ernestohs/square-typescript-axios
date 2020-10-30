@@ -28,14 +28,14 @@ export class SearchSubscriptionsFilter {
      * @type {Array<string>}
      * @memberof SearchSubscriptionsFilter
      */
-    @Field() 
+    
     customer_ids?: Array<string>;
     /**
      * A filter to select subscriptions based the location.
      * @type {Array<string>}
      * @memberof SearchSubscriptionsFilter
      */
-    @Field() 
+    
     location_ids?: Array<string>;
 }
 

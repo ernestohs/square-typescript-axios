@@ -29,14 +29,15 @@ export class UpdateWorkweekConfigResponse {
      * @type {WorkweekConfig}
      * @memberof UpdateWorkweekConfigResponse
      */
-    @Field(() => WorkweekConfig) 
+    
+    @Field(() => WorkweekConfig, { nullable: true })
     workweek_config?: WorkweekConfig;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof UpdateWorkweekConfigResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

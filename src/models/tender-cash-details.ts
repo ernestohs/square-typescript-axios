@@ -29,14 +29,16 @@ export class TenderCashDetails {
      * @type {Money}
      * @memberof TenderCashDetails
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     buyer_tendered_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof TenderCashDetails
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     change_back_money?: Money;
 }
 

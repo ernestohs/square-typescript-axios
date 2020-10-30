@@ -29,56 +29,64 @@ export class MeasurementUnit {
      * @type {MeasurementUnitCustom}
      * @memberof MeasurementUnit
      */
-    @Field(() => MeasurementUnitCustom) 
+    
+    @Field(() => MeasurementUnitCustom, { nullable: true })
     custom_unit?: MeasurementUnitCustom;
     /**
      * Represents a standard area unit. See [MeasurementUnitArea](#type-measurementunitarea) for possible values
      * @type {string}
      * @memberof MeasurementUnit
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     area_unit?: string;
     /**
      * Represents a standard length unit. See [MeasurementUnitLength](#type-measurementunitlength) for possible values
      * @type {string}
      * @memberof MeasurementUnit
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     length_unit?: string;
     /**
      * Represents a standard volume unit. See [MeasurementUnitVolume](#type-measurementunitvolume) for possible values
      * @type {string}
      * @memberof MeasurementUnit
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     volume_unit?: string;
     /**
      * Represents a standard unit of weight or mass. See [MeasurementUnitWeight](#type-measurementunitweight) for possible values
      * @type {string}
      * @memberof MeasurementUnit
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     weight_unit?: string;
     /**
      * Reserved for API integrations that lack the ability to specify a real measurement unit See [MeasurementUnitGeneric](#type-measurementunitgeneric) for possible values
      * @type {string}
      * @memberof MeasurementUnit
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     generic_unit?: string;
     /**
      * Represents a standard unit of time. See [MeasurementUnitTime](#type-measurementunittime) for possible values
      * @type {string}
      * @memberof MeasurementUnit
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     time_unit?: string;
     /**
      * Represents the type of the measurement unit. See [MeasurementUnitUnitType](#type-measurementunitunittype) for possible values
      * @type {string}
      * @memberof MeasurementUnit
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
 }
 

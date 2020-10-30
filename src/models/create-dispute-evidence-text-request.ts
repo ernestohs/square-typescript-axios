@@ -28,21 +28,24 @@ export class CreateDisputeEvidenceTextRequest {
      * @type {string}
      * @memberof CreateDisputeEvidenceTextRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * The type of evidence you are uploading. See [DisputeEvidenceType](#type-disputeevidencetype) for possible values
      * @type {string}
      * @memberof CreateDisputeEvidenceTextRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     evidence_type?: string;
     /**
      * The evidence string.
      * @type {string}
      * @memberof CreateDisputeEvidenceTextRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     evidence_text: string;
 }
 

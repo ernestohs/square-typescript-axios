@@ -28,14 +28,16 @@ export class Device {
      * @type {string}
      * @memberof Device
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The device\'s merchant-specified name.
      * @type {string}
      * @memberof Device
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
 }
 

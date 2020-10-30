@@ -28,42 +28,48 @@ export class V1PageCell {
      * @type {string}
      * @memberof V1PageCell
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     page_id?: string;
     /**
      * The row of the cell. Always an integer between 0 and 4, inclusive.
      * @type {number}
      * @memberof V1PageCell
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     row?: number;
     /**
      * The column of the cell. Always an integer between 0 and 4, inclusive.
      * @type {number}
      * @memberof V1PageCell
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     column?: number;
     /**
      * The type of entity represented in the cell (ITEM, DISCOUNT, CATEGORY, or PLACEHOLDER). See [V1PageCellObjectType](#type-v1pagecellobjecttype) for possible values
      * @type {string}
      * @memberof V1PageCell
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     object_type?: string;
     /**
      * The unique identifier of the entity represented in the cell. Not present for cells with an object_type of PLACEHOLDER.
      * @type {string}
      * @memberof V1PageCell
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     object_id?: string;
     /**
      * For a cell with an object_type of PLACEHOLDER, this value indicates the cell\'s special behavior. See [V1PageCellPlaceholderType](#type-v1pagecellplaceholdertype) for possible values
      * @type {string}
      * @memberof V1PageCell
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     placeholder_type?: string;
 }
 

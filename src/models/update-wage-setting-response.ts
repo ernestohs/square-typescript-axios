@@ -29,14 +29,15 @@ export class UpdateWageSettingResponse {
      * @type {WageSetting}
      * @memberof UpdateWageSettingResponse
      */
-    @Field(() => WageSetting) 
+    
+    @Field(() => WageSetting, { nullable: true })
     wage_setting?: WageSetting;
     /**
      * The errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof UpdateWageSettingResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

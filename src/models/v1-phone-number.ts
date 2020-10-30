@@ -28,14 +28,16 @@ export class V1PhoneNumber {
      * @type {string}
      * @memberof V1PhoneNumber
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     calling_code: string;
     /**
      * The phone number.
      * @type {string}
      * @memberof V1PhoneNumber
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     number: string;
 }
 

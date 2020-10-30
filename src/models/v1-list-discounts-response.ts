@@ -29,7 +29,8 @@ export class V1ListDiscountsResponse {
      * @type {Array<V1Discount>}
      * @memberof V1ListDiscountsResponse
      */
-    @Field(() => [V1Discount]) 
+    
+    @Field(() => [V1Discount], { nullable: true })
     items?: Array<V1Discount>;
 }
 

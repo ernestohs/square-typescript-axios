@@ -29,7 +29,8 @@ export class V1ListCashDrawerShiftsResponse {
      * @type {Array<V1CashDrawerShift>}
      * @memberof V1ListCashDrawerShiftsResponse
      */
-    @Field(() => [V1CashDrawerShift]) 
+    
+    @Field(() => [V1CashDrawerShift], { nullable: true })
     items?: Array<V1CashDrawerShift>;
 }
 

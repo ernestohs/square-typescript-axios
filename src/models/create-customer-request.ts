@@ -29,77 +29,88 @@ export class CreateCustomerRequest {
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
     /**
      * The given (i.e., first) name associated with the customer profile.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     given_name?: string;
     /**
      * The family (i.e., last) name associated with the customer profile.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     family_name?: string;
     /**
      * A business name associated with the customer profile.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     company_name?: string;
     /**
      * A nickname for the customer profile.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     nickname?: string;
     /**
      * The email address associated with the customer profile.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     email_address?: string;
     /**
      * 
      * @type {Address}
      * @memberof CreateCustomerRequest
      */
-    @Field(() => Address) 
+    
+    @Field(() => Address, { nullable: true })
     address?: Address;
     /**
      * The 11-digit phone number associated with the customer profile.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     phone_number?: string;
     /**
      * An optional, second ID used to associate the customer profile with an entity in another system.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reference_id?: string;
     /**
      * A custom note associated with the customer profile.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     note?: string;
     /**
      * The birthday associated with the customer profile, in RFC 3339 format. Year is optional, timezone and times are not allowed. For example: `0000-09-01T00:00:00-00:00` indicates a birthday on September 1st. `1998-09-01T00:00:00-00:00` indications a birthday on September 1st __1998__.
      * @type {string}
      * @memberof CreateCustomerRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     birthday?: string;
 }
 

@@ -29,21 +29,23 @@ export class ListSubscriptionEventsResponse {
      * @type {Array<Error>}
      * @memberof ListSubscriptionEventsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The `SubscriptionEvents` retrieved.
      * @type {Array<SubscriptionEvent>}
      * @memberof ListSubscriptionEventsResponse
      */
-    @Field(() => [SubscriptionEvent]) 
+    
+    @Field(() => [SubscriptionEvent], { nullable: true })
     subscription_events?: Array<SubscriptionEvent>;
     /**
      * When a response is truncated, it includes a cursor that you can  use in a subsequent request to fetch the next set of events.  If empty, this is the final response.  For more information, see [Pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination).
      * @type {string}
      * @memberof ListSubscriptionEventsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

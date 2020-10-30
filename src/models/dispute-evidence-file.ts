@@ -28,14 +28,16 @@ export class DisputeEvidenceFile {
      * @type {string}
      * @memberof DisputeEvidenceFile
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     filename?: string;
     /**
      * Dispute evidence files must one of application/pdf, image/heic, image/heif, image/jpeg, image/png, image/tiff formats.
      * @type {string}
      * @memberof DisputeEvidenceFile
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     filetype?: string;
 }
 

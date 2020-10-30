@@ -29,21 +29,24 @@ export class SearchTerminalRefundsRequest {
      * @type {TerminalRefundQuery}
      * @memberof SearchTerminalRefundsRequest
      */
-    @Field(() => TerminalRefundQuery) 
+    
+    @Field(() => TerminalRefundQuery, { nullable: true })
     query?: TerminalRefundQuery;
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for the original query.
      * @type {string}
      * @memberof SearchTerminalRefundsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Limit the number of results returned for a single request.
      * @type {number}
      * @memberof SearchTerminalRefundsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
 }
 

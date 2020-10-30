@@ -28,14 +28,16 @@ export class CatalogItemOptionValueForItemVariation {
      * @type {string}
      * @memberof CatalogItemOptionValueForItemVariation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     item_option_id?: string;
     /**
      * The unique id of the selected value for the item option.
      * @type {string}
      * @memberof CatalogItemOptionValueForItemVariation
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     item_option_value_id?: string;
 }
 

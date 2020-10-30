@@ -28,7 +28,8 @@ export class RetrieveCashDrawerShiftRequest {
      * @type {string}
      * @memberof RetrieveCashDrawerShiftRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
 }
 

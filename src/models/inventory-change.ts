@@ -31,28 +31,32 @@ export class InventoryChange {
      * @type {string}
      * @memberof InventoryChange
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * 
      * @type {InventoryPhysicalCount}
      * @memberof InventoryChange
      */
-    @Field(() => InventoryPhysicalCount) 
+    
+    @Field(() => InventoryPhysicalCount, { nullable: true })
     physical_count?: InventoryPhysicalCount;
     /**
      * 
      * @type {InventoryAdjustment}
      * @memberof InventoryChange
      */
-    @Field(() => InventoryAdjustment) 
+    
+    @Field(() => InventoryAdjustment, { nullable: true })
     adjustment?: InventoryAdjustment;
     /**
      * 
      * @type {InventoryTransfer}
      * @memberof InventoryChange
      */
-    @Field(() => InventoryTransfer) 
+    
+    @Field(() => InventoryTransfer, { nullable: true })
     transfer?: InventoryTransfer;
 }
 

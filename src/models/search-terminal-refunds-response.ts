@@ -29,21 +29,23 @@ export class SearchTerminalRefundsResponse {
      * @type {Array<Error>}
      * @memberof SearchTerminalRefundsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The requested search result of `TerminalRefund`s.
      * @type {Array<TerminalRefund>}
      * @memberof SearchTerminalRefundsResponse
      */
-    @Field(() => [TerminalRefund]) 
+    
+    @Field(() => [TerminalRefund], { nullable: true })
     refunds?: Array<TerminalRefund>;
     /**
      * The pagination cursor to be used in a subsequent request. If empty, this is the final response.  See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
      * @type {string}
      * @memberof SearchTerminalRefundsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

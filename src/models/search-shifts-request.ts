@@ -29,21 +29,24 @@ export class SearchShiftsRequest {
      * @type {ShiftQuery}
      * @memberof SearchShiftsRequest
      */
-    @Field(() => ShiftQuery) 
+    
+    @Field(() => ShiftQuery, { nullable: true })
     query?: ShiftQuery;
     /**
      * number of resources in a page (200 by default).
      * @type {number}
      * @memberof SearchShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * opaque cursor for fetching the next page.
      * @type {string}
      * @memberof SearchShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

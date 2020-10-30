@@ -28,21 +28,24 @@ export class ListCustomersRequest {
      * @type {string}
      * @memberof ListCustomersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Indicates how Customers should be sorted.  Default: `DEFAULT`. See [CustomerSortField](#type-customersortfield) for possible values
      * @type {string}
      * @memberof ListCustomersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sort_field?: string;
     /**
      * Indicates whether Customers should be sorted in ascending (`ASC`) or descending (`DESC`) order.  Default: `ASC`. See [SortOrder](#type-sortorder) for possible values
      * @type {string}
      * @memberof ListCustomersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sort_order?: string;
 }
 

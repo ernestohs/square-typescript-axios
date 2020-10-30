@@ -29,35 +29,40 @@ export class V1ModifierList {
      * @type {string}
      * @memberof V1ModifierList
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The modifier list\'s name.
      * @type {string}
      * @memberof V1ModifierList
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * Indicates whether MULTIPLE options or a SINGLE option from the modifier list can be applied to a single item. See [V1ModifierListSelectionType](#type-v1modifierlistselectiontype) for possible values
      * @type {string}
      * @memberof V1ModifierList
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     selection_type?: string;
     /**
      * The options included in the modifier list.
      * @type {Array<V1ModifierOption>}
      * @memberof V1ModifierList
      */
-    @Field(() => [V1ModifierOption]) 
+    
+    @Field(() => [V1ModifierOption], { nullable: true })
     modifier_options?: Array<V1ModifierOption>;
     /**
      * The ID of the CatalogObject in the Connect v2 API. Objects that are shared across multiple locations share the same v2 ID.
      * @type {string}
      * @memberof V1ModifierList
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     v2_id?: string;
 }
 

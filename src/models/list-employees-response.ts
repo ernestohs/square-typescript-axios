@@ -29,21 +29,23 @@ export class ListEmployeesResponse {
      * @type {Array<Employee>}
      * @memberof ListEmployeesResponse
      */
-    @Field(() => [Employee]) 
+    
+    @Field(() => [Employee], { nullable: true })
     employees?: Array<Employee>;
     /**
      * The token to be used to retrieve the next page of results.
      * @type {string}
      * @memberof ListEmployeesResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof ListEmployeesResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

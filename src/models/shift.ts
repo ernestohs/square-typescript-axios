@@ -30,91 +30,104 @@ export class Shift {
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The ID of the employee this shift belongs to. DEPRECATED at version 2020-08-26. Use `team_member_id` instead
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     employee_id?: string;
     /**
      * The ID of the location this shift occurred at. Should be based on where the employee clocked in.
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * Read-only convenience value that is calculated from the location based on `location_id`. Format: the IANA Timezone Database identifier for the location timezone.
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     timezone?: string;
     /**
      * RFC 3339; shifted to location timezone + offset. Precision up to the minute is respected; seconds are truncated.
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     start_at: string;
     /**
      * RFC 3339; shifted to timezone + offset. Precision up to the minute is respected; seconds are truncated.
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_at?: string;
     /**
      * 
      * @type {ShiftWage}
      * @memberof Shift
      */
-    @Field(() => ShiftWage) 
+    
+    @Field(() => ShiftWage, { nullable: true })
     wage?: ShiftWage;
     /**
      * A list of any paid or unpaid breaks that were taken during this shift.
      * @type {Array<Break>}
      * @memberof Shift
      */
-    @Field(() => [Break]) 
+    
+    @Field(() => [Break], { nullable: true })
     breaks?: Array<Break>;
     /**
      * Describes working state of the current `Shift`. See [ShiftStatus](#type-shiftstatus) for possible values
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * Used for resolving concurrency issues; request will fail if version provided does not match server version at time of request. If not provided, Square executes a blind write; potentially overwriting data from another write.
      * @type {number}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     version?: number;
     /**
      * A read-only timestamp in RFC 3339 format; presented in UTC.
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * A read-only timestamp in RFC 3339 format; presented in UTC.
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
     /**
      * The ID of the team member this shift belongs to. Replaced `employee_id` at version \"2020-08-26\"
      * @type {string}
      * @memberof Shift
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     team_member_id?: string;
 }
 

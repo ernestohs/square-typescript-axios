@@ -28,7 +28,8 @@ export class LoyaltyEventOrderFilter {
      * @type {string}
      * @memberof LoyaltyEventOrderFilter
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     order_id: string;
 }
 

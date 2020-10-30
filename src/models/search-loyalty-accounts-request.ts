@@ -29,21 +29,24 @@ export class SearchLoyaltyAccountsRequest {
      * @type {SearchLoyaltyAccountsRequestLoyaltyAccountQuery}
      * @memberof SearchLoyaltyAccountsRequest
      */
-    @Field(() => SearchLoyaltyAccountsRequestLoyaltyAccountQuery) 
+    
+    @Field(() => SearchLoyaltyAccountsRequestLoyaltyAccountQuery, { nullable: true })
     query?: SearchLoyaltyAccountsRequestLoyaltyAccountQuery;
     /**
      * The maximum number of results to include in the response.
      * @type {number}
      * @memberof SearchLoyaltyAccountsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * A pagination cursor returned by a previous call to  this endpoint. Provide this to retrieve the next set of  results for the original query.  For more information,  see [Pagination](https://developer.squareup.com/docs/docs/basics/api101/pagination).
      * @type {string}
      * @memberof SearchLoyaltyAccountsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

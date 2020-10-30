@@ -29,28 +29,32 @@ export class AdditionalRecipient {
      * @type {string}
      * @memberof AdditionalRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
     /**
      * The description of the additional recipient.
      * @type {string}
      * @memberof AdditionalRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     description: string;
     /**
      * 
      * @type {Money}
      * @memberof AdditionalRecipient
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: false })
     amount_money: Money;
     /**
      * The unique ID for this `AdditionalRecipientReceivable`, assigned by the server.
      * @type {string}
      * @memberof AdditionalRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     receivable_id?: string;
 }
 

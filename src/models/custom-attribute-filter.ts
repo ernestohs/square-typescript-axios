@@ -29,42 +29,47 @@ export class CustomAttributeFilter {
      * @type {string}
      * @memberof CustomAttributeFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     custom_attribute_definition_id?: string;
     /**
      * A query expression to filter items or item variations by matching their custom attributes\' `key` property value against the specified key.
      * @type {string}
      * @memberof CustomAttributeFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     key?: string;
     /**
      * A query expression to filter items or item variations by matching their custom attributes\' `string_value`  property value against the specified text.
      * @type {string}
      * @memberof CustomAttributeFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     string_filter?: string;
     /**
      * 
      * @type {Range}
      * @memberof CustomAttributeFilter
      */
-    @Field(() => Range) 
+    
+    @Field(() => Range, { nullable: true })
     number_filter?: Range;
     /**
      * A query expression to filter items or item variations by matching  their custom attributes\' `selection_uid_values` values against the specified selection uids.
      * @type {Array<string>}
      * @memberof CustomAttributeFilter
      */
-    @Field() 
+    
     selection_uids_filter?: Array<string>;
     /**
      * A query expression to filter items or item variations by matching their custom attributes\' `boolean_value` property values against the specified Boolean expression.
      * @type {boolean}
      * @memberof CustomAttributeFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     bool_filter?: boolean;
 }
 

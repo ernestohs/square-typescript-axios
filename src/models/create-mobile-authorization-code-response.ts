@@ -28,21 +28,24 @@ export class CreateMobileAuthorizationCodeResponse {
      * @type {string}
      * @memberof CreateMobileAuthorizationCodeResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     authorization_code?: string;
     /**
      * The timestamp when `authorization_code` expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, e.g., \"2016-09-04T23:59:33.123Z\".
      * @type {string}
      * @memberof CreateMobileAuthorizationCodeResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     expires_at?: string;
     /**
      * 
      * @type {Error}
      * @memberof CreateMobileAuthorizationCodeResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     error?: Error;
 }
 

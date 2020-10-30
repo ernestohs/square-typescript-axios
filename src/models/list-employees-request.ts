@@ -28,28 +28,32 @@ export class ListEmployeesRequest {
      * @type {string}
      * @memberof ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * Specifies the EmployeeStatus to filter the employee by. See [EmployeeStatus](#type-employeestatus) for possible values
      * @type {string}
      * @memberof ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * The number of employees to be returned on each page.
      * @type {number}
      * @memberof ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * The token required to retrieve the specified page of results.
      * @type {string}
      * @memberof ListEmployeesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

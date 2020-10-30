@@ -28,7 +28,7 @@ export class RemoveGroupFromCustomerResponse {
      * @type {Array<Error>}
      * @memberof RemoveGroupFromCustomerResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

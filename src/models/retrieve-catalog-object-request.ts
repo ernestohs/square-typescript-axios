@@ -28,7 +28,8 @@ export class RetrieveCatalogObjectRequest {
      * @type {boolean}
      * @memberof RetrieveCatalogObjectRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     include_related_objects?: boolean;
 }
 

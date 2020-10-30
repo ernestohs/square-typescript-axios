@@ -28,7 +28,8 @@ export class CatalogCategory {
      * @type {string}
      * @memberof CatalogCategory
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
 }
 

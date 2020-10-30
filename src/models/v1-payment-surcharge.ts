@@ -30,56 +30,64 @@ export class V1PaymentSurcharge {
      * @type {string}
      * @memberof V1PaymentSurcharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentSurcharge
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     applied_money?: V1Money;
     /**
      * The amount of the surcharge as a percentage. The percentage is provided as a string representing the decimal equivalent of the percentage. For example, \"0.7\" corresponds to a 7% surcharge. Exactly one of rate or amount_money should be set.
      * @type {string}
      * @memberof V1PaymentSurcharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     rate?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentSurcharge
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     amount_money?: V1Money;
     /**
      * Indicates the source of the surcharge. For example, if it was applied as an automatic gratuity for a large group. See [V1PaymentSurchargeType](#type-v1paymentsurchargetype) for possible values
      * @type {string}
      * @memberof V1PaymentSurcharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * Indicates whether the surcharge is taxable.
      * @type {boolean}
      * @memberof V1PaymentSurcharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     taxable?: boolean;
     /**
      * The list of taxes that should be applied to the surcharge.
      * @type {Array<V1PaymentTax>}
      * @memberof V1PaymentSurcharge
      */
-    @Field(() => [V1PaymentTax]) 
+    
+    @Field(() => [V1PaymentTax], { nullable: true })
     taxes?: Array<V1PaymentTax>;
     /**
      * A Square-issued unique identifier associated with the surcharge.
      * @type {string}
      * @memberof V1PaymentSurcharge
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     surcharge_id?: string;
 }
 

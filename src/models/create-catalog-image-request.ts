@@ -29,21 +29,24 @@ export class CreateCatalogImageRequest {
      * @type {string}
      * @memberof CreateCatalogImageRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * Unique ID of the `CatalogObject` to attach to this `CatalogImage`. Leave this field empty to create unattached images, for example if you are building an integration where these images can be attached to catalog items at a later time.
      * @type {string}
      * @memberof CreateCatalogImageRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     object_id?: string;
     /**
      * 
      * @type {CatalogObject}
      * @memberof CreateCatalogImageRequest
      */
-    @Field(() => CatalogObject) 
+    
+    @Field(() => CatalogObject, { nullable: true })
     image?: CatalogObject;
 }
 

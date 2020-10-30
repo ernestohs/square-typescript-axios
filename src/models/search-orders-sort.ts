@@ -28,14 +28,16 @@ export class SearchOrdersSort {
      * @type {string}
      * @memberof SearchOrdersSort
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     sort_field: string;
     /**
      * The chronological order in which results are returned. Defaults to `DESC`. See [SortOrder](#type-sortorder) for possible values
      * @type {string}
      * @memberof SearchOrdersSort
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sort_order?: string;
 }
 

@@ -28,35 +28,40 @@ export class V1UpdateOrderRequest {
      * @type {string}
      * @memberof V1UpdateOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     action: string;
     /**
      * The tracking number of the shipment associated with the order. Only valid if action is COMPLETE.
      * @type {string}
      * @memberof V1UpdateOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     shipped_tracking_number?: string;
     /**
      * A merchant-specified note about the completion of the order. Only valid if action is COMPLETE.
      * @type {string}
      * @memberof V1UpdateOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     completed_note?: string;
     /**
      * A merchant-specified note about the refunding of the order. Only valid if action is REFUND.
      * @type {string}
      * @memberof V1UpdateOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     refunded_note?: string;
     /**
      * A merchant-specified note about the canceling of the order. Only valid if action is CANCEL.
      * @type {string}
      * @memberof V1UpdateOrderRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     canceled_note?: string;
 }
 

@@ -28,7 +28,7 @@ export class CatalogQueryItemsForItemOptions {
      * @type {Array<string>}
      * @memberof CatalogQueryItemsForItemOptions
      */
-    @Field() 
+    
     item_option_ids?: Array<string>;
 }
 

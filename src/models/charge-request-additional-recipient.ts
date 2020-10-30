@@ -29,21 +29,24 @@ export class ChargeRequestAdditionalRecipient {
      * @type {string}
      * @memberof ChargeRequestAdditionalRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
     /**
      * The description of the additional recipient.
      * @type {string}
      * @memberof ChargeRequestAdditionalRecipient
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     description: string;
     /**
      * 
      * @type {Money}
      * @memberof ChargeRequestAdditionalRecipient
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: false })
     amount_money: Money;
 }
 

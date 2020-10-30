@@ -28,7 +28,7 @@ export class DeleteInvoiceResponse {
      * @type {Array<Error>}
      * @memberof DeleteInvoiceResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

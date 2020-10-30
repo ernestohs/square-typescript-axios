@@ -29,14 +29,15 @@ export class RetrieveEmployeeResponse {
      * @type {Employee}
      * @memberof RetrieveEmployeeResponse
      */
-    @Field(() => Employee) 
+    
+    @Field(() => Employee, { nullable: true })
     employee?: Employee;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof RetrieveEmployeeResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

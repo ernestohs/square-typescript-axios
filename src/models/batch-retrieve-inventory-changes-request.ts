@@ -28,49 +28,52 @@ export class BatchRetrieveInventoryChangesRequest {
      * @type {Array<string>}
      * @memberof BatchRetrieveInventoryChangesRequest
      */
-    @Field() 
+    
     catalog_object_ids?: Array<string>;
     /**
      * The filter to return results by `Location` ID.  The filter is only applicable when set. The default value is null.
      * @type {Array<string>}
      * @memberof BatchRetrieveInventoryChangesRequest
      */
-    @Field() 
+    
     location_ids?: Array<string>;
     /**
      * The filter to return results by `InventoryChangeType` values other than `TRANSFER`. The default value is `[PHYSICAL_COUNT, ADJUSTMENT]`. See [InventoryChangeType](#type-inventorychangetype) for possible values
      * @type {Array<string>}
      * @memberof BatchRetrieveInventoryChangesRequest
      */
-    @Field() 
+    
     types?: Array<string>;
     /**
      * The filter to return `ADJUSTMENT` query results by `InventoryState`. This filter is only applied when set. The default value is null. See [InventoryState](#type-inventorystate) for possible values
      * @type {Array<string>}
      * @memberof BatchRetrieveInventoryChangesRequest
      */
-    @Field() 
+    
     states?: Array<string>;
     /**
      * The filter to return results with their `calculated_at` value   after the given time as specified in an RFC 3339 timestamp.  The default value is the UNIX epoch of (`1970-01-01T00:00:00Z`).
      * @type {string}
      * @memberof BatchRetrieveInventoryChangesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_after?: string;
     /**
      * The filter to return results with their `created_at` or `calculated_at` value   strictly before the given time as specified in an RFC 3339 timestamp.  The default value is the UNIX epoch of (`1970-01-01T00:00:00Z`).
      * @type {string}
      * @memberof BatchRetrieveInventoryChangesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_before?: string;
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for the original query.  See the [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination) guide for more information.
      * @type {string}
      * @memberof BatchRetrieveInventoryChangesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

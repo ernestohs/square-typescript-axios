@@ -28,42 +28,48 @@ export class InventoryCount {
      * @type {string}
      * @memberof InventoryCount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_object_id?: string;
     /**
      * The `CatalogObjectType` of the `CatalogObject` being tracked. Tracking is only supported for the `ITEM_VARIATION` type.
      * @type {string}
      * @memberof InventoryCount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     catalog_object_type?: string;
     /**
      * The current `InventoryState` for the related quantity of items. See [InventoryState](#type-inventorystate) for possible values
      * @type {string}
      * @memberof InventoryCount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     state?: string;
     /**
      * The Square ID of the `Location` where the related quantity of items are being tracked.
      * @type {string}
      * @memberof InventoryCount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * The number of items affected by the estimated count as a decimal string. Can support up to 5 digits after the decimal point.
      * @type {string}
      * @memberof InventoryCount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     quantity?: string;
     /**
      * A read-only timestamp in RFC 3339 format that indicates when Square received the most recent physical count or adjustment that had an affect on the estimated count.
      * @type {string}
      * @memberof InventoryCount
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     calculated_at?: string;
 }
 

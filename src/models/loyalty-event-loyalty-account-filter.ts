@@ -28,7 +28,8 @@ export class LoyaltyEventLoyaltyAccountFilter {
      * @type {string}
      * @memberof LoyaltyEventLoyaltyAccountFilter
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     loyalty_account_id: string;
 }
 

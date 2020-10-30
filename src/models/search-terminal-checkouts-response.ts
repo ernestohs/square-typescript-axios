@@ -29,21 +29,23 @@ export class SearchTerminalCheckoutsResponse {
      * @type {Array<Error>}
      * @memberof SearchTerminalCheckoutsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The requested search result of `TerminalCheckout`s.
      * @type {Array<TerminalCheckout>}
      * @memberof SearchTerminalCheckoutsResponse
      */
-    @Field(() => [TerminalCheckout]) 
+    
+    @Field(() => [TerminalCheckout], { nullable: true })
     checkouts?: Array<TerminalCheckout>;
     /**
      * The pagination cursor to be used in a subsequent request. If empty, this is the final response.  See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
      * @type {string}
      * @memberof SearchTerminalCheckoutsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

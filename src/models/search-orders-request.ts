@@ -29,35 +29,39 @@ export class SearchOrdersRequest {
      * @type {Array<string>}
      * @memberof SearchOrdersRequest
      */
-    @Field() 
+    
     location_ids?: Array<string>;
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for your original query. See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
      * @type {string}
      * @memberof SearchOrdersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * 
      * @type {SearchOrdersQuery}
      * @memberof SearchOrdersRequest
      */
-    @Field(() => SearchOrdersQuery) 
+    
+    @Field(() => SearchOrdersQuery, { nullable: true })
     query?: SearchOrdersQuery;
     /**
      * Maximum number of results to be returned in a single page. It is possible to receive fewer results than the specified limit on a given page.  Default: `500`
      * @type {number}
      * @memberof SearchOrdersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * Boolean that controls the format of the search results. If `true`, SearchOrders will return ``OrderEntry`` objects. If `false`, SearchOrders will return complete Order objects.  Default: `false`.
      * @type {boolean}
      * @memberof SearchOrdersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     return_entries?: boolean;
 }
 

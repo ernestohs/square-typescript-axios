@@ -29,14 +29,15 @@ export class CreateCatalogImageResponse {
      * @type {Array<Error>}
      * @memberof CreateCatalogImageResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {CatalogObject}
      * @memberof CreateCatalogImageResponse
      */
-    @Field(() => CatalogObject) 
+    
+    @Field(() => CatalogObject, { nullable: true })
     image?: CatalogObject;
 }
 

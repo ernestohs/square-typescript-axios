@@ -29,42 +29,48 @@ export class ItemVariationLocationOverrides {
      * @type {string}
      * @memberof ItemVariationLocationOverrides
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * 
      * @type {Money}
      * @memberof ItemVariationLocationOverrides
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     price_money?: Money;
     /**
      * The pricing type (fixed or variable) for the `CatalogItemVariation` at the given `Location`. See [CatalogPricingType](#type-catalogpricingtype) for possible values
      * @type {string}
      * @memberof ItemVariationLocationOverrides
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     pricing_type?: string;
     /**
      * If `true`, inventory tracking is active for the `CatalogItemVariation` at this `Location`.
      * @type {boolean}
      * @memberof ItemVariationLocationOverrides
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     track_inventory?: boolean;
     /**
      * Indicates whether the `CatalogItemVariation` displays an alert when its inventory quantity is less than or equal to its `inventory_alert_threshold`. See [InventoryAlertType](#type-inventoryalerttype) for possible values
      * @type {string}
      * @memberof ItemVariationLocationOverrides
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     inventory_alert_type?: string;
     /**
      * If the inventory quantity for the variation is less than or equal to this value and `inventory_alert_type` is `LOW_QUANTITY`, the variation displays an alert in the merchant dashboard.  This value is always an integer.
      * @type {number}
      * @memberof ItemVariationLocationOverrides
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     inventory_alert_threshold?: number;
 }
 

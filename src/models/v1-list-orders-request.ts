@@ -28,21 +28,24 @@ export class V1ListOrdersRequest {
      * @type {string}
      * @memberof V1ListOrdersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order?: string;
     /**
      * The maximum number of payments to return in a single response. This value cannot exceed 200.
      * @type {number}
      * @memberof V1ListOrdersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * A pagination cursor to retrieve the next set of results for your original query to the endpoint.
      * @type {string}
      * @memberof V1ListOrdersRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     batch_token?: string;
 }
 

@@ -29,14 +29,15 @@ export class CreateCustomerGroupResponse {
      * @type {Array<Error>}
      * @memberof CreateCustomerGroupResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {CustomerGroup}
      * @memberof CreateCustomerGroupResponse
      */
-    @Field(() => CustomerGroup) 
+    
+    @Field(() => CustomerGroup, { nullable: true })
     group?: CustomerGroup;
 }
 

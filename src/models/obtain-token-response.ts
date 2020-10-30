@@ -28,56 +28,64 @@ export class ObtainTokenResponse {
      * @type {string}
      * @memberof ObtainTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     access_token?: string;
     /**
      * This value is always _bearer_.
      * @type {string}
      * @memberof ObtainTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     token_type?: string;
     /**
      * The date when access_token expires, in [ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm) format.
      * @type {string}
      * @memberof ObtainTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     expires_at?: string;
     /**
      * The ID of the authorizing merchant\'s business.
      * @type {string}
      * @memberof ObtainTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     merchant_id?: string;
     /**
      * __LEGACY FIELD__. The ID of a subscription plan the merchant signed up for. Only present if the merchant signed up for a subscription during authorization.
      * @type {string}
      * @memberof ObtainTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     subscription_id?: string;
     /**
      * T__LEGACY FIELD__. The ID of the subscription plan the merchant signed up for. Only present if the merchant signed up for a subscription during authorization.
      * @type {string}
      * @memberof ObtainTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     plan_id?: string;
     /**
      * Then OpenID token belonging to this this person. Only present if the OPENID scope is included in the authorize request.
      * @type {string}
      * @memberof ObtainTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id_token?: string;
     /**
      * A refresh token. OAuth refresh tokens are 64 bytes long. For more information, see [OAuth access token management](https://developer.squareup.com/docs/authz/oauth/how-it-works#oauth-access-token-management).
      * @type {string}
      * @memberof ObtainTokenResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     refresh_token?: string;
 }
 

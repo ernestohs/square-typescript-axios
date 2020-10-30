@@ -29,14 +29,16 @@ export class CreateTerminalCheckoutRequest {
      * @type {string}
      * @memberof CreateTerminalCheckoutRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * 
      * @type {TerminalCheckout}
      * @memberof CreateTerminalCheckoutRequest
      */
-    @Field(() => TerminalCheckout) 
+    
+    @Field(() => TerminalCheckout, { nullable: false })
     checkout: TerminalCheckout;
 }
 

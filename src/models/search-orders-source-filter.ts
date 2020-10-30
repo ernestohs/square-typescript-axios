@@ -28,7 +28,7 @@ export class SearchOrdersSourceFilter {
      * @type {Array<string>}
      * @memberof SearchOrdersSourceFilter
      */
-    @Field() 
+    
     source_names?: Array<string>;
 }
 

@@ -28,28 +28,32 @@ export class SubscriptionEvent {
      * @type {string}
      * @memberof SubscriptionEvent
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     id: string;
     /**
      * Type of the subscription event. See [SubscriptionEventSubscriptionEventType](#type-subscriptioneventsubscriptioneventtype) for possible values
      * @type {string}
      * @memberof SubscriptionEvent
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     subscription_event_type: string;
     /**
      * The date, in YYYY-MM-DD format (for example, 2013-01-15), when the subscription event went into effect.
      * @type {string}
      * @memberof SubscriptionEvent
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     effective_date: string;
     /**
      * The ID of the subscription plan associated with the subscription.
      * @type {string}
      * @memberof SubscriptionEvent
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     plan_id: string;
 }
 

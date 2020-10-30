@@ -28,14 +28,16 @@ export class V1InventoryEntry {
      * @type {string}
      * @memberof V1InventoryEntry
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     variation_id?: string;
     /**
      * The current available quantity of the item variation.
      * @type {number}
      * @memberof V1InventoryEntry
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     quantity_on_hand?: number;
 }
 

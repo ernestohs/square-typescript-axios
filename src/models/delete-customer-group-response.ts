@@ -28,7 +28,7 @@ export class DeleteCustomerGroupResponse {
      * @type {Array<Error>}
      * @memberof DeleteCustomerGroupResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

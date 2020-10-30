@@ -28,14 +28,16 @@ export class CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelec
      * @type {string}
      * @memberof CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     uid?: string;
     /**
      * Selection name, unique within `allowed_selections`.
      * @type {string}
      * @memberof CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     name: string;
 }
 

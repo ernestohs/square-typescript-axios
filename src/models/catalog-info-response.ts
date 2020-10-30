@@ -30,21 +30,23 @@ export class CatalogInfoResponse {
      * @type {Array<Error>}
      * @memberof CatalogInfoResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {CatalogInfoResponseLimits}
      * @memberof CatalogInfoResponse
      */
-    @Field(() => CatalogInfoResponseLimits) 
+    
+    @Field(() => CatalogInfoResponseLimits, { nullable: true })
     limits?: CatalogInfoResponseLimits;
     /**
      * 
      * @type {StandardUnitDescriptionGroup}
      * @memberof CatalogInfoResponse
      */
-    @Field(() => StandardUnitDescriptionGroup) 
+    
+    @Field(() => StandardUnitDescriptionGroup, { nullable: true })
     standard_unit_description_group?: StandardUnitDescriptionGroup;
 }
 

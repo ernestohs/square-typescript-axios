@@ -28,7 +28,7 @@ export class RemoveDisputeEvidenceResponse {
      * @type {Array<Error>}
      * @memberof RemoveDisputeEvidenceResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

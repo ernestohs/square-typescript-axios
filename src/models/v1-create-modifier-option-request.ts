@@ -29,7 +29,8 @@ export class V1CreateModifierOptionRequest {
      * @type {V1ModifierOption}
      * @memberof V1CreateModifierOptionRequest
      */
-    @Field(() => V1ModifierOption) 
+    
+    @Field(() => V1ModifierOption, { nullable: true })
     body?: V1ModifierOption;
 }
 

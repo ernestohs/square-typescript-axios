@@ -28,7 +28,7 @@ export class AddGroupToCustomerResponse {
      * @type {Array<Error>}
      * @memberof AddGroupToCustomerResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

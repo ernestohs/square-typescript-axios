@@ -29,21 +29,24 @@ export class TenderCardDetails {
      * @type {string}
      * @memberof TenderCardDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * 
      * @type {Card}
      * @memberof TenderCardDetails
      */
-    @Field(() => Card) 
+    
+    @Field(() => Card, { nullable: true })
     card?: Card;
     /**
      * The method used to enter the card\'s details for the transaction. See [TenderCardDetailsEntryMethod](#type-tendercarddetailsentrymethod) for possible values
      * @type {string}
      * @memberof TenderCardDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     entry_method?: string;
 }
 

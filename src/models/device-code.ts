@@ -28,77 +28,88 @@ export class DeviceCode {
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * An optional user-defined name for the device code.
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The unique code that can be used to login.
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     code?: string;
     /**
      * The unique id of the device that used this code. Populated when the device is paired up.
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     device_id?: string;
     /**
      * The targeting product type of the device code. See [ProductType](#type-producttype) for possible values
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     product_type: string;
     /**
      * The location assigned to this code.
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * The pairing status of the device code. See [DeviceCodeStatus](#type-devicecodestatus) for possible values
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * When this DeviceCode will expire and no longer login. Timestamp in RFC 3339 format.
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     pair_by?: string;
     /**
      * When this DeviceCode was created. Timestamp in RFC 3339 format.
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * When this DeviceCode\'s status was last changed. Timestamp in RFC 3339 format.
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status_changed_at?: string;
     /**
      * When this DeviceCode was paired. Timestamp in RFC 3339 format.
      * @type {string}
      * @memberof DeviceCode
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     paired_at?: string;
 }
 

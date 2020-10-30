@@ -28,21 +28,24 @@ export class DeviceDetails {
      * @type {string}
      * @memberof DeviceDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     device_id?: string;
     /**
      * Square-issued installation ID for the device.
      * @type {string}
      * @memberof DeviceDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     device_installation_id?: string;
     /**
      * The name of the device set by the merchant.
      * @type {string}
      * @memberof DeviceDetails
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     device_name?: string;
 }
 

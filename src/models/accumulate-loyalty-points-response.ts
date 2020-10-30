@@ -29,14 +29,15 @@ export class AccumulateLoyaltyPointsResponse {
      * @type {Array<Error>}
      * @memberof AccumulateLoyaltyPointsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {LoyaltyEvent}
      * @memberof AccumulateLoyaltyPointsResponse
      */
-    @Field(() => LoyaltyEvent) 
+    
+    @Field(() => LoyaltyEvent, { nullable: true })
     event?: LoyaltyEvent;
 }
 

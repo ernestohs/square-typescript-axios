@@ -29,21 +29,23 @@ export class ListPaymentsResponse {
      * @type {Array<Error>}
      * @memberof ListPaymentsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The requested list of payments.
      * @type {Array<Payment>}
      * @memberof ListPaymentsResponse
      */
-    @Field(() => [Payment]) 
+    
+    @Field(() => [Payment], { nullable: true })
     payments?: Array<Payment>;
     /**
      * The pagination cursor to be used in a subsequent request. If empty, this is the final response.  For more information, see [Pagination](https://developer.squareup.com/docs/basics/api101/pagination).
      * @type {string}
      * @memberof ListPaymentsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

@@ -28,7 +28,8 @@ export class RegisterDomainRequest {
      * @type {string}
      * @memberof RegisterDomainRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     domain_name: string;
 }
 

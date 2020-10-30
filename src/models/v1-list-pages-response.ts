@@ -29,7 +29,8 @@ export class V1ListPagesResponse {
      * @type {Array<V1Page>}
      * @memberof V1ListPagesResponse
      */
-    @Field(() => [V1Page]) 
+    
+    @Field(() => [V1Page], { nullable: true })
     items?: Array<V1Page>;
 }
 

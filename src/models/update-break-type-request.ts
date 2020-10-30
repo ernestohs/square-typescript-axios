@@ -29,7 +29,8 @@ export class UpdateBreakTypeRequest {
      * @type {BreakType}
      * @memberof UpdateBreakTypeRequest
      */
-    @Field(() => BreakType) 
+    
+    @Field(() => BreakType, { nullable: false })
     break_type: BreakType;
 }
 

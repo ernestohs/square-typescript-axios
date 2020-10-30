@@ -29,21 +29,23 @@ export class ListDisputesResponse {
      * @type {Array<Error>}
      * @memberof ListDisputesResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The list of Disputes.
      * @type {Array<Dispute>}
      * @memberof ListDisputesResponse
      */
-    @Field(() => [Dispute]) 
+    
+    @Field(() => [Dispute], { nullable: true })
     disputes?: Array<Dispute>;
     /**
      * The pagination cursor to be used in a subsequent request. If unset, this is the final response. For more information, see [Paginating](https://developer.squareup.com/docs/basics/api101/pagination).
      * @type {string}
      * @memberof ListDisputesResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

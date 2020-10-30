@@ -29,14 +29,15 @@ export class RetrieveLoyaltyRewardResponse {
      * @type {Array<Error>}
      * @memberof RetrieveLoyaltyRewardResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {LoyaltyReward}
      * @memberof RetrieveLoyaltyRewardResponse
      */
-    @Field(() => LoyaltyReward) 
+    
+    @Field(() => LoyaltyReward, { nullable: true })
     reward?: LoyaltyReward;
 }
 

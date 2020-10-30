@@ -29,21 +29,23 @@ export class ListTransactionsResponse {
      * @type {Array<Error>}
      * @memberof ListTransactionsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * An array of transactions that match your query.
      * @type {Array<Transaction>}
      * @memberof ListTransactionsResponse
      */
-    @Field(() => [Transaction]) 
+    
+    @Field(() => [Transaction], { nullable: true })
     transactions?: Array<Transaction>;
     /**
      * A pagination cursor for retrieving the next set of results, if any remain. Provide this value as the `cursor` parameter in a subsequent request to this endpoint.  See [Paginating results](#paginatingresults) for more information.
      * @type {string}
      * @memberof ListTransactionsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

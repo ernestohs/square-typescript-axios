@@ -28,14 +28,16 @@ export class V1DeletePageCellRequest {
      * @type {string}
      * @memberof V1DeletePageCellRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     row?: string;
     /**
      * The column of the cell to clear. Always an integer between 0 and 4, inclusive. Column 0 is the leftmost column.
      * @type {string}
      * @memberof V1DeletePageCellRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     column?: string;
 }
 

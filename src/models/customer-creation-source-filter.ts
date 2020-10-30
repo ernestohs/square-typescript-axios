@@ -28,14 +28,15 @@ export class CustomerCreationSourceFilter {
      * @type {Array<string>}
      * @memberof CustomerCreationSourceFilter
      */
-    @Field() 
+    
     values?: Array<string>;
     /**
      * Indicates whether a customer profile matching the filter criteria should be included in the result or excluded from the result.  Default: `INCLUDE`. See [CustomerInclusionExclusion](#type-customerinclusionexclusion) for possible values
      * @type {string}
      * @memberof CustomerCreationSourceFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     rule?: string;
 }
 

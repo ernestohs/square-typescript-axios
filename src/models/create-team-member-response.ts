@@ -29,14 +29,15 @@ export class CreateTeamMemberResponse {
      * @type {TeamMember}
      * @memberof CreateTeamMemberResponse
      */
-    @Field(() => TeamMember) 
+    
+    @Field(() => TeamMember, { nullable: true })
     team_member?: TeamMember;
     /**
      * The errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof CreateTeamMemberResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

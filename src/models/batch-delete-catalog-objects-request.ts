@@ -28,7 +28,7 @@ export class BatchDeleteCatalogObjectsRequest {
      * @type {Array<string>}
      * @memberof BatchDeleteCatalogObjectsRequest
      */
-    @Field() 
+    
     object_ids?: Array<string>;
 }
 

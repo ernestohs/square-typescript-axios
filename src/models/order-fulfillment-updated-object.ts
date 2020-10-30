@@ -29,7 +29,8 @@ export class OrderFulfillmentUpdatedObject {
      * @type {OrderFulfillmentUpdated}
      * @memberof OrderFulfillmentUpdatedObject
      */
-    @Field(() => OrderFulfillmentUpdated) 
+    
+    @Field(() => OrderFulfillmentUpdated, { nullable: true })
     order_fulfillment_updated?: OrderFulfillmentUpdated;
 }
 

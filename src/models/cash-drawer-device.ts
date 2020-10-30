@@ -28,14 +28,16 @@ export class CashDrawerDevice {
      * @type {string}
      * @memberof CashDrawerDevice
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The device merchant-specified name.
      * @type {string}
      * @memberof CashDrawerDevice
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
 }
 

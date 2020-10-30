@@ -20,7 +20,22 @@ export class {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{
      * @deprecated
     {{/deprecated}}
      */
-    @Field({{^isPrimitiveType}}{{#isListContainer}}() => [{{{complexType}}}]{{/isListContainer}}{{^isListContainer}}{{^isMapContainer}}() => {{{dataType}}}{{/isMapContainer}}{{/isListContainer}}{{/isPrimitiveType}}) 
+    
+    {{^isPrimitiveType}}
+        {{#isListContainer}}
+    @Field(() => [{{{complexType}}}], { nullable: {{#required}}false{{/required}}{{^required}}true{{/required}} })
+        {{/isListContainer}}
+        {{^isListContainer}}
+            {{^isMapContainer}}
+    @Field(() => {{{dataType}}}, { nullable: {{#required}}false{{/required}}{{^required}}true{{/required}} })
+            {{/isMapContainer}}
+        {{/isListContainer}}
+    {{/isPrimitiveType}}
+    {{#isPrimitiveType}}
+        {{^isContainer}}
+    @Field({ nullable: {{#required}}false{{/required}}{{^required}}true{{/required}} })
+        {{/isContainer}}
+    {{/isPrimitiveType}}
     {{name}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}};
 {{/vars}}
 }{{#hasEnums}}

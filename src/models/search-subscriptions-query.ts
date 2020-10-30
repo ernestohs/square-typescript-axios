@@ -29,7 +29,8 @@ export class SearchSubscriptionsQuery {
      * @type {SearchSubscriptionsFilter}
      * @memberof SearchSubscriptionsQuery
      */
-    @Field(() => SearchSubscriptionsFilter) 
+    
+    @Field(() => SearchSubscriptionsFilter, { nullable: true })
     filter?: SearchSubscriptionsFilter;
 }
 

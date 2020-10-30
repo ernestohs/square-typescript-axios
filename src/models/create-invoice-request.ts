@@ -29,14 +29,16 @@ export class CreateInvoiceRequest {
      * @type {Invoice}
      * @memberof CreateInvoiceRequest
      */
-    @Field(() => Invoice) 
+    
+    @Field(() => Invoice, { nullable: false })
     invoice: Invoice;
     /**
      * A unique string that identifies the `CreateInvoice` request. If you do not  provide `idempotency_key` (or provide an empty string as the value), the endpoint  treats each request as independent.  For more information, see [Idempotency](https://developer.squareup.com/docs/docs/working-with-apis/idempotency).
      * @type {string}
      * @memberof CreateInvoiceRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
 }
 

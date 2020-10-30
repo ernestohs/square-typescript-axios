@@ -28,7 +28,8 @@ export class CancelPaymentByIdempotencyKeyRequest {
      * @type {string}
      * @memberof CancelPaymentByIdempotencyKeyRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
 }
 

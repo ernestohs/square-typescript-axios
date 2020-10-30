@@ -29,14 +29,15 @@ export class CreateDeviceCodeResponse {
      * @type {Array<Error>}
      * @memberof CreateDeviceCodeResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {DeviceCode}
      * @memberof CreateDeviceCodeResponse
      */
-    @Field(() => DeviceCode) 
+    
+    @Field(() => DeviceCode, { nullable: true })
     device_code?: DeviceCode;
 }
 

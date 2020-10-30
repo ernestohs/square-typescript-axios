@@ -28,21 +28,21 @@ export class UpdateItemModifierListsRequest {
      * @type {Array<string>}
      * @memberof UpdateItemModifierListsRequest
      */
-    @Field() 
+    
     item_ids: Array<string>;
     /**
      * The IDs of the CatalogModifierList objects to enable for the CatalogItem.
      * @type {Array<string>}
      * @memberof UpdateItemModifierListsRequest
      */
-    @Field() 
+    
     modifier_lists_to_enable?: Array<string>;
     /**
      * The IDs of the CatalogModifierList objects to disable for the CatalogItem.
      * @type {Array<string>}
      * @memberof UpdateItemModifierListsRequest
      */
-    @Field() 
+    
     modifier_lists_to_disable?: Array<string>;
 }
 

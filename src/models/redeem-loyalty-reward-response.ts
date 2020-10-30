@@ -29,14 +29,15 @@ export class RedeemLoyaltyRewardResponse {
      * @type {Array<Error>}
      * @memberof RedeemLoyaltyRewardResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {LoyaltyEvent}
      * @memberof RedeemLoyaltyRewardResponse
      */
-    @Field(() => LoyaltyEvent) 
+    
+    @Field(() => LoyaltyEvent, { nullable: true })
     event?: LoyaltyEvent;
 }
 

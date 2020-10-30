@@ -29,35 +29,39 @@ export class SearchCatalogObjectsResponse {
      * @type {Array<Error>}
      * @memberof SearchCatalogObjectsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * The pagination cursor to be used in a subsequent request. If unset, this is the final response. See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
      * @type {string}
      * @memberof SearchCatalogObjectsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * The CatalogObjects returned.
      * @type {Array<CatalogObject>}
      * @memberof SearchCatalogObjectsResponse
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: true })
     objects?: Array<CatalogObject>;
     /**
      * A list of CatalogObjects referenced by the objects in the `objects` field.
      * @type {Array<CatalogObject>}
      * @memberof SearchCatalogObjectsResponse
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: true })
     related_objects?: Array<CatalogObject>;
     /**
      * When the associated product catalog was last updated. Will match the value for `end_time` or `cursor` if either field is included in the `SearchCatalog` request.
      * @type {string}
      * @memberof SearchCatalogObjectsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     latest_time?: string;
 }
 

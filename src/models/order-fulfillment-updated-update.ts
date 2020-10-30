@@ -28,21 +28,24 @@ export class OrderFulfillmentUpdatedUpdate {
      * @type {string}
      * @memberof OrderFulfillmentUpdatedUpdate
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     fulfillment_uid?: string;
     /**
      * The state of the fulfillment before the change. Will not be populated if the fulfillment is created with this new Order version. See [OrderFulfillmentState](#type-orderfulfillmentstate) for possible values
      * @type {string}
      * @memberof OrderFulfillmentUpdatedUpdate
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     old_state?: string;
     /**
      * The state of the fulfillment after the change. May be equal to old_state if a non-state field was changed on the fulfillment (e.g. tracking number). See [OrderFulfillmentState](#type-orderfulfillmentstate) for possible values
      * @type {string}
      * @memberof OrderFulfillmentUpdatedUpdate
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     new_state?: string;
 }
 

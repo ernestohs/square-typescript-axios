@@ -29,14 +29,16 @@ export class CreateTeamMemberRequest {
      * @type {string}
      * @memberof CreateTeamMemberRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     idempotency_key?: string;
     /**
      * 
      * @type {TeamMember}
      * @memberof CreateTeamMemberRequest
      */
-    @Field(() => TeamMember) 
+    
+    @Field(() => TeamMember, { nullable: true })
     team_member?: TeamMember;
 }
 

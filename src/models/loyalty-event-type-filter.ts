@@ -28,7 +28,7 @@ export class LoyaltyEventTypeFilter {
      * @type {Array<string>}
      * @memberof LoyaltyEventTypeFilter
      */
-    @Field() 
+    
     types: Array<string>;
 }
 

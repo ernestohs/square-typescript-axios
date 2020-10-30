@@ -28,28 +28,32 @@ export class V1PaymentItemDetail {
      * @type {string}
      * @memberof V1PaymentItemDetail
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     category_name?: string;
     /**
      *  The item\'s merchant-defined SKU, if any.
      * @type {string}
      * @memberof V1PaymentItemDetail
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sku?: string;
     /**
      * The unique ID of the item purchased, if any.
      * @type {string}
      * @memberof V1PaymentItemDetail
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     item_id?: string;
     /**
      * The unique ID of the item variation purchased, if any.
      * @type {string}
      * @memberof V1PaymentItemDetail
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     item_variation_id?: string;
 }
 

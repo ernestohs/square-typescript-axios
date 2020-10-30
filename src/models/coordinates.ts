@@ -28,14 +28,16 @@ export class Coordinates {
      * @type {number}
      * @memberof Coordinates
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     latitude?: number;
     /**
      * The longitude of the coordinate expressed in degrees.
      * @type {number}
      * @memberof Coordinates
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     longitude?: number;
 }
 

@@ -29,21 +29,24 @@ export class ProcessingFee {
      * @type {string}
      * @memberof ProcessingFee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     effective_at?: string;
     /**
      * The type of fee assessed or adjusted. Can be one of: `INITIAL`, `ADJUSTMENT`.
      * @type {string}
      * @memberof ProcessingFee
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * 
      * @type {Money}
      * @memberof ProcessingFee
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     amount_money?: Money;
 }
 

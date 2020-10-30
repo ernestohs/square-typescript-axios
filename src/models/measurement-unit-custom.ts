@@ -28,14 +28,16 @@ export class MeasurementUnitCustom {
      * @type {string}
      * @memberof MeasurementUnitCustom
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     name: string;
     /**
      * The abbreviation of the custom unit, such as \"bsh\" (bushel). This appears in the cart for the Point of Sale app, and in reports.
      * @type {string}
      * @memberof MeasurementUnitCustom
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     abbreviation: string;
 }
 

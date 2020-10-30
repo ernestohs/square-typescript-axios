@@ -29,14 +29,15 @@ export class CreateLocationResponse {
      * @type {Array<Error>}
      * @memberof CreateLocationResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {Location}
      * @memberof CreateLocationResponse
      */
-    @Field(() => Location) 
+    
+    @Field(() => Location, { nullable: true })
     location?: Location;
 }
 

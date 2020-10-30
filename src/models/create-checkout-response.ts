@@ -29,14 +29,15 @@ export class CreateCheckoutResponse {
      * @type {Checkout}
      * @memberof CreateCheckoutResponse
      */
-    @Field(() => Checkout) 
+    
+    @Field(() => Checkout, { nullable: true })
     checkout?: Checkout;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof CreateCheckoutResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

@@ -28,14 +28,16 @@ export class V1ListInventoryRequest {
      * @type {number}
      * @memberof V1ListInventoryRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * A pagination cursor to retrieve the next set of results for your original query to the endpoint.
      * @type {string}
      * @memberof V1ListInventoryRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     batch_token?: string;
 }
 

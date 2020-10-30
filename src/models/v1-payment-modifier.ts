@@ -29,21 +29,24 @@ export class V1PaymentModifier {
      * @type {string}
      * @memberof V1PaymentModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1PaymentModifier
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     applied_money?: V1Money;
     /**
      * TThe ID of the applied modifier option, if available. Modifier options applied in older versions of Square Register might not have an ID.
      * @type {string}
      * @memberof V1PaymentModifier
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     modifier_option_id?: string;
 }
 

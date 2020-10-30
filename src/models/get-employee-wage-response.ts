@@ -29,14 +29,15 @@ export class GetEmployeeWageResponse {
      * @type {EmployeeWage}
      * @memberof GetEmployeeWageResponse
      */
-    @Field(() => EmployeeWage) 
+    
+    @Field(() => EmployeeWage, { nullable: true })
     employee_wage?: EmployeeWage;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof GetEmployeeWageResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

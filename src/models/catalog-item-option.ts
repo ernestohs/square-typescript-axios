@@ -29,35 +29,40 @@ export class CatalogItemOption {
      * @type {string}
      * @memberof CatalogItemOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The item option\'s display name for the customer. This is a searchable attribute for use in applicable query filters.
      * @type {string}
      * @memberof CatalogItemOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     display_name?: string;
     /**
      * The item option\'s human-readable description. Displayed in the Square Point of Sale app for the seller and in the Online Store or on receipts for the buyer. This is a searchable attribute for use in applicable query filters.
      * @type {string}
      * @memberof CatalogItemOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     description?: string;
     /**
      * If true, display colors for entries in `values` when present.
      * @type {boolean}
      * @memberof CatalogItemOption
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     show_colors?: boolean;
     /**
      * A list of CatalogObjects containing the `CatalogItemOptionValue`s for this item.
      * @type {Array<CatalogObject>}
      * @memberof CatalogItemOption
      */
-    @Field(() => [CatalogObject]) 
+    
+    @Field(() => [CatalogObject], { nullable: true })
     values?: Array<CatalogObject>;
 }
 

@@ -28,7 +28,8 @@ export class TerminalRefundQuerySort {
      * @type {string}
      * @memberof TerminalRefundQuerySort
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sort_order?: string;
 }
 

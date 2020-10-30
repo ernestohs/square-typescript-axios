@@ -28,14 +28,16 @@ export class CustomerTextFilter {
      * @type {string}
      * @memberof CustomerTextFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     exact?: string;
     /**
      * Use the fuzzy filter to select customers whose attributes match the specified query  in a fuzzy manner. When the fuzzy option is used, search queries are tokenized, and then  each query token must be matched somewhere in the searched attribute. For single token queries,  this is effectively the same behavior as a partial match operation.
      * @type {string}
      * @memberof CustomerTextFilter
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     fuzzy?: string;
 }
 

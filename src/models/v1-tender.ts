@@ -29,112 +29,128 @@ export class V1Tender {
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The type of tender. See [V1TenderType](#type-v1tendertype) for possible values
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     type?: string;
     /**
      * A human-readable description of the tender.
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     name?: string;
     /**
      * The ID of the employee that processed the tender.
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     employee_id?: string;
     /**
      * The URL of the receipt for the tender.
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     receipt_url?: string;
     /**
      * The brand of credit card provided. See [V1TenderCardBrand](#type-v1tendercardbrand) for possible values
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     card_brand?: string;
     /**
      * The last four digits of the provided credit card\'s account number.
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     pan_suffix?: string;
     /**
      * The tender\'s unique ID. See [V1TenderEntryMethod](#type-v1tenderentrymethod) for possible values
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     entry_method?: string;
     /**
      * Notes entered by the merchant about the tender at the time of payment, if any. Typically only present for tender with the type: OTHER.
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     payment_note?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Tender
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     total_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Tender
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     tendered_money?: V1Money;
     /**
      * The time when the tender was created, in ISO 8601 format.
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     tendered_at?: string;
     /**
      * The time when the tender was settled, in ISO 8601 format.
      * @type {string}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     settled_at?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Tender
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     change_back_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Tender
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     refunded_money?: V1Money;
     /**
      * Indicates whether or not the tender is associated with an exchange. If is_exchange is true, the tender represents the value of goods returned in an exchange not the actual money paid. The exchange value reduces the tender amounts needed to pay for items purchased in the exchange.
      * @type {boolean}
      * @memberof V1Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     is_exchange?: boolean;
 }
 

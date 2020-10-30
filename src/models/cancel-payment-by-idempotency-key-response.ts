@@ -28,7 +28,7 @@ export class CancelPaymentByIdempotencyKeyResponse {
      * @type {Array<Error>}
      * @memberof CancelPaymentByIdempotencyKeyResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

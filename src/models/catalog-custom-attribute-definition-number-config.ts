@@ -28,7 +28,8 @@ export class CatalogCustomAttributeDefinitionNumberConfig {
      * @type {number}
      * @memberof CatalogCustomAttributeDefinitionNumberConfig
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     precision?: number;
 }
 

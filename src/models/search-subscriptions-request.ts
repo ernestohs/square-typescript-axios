@@ -29,21 +29,24 @@ export class SearchSubscriptionsRequest {
      * @type {string}
      * @memberof SearchSubscriptionsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * The upper limit on the number of subscriptions to return  in the response.   Default: `200`
      * @type {number}
      * @memberof SearchSubscriptionsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * 
      * @type {SearchSubscriptionsQuery}
      * @memberof SearchSubscriptionsRequest
      */
-    @Field(() => SearchSubscriptionsQuery) 
+    
+    @Field(() => SearchSubscriptionsQuery, { nullable: true })
     query?: SearchSubscriptionsQuery;
 }
 

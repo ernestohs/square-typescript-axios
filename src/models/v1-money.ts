@@ -28,14 +28,16 @@ export class V1Money {
      * @type {number}
      * @memberof V1Money
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     amount?: number;
     /**
      *  See [Currency](#type-currency) for possible values
      * @type {string}
      * @memberof V1Money
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     currency_code?: string;
 }
 

@@ -28,14 +28,16 @@ export class CustomerSort {
      * @type {string}
      * @memberof CustomerSort
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     field?: string;
     /**
      * Indicates the order in which results should be sorted based on the sort field value. Strings use standard alphabetic comparison to determine order. Strings representing numbers are sorted as strings.  Default: `ASC`. See [SortOrder](#type-sortorder) for possible values
      * @type {string}
      * @memberof CustomerSort
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order?: string;
 }
 

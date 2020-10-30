@@ -28,7 +28,7 @@ export class DeleteShiftResponse {
      * @type {Array<Error>}
      * @memberof DeleteShiftResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

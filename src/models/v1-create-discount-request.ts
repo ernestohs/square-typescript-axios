@@ -29,7 +29,8 @@ export class V1CreateDiscountRequest {
      * @type {V1Discount}
      * @memberof V1CreateDiscountRequest
      */
-    @Field(() => V1Discount) 
+    
+    @Field(() => V1Discount, { nullable: true })
     body?: V1Discount;
 }
 

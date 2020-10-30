@@ -29,14 +29,16 @@ export class OrderQuantityUnit {
      * @type {MeasurementUnit}
      * @memberof OrderQuantityUnit
      */
-    @Field(() => MeasurementUnit) 
+    
+    @Field(() => MeasurementUnit, { nullable: true })
     measurement_unit?: MeasurementUnit;
     /**
      * For non-integer quantities, represents the number of digits after the decimal point that are recorded for this quantity.  For example, a precision of 1 allows quantities like `\"1.0\"` and `\"1.1\"`, but not `\"1.01\"`.  Min: 0. Max: 5.
      * @type {number}
      * @memberof OrderQuantityUnit
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     precision?: number;
 }
 

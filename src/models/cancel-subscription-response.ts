@@ -29,14 +29,15 @@ export class CancelSubscriptionResponse {
      * @type {Array<Error>}
      * @memberof CancelSubscriptionResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {Subscription}
      * @memberof CancelSubscriptionResponse
      */
-    @Field(() => Subscription) 
+    
+    @Field(() => Subscription, { nullable: true })
     subscription?: Subscription;
 }
 

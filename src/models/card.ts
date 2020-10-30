@@ -29,77 +29,88 @@ export class Card {
      * @type {string}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The card\'s brand. See [CardBrand](#type-cardbrand) for possible values
      * @type {string}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     card_brand?: string;
     /**
      * The last 4 digits of the card number.
      * @type {string}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     last_4?: string;
     /**
      * The expiration month of the associated card as an integer between 1 and 12.
      * @type {number}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     exp_month?: number;
     /**
      * The four-digit year of the card\'s expiration date.
      * @type {number}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     exp_year?: number;
     /**
      * The name of the cardholder.
      * @type {string}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cardholder_name?: string;
     /**
      * 
      * @type {Address}
      * @memberof Card
      */
-    @Field(() => Address) 
+    
+    @Field(() => Address, { nullable: true })
     billing_address?: Address;
     /**
      * __Not currently set.__ Intended as a Square-assigned identifier, based on the card number, to identify the card across multiple locations within a single application.
      * @type {string}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     fingerprint?: string;
     /**
      * The type of the card. The Card object includes this field only in response to Payments API calls. See [CardType](#type-cardtype) for possible values
      * @type {string}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     card_type?: string;
     /**
      * Indicates whether the Card is prepaid or not. The Card object includes this field only in response to Payments API calls. See [CardPrepaidType](#type-cardprepaidtype) for possible values
      * @type {string}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     prepaid_type?: string;
     /**
      * The first six digits of the card number, known as the Bank Identification Number (BIN). Only the Payments API returns this field.
      * @type {string}
      * @memberof Card
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     bin?: string;
 }
 

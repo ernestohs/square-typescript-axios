@@ -28,14 +28,16 @@ export class DateRange {
      * @type {string}
      * @memberof DateRange
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     start_date?: string;
     /**
      * String in `YYYY-MM-DD` format, e.g. `2017-10-31` per the ISO 8601 extended format for calendar dates. The end of a date range (inclusive)
      * @type {string}
      * @memberof DateRange
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_date?: string;
 }
 

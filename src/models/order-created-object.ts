@@ -29,7 +29,8 @@ export class OrderCreatedObject {
      * @type {OrderCreated}
      * @memberof OrderCreatedObject
      */
-    @Field(() => OrderCreated) 
+    
+    @Field(() => OrderCreated, { nullable: true })
     order_created?: OrderCreated;
 }
 

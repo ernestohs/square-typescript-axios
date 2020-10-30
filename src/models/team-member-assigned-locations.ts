@@ -28,14 +28,15 @@ export class TeamMemberAssignedLocations {
      * @type {string}
      * @memberof TeamMemberAssignedLocations
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     assignment_type?: string;
     /**
      * The locations that the team member is assigned to.
      * @type {Array<string>}
      * @memberof TeamMemberAssignedLocations
      */
-    @Field() 
+    
     location_ids?: Array<string>;
 }
 

@@ -28,21 +28,24 @@ export class CatalogQueryRange {
      * @type {string}
      * @memberof CatalogQueryRange
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     attribute_name: string;
     /**
      * The desired minimum value for the search attribute (inclusive).
      * @type {number}
      * @memberof CatalogQueryRange
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     attribute_min_value?: number;
     /**
      * The desired maximum value for the search attribute (inclusive).
      * @type {number}
      * @memberof CatalogQueryRange
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     attribute_max_value?: number;
 }
 

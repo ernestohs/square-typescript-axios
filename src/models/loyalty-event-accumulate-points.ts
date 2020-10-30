@@ -28,21 +28,24 @@ export class LoyaltyEventAccumulatePoints {
      * @type {string}
      * @memberof LoyaltyEventAccumulatePoints
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     loyalty_program_id?: string;
     /**
      * The number of points accumulated by the event.
      * @type {number}
      * @memberof LoyaltyEventAccumulatePoints
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     points?: number;
     /**
      * The ID of the `order` for which the buyer accumulated the points. This field is returned only if the Orders API is used to process orders.
      * @type {string}
      * @memberof LoyaltyEventAccumulatePoints
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order_id?: string;
 }
 

@@ -29,84 +29,96 @@ export class TerminalRefund {
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The reference to the payment refund created by completing this `TerminalRefund`.
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     refund_id?: string;
     /**
      * Unique ID of the payment being refunded.
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     payment_id: string;
     /**
      * The reference to the Square order id for the payment identified by the `payment_id`.
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     order_id?: string;
     /**
      * 
      * @type {Money}
      * @memberof TerminalRefund
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: false })
     amount_money: Money;
     /**
      * A description of the reason for the refund. Note: maximum 192 characters
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     reason?: string;
     /**
      * The unique Id of the device intended for this `TerminalRefund`. The Id can be retrieved from /v2/devices api.
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     device_id?: string;
     /**
      * The duration as an RFC 3339 duration, after which the refund will be automatically canceled. TerminalRefunds that are `PENDING` will be automatically `CANCELED` and have a cancellation reason of `TIMED_OUT`  Default: 5 minutes from creation  Maximum: 5 minutes
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     deadline_duration?: string;
     /**
      * The status of the `TerminalRefund`. Options: `PENDING`, `IN\\_PROGRESS`, `CANCELED`, `COMPLETED`
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     status?: string;
     /**
      * Present if the status is `CANCELED`. See [ActionCancelReason](#type-actioncancelreason) for possible values
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cancel_reason?: string;
     /**
      * The time when the `TerminalRefund` was created as an RFC 3339 timestamp.
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The time when the `TerminalRefund` was last updated as an RFC 3339 timestamp.
      * @type {string}
      * @memberof TerminalRefund
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     updated_at?: string;
 }
 

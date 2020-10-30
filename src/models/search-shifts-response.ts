@@ -29,21 +29,23 @@ export class SearchShiftsResponse {
      * @type {Array<Shift>}
      * @memberof SearchShiftsResponse
      */
-    @Field(() => [Shift]) 
+    
+    @Field(() => [Shift], { nullable: true })
     shifts?: Array<Shift>;
     /**
      * Opaque cursor for fetching the next page.
      * @type {string}
      * @memberof SearchShiftsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof SearchShiftsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

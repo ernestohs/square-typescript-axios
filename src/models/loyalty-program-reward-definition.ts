@@ -29,42 +29,47 @@ export class LoyaltyProgramRewardDefinition {
      * @type {string}
      * @memberof LoyaltyProgramRewardDefinition
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     scope: string;
     /**
      * The type of discount the reward tier offers. See [LoyaltyProgramRewardDefinitionType](#type-loyaltyprogramrewarddefinitiontype) for possible values
      * @type {string}
      * @memberof LoyaltyProgramRewardDefinition
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     discount_type: string;
     /**
      * Present if `discount_type` is `FIXED_PERCENTAGE`. For example, a 7.25% off discount will be represented as \"7.25\".
      * @type {string}
      * @memberof LoyaltyProgramRewardDefinition
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     percentage_discount?: string;
     /**
      * A list of `catalog object` ids to which this reward can be applied. They are either all item-variation ids or category ids, depending on the `type` field.
      * @type {Array<string>}
      * @memberof LoyaltyProgramRewardDefinition
      */
-    @Field() 
+    
     catalog_object_ids?: Array<string>;
     /**
      * 
      * @type {Money}
      * @memberof LoyaltyProgramRewardDefinition
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     fixed_discount_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof LoyaltyProgramRewardDefinition
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     max_discount_money?: Money;
 }
 

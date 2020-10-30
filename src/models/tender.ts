@@ -32,98 +32,112 @@ export class Tender {
      * @type {string}
      * @memberof Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The ID of the transaction\'s associated location.
      * @type {string}
      * @memberof Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * The ID of the tender\'s associated transaction.
      * @type {string}
      * @memberof Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     transaction_id?: string;
     /**
      * The timestamp for when the tender was created, in RFC 3339 format.
      * @type {string}
      * @memberof Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * An optional note associated with the tender at the time of payment.
      * @type {string}
      * @memberof Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     note?: string;
     /**
      * 
      * @type {Money}
      * @memberof Tender
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     amount_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof Tender
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     tip_money?: Money;
     /**
      * 
      * @type {Money}
      * @memberof Tender
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     processing_fee_money?: Money;
     /**
      * If the tender is associated with a customer or represents a customer\'s card on file, this is the ID of the associated customer.
      * @type {string}
      * @memberof Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     customer_id?: string;
     /**
      * The type of tender, such as `CARD` or `CASH`. See [TenderType](#type-tendertype) for possible values
      * @type {string}
      * @memberof Tender
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     type: string;
     /**
      * 
      * @type {TenderCardDetails}
      * @memberof Tender
      */
-    @Field(() => TenderCardDetails) 
+    
+    @Field(() => TenderCardDetails, { nullable: true })
     card_details?: TenderCardDetails;
     /**
      * 
      * @type {TenderCashDetails}
      * @memberof Tender
      */
-    @Field(() => TenderCashDetails) 
+    
+    @Field(() => TenderCashDetails, { nullable: true })
     cash_details?: TenderCashDetails;
     /**
      * Additional recipients (other than the merchant) receiving a portion of this tender. For example, fees assessed on the purchase by a third party integration.
      * @type {Array<AdditionalRecipient>}
      * @memberof Tender
      */
-    @Field(() => [AdditionalRecipient]) 
+    
+    @Field(() => [AdditionalRecipient], { nullable: true })
     additional_recipients?: Array<AdditionalRecipient>;
     /**
      * The ID of the `Payment` that corresponds to this tender. This value is only present for payments created with the v2 Payments API.
      * @type {string}
      * @memberof Tender
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     payment_id?: string;
 }
 

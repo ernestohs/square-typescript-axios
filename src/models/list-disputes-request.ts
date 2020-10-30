@@ -28,21 +28,23 @@ export class ListDisputesRequest {
      * @type {string}
      * @memberof ListDisputesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * The dispute states to filter the result. If not specified, the endpoint returns all open disputes (dispute status is not `INQUIRY_CLOSED`, `WON`, or `LOST`). See [DisputeState](#type-disputestate) for possible values
      * @type {Array<string>}
      * @memberof ListDisputesRequest
      */
-    @Field() 
+    
     states?: Array<string>;
     /**
      * The ID of the location for which to return  a list of disputes. If not specified, the endpoint returns all open disputes (dispute status is not `INQUIRY_CLOSED`, `WON`, or  `LOST`) associated with all locations.
      * @type {string}
      * @memberof ListDisputesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
 }
 

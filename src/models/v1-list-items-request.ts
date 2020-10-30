@@ -28,7 +28,8 @@ export class V1ListItemsRequest {
      * @type {string}
      * @memberof V1ListItemsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     batch_token?: string;
 }
 

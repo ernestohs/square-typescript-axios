@@ -28,7 +28,8 @@ export class RenewTokenRequest {
      * @type {string}
      * @memberof RenewTokenRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     access_token?: string;
 }
 

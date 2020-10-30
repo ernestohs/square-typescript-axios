@@ -29,14 +29,16 @@ export class AdjustLoyaltyPointsRequest {
      * @type {string}
      * @memberof AdjustLoyaltyPointsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * 
      * @type {LoyaltyEventAdjustPoints}
      * @memberof AdjustLoyaltyPointsRequest
      */
-    @Field(() => LoyaltyEventAdjustPoints) 
+    
+    @Field(() => LoyaltyEventAdjustPoints, { nullable: false })
     adjust_points: LoyaltyEventAdjustPoints;
 }
 

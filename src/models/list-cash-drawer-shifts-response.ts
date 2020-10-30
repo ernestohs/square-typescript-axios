@@ -29,21 +29,23 @@ export class ListCashDrawerShiftsResponse {
      * @type {Array<CashDrawerShiftSummary>}
      * @memberof ListCashDrawerShiftsResponse
      */
-    @Field(() => [CashDrawerShiftSummary]) 
+    
+    @Field(() => [CashDrawerShiftSummary], { nullable: true })
     items?: Array<CashDrawerShiftSummary>;
     /**
      * Opaque cursor for fetching the next page of results. Cursor is not present in the last page of results.
      * @type {string}
      * @memberof ListCashDrawerShiftsResponse
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof ListCashDrawerShiftsResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

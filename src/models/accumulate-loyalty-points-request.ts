@@ -29,21 +29,24 @@ export class AccumulateLoyaltyPointsRequest {
      * @type {LoyaltyEventAccumulatePoints}
      * @memberof AccumulateLoyaltyPointsRequest
      */
-    @Field(() => LoyaltyEventAccumulatePoints) 
+    
+    @Field(() => LoyaltyEventAccumulatePoints, { nullable: false })
     accumulate_points: LoyaltyEventAccumulatePoints;
     /**
      * A unique string that identifies the `AccumulateLoyaltyPoints` request.  Keys can be any valid string but must be unique for every request.
      * @type {string}
      * @memberof AccumulateLoyaltyPointsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     idempotency_key: string;
     /**
      * The `location` where the purchase was made.
      * @type {string}
      * @memberof AccumulateLoyaltyPointsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
 }
 

@@ -29,14 +29,15 @@ export class CreatePaymentResponse {
      * @type {Array<Error>}
      * @memberof CreatePaymentResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
     /**
      * 
      * @type {Payment}
      * @memberof CreatePaymentResponse
      */
-    @Field(() => Payment) 
+    
+    @Field(() => Payment, { nullable: true })
     payment?: Payment;
 }
 

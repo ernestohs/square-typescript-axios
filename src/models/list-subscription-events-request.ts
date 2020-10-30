@@ -28,14 +28,16 @@ export class ListSubscriptionEventsRequest {
      * @type {string}
      * @memberof ListSubscriptionEventsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * The upper limit on the number of subscription events to return  in the response.   Default: `200`
      * @type {number}
      * @memberof ListSubscriptionEventsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
 }
 

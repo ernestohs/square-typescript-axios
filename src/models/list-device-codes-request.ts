@@ -28,28 +28,31 @@ export class ListDeviceCodesRequest {
      * @type {string}
      * @memberof ListDeviceCodesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
     /**
      * If specified, only returns DeviceCodes of the specified location. Returns DeviceCodes of all locations if empty.
      * @type {string}
      * @memberof ListDeviceCodesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     location_id?: string;
     /**
      * If specified, only returns DeviceCodes targeting the specified product type. Returns DeviceCodes of all product types if empty. See [ProductType](#type-producttype) for possible values
      * @type {string}
      * @memberof ListDeviceCodesRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     product_type?: string;
     /**
      * If specified, returns DeviceCodes with the specified statuses. Returns DeviceCodes of status `PAIRED` and `UNPAIRED` if empty. See [DeviceCodeStatus](#type-devicecodestatus) for possible values
      * @type {Array<string>}
      * @memberof ListDeviceCodesRequest
      */
-    @Field() 
+    
     status?: Array<string>;
 }
 

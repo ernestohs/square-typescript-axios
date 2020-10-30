@@ -29,14 +29,16 @@ export class ShiftWage {
      * @type {string}
      * @memberof ShiftWage
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     title?: string;
     /**
      * 
      * @type {Money}
      * @memberof ShiftWage
      */
-    @Field(() => Money) 
+    
+    @Field(() => Money, { nullable: true })
     hourly_rate?: Money;
 }
 

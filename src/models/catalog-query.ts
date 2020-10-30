@@ -38,70 +38,80 @@ export class CatalogQuery {
      * @type {CatalogQuerySortedAttribute}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQuerySortedAttribute) 
+    
+    @Field(() => CatalogQuerySortedAttribute, { nullable: true })
     sorted_attribute_query?: CatalogQuerySortedAttribute;
     /**
      * 
      * @type {CatalogQueryExact}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQueryExact) 
+    
+    @Field(() => CatalogQueryExact, { nullable: true })
     exact_query?: CatalogQueryExact;
     /**
      * 
      * @type {CatalogQuerySet}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQuerySet) 
+    
+    @Field(() => CatalogQuerySet, { nullable: true })
     set_query?: CatalogQuerySet;
     /**
      * 
      * @type {CatalogQueryPrefix}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQueryPrefix) 
+    
+    @Field(() => CatalogQueryPrefix, { nullable: true })
     prefix_query?: CatalogQueryPrefix;
     /**
      * 
      * @type {CatalogQueryRange}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQueryRange) 
+    
+    @Field(() => CatalogQueryRange, { nullable: true })
     range_query?: CatalogQueryRange;
     /**
      * 
      * @type {CatalogQueryText}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQueryText) 
+    
+    @Field(() => CatalogQueryText, { nullable: true })
     text_query?: CatalogQueryText;
     /**
      * 
      * @type {CatalogQueryItemsForTax}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQueryItemsForTax) 
+    
+    @Field(() => CatalogQueryItemsForTax, { nullable: true })
     items_for_tax_query?: CatalogQueryItemsForTax;
     /**
      * 
      * @type {CatalogQueryItemsForModifierList}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQueryItemsForModifierList) 
+    
+    @Field(() => CatalogQueryItemsForModifierList, { nullable: true })
     items_for_modifier_list_query?: CatalogQueryItemsForModifierList;
     /**
      * 
      * @type {CatalogQueryItemsForItemOptions}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQueryItemsForItemOptions) 
+    
+    @Field(() => CatalogQueryItemsForItemOptions, { nullable: true })
     items_for_item_options_query?: CatalogQueryItemsForItemOptions;
     /**
      * 
      * @type {CatalogQueryItemVariationsForItemOptionValues}
      * @memberof CatalogQuery
      */
-    @Field(() => CatalogQueryItemVariationsForItemOptionValues) 
+    
+    @Field(() => CatalogQueryItemVariationsForItemOptionValues, { nullable: true })
     item_variations_for_item_option_values_query?: CatalogQueryItemVariationsForItemOptionValues;
 }
 

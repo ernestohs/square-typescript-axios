@@ -29,14 +29,15 @@ export class GetShiftResponse {
      * @type {Shift}
      * @memberof GetShiftResponse
      */
-    @Field(() => Shift) 
+    
+    @Field(() => Shift, { nullable: true })
     shift?: Shift;
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}
      * @memberof GetShiftResponse
      */
-    @Field() 
+    
     errors?: Array<Error>;
 }
 

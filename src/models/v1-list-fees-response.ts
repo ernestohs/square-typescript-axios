@@ -29,7 +29,8 @@ export class V1ListFeesResponse {
      * @type {Array<V1Fee>}
      * @memberof V1ListFeesResponse
      */
-    @Field(() => [V1Fee]) 
+    
+    @Field(() => [V1Fee], { nullable: true })
     items?: Array<V1Fee>;
 }
 

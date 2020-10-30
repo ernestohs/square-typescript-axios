@@ -28,42 +28,48 @@ export class ListCashDrawerShiftsRequest {
      * @type {string}
      * @memberof ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: false })
     location_id: string;
     /**
      * The order in which cash drawer shifts are listed in the response, based on their opened_at field. Default value: ASC See [SortOrder](#type-sortorder) for possible values
      * @type {string}
      * @memberof ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     sort_order?: string;
     /**
      * The inclusive start time of the query on opened_at, in ISO 8601 format.
      * @type {string}
      * @memberof ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     begin_time?: string;
     /**
      * The exclusive end date of the query on opened_at, in ISO 8601 format.
      * @type {string}
      * @memberof ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     end_time?: string;
     /**
      * Number of cash drawer shift events in a page of results (200 by default, 1000 max).
      * @type {number}
      * @memberof ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     limit?: number;
     /**
      * Opaque cursor for fetching the next page of results.
      * @type {string}
      * @memberof ListCashDrawerShiftsRequest
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     cursor?: string;
 }
 

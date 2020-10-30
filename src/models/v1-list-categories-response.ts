@@ -29,7 +29,8 @@ export class V1ListCategoriesResponse {
      * @type {Array<V1Category>}
      * @memberof V1ListCategoriesResponse
      */
-    @Field(() => [V1Category]) 
+    
+    @Field(() => [V1Category], { nullable: true })
     items?: Array<V1Category>;
 }
 

@@ -35,189 +35,216 @@ export class V1Payment {
      * @type {string}
      * @memberof V1Payment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     id?: string;
     /**
      * The unique identifier of the merchant that took the payment.
      * @type {string}
      * @memberof V1Payment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     merchant_id?: string;
     /**
      * The time when the payment was created, in ISO 8601 format. Reflects the time of the first payment if the object represents an incomplete partial payment, and the time of the last or complete payment otherwise.
      * @type {string}
      * @memberof V1Payment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     created_at?: string;
     /**
      * The unique identifier of the Square account that took the payment.
      * @type {string}
      * @memberof V1Payment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     creator_id?: string;
     /**
      * 
      * @type {Device}
      * @memberof V1Payment
      */
-    @Field(() => Device) 
+    
+    @Field(() => Device, { nullable: true })
     device?: Device;
     /**
      * The URL of the payment\'s detail page in the merchant dashboard. The merchant must be signed in to the merchant dashboard to view this page.
      * @type {string}
      * @memberof V1Payment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     payment_url?: string;
     /**
      * The URL of the receipt for the payment. Note that for split tender payments, this URL corresponds to the receipt for the first tender listed in the payment\'s tender field. Each Tender object has its own receipt_url field you can use to get the other receipts associated with a split tender payment.
      * @type {string}
      * @memberof V1Payment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     receipt_url?: string;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     inclusive_tax_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     additive_tax_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     tax_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     tip_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     discount_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     total_collected_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     processing_fee_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     net_total_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     refunded_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     swedish_rounding_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     gross_sales_money?: V1Money;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     net_sales_money?: V1Money;
     /**
      * All of the inclusive taxes associated with the payment.
      * @type {Array<V1PaymentTax>}
      * @memberof V1Payment
      */
-    @Field(() => [V1PaymentTax]) 
+    
+    @Field(() => [V1PaymentTax], { nullable: true })
     inclusive_tax?: Array<V1PaymentTax>;
     /**
      * All of the additive taxes associated with the payment.
      * @type {Array<V1PaymentTax>}
      * @memberof V1Payment
      */
-    @Field(() => [V1PaymentTax]) 
+    
+    @Field(() => [V1PaymentTax], { nullable: true })
     additive_tax?: Array<V1PaymentTax>;
     /**
      * All of the tenders associated with the payment.
      * @type {Array<V1Tender>}
      * @memberof V1Payment
      */
-    @Field(() => [V1Tender]) 
+    
+    @Field(() => [V1Tender], { nullable: true })
     tender?: Array<V1Tender>;
     /**
      * All of the refunds applied to the payment. Note that the value of all refunds on a payment can exceed the value of all tenders if a merchant chooses to refund money to a tender after previously accepting returned goods as part of an exchange.
      * @type {Array<V1Refund>}
      * @memberof V1Payment
      */
-    @Field(() => [V1Refund]) 
+    
+    @Field(() => [V1Refund], { nullable: true })
     refunds?: Array<V1Refund>;
     /**
      * The items purchased in the payment.
      * @type {Array<V1PaymentItemization>}
      * @memberof V1Payment
      */
-    @Field(() => [V1PaymentItemization]) 
+    
+    @Field(() => [V1PaymentItemization], { nullable: true })
     itemizations?: Array<V1PaymentItemization>;
     /**
      * 
      * @type {V1Money}
      * @memberof V1Payment
      */
-    @Field(() => V1Money) 
+    
+    @Field(() => V1Money, { nullable: true })
     surcharge_money?: V1Money;
     /**
      * A list of all surcharges associated with the payment.
      * @type {Array<V1PaymentSurcharge>}
      * @memberof V1Payment
      */
-    @Field(() => [V1PaymentSurcharge]) 
+    
+    @Field(() => [V1PaymentSurcharge], { nullable: true })
     surcharges?: Array<V1PaymentSurcharge>;
     /**
      * Indicates whether or not the payment is only partially paid for. If true, this payment will have the tenders collected so far, but the itemizations will be empty until the payment is completed.
      * @type {boolean}
      * @memberof V1Payment
      */
-    @Field() 
+    
+    @Field({ nullable: true })
     is_partial?: boolean;
 }
 
