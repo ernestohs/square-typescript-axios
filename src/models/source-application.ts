@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Provides information about the application used to generate a change.

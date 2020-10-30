@@ -16,6 +16,7 @@
 import { Range } from './range';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Supported custom attribute query expressions for calling the [SearchCatalogItems](#endpoint-Catalog-SearchCatalogItems) endpoint to search for items or item variations.
@@ -62,6 +63,7 @@ export class CustomAttributeFilter {
      * @memberof CustomAttributeFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     selection_uids_filter?: Array<string>;
     /**
      * A query expression to filter items or item variations by matching their custom attributes\' `boolean_value` property values against the specified Boolean expression.

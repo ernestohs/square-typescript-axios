@@ -21,9 +21,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatalogPricingRule = void 0;
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Defines how discounts are automatically applied to a set of items that match the pricing rule during the active time period.
  * @export
@@ -36,6 +40,10 @@ var CatalogPricingRule = /** @class */ (function () {
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
     ], CatalogPricingRule.prototype, "name", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], CatalogPricingRule.prototype, "time_period_ids", void 0);
     __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)

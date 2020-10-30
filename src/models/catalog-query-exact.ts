@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The query filter to return the search result by exact match of the specified attribute name and value.

@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The query filter to return the search result whose named attribute values fall between the specified range.

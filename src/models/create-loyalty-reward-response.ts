@@ -16,6 +16,7 @@
 import { LoyaltyReward } from './loyalty-reward';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response that includes the loyalty reward created.
@@ -30,6 +31,7 @@ export class CreateLoyaltyRewardResponse {
      * @memberof CreateLoyaltyRewardResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

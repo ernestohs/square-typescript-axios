@@ -1,4 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * {{{description}}}
@@ -34,6 +35,9 @@ export class {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{
     {{#isPrimitiveType}}
         {{^isContainer}}
     @Field({ nullable: {{#required}}false{{/required}}{{^required}}true{{/required}} })
+        {{/isContainer}}
+        {{#isContainer}}
+    @Field(() => GraphQLJSON, { nullable: {{#required}}false{{/required}}{{^required}}true{{/required}} })
         {{/isContainer}}
     {{/isPrimitiveType}}
     {{name}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}};

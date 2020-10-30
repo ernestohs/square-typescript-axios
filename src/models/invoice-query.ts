@@ -17,6 +17,7 @@ import { InvoiceFilter } from './invoice-filter';
 import { InvoiceSort } from './invoice-sort';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes query criteria for searching invoices.

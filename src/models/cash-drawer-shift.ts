@@ -17,6 +17,7 @@ import { CashDrawerDevice } from './cash-drawer-device';
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * This model gives the details of a cash drawer shift. The cash_payment_money, cash_refund_money, cash_paid_in_money, and cash_paid_out_money fields are all computed by summing their respective event types.
@@ -71,6 +72,7 @@ export class CashDrawerShift {
      * @memberof CashDrawerShift
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     employee_ids?: Array<string>;
     /**
      * The ID of the employee that started the cash drawer shift.

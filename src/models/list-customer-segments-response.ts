@@ -16,6 +16,7 @@
 import { CustomerSegment } from './customer-segment';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields included in the response body for requests to __ListCustomerSegments__.  One of `errors` or `segments` is present in a given response (never both).
@@ -30,6 +31,7 @@ export class ListCustomerSegmentsResponse {
      * @memberof ListCustomerSegmentsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The list of customer segments belonging to the associated Square account.

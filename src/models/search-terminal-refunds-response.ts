@@ -16,6 +16,7 @@
 import { TerminalRefund } from './terminal-refund';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -30,6 +31,7 @@ export class SearchTerminalRefundsResponse {
      * @memberof SearchTerminalRefundsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The requested search result of `TerminalRefund`s.

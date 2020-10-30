@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * An enumerated value that can link a `CatalogItemVariation` to an item option as one of its item option values.

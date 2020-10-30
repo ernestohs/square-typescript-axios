@@ -16,6 +16,7 @@
 import { Location } from './location';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response body of a request to the __ListLocations__ endpoint.  One of `errors` or `locations` is present in a given response (never both).
@@ -30,6 +31,7 @@ export class ListLocationsResponse {
      * @memberof ListLocationsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The business locations.

@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The return value from the [CancelPaymentByIdempotencyKey](#endpoint-payments-cancelpaymentbyidempotencykey) endpoint. On success, `errors` is empty.
@@ -29,6 +30,7 @@ export class CancelPaymentByIdempotencyKeyResponse {
      * @memberof CancelPaymentByIdempotencyKeyResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

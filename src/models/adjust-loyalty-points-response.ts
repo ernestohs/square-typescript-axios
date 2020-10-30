@@ -16,6 +16,7 @@
 import { LoyaltyEvent } from './loyalty-event';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response that includes the loyalty event that  resulted from the successful API call.
@@ -30,6 +31,7 @@ export class AdjustLoyaltyPointsResponse {
      * @memberof AdjustLoyaltyPointsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

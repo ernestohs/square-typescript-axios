@@ -16,6 +16,7 @@
 import { V1TimecardEvent } from './v1-timecard-event';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

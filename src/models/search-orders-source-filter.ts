@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Filter based on order `source` information.
@@ -29,6 +30,7 @@ export class SearchOrdersSourceFilter {
      * @memberof SearchOrdersSourceFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     source_names?: Array<string>;
 }
 

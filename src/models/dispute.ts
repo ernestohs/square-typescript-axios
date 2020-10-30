@@ -17,6 +17,7 @@ import { DisputedPayment } from './disputed-payment';
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a dispute a cardholder initiated with their bank.
@@ -79,6 +80,7 @@ export class Dispute {
      * @memberof Dispute
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     evidence_ids?: Array<string>;
     /**
      * The card brand used in the disputed payment. See [CardBrand](#type-cardbrand) for possible values

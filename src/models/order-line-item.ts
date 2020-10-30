@@ -20,6 +20,7 @@ import { OrderLineItemModifier } from './order-line-item-modifier';
 import { OrderQuantityUnit } from './order-quantity-unit';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a line item in an order. Each line item describes a different product to purchase, with its own quantity and price details.
@@ -90,6 +91,7 @@ export class OrderLineItem {
      * @memberof OrderLineItem
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     metadata?: { [key: string]: string; };
     /**
      * The `CatalogModifier`s applied to this line item.

@@ -16,6 +16,7 @@
 import { Subscription } from './subscription';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines fields that are included in a  [CancelSubscription](#endpoint-subscriptions-cancelsubscription) response.
@@ -30,6 +31,7 @@ export class CancelSubscriptionResponse {
      * @memberof CancelSubscriptionResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

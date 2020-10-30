@@ -16,6 +16,7 @@
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Price and inventory alerting overrides for a `CatalogItemVariation` at a specific `Location`.

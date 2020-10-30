@@ -16,6 +16,7 @@
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * An object describing a job that a team member is assigned to.

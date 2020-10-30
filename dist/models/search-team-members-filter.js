@@ -21,9 +21,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchTeamMembersFilter = void 0;
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Represents a filter used in a search for `TeamMember` objects. `AND` logic is applied between the individual fields, and `OR` logic is applied within list-based fields. For example, setting this filter value, ``` filter = (locations_ids = [\"A\", \"B\"], status = ACTIVE) ``` returns only active team members assigned to either location \"A\" or \"B\".
  * @export
@@ -32,6 +36,10 @@ var graphql_1 = require("@nestjs/graphql");
 var SearchTeamMembersFilter = /** @class */ (function () {
     function SearchTeamMembersFilter() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], SearchTeamMembersFilter.prototype, "location_ids", void 0);
     __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)

@@ -16,6 +16,7 @@
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request to calculate the points that a buyer can earn from  a specified purchase.

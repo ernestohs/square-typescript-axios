@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines how discounts are automatically applied to a set of items that match the pricing rule during the active time period.
@@ -37,6 +38,7 @@ export class CatalogPricingRule {
      * @memberof CatalogPricingRule
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     time_period_ids?: Array<string>;
     /**
      * Unique ID for the `CatalogDiscount` to take off the price of all matched items.

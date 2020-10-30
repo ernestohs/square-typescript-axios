@@ -16,6 +16,7 @@
 import { CustomerQuery } from './customer-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields included in the request body for the SearchCustomers endpoint.

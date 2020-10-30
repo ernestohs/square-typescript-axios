@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateLocationResponse = void 0;
 var location_1 = require("./location");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Response object returned by the [CreateLocation](#endpoint-createlocation) endpoint.
  * @export
@@ -33,6 +37,10 @@ var graphql_1 = require("@nestjs/graphql");
 var CreateLocationResponse = /** @class */ (function () {
     function CreateLocationResponse() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], CreateLocationResponse.prototype, "errors", void 0);
     __decorate([
         graphql_1.Field(function () { return location_1.Location; }, { nullable: true }),
         __metadata("design:type", location_1.Location)

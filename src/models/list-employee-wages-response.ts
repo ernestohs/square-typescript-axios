@@ -16,6 +16,7 @@
 import { EmployeeWage } from './employee-wage';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The response to a request for a set of `EmployeeWage` objects. Contains  a set of `EmployeeWage`.
@@ -46,6 +47,7 @@ export class ListEmployeeWagesResponse {
      * @memberof ListEmployeeWagesResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

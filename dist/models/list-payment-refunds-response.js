@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ListPaymentRefundsResponse = void 0;
 var payment_refund_1 = require("./payment-refund");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Defines the fields that are included in the response body of a request to the [ListPaymentRefunds](#endpoint-refunds-listpaymentrefunds) endpoint.  One of `errors` or `refunds` is present in a given response (never both).
  * @export
@@ -33,6 +37,10 @@ var graphql_1 = require("@nestjs/graphql");
 var ListPaymentRefundsResponse = /** @class */ (function () {
     function ListPaymentRefundsResponse() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], ListPaymentRefundsResponse.prototype, "errors", void 0);
     __decorate([
         graphql_1.Field(function () { return [payment_refund_1.PaymentRefund]; }, { nullable: true }),
         __metadata("design:type", Array)

@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchSubscriptionsResponse = void 0;
 var subscription_1 = require("./subscription");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Defines the fields that are included in the response from the [SearchSubscriptions](#endpoint-subscriptions-searchsubscriptions) endpoint.
  * @export
@@ -33,6 +37,10 @@ var graphql_1 = require("@nestjs/graphql");
 var SearchSubscriptionsResponse = /** @class */ (function () {
     function SearchSubscriptionsResponse() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], SearchSubscriptionsResponse.prototype, "errors", void 0);
     __decorate([
         graphql_1.Field(function () { return [subscription_1.Subscription]; }, { nullable: true }),
         __metadata("design:type", Array)

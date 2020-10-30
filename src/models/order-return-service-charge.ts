@@ -17,6 +17,7 @@ import { Money } from './money';
 import { OrderLineItemAppliedTax } from './order-line-item-applied-tax';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents the service charge applied to the original order.

@@ -17,6 +17,7 @@ import { Money } from './money';
 import { ProcessingFee } from './processing-fee';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a refund of a payment made using Square. Contains information on the original payment and the amount of money refunded.

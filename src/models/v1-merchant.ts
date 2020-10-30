@@ -18,6 +18,7 @@ import { V1MerchantLocationDetails } from './v1-merchant-location-details';
 import { V1PhoneNumber } from './v1-phone-number';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response body of a request to the **RetrieveBusiness** endpoint.
@@ -64,6 +65,7 @@ export class V1Merchant {
      * @memberof V1Merchant
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     account_capabilities?: Array<string>;
     /**
      * The country associated with the merchant account, in ISO 3166-1-alpha-2 format.

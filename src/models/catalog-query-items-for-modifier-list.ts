@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The query filter to return the items containing the specified modifier list IDs.
@@ -29,6 +30,7 @@ export class CatalogQueryItemsForModifierList {
      * @memberof CatalogQueryItemsForModifierList
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     modifier_list_ids: Array<string>;
 }
 

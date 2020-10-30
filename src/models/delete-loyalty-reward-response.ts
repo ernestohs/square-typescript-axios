@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response returned by the API call.
@@ -29,6 +30,7 @@ export class DeleteLoyaltyRewardResponse {
      * @memberof DeleteLoyaltyRewardResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

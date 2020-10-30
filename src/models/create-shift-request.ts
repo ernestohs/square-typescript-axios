@@ -16,6 +16,7 @@
 import { Shift } from './shift';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a request to create a `Shift`

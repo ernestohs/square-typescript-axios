@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a set of SearchSubscriptionsQuery filters used to limit the set of Subscriptions returned by SearchSubscriptions.
@@ -29,6 +30,7 @@ export class SearchSubscriptionsFilter {
      * @memberof SearchSubscriptionsFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     customer_ids?: Array<string>;
     /**
      * A filter to select subscriptions based the location.
@@ -36,6 +38,7 @@ export class SearchSubscriptionsFilter {
      * @memberof SearchSubscriptionsFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     location_ids?: Array<string>;
 }
 

@@ -21,6 +21,7 @@ import { OrderReturnTax } from './order-return-tax';
 import { OrderRoundingAdjustment } from './order-rounding-adjustment';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The set of line items, service charges, taxes, discounts, tips, etc. being returned in an Order.

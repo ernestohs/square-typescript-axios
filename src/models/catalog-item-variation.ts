@@ -18,6 +18,7 @@ import { ItemVariationLocationOverrides } from './item-variation-location-overri
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * An item variation (i.e., product) in the Catalog object model. Each item may have a maximum of 250 item variations.

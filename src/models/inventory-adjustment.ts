@@ -17,6 +17,7 @@ import { Money } from './money';
 import { SourceApplication } from './source-application';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a change in state or quantity of product inventory at a particular time and location.

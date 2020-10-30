@@ -21,12 +21,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatalogItem = void 0;
 var catalog_item_modifier_list_info_1 = require("./catalog-item-modifier-list-info");
 var catalog_item_option_for_item_1 = require("./catalog-item-option-for-item");
 var catalog_object_1 = require("./catalog-object");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * An [CatalogObject](#type-CatalogObject) instance of the `ITEM` type, also referred to as an item, in the catalog.
  * @export
@@ -67,6 +71,10 @@ var CatalogItem = /** @class */ (function () {
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
     ], CatalogItem.prototype, "category_id", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], CatalogItem.prototype, "tax_ids", void 0);
     __decorate([
         graphql_1.Field(function () { return [catalog_item_modifier_list_info_1.CatalogItemModifierListInfo]; }, { nullable: true }),
         __metadata("design:type", Array)

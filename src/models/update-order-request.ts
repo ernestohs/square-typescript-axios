@@ -16,6 +16,7 @@
 import { Order } from './order';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in requests to the [UpdateOrder](#endpoint-orders-updateorder) endpoint.
@@ -38,6 +39,7 @@ export class UpdateOrderRequest {
      * @memberof UpdateOrderRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     fields_to_clear?: Array<string>;
     /**
      * A value you specify that uniquely identifies this update request  If you\'re unsure whether a particular update was applied to an order successfully, you can reattempt it with the same idempotency key without worrying about creating duplicate updates to the order. The latest order version will be returned.  See [Idempotency](https://developer.squareup.com/docs/basics/api101/idempotency) for more information.

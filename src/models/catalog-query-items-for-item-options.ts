@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The query filter to return the items containing the specified item option IDs.
@@ -29,6 +30,7 @@ export class CatalogQueryItemsForItemOptions {
      * @memberof CatalogQueryItemsForItemOptions
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     item_option_ids?: Array<string>;
 }
 

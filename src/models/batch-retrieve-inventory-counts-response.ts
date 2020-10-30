@@ -16,6 +16,7 @@
 import { InventoryCount } from './inventory-count';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -30,6 +31,7 @@ export class BatchRetrieveInventoryCountsResponse {
      * @memberof BatchRetrieveInventoryCountsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The current calculated inventory counts for the requested objects and locations.

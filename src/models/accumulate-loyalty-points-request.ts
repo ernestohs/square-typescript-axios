@@ -16,6 +16,7 @@
 import { LoyaltyEventAccumulatePoints } from './loyalty-event-accumulate-points';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request to accumulate points for a purchase.

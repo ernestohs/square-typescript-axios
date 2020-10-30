@@ -16,6 +16,7 @@
 import { ShiftQuery } from './shift-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request for a filtered and sorted set of `Shift` objects.

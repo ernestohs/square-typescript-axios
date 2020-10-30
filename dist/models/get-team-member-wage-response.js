@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetTeamMemberWageResponse = void 0;
 var team_member_wage_1 = require("./team-member-wage");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * A response to a request to get a `TeamMemberWage`. Contains the requested `TeamMemberWage` objects. May contain a set of `Error` objects if the request resulted in errors.
  * @export
@@ -37,6 +41,10 @@ var GetTeamMemberWageResponse = /** @class */ (function () {
         graphql_1.Field(function () { return team_member_wage_1.TeamMemberWage; }, { nullable: true }),
         __metadata("design:type", team_member_wage_1.TeamMemberWage)
     ], GetTeamMemberWageResponse.prototype, "team_member_wage", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], GetTeamMemberWageResponse.prototype, "errors", void 0);
     GetTeamMemberWageResponse = __decorate([
         graphql_1.ObjectType()
     ], GetTeamMemberWageResponse);

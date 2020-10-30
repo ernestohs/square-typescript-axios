@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -29,6 +30,7 @@ export class BatchRetrieveInventoryCountsRequest {
      * @memberof BatchRetrieveInventoryCountsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     catalog_object_ids?: Array<string>;
     /**
      * The filter to return results by `Location` ID.  This filter is applicable only when set. The default is null.
@@ -36,6 +38,7 @@ export class BatchRetrieveInventoryCountsRequest {
      * @memberof BatchRetrieveInventoryCountsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     location_ids?: Array<string>;
     /**
      * The filter to return results with their `calculated_at` value  after the given time as specified in an RFC 3339 timestamp.  The default value is the UNIX epoch of (`1970-01-01T00:00:00Z`).
@@ -59,6 +62,7 @@ export class BatchRetrieveInventoryCountsRequest {
      * @memberof BatchRetrieveInventoryCountsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     states?: Array<string>;
 }
 

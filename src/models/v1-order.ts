@@ -19,6 +19,7 @@ import { V1OrderHistoryEntry } from './v1-order-history-entry';
 import { V1Tender } from './v1-tender';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * V1Order
@@ -33,6 +34,7 @@ export class V1Order {
      * @memberof V1Order
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The order\'s unique identifier.

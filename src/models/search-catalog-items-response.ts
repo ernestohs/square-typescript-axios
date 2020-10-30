@@ -16,6 +16,7 @@
 import { CatalogObject } from './catalog-object';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the response body returned from the [SearchCatalogItems](#endpoint-Catalog-SearchCatalogItems) endpoint.
@@ -30,6 +31,7 @@ export class SearchCatalogItemsResponse {
      * @memberof SearchCatalogItemsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * Returned items matching the specified query expressions.
@@ -53,6 +55,7 @@ export class SearchCatalogItemsResponse {
      * @memberof SearchCatalogItemsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     matched_variation_ids?: Array<string>;
 }
 

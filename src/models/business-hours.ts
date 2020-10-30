@@ -16,6 +16,7 @@
 import { BusinessHoursPeriod } from './business-hours-period';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents the hours of operation for a business location.

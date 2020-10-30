@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateCustomerResponse = void 0;
 var customer_1 = require("./customer");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Defines the fields that are included in the response body of a request to the CreateCustomer endpoint.  One of `errors` or `customer` is present in a given response (never both).
  * @export
@@ -33,6 +37,10 @@ var graphql_1 = require("@nestjs/graphql");
 var CreateCustomerResponse = /** @class */ (function () {
     function CreateCustomerResponse() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], CreateCustomerResponse.prototype, "errors", void 0);
     __decorate([
         graphql_1.Field(function () { return customer_1.Customer; }, { nullable: true }),
         __metadata("design:type", customer_1.Customer)

@@ -16,6 +16,7 @@
 import { CashDrawerShift } from './cash-drawer-shift';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -38,6 +39,7 @@ export class RetrieveCashDrawerShiftResponse {
      * @memberof RetrieveCashDrawerShiftResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

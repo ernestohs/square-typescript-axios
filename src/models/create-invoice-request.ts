@@ -16,6 +16,7 @@
 import { Invoice } from './invoice';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes a `CreateInvoice` request.

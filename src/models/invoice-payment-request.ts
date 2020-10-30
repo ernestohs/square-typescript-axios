@@ -17,6 +17,7 @@ import { InvoicePaymentReminder } from './invoice-payment-reminder';
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes a specific payment request in an invoice. Invoices that contain multiple payment requests can  specify a maximum of 12 `INSTALLMENT` request types. All of the payment requests must specify the same `request_method`.  For more information,  see [Payment requests](/docs/invoices-api/overview#payment-requests).

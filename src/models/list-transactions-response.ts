@@ -16,6 +16,7 @@
 import { Transaction } from './transaction';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response body of a request to the [ListTransactions](#endpoint-listtransactions) endpoint.  One of `errors` or `transactions` is present in a given response (never both).
@@ -30,6 +31,7 @@ export class ListTransactionsResponse {
      * @memberof ListTransactionsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * An array of transactions that match your query.

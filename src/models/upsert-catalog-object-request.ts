@@ -16,6 +16,7 @@
 import { CatalogObject } from './catalog-object';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

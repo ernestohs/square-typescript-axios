@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * An employee object that is used by the external API.
@@ -69,6 +70,7 @@ export class Employee {
      * @memberof Employee
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     location_ids?: Array<string>;
     /**
      * Specifies the status of the employees being fetched. See [EmployeeStatus](#type-employeestatus) for possible values

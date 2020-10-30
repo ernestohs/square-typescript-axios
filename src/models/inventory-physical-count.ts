@@ -16,6 +16,7 @@
 import { SourceApplication } from './source-application';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents the quantity of an item variation that is physically present at a specific location, verified by a seller or a seller\'s employee. For example, a physical count might come from an employee counting the item variations on hand or from syncing with an external system.

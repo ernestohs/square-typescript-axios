@@ -21,6 +21,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatalogCustomAttributeDefinition = void 0;
 var catalog_custom_attribute_definition_number_config_1 = require("./catalog-custom-attribute-definition-number-config");
@@ -28,6 +31,7 @@ var catalog_custom_attribute_definition_selection_config_1 = require("./catalog-
 var catalog_custom_attribute_definition_string_config_1 = require("./catalog-custom-attribute-definition-string-config");
 var source_application_1 = require("./source-application");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Contains information defining a custom attribute. Custom attributes are intended to store additional information about a catalog object or to associate a catalog object with an entity in another system. Do not use custom attributes to store any sensitive information (personally identifiable information, card details, etc.). [Read more about custom attributes](/catalog-api/add-custom-attributes)
  * @export
@@ -52,6 +56,10 @@ var CatalogCustomAttributeDefinition = /** @class */ (function () {
         graphql_1.Field(function () { return source_application_1.SourceApplication; }, { nullable: true }),
         __metadata("design:type", source_application_1.SourceApplication)
     ], CatalogCustomAttributeDefinition.prototype, "source_application", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: false }),
+        __metadata("design:type", Array)
+    ], CatalogCustomAttributeDefinition.prototype, "allowed_object_types", void 0);
     __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)

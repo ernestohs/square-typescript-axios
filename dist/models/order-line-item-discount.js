@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderLineItemDiscount = void 0;
 var money_1 = require("./money");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Represents a discount that applies to one or more line items in an order.  Fixed-amount, order-scoped discounts are distributed across all non-zero line item totals. The amount distributed to each line item is relative to the amount contributed by the item to the order subtotal.
  * @export
@@ -62,9 +66,17 @@ var OrderLineItemDiscount = /** @class */ (function () {
         __metadata("design:type", money_1.Money)
     ], OrderLineItemDiscount.prototype, "applied_money", void 0);
     __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Object)
+    ], OrderLineItemDiscount.prototype, "metadata", void 0);
+    __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
     ], OrderLineItemDiscount.prototype, "scope", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], OrderLineItemDiscount.prototype, "reward_ids", void 0);
     __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)

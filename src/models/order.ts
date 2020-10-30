@@ -29,6 +29,7 @@ import { Refund } from './refund';
 import { Tender } from './tender';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Contains all information related to a single order to process with Square, including line items that specify the products to purchase. Order objects also include information on any associated tenders, refunds, and returns.  All Connect V2 Transactions have all been converted to Orders including all associated itemization data.
@@ -171,6 +172,7 @@ export class Order {
      * @memberof Order
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     metadata?: { [key: string]: string; };
     /**
      * Timestamp for when the order was created. In RFC 3339 format, e.g., \"2016-09-04T23:59:33.123Z\".

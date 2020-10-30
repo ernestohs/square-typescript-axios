@@ -16,6 +16,7 @@
 import { V1Refund } from './v1-refund';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

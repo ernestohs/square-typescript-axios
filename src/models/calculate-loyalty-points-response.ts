@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response that includes the points that the buyer can earn from  a specified purchase.
@@ -29,6 +30,7 @@ export class CalculateLoyaltyPointsResponse {
      * @memberof CalculateLoyaltyPointsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The points that the buyer can earn from a specified purchase.

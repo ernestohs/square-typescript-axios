@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RetrieveEmployeeResponse = void 0;
 var employee_1 = require("./employee");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  *
  * @export
@@ -37,6 +41,10 @@ var RetrieveEmployeeResponse = /** @class */ (function () {
         graphql_1.Field(function () { return employee_1.Employee; }, { nullable: true }),
         __metadata("design:type", employee_1.Employee)
     ], RetrieveEmployeeResponse.prototype, "employee", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], RetrieveEmployeeResponse.prototype, "errors", void 0);
     RetrieveEmployeeResponse = __decorate([
         graphql_1.ObjectType()
     ], RetrieveEmployeeResponse);

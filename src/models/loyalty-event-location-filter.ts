@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Filter events by location.
@@ -29,6 +30,7 @@ export class LoyaltyEventLocationFilter {
      * @memberof LoyaltyEventLocationFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     location_ids: Array<string>;
 }
 

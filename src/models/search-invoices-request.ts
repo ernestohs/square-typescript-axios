@@ -16,6 +16,7 @@
 import { InvoiceQuery } from './invoice-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes a `SearchInvoices` request.

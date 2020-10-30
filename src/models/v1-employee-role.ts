@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * V1EmployeeRole
@@ -45,6 +46,7 @@ export class V1EmployeeRole {
      * @memberof V1EmployeeRole
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     permissions: Array<string>;
     /**
      * If true, employees with this role have all permissions, regardless of the values indicated in permissions.

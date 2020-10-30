@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RetrieveCustomerSegmentResponse = void 0;
 var customer_segment_1 = require("./customer-segment");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Defines the fields included in the response body for requests to __RetrieveCustomerSegment__.  One of `errors` or `segment` is present in a given response (never both).
  * @export
@@ -33,6 +37,10 @@ var graphql_1 = require("@nestjs/graphql");
 var RetrieveCustomerSegmentResponse = /** @class */ (function () {
     function RetrieveCustomerSegmentResponse() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], RetrieveCustomerSegmentResponse.prototype, "errors", void 0);
     __decorate([
         graphql_1.Field(function () { return customer_segment_1.CustomerSegment; }, { nullable: true }),
         __metadata("design:type", customer_segment_1.CustomerSegment)

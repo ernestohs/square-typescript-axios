@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The query filter to return the items containing the specified tax IDs.
@@ -29,6 +30,7 @@ export class CatalogQueryItemsForTax {
      * @memberof CatalogQueryItemsForTax
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     tax_ids: Array<string>;
 }
 

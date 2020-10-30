@@ -16,6 +16,7 @@
 import { SearchOrdersQuery } from './search-orders-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The request does not have any required fields. When given no query criteria, SearchOrders will return all results for all of the merchant’s locations. When fetching additional pages using a `cursor`, the `query` must be equal to the `query` used to fetch the first page of results.
@@ -30,6 +31,7 @@ export class SearchOrdersRequest {
      * @memberof SearchOrdersRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     location_ids?: Array<string>;
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for your original query. See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.

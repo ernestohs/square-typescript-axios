@@ -17,6 +17,7 @@ import { Money } from './money';
 import { OrderLineItemAppliedTax } from './order-line-item-applied-tax';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a service charge applied to an order.
@@ -119,6 +120,7 @@ export class OrderServiceCharge {
      * @memberof OrderServiceCharge
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     metadata?: { [key: string]: string; };
 }
 

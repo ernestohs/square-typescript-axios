@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Sorting criteria for a SearchOrders request. Results can only be sorted by a timestamp field.

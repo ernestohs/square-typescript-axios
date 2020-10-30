@@ -19,6 +19,7 @@ import { TenderCardDetails } from './tender-card-details';
 import { TenderCashDetails } from './tender-cash-details';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a tender (i.e., a method of payment) used in a Square transaction.

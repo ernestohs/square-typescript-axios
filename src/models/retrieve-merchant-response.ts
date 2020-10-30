@@ -16,6 +16,7 @@
 import { Merchant } from './merchant';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The response object returned by the [RetrieveMerchant](#endpoint-retrieveMerchant) endpoint.
@@ -30,6 +31,7 @@ export class RetrieveMerchantResponse {
      * @memberof RetrieveMerchantResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

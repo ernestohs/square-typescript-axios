@@ -16,6 +16,7 @@
 import { LoyaltyEvent } from './loyalty-event';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response that contains loyalty events that satisfy the search  criteria, in order by the `created_at` date.
@@ -30,6 +31,7 @@ export class SearchLoyaltyEventsResponse {
      * @memberof SearchLoyaltyEventsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The loyalty events that satisfy the search criteria.

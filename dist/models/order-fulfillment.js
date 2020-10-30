@@ -21,11 +21,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderFulfillment = void 0;
 var order_fulfillment_pickup_details_1 = require("./order-fulfillment-pickup-details");
 var order_fulfillment_shipment_details_1 = require("./order-fulfillment-shipment-details");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Contains details on how to fulfill this order.
  * @export
@@ -46,6 +50,10 @@ var OrderFulfillment = /** @class */ (function () {
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
     ], OrderFulfillment.prototype, "state", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Object)
+    ], OrderFulfillment.prototype, "metadata", void 0);
     __decorate([
         graphql_1.Field(function () { return order_fulfillment_pickup_details_1.OrderFulfillmentPickupDetails; }, { nullable: true }),
         __metadata("design:type", order_fulfillment_pickup_details_1.OrderFulfillmentPickupDetails)

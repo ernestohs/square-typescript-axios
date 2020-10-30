@@ -16,6 +16,7 @@
 import { TeamMemberAssignedLocations } from './team-member-assigned-locations';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A record representing an individual team member for a business.

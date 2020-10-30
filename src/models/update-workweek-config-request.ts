@@ -16,6 +16,7 @@
 import { WorkweekConfig } from './workweek-config';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request to update a `WorkweekConfig` object

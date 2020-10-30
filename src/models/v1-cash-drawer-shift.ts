@@ -18,6 +18,7 @@ import { V1CashDrawerEvent } from './v1-cash-drawer-event';
 import { V1Money } from './v1-money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Contains details for a single cash drawer shift.
@@ -72,6 +73,7 @@ export class V1CashDrawerShift {
      * @memberof V1CashDrawerShift
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     employee_ids?: Array<string>;
     /**
      * The ID of the employee that started the cash drawer shift.

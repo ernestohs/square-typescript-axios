@@ -16,6 +16,7 @@
 import { Invoice } from './invoice';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The response returned by the `CreateInvoice` request.
@@ -38,6 +39,7 @@ export class CreateInvoiceResponse {
      * @memberof CreateInvoiceResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Filter based on [Order Fulfillment](#type-orderfulfillment) information.
@@ -29,6 +30,7 @@ export class SearchOrdersFulfillmentFilter {
      * @memberof SearchOrdersFulfillmentFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     fulfillment_types?: Array<string>;
     /**
      * List of `fulfillment states` to filter for. Will return orders if any of its fulfillments match any of the fulfillment states listed in this field. See [OrderFulfillmentState](#type-orderfulfillmentstate) for possible values
@@ -36,6 +38,7 @@ export class SearchOrdersFulfillmentFilter {
      * @memberof SearchOrdersFulfillmentFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     fulfillment_states?: Array<string>;
 }
 

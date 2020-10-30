@@ -16,6 +16,7 @@
 import { CatalogQuery } from './catalog-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -38,6 +39,7 @@ export class SearchCatalogObjectsRequest {
      * @memberof SearchCatalogObjectsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     object_types?: Array<string>;
     /**
      * If `true`, deleted objects will be included in the results. Deleted objects will have their `is_deleted` field set to `true`.

@@ -17,6 +17,7 @@ import { OrderFulfillmentPickupDetailsCurbsidePickupDetails } from './order-fulf
 import { OrderFulfillmentRecipient } from './order-fulfillment-recipient';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Contains details necessary to fulfill a pickup order.

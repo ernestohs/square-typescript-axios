@@ -17,6 +17,7 @@ import { SearchOrdersFilter } from './search-orders-filter';
 import { SearchOrdersSort } from './search-orders-sort';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Contains query criteria for the search.

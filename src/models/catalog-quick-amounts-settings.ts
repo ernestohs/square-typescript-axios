@@ -16,6 +16,7 @@
 import { CatalogQuickAmount } from './catalog-quick-amount';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A parent Catalog Object model represents a set of Quick Amounts and the settings control the amounts.

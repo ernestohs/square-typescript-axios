@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -29,6 +30,7 @@ export class UpdateItemModifierListsRequest {
      * @memberof UpdateItemModifierListsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     item_ids: Array<string>;
     /**
      * The IDs of the CatalogModifierList objects to enable for the CatalogItem.
@@ -36,6 +38,7 @@ export class UpdateItemModifierListsRequest {
      * @memberof UpdateItemModifierListsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     modifier_lists_to_enable?: Array<string>;
     /**
      * The IDs of the CatalogModifierList objects to disable for the CatalogItem.
@@ -43,6 +46,7 @@ export class UpdateItemModifierListsRequest {
      * @memberof UpdateItemModifierListsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     modifier_lists_to_disable?: Array<string>;
 }
 

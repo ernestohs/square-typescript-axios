@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetShiftResponse = void 0;
 var shift_1 = require("./shift");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * A response to request to get a `Shift`. Contains the requested `Shift` object. May contain a set of `Error` objects if the request resulted in errors.
  * @export
@@ -37,6 +41,10 @@ var GetShiftResponse = /** @class */ (function () {
         graphql_1.Field(function () { return shift_1.Shift; }, { nullable: true }),
         __metadata("design:type", shift_1.Shift)
     ], GetShiftResponse.prototype, "shift", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], GetShiftResponse.prototype, "errors", void 0);
     GetShiftResponse = __decorate([
         graphql_1.ObjectType()
     ], GetShiftResponse);

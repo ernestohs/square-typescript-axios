@@ -16,6 +16,7 @@
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines parameters in a  [CreateSubscription](#endpoint-subscriptions-createsubscription) endpoint request.

@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * An object that represents a team member\'s assignment to locations.
@@ -37,6 +38,7 @@ export class TeamMemberAssignedLocations {
      * @memberof TeamMemberAssignedLocations
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     location_ids?: Array<string>;
 }
 

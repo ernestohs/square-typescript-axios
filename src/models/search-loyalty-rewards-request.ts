@@ -16,6 +16,7 @@
 import { SearchLoyaltyRewardsRequestLoyaltyRewardQuery } from './search-loyalty-rewards-request-loyalty-reward-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request to search for loyalty rewards.

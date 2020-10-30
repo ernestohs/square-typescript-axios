@@ -16,6 +16,7 @@
 import { CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection } from './catalog-custom-attribute-definition-selection-config-custom-attribute-selection';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Configuration associated with `SELECTION`-type custom attribute definitions.

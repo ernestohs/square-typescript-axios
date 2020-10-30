@@ -16,6 +16,7 @@
 import { CustomerSegment } from './customer-segment';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields included in the response body for requests to __RetrieveCustomerSegment__.  One of `errors` or `segment` is present in a given response (never both).
@@ -30,6 +31,7 @@ export class RetrieveCustomerSegmentResponse {
      * @memberof RetrieveCustomerSegmentResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

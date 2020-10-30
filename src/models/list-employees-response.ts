@@ -16,6 +16,7 @@
 import { Employee } from './employee';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -46,6 +47,7 @@ export class ListEmployeesResponse {
      * @memberof ListEmployeesResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

@@ -16,6 +16,7 @@
 import { TeamMember } from './team-member';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents an update request for a `TeamMember` object.

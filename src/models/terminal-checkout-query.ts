@@ -17,6 +17,7 @@ import { TerminalCheckoutQueryFilter } from './terminal-checkout-query-filter';
 import { TerminalCheckoutQuerySort } from './terminal-checkout-query-sort';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

@@ -19,6 +19,7 @@ import { CatalogCustomAttributeDefinitionStringConfig } from './catalog-custom-a
 import { SourceApplication } from './source-application';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Contains information defining a custom attribute. Custom attributes are intended to store additional information about a catalog object or to associate a catalog object with an entity in another system. Do not use custom attributes to store any sensitive information (personally identifiable information, card details, etc.). [Read more about custom attributes](/catalog-api/add-custom-attributes)
@@ -65,6 +66,7 @@ export class CatalogCustomAttributeDefinition {
      * @memberof CatalogCustomAttributeDefinition
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     allowed_object_types: Array<string>;
     /**
      * The visibility of a custom attribute in seller-facing UIs (including Square Point of Sale applications and Square Dashboard). May be modified. See [CatalogCustomAttributeDefinitionSellerVisibility](#type-catalogcustomattributedefinitionsellervisibility) for possible values

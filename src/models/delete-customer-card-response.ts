@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response body of a request to the DeleteCustomerCard endpoint.
@@ -29,6 +30,7 @@ export class DeleteCustomerCardResponse {
      * @memberof DeleteCustomerCardResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

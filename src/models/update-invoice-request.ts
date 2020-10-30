@@ -16,6 +16,7 @@
 import { Invoice } from './invoice';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes a `UpdateInvoice` request.
@@ -46,6 +47,7 @@ export class UpdateInvoiceRequest {
      * @memberof UpdateInvoiceRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     fields_to_clear?: Array<string>;
 }
 

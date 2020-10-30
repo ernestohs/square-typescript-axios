@@ -19,6 +19,7 @@ import { Money } from './money';
 import { ProcessingFee } from './processing-fee';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a payment processed by the Square API.
@@ -193,6 +194,7 @@ export class Payment {
      * @memberof Payment
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     refund_ids?: Array<string>;
     /**
      * The buyer\'s e-mail address

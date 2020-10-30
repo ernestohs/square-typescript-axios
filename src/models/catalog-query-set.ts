@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The query filter to return the search result(s) by exact match of the specified `attribute_name` and any of the `attribute_values`.
@@ -37,6 +38,7 @@ export class CatalogQuerySet {
      * @memberof CatalogQuerySet
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     attribute_values: Array<string>;
 }
 

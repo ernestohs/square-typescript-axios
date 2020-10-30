@@ -16,6 +16,7 @@
 import { CustomAttributeFilter } from './custom-attribute-filter';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the request body for the [SearchCatalogItems](#endpoint-Catalog-SearchCatalogItems) endpoint.
@@ -38,6 +39,7 @@ export class SearchCatalogItemsRequest {
      * @memberof SearchCatalogItemsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     category_ids?: Array<string>;
     /**
      * The stock-level query expression to return item variations with the specified stock levels. See [SearchCatalogItemsRequestStockLevel](#type-searchcatalogitemsrequeststocklevel) for possible values
@@ -45,6 +47,7 @@ export class SearchCatalogItemsRequest {
      * @memberof SearchCatalogItemsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     stock_levels?: Array<string>;
     /**
      * The enabled-location query expression to return items and item variations having specified enabled locations.
@@ -52,6 +55,7 @@ export class SearchCatalogItemsRequest {
      * @memberof SearchCatalogItemsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     enabled_location_ids?: Array<string>;
     /**
      * The pagination token, returned in the previous response, used to fetch the next batch of pending results.
@@ -83,6 +87,7 @@ export class SearchCatalogItemsRequest {
      * @memberof SearchCatalogItemsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     product_types?: Array<string>;
     /**
      * The customer-attribute filter to return items or item variations matching the specified custom attribute expressions. A maximum number of 10 custom attribute expressions are supported in a single call to the `SearchCatalogItems` endpoint.

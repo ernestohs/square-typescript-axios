@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Sets the Day of the week and hour of the day that a business starts a work week. Used for the calculation of overtime pay.

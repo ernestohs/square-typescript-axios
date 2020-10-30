@@ -16,6 +16,7 @@
 import { LoyaltyEventAdjustPoints } from './loyalty-event-adjust-points';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request to adjust (add or subtract) points manually.

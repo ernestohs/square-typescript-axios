@@ -16,6 +16,7 @@
 import { DisputeEvidence } from './dispute-evidence';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines fields in a ListDisputeEvidence response.
@@ -38,6 +39,7 @@ export class ListDisputeEvidenceResponse {
      * @memberof ListDisputeEvidenceResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

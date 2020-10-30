@@ -20,6 +20,7 @@ import { LoyaltyEventOrderFilter } from './loyalty-event-order-filter';
 import { LoyaltyEventTypeFilter } from './loyalty-event-type-filter';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The filtering criteria. If the request specifies multiple filters,  the endpoint uses a logical AND to evaluate them.

@@ -17,6 +17,7 @@ import { ShiftFilter } from './shift-filter';
 import { ShiftSort } from './shift-sort';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The parameters of a `Shift` search query. Includes filter and sort options.

@@ -19,6 +19,7 @@ import { FilterValue } from './filter-value';
 import { TimeRange } from './time-range';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a set of `CustomerQuery` filters used to limit the set of `Customers` returned by `SearchCustomers`.

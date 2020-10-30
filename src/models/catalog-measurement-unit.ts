@@ -16,6 +16,7 @@
 import { MeasurementUnit } from './measurement-unit';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents the unit used to measure a `CatalogItemVariation` and specifies the precision for decimal quantities.

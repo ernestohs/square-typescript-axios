@@ -16,6 +16,7 @@
 import { SourceApplication } from './source-application';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents the transfer of a quantity of product inventory at a particular time from one location to another.

@@ -18,6 +18,7 @@ import { BusinessHours } from './business-hours';
 import { Coordinates } from './coordinates';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -64,6 +65,7 @@ export class Location {
      * @memberof Location
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     capabilities?: Array<string>;
     /**
      * The status of the location, either active or inactive. See [LocationStatus](#type-locationstatus) for possible values

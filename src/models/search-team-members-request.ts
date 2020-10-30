@@ -16,6 +16,7 @@
 import { SearchTeamMembersQuery } from './search-team-members-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a search request for a filtered list of `TeamMember` objects.

@@ -16,6 +16,7 @@
 import { LoyaltyAccount } from './loyalty-account';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response that includes loyalty accounts that satisfy the search criteria.
@@ -30,6 +31,7 @@ export class SearchLoyaltyAccountsResponse {
      * @memberof SearchLoyaltyAccountsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The loyalty accounts that met the search criteria,   in order of creation date.

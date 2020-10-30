@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Filter by current Order `state`.
@@ -29,6 +30,7 @@ export class SearchOrdersStateFilter {
      * @memberof SearchOrdersStateFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     states: Array<string>;
 }
 

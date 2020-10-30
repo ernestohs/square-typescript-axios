@@ -16,6 +16,7 @@
 import { Payment } from './payment';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The return value from a [CompletePayment](#endpoint-payments-completepayment) call.
@@ -30,6 +31,7 @@ export class CompletePaymentResponse {
      * @memberof CompletePaymentResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

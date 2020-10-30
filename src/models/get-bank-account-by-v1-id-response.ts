@@ -16,6 +16,7 @@
 import { BankAccount } from './bank-account';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Response object returned by GetBankAccountByV1Id.
@@ -30,6 +31,7 @@ export class GetBankAccountByV1IdResponse {
      * @memberof GetBankAccountByV1IdResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

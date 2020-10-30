@@ -21,6 +21,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Order = void 0;
 var money_1 = require("./money");
@@ -38,6 +41,7 @@ var order_source_1 = require("./order-source");
 var refund_1 = require("./refund");
 var tender_1 = require("./tender");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Contains all information related to a single order to process with Square, including line items that specify the products to purchase. Order objects also include information on any associated tenders, refunds, and returns.  All Connect V2 Transactions have all been converted to Orders including all associated itemization data.
  * @export
@@ -110,6 +114,10 @@ var Order = /** @class */ (function () {
         graphql_1.Field(function () { return [refund_1.Refund]; }, { nullable: true }),
         __metadata("design:type", Array)
     ], Order.prototype, "refunds", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Object)
+    ], Order.prototype, "metadata", void 0);
     __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)

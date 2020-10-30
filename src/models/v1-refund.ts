@@ -18,6 +18,7 @@ import { V1PaymentSurcharge } from './v1-payment-surcharge';
 import { V1PaymentTax } from './v1-payment-tax';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * V1Refund

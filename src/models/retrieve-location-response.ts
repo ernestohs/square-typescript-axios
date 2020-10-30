@@ -16,6 +16,7 @@
 import { Location } from './location';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that the [RetrieveLocation](#endpoint-retrievelocation) endpoint returns in a response.
@@ -30,6 +31,7 @@ export class RetrieveLocationResponse {
      * @memberof RetrieveLocationResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

@@ -16,6 +16,7 @@
 import { InventoryPhysicalCount } from './inventory-physical-count';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -30,6 +31,7 @@ export class RetrieveInventoryPhysicalCountResponse {
      * @memberof RetrieveInventoryPhysicalCountResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

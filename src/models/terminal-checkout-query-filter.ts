@@ -16,6 +16,7 @@
 import { TimeRange } from './time-range';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

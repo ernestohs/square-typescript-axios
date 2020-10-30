@@ -16,6 +16,7 @@
 import { TeamMember } from './team-member';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a response from a create request, containing the created `TeamMember` object or error messages.
@@ -38,6 +39,7 @@ export class CreateTeamMemberResponse {
      * @memberof CreateTeamMemberResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

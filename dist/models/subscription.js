@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Subscription = void 0;
 var money_1 = require("./money");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Represents a customer subscription to a subscription plan. For an overview of the `Subscription` type, see  [Subscription object](/docs/subscriptions-api/overview#subscription-object-overview).
  * @export
@@ -65,6 +69,10 @@ var Subscription = /** @class */ (function () {
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
     ], Subscription.prototype, "tax_percentage", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], Subscription.prototype, "invoice_ids", void 0);
     __decorate([
         graphql_1.Field(function () { return money_1.Money; }, { nullable: true }),
         __metadata("design:type", money_1.Money)

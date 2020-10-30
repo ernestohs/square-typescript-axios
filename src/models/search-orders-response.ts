@@ -17,6 +17,7 @@ import { Order } from './order';
 import { OrderEntry } from './order-entry';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Only one of `order_entries` or `orders` fields will be set, depending on whether `return_entries` was set on the [SearchOrdersRequest](#type-searchorderrequest).
@@ -55,6 +56,7 @@ export class SearchOrdersResponse {
      * @memberof SearchOrdersResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

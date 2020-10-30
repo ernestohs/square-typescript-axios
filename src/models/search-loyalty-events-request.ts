@@ -16,6 +16,7 @@
 import { LoyaltyEventQuery } from './loyalty-event-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request to search for loyalty events.

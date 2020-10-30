@@ -16,6 +16,7 @@
 import { V1Merchant } from './v1-merchant';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

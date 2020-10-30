@@ -17,6 +17,7 @@ import { CatalogIdMapping } from './catalog-id-mapping';
 import { CatalogObject } from './catalog-object';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -31,6 +32,7 @@ export class UpsertCatalogObjectResponse {
      * @memberof UpsertCatalogObjectResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

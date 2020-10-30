@@ -16,6 +16,7 @@
 import { LoyaltyProgram } from './loyalty-program';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response that contains all loyalty programs.
@@ -30,6 +31,7 @@ export class ListLoyaltyProgramsResponse {
      * @memberof ListLoyaltyProgramsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * A list of `LoyaltyProgram` for the merchant.

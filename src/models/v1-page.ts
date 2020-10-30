@@ -16,6 +16,7 @@
 import { V1PageCell } from './v1-page-cell';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * V1Page

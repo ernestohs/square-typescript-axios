@@ -18,6 +18,7 @@ import { ChargeRequestAdditionalRecipient } from './charge-request-additional-re
 import { CreateOrderRequest } from './create-order-request';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the parameters that can be included in the body of a request to the __CreateCheckout__ endpoint.

@@ -16,6 +16,7 @@
 import { Shift } from './shift';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The response to a request for `Shift` objects. Contains the requested `Shift` objects. May contain a set of `Error` objects if the request resulted in errors.
@@ -46,6 +47,7 @@ export class SearchShiftsResponse {
      * @memberof SearchShiftsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

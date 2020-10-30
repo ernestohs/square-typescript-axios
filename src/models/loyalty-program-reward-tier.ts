@@ -16,6 +16,7 @@
 import { LoyaltyProgramRewardDefinition } from './loyalty-program-reward-definition';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes a loyalty program reward tier.

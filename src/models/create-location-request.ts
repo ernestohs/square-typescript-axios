@@ -16,6 +16,7 @@
 import { Location } from './location';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Request object for the [CreateLocation](#endpoint-createlocation) endpoint.

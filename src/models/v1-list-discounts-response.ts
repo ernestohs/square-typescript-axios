@@ -16,6 +16,7 @@
 import { V1Discount } from './v1-discount';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

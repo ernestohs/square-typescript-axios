@@ -16,6 +16,7 @@
 import { CatalogObject } from './catalog-object';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -30,6 +31,7 @@ export class RetrieveCatalogObjectResponse {
      * @memberof RetrieveCatalogObjectResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

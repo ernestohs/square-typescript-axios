@@ -17,6 +17,7 @@ import { OrderFulfillmentPickupDetails } from './order-fulfillment-pickup-detail
 import { OrderFulfillmentShipmentDetails } from './order-fulfillment-shipment-details';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Contains details on how to fulfill this order.
@@ -55,6 +56,7 @@ export class OrderFulfillment {
      * @memberof OrderFulfillment
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     metadata?: { [key: string]: string; };
     /**
      * 

@@ -16,6 +16,7 @@
 import { CustomerGroup } from './customer-group';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response body of a request to the [RetrieveCustomerGroup](#endpoint-retrievecustomergroup) endpoint.  One of `errors` or `group` is present in a given response (never both).
@@ -30,6 +31,7 @@ export class RetrieveCustomerGroupResponse {
      * @memberof RetrieveCustomerGroupResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

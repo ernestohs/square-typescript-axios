@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Filter events by event type.
@@ -29,6 +30,7 @@ export class LoyaltyEventTypeFilter {
      * @memberof LoyaltyEventTypeFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     types: Array<string>;
 }
 

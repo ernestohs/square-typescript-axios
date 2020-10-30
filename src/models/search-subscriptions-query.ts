@@ -16,6 +16,7 @@
 import { SearchSubscriptionsFilter } from './search-subscriptions-filter';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a query (including filtering criteria) used to search for subscriptions.

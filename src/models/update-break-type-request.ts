@@ -16,6 +16,7 @@
 import { BreakType } from './break-type';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request to update a `BreakType`

@@ -21,9 +21,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatalogQuerySet = void 0;
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * The query filter to return the search result(s) by exact match of the specified `attribute_name` and any of the `attribute_values`.
  * @export
@@ -36,6 +40,10 @@ var CatalogQuerySet = /** @class */ (function () {
         graphql_1.Field({ nullable: false }),
         __metadata("design:type", String)
     ], CatalogQuerySet.prototype, "attribute_name", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: false }),
+        __metadata("design:type", Array)
+    ], CatalogQuerySet.prototype, "attribute_values", void 0);
     CatalogQuerySet = __decorate([
         graphql_1.ObjectType()
     ], CatalogQuerySet);

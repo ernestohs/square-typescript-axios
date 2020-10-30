@@ -16,6 +16,7 @@
 import { WageSetting } from './wage-setting';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a response from a retrieve request, containing the specified `WageSetting` object or error messages.
@@ -38,6 +39,7 @@ export class RetrieveWageSettingResponse {
      * @memberof RetrieveWageSettingResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

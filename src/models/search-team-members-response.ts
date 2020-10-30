@@ -16,6 +16,7 @@
 import { TeamMember } from './team-member';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a response from a search request, containing a filtered list of `TeamMember` objects.
@@ -46,6 +47,7 @@ export class SearchTeamMembersResponse {
      * @memberof SearchTeamMembersResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

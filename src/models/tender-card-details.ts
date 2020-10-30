@@ -16,6 +16,7 @@
 import { Card } from './card';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents additional details of a tender with `type` `CARD` or `SQUARE_GIFT_CARD`

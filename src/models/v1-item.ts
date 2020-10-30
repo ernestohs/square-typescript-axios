@@ -20,6 +20,7 @@ import { V1ModifierList } from './v1-modifier-list';
 import { V1Variation } from './v1-variation';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * V1Item

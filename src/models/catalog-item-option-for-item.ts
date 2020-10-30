@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  *  An option that can be assigned to an item. For example, a t-shirt item may offer a color option or a size option.

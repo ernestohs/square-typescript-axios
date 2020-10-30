@@ -16,6 +16,7 @@
 import { WageSetting } from './wage-setting';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents an update request for the `WageSetting` object describing a `TeamMember`.

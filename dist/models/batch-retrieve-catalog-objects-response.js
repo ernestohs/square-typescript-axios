@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BatchRetrieveCatalogObjectsResponse = void 0;
 var catalog_object_1 = require("./catalog-object");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  *
  * @export
@@ -33,6 +37,10 @@ var graphql_1 = require("@nestjs/graphql");
 var BatchRetrieveCatalogObjectsResponse = /** @class */ (function () {
     function BatchRetrieveCatalogObjectsResponse() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], BatchRetrieveCatalogObjectsResponse.prototype, "errors", void 0);
     __decorate([
         graphql_1.Field(function () { return [catalog_object_1.CatalogObject]; }, { nullable: true }),
         __metadata("design:type", Array)

@@ -21,11 +21,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CardPaymentDetails = void 0;
 var card_1 = require("./card");
 var device_details_1 = require("./device-details");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Reflects the current status of a card payment.
  * @export
@@ -90,6 +94,10 @@ var CardPaymentDetails = /** @class */ (function () {
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", Boolean)
     ], CardPaymentDetails.prototype, "refund_requires_card_presence", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], CardPaymentDetails.prototype, "errors", void 0);
     CardPaymentDetails = __decorate([
         graphql_1.ObjectType()
     ], CardPaymentDetails);

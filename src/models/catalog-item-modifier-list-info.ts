@@ -16,6 +16,7 @@
 import { CatalogModifierOverride } from './catalog-modifier-override';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Options to control the properties of a `CatalogModifierList` applied to a `CatalogItem` instance.

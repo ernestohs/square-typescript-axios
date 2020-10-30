@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the body parameters that can be provided in a request to the __CreateMobileAuthorizationCode__ endpoint.

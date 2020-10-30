@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CustomAttributeFilter = void 0;
 var range_1 = require("./range");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Supported custom attribute query expressions for calling the [SearchCatalogItems](#endpoint-Catalog-SearchCatalogItems) endpoint to search for items or item variations.
  * @export
@@ -49,6 +53,10 @@ var CustomAttributeFilter = /** @class */ (function () {
         graphql_1.Field(function () { return range_1.Range; }, { nullable: true }),
         __metadata("design:type", range_1.Range)
     ], CustomAttributeFilter.prototype, "number_filter", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], CustomAttributeFilter.prototype, "selection_uids_filter", void 0);
     __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", Boolean)

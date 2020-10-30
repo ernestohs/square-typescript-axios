@@ -16,6 +16,7 @@
 import { MeasurementUnit } from './measurement-unit';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Contains the measurement unit for a quantity and a precision which specifies the number of digits after the decimal point for decimal quantities.

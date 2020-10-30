@@ -16,6 +16,7 @@
 import { WorkweekConfig } from './workweek-config';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The response to a request for a set of `WorkweekConfig` objects. Contains the requested `WorkweekConfig` objects. May contain a set of `Error` objects if the request resulted in errors.
@@ -46,6 +47,7 @@ export class ListWorkweekConfigsResponse {
      * @memberof ListWorkweekConfigsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

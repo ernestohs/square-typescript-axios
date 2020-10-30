@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchCatalogItemsRequest = void 0;
 var custom_attribute_filter_1 = require("./custom-attribute-filter");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Defines the request body for the [SearchCatalogItems](#endpoint-Catalog-SearchCatalogItems) endpoint.
  * @export
@@ -38,6 +42,18 @@ var SearchCatalogItemsRequest = /** @class */ (function () {
         __metadata("design:type", String)
     ], SearchCatalogItemsRequest.prototype, "text_filter", void 0);
     __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], SearchCatalogItemsRequest.prototype, "category_ids", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], SearchCatalogItemsRequest.prototype, "stock_levels", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], SearchCatalogItemsRequest.prototype, "enabled_location_ids", void 0);
+    __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
     ], SearchCatalogItemsRequest.prototype, "cursor", void 0);
@@ -49,6 +65,10 @@ var SearchCatalogItemsRequest = /** @class */ (function () {
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
     ], SearchCatalogItemsRequest.prototype, "sort_order", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], SearchCatalogItemsRequest.prototype, "product_types", void 0);
     __decorate([
         graphql_1.Field(function () { return [custom_attribute_filter_1.CustomAttributeFilter]; }, { nullable: true }),
         __metadata("design:type", Array)

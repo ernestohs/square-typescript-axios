@@ -16,6 +16,7 @@
 import { LoyaltyAccountMapping } from './loyalty-account-mapping';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes a loyalty account. For more information, see  [Loyalty Overview](/docs/loyalty/overview).

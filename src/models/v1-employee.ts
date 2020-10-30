@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents one of a business\'s employees.
@@ -53,6 +54,7 @@ export class V1Employee {
      * @memberof V1Employee
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     role_ids?: Array<string>;
     /**
      * The IDs of the locations the employee is allowed to clock in at.
@@ -60,6 +62,7 @@ export class V1Employee {
      * @memberof V1Employee
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     authorized_location_ids?: Array<string>;
     /**
      * The employee\'s email address.

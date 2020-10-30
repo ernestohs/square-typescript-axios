@@ -17,6 +17,7 @@ import { TerminalRefundQueryFilter } from './terminal-refund-query-filter';
 import { TerminalRefundQuerySort } from './terminal-refund-query-sort';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

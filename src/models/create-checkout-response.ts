@@ -16,6 +16,7 @@
 import { Checkout } from './checkout';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response body of a request to the __CreateCheckout__ endpoint.
@@ -38,6 +39,7 @@ export class CreateCheckoutResponse {
      * @memberof CreateCheckoutResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

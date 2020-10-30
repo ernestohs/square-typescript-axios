@@ -19,6 +19,7 @@ import { LoyaltyProgramRewardTier } from './loyalty-program-reward-tier';
 import { LoyaltyProgramTerminology } from './loyalty-program-terminology';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -73,6 +74,7 @@ export class LoyaltyProgram {
      * @memberof LoyaltyProgram
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     location_ids: Array<string>;
     /**
      * The timestamp when the program was created, in RFC 3339 format.

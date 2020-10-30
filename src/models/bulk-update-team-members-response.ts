@@ -16,6 +16,7 @@
 import { UpdateTeamMemberResponse } from './update-team-member-response';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a response from a bulk update request, containing the updated `TeamMember` objects or error messages.
@@ -37,6 +38,7 @@ export class BulkUpdateTeamMembersResponse {
      * @memberof BulkUpdateTeamMembersResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

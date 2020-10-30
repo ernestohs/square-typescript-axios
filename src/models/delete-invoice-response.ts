@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes a `DeleteInvoice` response.
@@ -29,6 +30,7 @@ export class DeleteInvoiceResponse {
      * @memberof DeleteInvoiceResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

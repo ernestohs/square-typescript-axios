@@ -16,6 +16,7 @@
 import { TerminalCheckout } from './terminal-checkout';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -30,6 +31,7 @@ export class CreateTerminalCheckoutResponse {
      * @memberof CreateTerminalCheckoutResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

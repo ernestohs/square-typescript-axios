@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Associates a loyalty account with the buyer\'s phone number. For more information, see  [Loyalty Overview](/docs/loyalty/overview).

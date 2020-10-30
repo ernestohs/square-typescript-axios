@@ -16,6 +16,7 @@
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a discount that applies to one or more line items in an order.  Fixed-amount, order-scoped discounts are distributed across all non-zero line item totals. The amount distributed to each line item is relative to the amount contributed by the item to the order subtotal.
@@ -86,6 +87,7 @@ export class OrderLineItemDiscount {
      * @memberof OrderLineItemDiscount
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     metadata?: { [key: string]: string; };
     /**
      * Indicates the level at which the discount applies. For `ORDER` scoped discounts, Square generates references in `applied_discounts` on all order line items that do not have them. For `LINE_ITEM` scoped discounts, the discount only applies to line items with a discount reference in their `applied_discounts` field.  This field is immutable. To change the scope of a discount you must delete the discount and re-add it as a new discount. See [OrderLineItemDiscountScope](#type-orderlineitemdiscountscope) for possible values
@@ -101,6 +103,7 @@ export class OrderLineItemDiscount {
      * @memberof OrderLineItemDiscount
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     reward_ids?: Array<string>;
     /**
      * The object identifier of a `pricing rule` to be applied automatically to this discount. The specification and application of the discounts, to which a `pricing_rule_id` is assigned, are completely controlled by the corresponding pricing rule.

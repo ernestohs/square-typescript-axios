@@ -16,6 +16,7 @@
 import { SearchLoyaltyAccountsRequestLoyaltyAccountQuery } from './search-loyalty-accounts-request-loyalty-account-query';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A request to search for loyalty accounts.

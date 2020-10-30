@@ -16,6 +16,7 @@
 import { Subscription } from './subscription';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response from the [CreateSubscription](#endpoint-subscriptions-createsubscription) endpoint.
@@ -30,6 +31,7 @@ export class CreateSubscriptionResponse {
      * @memberof CreateSubscriptionResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

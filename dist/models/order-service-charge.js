@@ -21,11 +21,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderServiceCharge = void 0;
 var money_1 = require("./money");
 var order_line_item_applied_tax_1 = require("./order-line-item-applied-tax");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Represents a service charge applied to an order.
  * @export
@@ -78,6 +82,10 @@ var OrderServiceCharge = /** @class */ (function () {
         graphql_1.Field(function () { return [order_line_item_applied_tax_1.OrderLineItemAppliedTax]; }, { nullable: true }),
         __metadata("design:type", Array)
     ], OrderServiceCharge.prototype, "applied_taxes", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Object)
+    ], OrderServiceCharge.prototype, "metadata", void 0);
     OrderServiceCharge = __decorate([
         graphql_1.ObjectType()
     ], OrderServiceCharge);

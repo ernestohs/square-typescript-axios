@@ -16,6 +16,7 @@
 import { LoyaltyEvent } from './loyalty-event';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response that includes the `LoyaltyEvent` published for redeeming the reward.
@@ -30,6 +31,7 @@ export class RedeemLoyaltyRewardResponse {
      * @memberof RedeemLoyaltyRewardResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

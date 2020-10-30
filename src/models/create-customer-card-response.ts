@@ -16,6 +16,7 @@
 import { Card } from './card';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response body of a request to the CreateCustomerCard endpoint.  One of `errors` or `card` is present in a given response (never both).
@@ -30,6 +31,7 @@ export class CreateCustomerCardResponse {
      * @memberof CreateCustomerCardResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

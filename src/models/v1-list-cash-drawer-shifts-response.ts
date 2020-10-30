@@ -16,6 +16,7 @@
 import { V1CashDrawerShift } from './v1-cash-drawer-shift';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

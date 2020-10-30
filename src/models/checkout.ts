@@ -18,6 +18,7 @@ import { Address } from './address';
 import { Order } from './order';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Square Checkout lets merchants accept online payments for supported payment types using a checkout workflow hosted on squareup.com.

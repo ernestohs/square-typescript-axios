@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines request parameters for the ListDisputes endpoint.
@@ -37,6 +38,7 @@ export class ListDisputesRequest {
      * @memberof ListDisputesRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     states?: Array<string>;
     /**
      * The ID of the location for which to return  a list of disputes. If not specified, the endpoint returns all open disputes (dispute status is not `INQUIRY_CLOSED`, `WON`, or  `LOST`) associated with all locations.

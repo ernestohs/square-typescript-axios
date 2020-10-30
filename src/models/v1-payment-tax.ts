@@ -16,6 +16,7 @@
 import { V1Money } from './v1-money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * V1PaymentTax
@@ -30,6 +31,7 @@ export class V1PaymentTax {
      * @memberof V1PaymentTax
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The merchant-defined name of the tax.

@@ -19,6 +19,7 @@ import { CustomerGroupInfo } from './customer-group-info';
 import { CustomerPreferences } from './customer-preferences';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a Square customer profile, which can have one or more cards on file associated with it.
@@ -169,6 +170,7 @@ export class Customer {
      * @memberof Customer
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     group_ids?: Array<string>;
     /**
      * The IDs of segments the customer belongs to.
@@ -176,6 +178,7 @@ export class Customer {
      * @memberof Customer
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     segment_ids?: Array<string>;
 }
 

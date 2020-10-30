@@ -20,6 +20,7 @@ import { SearchOrdersSourceFilter } from './search-orders-source-filter';
 import { SearchOrdersStateFilter } from './search-orders-state-filter';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Filtering criteria to use for a SearchOrders request. Multiple filters will be ANDed together.

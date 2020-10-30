@@ -21,6 +21,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.V1Order = void 0;
 var address_1 = require("./address");
@@ -28,6 +31,7 @@ var v1_money_1 = require("./v1-money");
 var v1_order_history_entry_1 = require("./v1-order-history-entry");
 var v1_tender_1 = require("./v1-tender");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * V1Order
  * @export
@@ -36,6 +40,10 @@ var graphql_1 = require("@nestjs/graphql");
 var V1Order = /** @class */ (function () {
     function V1Order() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], V1Order.prototype, "errors", void 0);
     __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)

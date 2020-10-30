@@ -16,6 +16,7 @@
 import { Payment } from './payment';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response body of a request to the [ListPayments](#endpoint-payments-listpayments) endpoint.
@@ -30,6 +31,7 @@ export class ListPaymentsResponse {
      * @memberof ListPaymentsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The requested list of payments.

@@ -16,6 +16,7 @@
 import { CreateTeamMemberResponse } from './create-team-member-response';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a response from a bulk create request, containing the created `TeamMember` objects or error messages.
@@ -37,6 +38,7 @@ export class BulkCreateTeamMembersResponse {
      * @memberof BulkCreateTeamMembersResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

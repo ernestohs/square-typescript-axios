@@ -21,6 +21,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Customer = void 0;
 var address_1 = require("./address");
@@ -28,6 +31,7 @@ var card_1 = require("./card");
 var customer_group_info_1 = require("./customer-group-info");
 var customer_preferences_1 = require("./customer-preferences");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Represents a Square customer profile, which can have one or more cards on file associated with it.
  * @export
@@ -104,6 +108,14 @@ var Customer = /** @class */ (function () {
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
     ], Customer.prototype, "creation_source", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], Customer.prototype, "group_ids", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], Customer.prototype, "segment_ids", void 0);
     Customer = __decorate([
         graphql_1.ObjectType()
     ], Customer);

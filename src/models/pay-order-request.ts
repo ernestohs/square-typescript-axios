@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in requests to the [PayOrder](#endpoint-payorder) endpoint.
@@ -45,6 +46,7 @@ export class PayOrderRequest {
      * @memberof PayOrderRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     payment_ids?: Array<string>;
 }
 

@@ -17,6 +17,7 @@ import { Card } from './card';
 import { DeviceDetails } from './device-details';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Reflects the current status of a card payment.
@@ -143,6 +144,7 @@ export class CardPaymentDetails {
      * @memberof CardPaymentDetails
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

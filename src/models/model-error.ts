@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents an error encountered during a request to the Connect API.  See [Handling errors](#handlingerrors) for more information.

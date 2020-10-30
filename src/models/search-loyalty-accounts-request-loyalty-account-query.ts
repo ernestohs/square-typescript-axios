@@ -16,6 +16,7 @@
 import { LoyaltyAccountMapping } from './loyalty-account-mapping';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The search criteria for the loyalty accounts.
@@ -38,6 +39,7 @@ export class SearchLoyaltyAccountsRequestLoyaltyAccountQuery {
      * @memberof SearchLoyaltyAccountsRequestLoyaltyAccountQuery
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     customer_ids?: Array<string>;
 }
 

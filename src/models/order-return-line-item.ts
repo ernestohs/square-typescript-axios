@@ -20,6 +20,7 @@ import { OrderQuantityUnit } from './order-quantity-unit';
 import { OrderReturnLineItemModifier } from './order-return-line-item-modifier';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The line item being returned in an Order.

@@ -21,11 +21,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ShiftFilter = void 0;
 var shift_workday_1 = require("./shift-workday");
 var time_range_1 = require("./time-range");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Defines a filter used in a search for `Shift` records. `AND` logic is used by Square\'s servers to apply each filter property specified.
  * @export
@@ -34,6 +38,14 @@ var graphql_1 = require("@nestjs/graphql");
 var ShiftFilter = /** @class */ (function () {
     function ShiftFilter() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: false }),
+        __metadata("design:type", Array)
+    ], ShiftFilter.prototype, "location_ids", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], ShiftFilter.prototype, "employee_ids", void 0);
     __decorate([
         graphql_1.Field({ nullable: true }),
         __metadata("design:type", String)
@@ -50,6 +62,10 @@ var ShiftFilter = /** @class */ (function () {
         graphql_1.Field(function () { return shift_workday_1.ShiftWorkday; }, { nullable: true }),
         __metadata("design:type", shift_workday_1.ShiftWorkday)
     ], ShiftFilter.prototype, "workday", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: false }),
+        __metadata("design:type", Array)
+    ], ShiftFilter.prototype, "team_member_ids", void 0);
     ShiftFilter = __decorate([
         graphql_1.ObjectType()
     ], ShiftFilter);

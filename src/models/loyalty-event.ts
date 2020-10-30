@@ -22,6 +22,7 @@ import { LoyaltyEventOther } from './loyalty-event-other';
 import { LoyaltyEventRedeemReward } from './loyalty-event-redeem-reward';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Provides information about a loyalty event.  For more information, see [Loyalty events](/docs/loyalty-api/overview/#loyalty-events).

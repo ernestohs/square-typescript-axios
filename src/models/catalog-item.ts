@@ -18,6 +18,7 @@ import { CatalogItemOptionForItem } from './catalog-item-option-for-item';
 import { CatalogObject } from './catalog-object';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * An [CatalogObject](#type-CatalogObject) instance of the `ITEM` type, also referred to as an item, in the catalog.
@@ -96,6 +97,7 @@ export class CatalogItem {
      * @memberof CatalogItem
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     tax_ids?: Array<string>;
     /**
      * A set of `CatalogItemModifierListInfo` objects representing the modifier lists that apply to this item, along with the overrides and min and max limits that are specific to this item. Modifier lists may also be added to or deleted from an item using `UpdateItemModifierLists`.

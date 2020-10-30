@@ -17,6 +17,7 @@ import { DeviceCheckoutOptions } from './device-checkout-options';
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -95,6 +96,7 @@ export class TerminalCheckout {
      * @memberof TerminalCheckout
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     payment_ids?: Array<string>;
     /**
      * The time when the `TerminalCheckout` was created as an RFC 3339 timestamp.

@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * An instance of a custom attribute. Custom attributes can be defined and added to `ITEM` and `ITEM_VARIATION` type catalog objects. [Read more about custom attributes](/catalog-api/add-custom-attributes).
@@ -77,6 +78,7 @@ export class CatalogCustomAttributeValue {
      * @memberof CatalogCustomAttributeValue
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     selection_uid_values?: Array<string>;
     /**
      * __Read-only.__ A copy of key from the associated `CatalogCustomAttributeDefinition`.

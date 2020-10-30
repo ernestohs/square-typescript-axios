@@ -17,6 +17,7 @@ import { V1Money } from './v1-money';
 import { V1SettlementEntry } from './v1-settlement-entry';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * V1Settlement

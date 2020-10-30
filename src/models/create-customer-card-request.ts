@@ -16,6 +16,7 @@
 import { Address } from './address';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the request body of a request to the CreateCustomerCard endpoint.

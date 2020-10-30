@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchTerminalCheckoutsResponse = void 0;
 var terminal_checkout_1 = require("./terminal-checkout");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  *
  * @export
@@ -33,6 +37,10 @@ var graphql_1 = require("@nestjs/graphql");
 var SearchTerminalCheckoutsResponse = /** @class */ (function () {
     function SearchTerminalCheckoutsResponse() {
     }
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], SearchTerminalCheckoutsResponse.prototype, "errors", void 0);
     __decorate([
         graphql_1.Field(function () { return [terminal_checkout_1.TerminalCheckout]; }, { nullable: true }),
         __metadata("design:type", Array)

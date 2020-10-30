@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -29,6 +30,7 @@ export class BatchDeleteCatalogObjectsRequest {
      * @memberof BatchDeleteCatalogObjectsRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     object_ids?: Array<string>;
 }
 

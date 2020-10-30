@@ -16,6 +16,7 @@
 import { LoyaltyReward } from './loyalty-reward';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * A response that includes the loyalty rewards satisfying the search criteria.
@@ -30,6 +31,7 @@ export class SearchLoyaltyRewardsResponse {
      * @memberof SearchLoyaltyRewardsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The loyalty rewards that satisfy the search criteria. These are returned in descending order by `updated_at`.

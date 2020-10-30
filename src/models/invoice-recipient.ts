@@ -16,6 +16,7 @@
 import { Address } from './address';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Provides customer data that Square uses to deliver an invoice.

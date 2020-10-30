@@ -16,6 +16,7 @@
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a customer subscription to a subscription plan. For an overview of the `Subscription` type, see  [Subscription object](/docs/subscriptions-api/overview#subscription-object-overview).
@@ -94,6 +95,7 @@ export class Subscription {
      * @memberof Subscription
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     invoice_ids?: Array<string>;
     /**
      * 

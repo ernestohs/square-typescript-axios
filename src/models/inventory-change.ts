@@ -18,6 +18,7 @@ import { InventoryPhysicalCount } from './inventory-physical-count';
 import { InventoryTransfer } from './inventory-transfer';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a single physical count, inventory, adjustment, or transfer that is part of the history of inventory changes for a particular `CatalogObject`.

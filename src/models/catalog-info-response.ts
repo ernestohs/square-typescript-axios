@@ -17,6 +17,7 @@ import { CatalogInfoResponseLimits } from './catalog-info-response-limits';
 import { StandardUnitDescriptionGroup } from './standard-unit-description-group';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 
@@ -31,6 +32,7 @@ export class CatalogInfoResponse {
      * @memberof CatalogInfoResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * 

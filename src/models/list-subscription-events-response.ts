@@ -16,6 +16,7 @@
 import { SubscriptionEvent } from './subscription-event';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in the response from the [ListSubscriptionEvents](#endpoint-subscriptions-listsubscriptionevents) endpoint.
@@ -30,6 +31,7 @@ export class ListSubscriptionEventsResponse {
      * @memberof ListSubscriptionEventsResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
     /**
      * The `SubscriptionEvents` retrieved.

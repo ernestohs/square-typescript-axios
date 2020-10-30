@@ -21,10 +21,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateCheckoutResponse = void 0;
 var checkout_1 = require("./checkout");
 var graphql_1 = require("@nestjs/graphql");
+var graphql_type_json_1 = __importDefault(require("graphql-type-json"));
 /**
  * Defines the fields that are included in the response body of a request to the __CreateCheckout__ endpoint.
  * @export
@@ -37,6 +41,10 @@ var CreateCheckoutResponse = /** @class */ (function () {
         graphql_1.Field(function () { return checkout_1.Checkout; }, { nullable: true }),
         __metadata("design:type", checkout_1.Checkout)
     ], CreateCheckoutResponse.prototype, "checkout", void 0);
+    __decorate([
+        graphql_1.Field(function () { return graphql_type_json_1.default; }, { nullable: true }),
+        __metadata("design:type", Array)
+    ], CreateCheckoutResponse.prototype, "errors", void 0);
     CreateCheckoutResponse = __decorate([
         graphql_1.ObjectType()
     ], CreateCheckoutResponse);

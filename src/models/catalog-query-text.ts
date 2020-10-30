@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The query filter to return the search result whose searchable attribute values contain all of the specified keywords or tokens, independent of the token order or case.
@@ -29,6 +30,7 @@ export class CatalogQueryText {
      * @memberof CatalogQueryText
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     keywords: Array<string>;
 }
 

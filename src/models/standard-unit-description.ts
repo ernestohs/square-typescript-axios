@@ -16,6 +16,7 @@
 import { MeasurementUnit } from './measurement-unit';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Contains the name and abbreviation for standard measurement unit.

@@ -16,6 +16,7 @@
 import { Money } from './money';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Provides details about the loyalty program reward tier definition.
@@ -54,6 +55,7 @@ export class LoyaltyProgramRewardDefinition {
      * @memberof LoyaltyProgramRewardDefinition
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     catalog_object_ids?: Array<string>;
     /**
      * 

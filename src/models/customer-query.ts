@@ -17,6 +17,7 @@ import { CustomerFilter } from './customer-filter';
 import { CustomerSort } from './customer-sort';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Represents a query (including filtering criteria, sorting criteria, or both) used to search for customer profiles.

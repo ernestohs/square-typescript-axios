@@ -17,6 +17,7 @@ import { ShiftWorkday } from './shift-workday';
 import { TimeRange } from './time-range';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines a filter used in a search for `Shift` records. `AND` logic is used by Square\'s servers to apply each filter property specified.
@@ -31,6 +32,7 @@ export class ShiftFilter {
      * @memberof ShiftFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     location_ids: Array<string>;
     /**
      * Fetch shifts for the specified employees. DEPRECATED at version 2020-08-26. Use `team_member_ids` instead
@@ -38,6 +40,7 @@ export class ShiftFilter {
      * @memberof ShiftFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     employee_ids?: Array<string>;
     /**
      * Fetch a `Shift` instance by `Shift.status`. See [ShiftFilterStatus](#type-shiftfilterstatus) for possible values
@@ -77,6 +80,7 @@ export class ShiftFilter {
      * @memberof ShiftFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     team_member_ids: Array<string>;
 }
 

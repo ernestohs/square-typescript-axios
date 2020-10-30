@@ -16,6 +16,7 @@
 import { BreakType } from './break-type';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * The response to a request to get a `BreakType`. Contains the requested `BreakType` objects. May contain a set of `Error` objects if the request resulted in errors.
@@ -38,6 +39,7 @@ export class GetBreakTypeResponse {
      * @memberof GetBreakTypeResponse
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     errors?: Array<Error>;
 }
 

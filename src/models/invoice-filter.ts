@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Describes query filters to apply.
@@ -29,6 +30,7 @@ export class InvoiceFilter {
      * @memberof InvoiceFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     location_ids: Array<string>;
     /**
      * Limits the search to the specified customers, within the specified locations.  Specifying a customer is optional. In the current implementation,  a maximum of one customer can be specified.
@@ -36,6 +38,7 @@ export class InvoiceFilter {
      * @memberof InvoiceFilter
      */
     
+    @Field(() => GraphQLJSON, { nullable: true })
     customer_ids?: Array<string>;
 }
 

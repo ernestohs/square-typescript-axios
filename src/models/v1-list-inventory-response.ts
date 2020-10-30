@@ -16,6 +16,7 @@
 import { V1InventoryEntry } from './v1-inventory-entry';
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * 

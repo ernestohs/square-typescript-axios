@@ -15,6 +15,7 @@
 
 
 import { Field, ObjectType } from '@nestjs/graphql';
+import GraphQLJSON from 'graphql-type-json';
 
 /**
  * Defines the fields that are included in requests to the BatchRetrieveOrders endpoint.
@@ -37,6 +38,7 @@ export class BatchRetrieveOrdersRequest {
      * @memberof BatchRetrieveOrdersRequest
      */
     
+    @Field(() => GraphQLJSON, { nullable: false })
     order_ids: Array<string>;
 }
 
