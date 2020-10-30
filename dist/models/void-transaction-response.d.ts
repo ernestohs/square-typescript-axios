@@ -12,9 +12,9 @@
 /**
  * Defines the fields that are included in the response body of a request to the [VoidTransaction](#endpoint-voidtransaction) endpoint.
  * @export
- * @interface VoidTransactionResponse
+ * @class VoidTransactionResponse
  */
-export interface VoidTransactionResponse {
+export declare class VoidTransactionResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

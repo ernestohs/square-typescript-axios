@@ -12,9 +12,9 @@
 /**
  * The payment the cardholder disputed.
  * @export
- * @interface DisputedPayment
+ * @class DisputedPayment
  */
-export interface DisputedPayment {
+export declare class DisputedPayment {
     /**
      * Square-generated unique ID of the payment being disputed.
      * @type {string}

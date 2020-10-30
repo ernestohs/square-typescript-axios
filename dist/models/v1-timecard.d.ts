@@ -12,9 +12,9 @@
 /**
  * Represents a timecard for an employee.
  * @export
- * @interface V1Timecard
+ * @class V1Timecard
  */
-export interface V1Timecard {
+export declare class V1Timecard {
     /**
      * The timecard\'s unique ID.
      * @type {string}

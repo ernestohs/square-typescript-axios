@@ -14,9 +14,9 @@ import { ShiftWage } from './shift-wage';
 /**
  * A record of the hourly rate, start, and end times for a single work shift for an employee. May include a record of the start and end times for breaks taken during the shift.
  * @export
- * @interface Shift
+ * @class Shift
  */
-export interface Shift {
+export declare class Shift {
     /**
      * UUID for this object
      * @type {string}

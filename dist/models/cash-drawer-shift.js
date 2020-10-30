@@ -12,4 +12,103 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CashDrawerShift = void 0;
+var cash_drawer_device_1 = require("./cash-drawer-device");
+var money_1 = require("./money");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * This model gives the details of a cash drawer shift. The cash_payment_money, cash_refund_money, cash_paid_in_money, and cash_paid_out_money fields are all computed by summing their respective event types.
+ * @export
+ * @class CashDrawerShift
+ */
+var CashDrawerShift = /** @class */ (function () {
+    function CashDrawerShift() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "state", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "opened_at", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "ended_at", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "closed_at", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Array)
+    ], CashDrawerShift.prototype, "employee_ids", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "opening_employee_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "ending_employee_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "closing_employee_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CashDrawerShift.prototype, "description", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CashDrawerShift.prototype, "opened_cash_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CashDrawerShift.prototype, "cash_payment_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CashDrawerShift.prototype, "cash_refunds_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CashDrawerShift.prototype, "cash_paid_in_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CashDrawerShift.prototype, "cash_paid_out_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CashDrawerShift.prototype, "expected_cash_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CashDrawerShift.prototype, "closed_cash_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return cash_drawer_device_1.CashDrawerDevice; }),
+        __metadata("design:type", cash_drawer_device_1.CashDrawerDevice)
+    ], CashDrawerShift.prototype, "device", void 0);
+    CashDrawerShift = __decorate([
+        graphql_1.ObjectType()
+    ], CashDrawerShift);
+    return CashDrawerShift;
+}());
+exports.CashDrawerShift = CashDrawerShift;

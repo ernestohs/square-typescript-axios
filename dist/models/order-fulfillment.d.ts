@@ -14,9 +14,9 @@ import { OrderFulfillmentShipmentDetails } from './order-fulfillment-shipment-de
 /**
  * Contains details on how to fulfill this order.
  * @export
- * @interface OrderFulfillment
+ * @class OrderFulfillment
  */
-export interface OrderFulfillment {
+export declare class OrderFulfillment {
     /**
      * Unique ID that identifies the fulfillment only within this order.
      * @type {string}

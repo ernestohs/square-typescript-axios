@@ -13,9 +13,9 @@ import { EmployeeWage } from './employee-wage';
 /**
  * A response to a request to get an `EmployeeWage`. Contains the requested `EmployeeWage` objects. May contain a set of `Error` objects if the request resulted in errors.
  * @export
- * @interface GetEmployeeWageResponse
+ * @class GetEmployeeWageResponse
  */
-export interface GetEmployeeWageResponse {
+export declare class GetEmployeeWageResponse {
     /**
      *
      * @type {EmployeeWage}

@@ -12,9 +12,9 @@
 /**
  * Defines the fields that are included in the response body of a request to the [RegisterDomain](#endpoint-registerdomain) endpoint.  Either `errors` or `status` will be present in a given response (never both).
  * @export
- * @interface RegisterDomainResponse
+ * @class RegisterDomainResponse
  */
-export interface RegisterDomainResponse {
+export declare class RegisterDomainResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

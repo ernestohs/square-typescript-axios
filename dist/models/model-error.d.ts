@@ -12,9 +12,9 @@
 /**
  * Represents an error encountered during a request to the Connect API.  See [Handling errors](#handlingerrors) for more information.
  * @export
- * @interface ModelError
+ * @class ModelError
  */
-export interface ModelError {
+export declare class ModelError {
     /**
      * The high-level category for the error. See `ErrorCategory` for possible values. See [ErrorCategory](#type-errorcategory) for possible values
      * @type {string}

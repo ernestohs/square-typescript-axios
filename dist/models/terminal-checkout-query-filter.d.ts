@@ -13,9 +13,9 @@ import { TimeRange } from './time-range';
 /**
  *
  * @export
- * @interface TerminalCheckoutQueryFilter
+ * @class TerminalCheckoutQueryFilter
  */
-export interface TerminalCheckoutQueryFilter {
+export declare class TerminalCheckoutQueryFilter {
     /**
      * `TerminalCheckout`s associated with a specific device. If no device is specified then all `TerminalCheckout`s for the merchant will be displayed.
      * @type {string}

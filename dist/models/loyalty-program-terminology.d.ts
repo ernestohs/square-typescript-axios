@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface LoyaltyProgramTerminology
+ * @class LoyaltyProgramTerminology
  */
-export interface LoyaltyProgramTerminology {
+export declare class LoyaltyProgramTerminology {
     /**
      * A singular unit for a point (for example, 1 point is called 1 star).
      * @type {string}

@@ -13,9 +13,9 @@ import { Order } from './order';
 /**
  * Defines the fields that are included in the response body of a request to the [UpdateOrder](#endpoint-orders-updateorder) endpoint.
  * @export
- * @interface UpdateOrderResponse
+ * @class UpdateOrderResponse
  */
-export interface UpdateOrderResponse {
+export declare class UpdateOrderResponse {
     /**
      *
      * @type {Order}

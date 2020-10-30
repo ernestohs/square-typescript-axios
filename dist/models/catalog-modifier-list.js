@@ -12,4 +12,46 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatalogModifierList = void 0;
+var catalog_object_1 = require("./catalog-object");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * A list of modifiers applicable to items at the time of sale.  For example, a \"Condiments\" modifier list applicable to a \"Hot Dog\" item may contain \"Ketchup\", \"Mustard\", and \"Relish\" modifiers. Use the `selection_type` field to specify whether or not multiple selections from the modifier list are allowed.
+ * @export
+ * @class CatalogModifierList
+ */
+var CatalogModifierList = /** @class */ (function () {
+    function CatalogModifierList() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogModifierList.prototype, "name", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Number)
+    ], CatalogModifierList.prototype, "ordinal", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogModifierList.prototype, "selection_type", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [catalog_object_1.CatalogObject]; }),
+        __metadata("design:type", Array)
+    ], CatalogModifierList.prototype, "modifiers", void 0);
+    CatalogModifierList = __decorate([
+        graphql_1.ObjectType()
+    ], CatalogModifierList);
+    return CatalogModifierList;
+}());
+exports.CatalogModifierList = CatalogModifierList;

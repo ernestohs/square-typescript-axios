@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface BatchRetrieveInventoryChangesRequest
+ * @class BatchRetrieveInventoryChangesRequest
  */
-export interface BatchRetrieveInventoryChangesRequest {
+export declare class BatchRetrieveInventoryChangesRequest {
     /**
      * The filter to return results by `CatalogObject` ID. The filter is only applicable when set. The default value is null.
      * @type {Array<string>}

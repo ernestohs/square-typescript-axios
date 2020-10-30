@@ -13,9 +13,9 @@ import { V1Page } from './v1-page';
 /**
  *
  * @export
- * @interface V1UpdatePageRequest
+ * @class V1UpdatePageRequest
  */
-export interface V1UpdatePageRequest {
+export declare class V1UpdatePageRequest {
     /**
      *
      * @type {V1Page}

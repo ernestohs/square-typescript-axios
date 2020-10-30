@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface DisputeEvidence
+ * @class DisputeEvidence
  */
-export interface DisputeEvidence {
+export declare class DisputeEvidence {
     /**
      * The Square-generated ID of the evidence.
      * @type {string}

@@ -13,9 +13,9 @@ import { CatalogQuickAmount } from './catalog-quick-amount';
 /**
  * A parent Catalog Object model represents a set of Quick Amounts and the settings control the amounts.
  * @export
- * @interface CatalogQuickAmountsSettings
+ * @class CatalogQuickAmountsSettings
  */
-export interface CatalogQuickAmountsSettings {
+export declare class CatalogQuickAmountsSettings {
     /**
      * Represents the option seller currently uses on Quick Amounts. See [CatalogQuickAmountsSettingsOption](#type-catalogquickamountssettingsoption) for possible values
      * @type {string}

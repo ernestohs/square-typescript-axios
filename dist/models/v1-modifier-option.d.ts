@@ -13,9 +13,9 @@ import { V1Money } from './v1-money';
 /**
  * V1ModifierOption
  * @export
- * @interface V1ModifierOption
+ * @class V1ModifierOption
  */
-export interface V1ModifierOption {
+export declare class V1ModifierOption {
     /**
      * The modifier option\'s unique ID.
      * @type {string}

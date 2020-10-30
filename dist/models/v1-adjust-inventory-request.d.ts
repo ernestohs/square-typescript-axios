@@ -12,9 +12,9 @@
 /**
  * V1AdjustInventoryRequest
  * @export
- * @interface V1AdjustInventoryRequest
+ * @class V1AdjustInventoryRequest
  */
-export interface V1AdjustInventoryRequest {
+export declare class V1AdjustInventoryRequest {
     /**
      * The number to adjust the variation\'s quantity by.
      * @type {number}

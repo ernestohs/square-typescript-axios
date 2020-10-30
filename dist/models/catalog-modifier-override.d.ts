@@ -12,9 +12,9 @@
 /**
  * Options to control how to override the default behavior of the specified modifier.
  * @export
- * @interface CatalogModifierOverride
+ * @class CatalogModifierOverride
  */
-export interface CatalogModifierOverride {
+export declare class CatalogModifierOverride {
     /**
      * The ID of the `CatalogModifier` whose default behavior is being overridden.
      * @type {string}

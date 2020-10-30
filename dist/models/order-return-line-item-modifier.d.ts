@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * A line item modifier being returned.
  * @export
- * @interface OrderReturnLineItemModifier
+ * @class OrderReturnLineItemModifier
  */
-export interface OrderReturnLineItemModifier {
+export declare class OrderReturnLineItemModifier {
     /**
      * Unique ID that identifies the return modifier only within this order.
      * @type {string}

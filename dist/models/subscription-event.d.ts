@@ -12,9 +12,9 @@
 /**
  * Describes changes to subscription and billing states.
  * @export
- * @interface SubscriptionEvent
+ * @class SubscriptionEvent
  */
-export interface SubscriptionEvent {
+export declare class SubscriptionEvent {
     /**
      * The ID of the subscription event.
      * @type {string}

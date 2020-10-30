@@ -13,9 +13,9 @@ import { V1Refund } from './v1-refund';
 /**
  *
  * @export
- * @interface V1ListRefundsResponse
+ * @class V1ListRefundsResponse
  */
-export interface V1ListRefundsResponse {
+export declare class V1ListRefundsResponse {
     /**
      *
      * @type {Array<V1Refund>}

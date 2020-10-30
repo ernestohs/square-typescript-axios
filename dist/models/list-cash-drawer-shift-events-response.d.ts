@@ -13,9 +13,9 @@ import { CashDrawerShiftEvent } from './cash-drawer-shift-event';
 /**
  *
  * @export
- * @interface ListCashDrawerShiftEventsResponse
+ * @class ListCashDrawerShiftEventsResponse
  */
-export interface ListCashDrawerShiftEventsResponse {
+export declare class ListCashDrawerShiftEventsResponse {
     /**
      * All of the events (payments, refunds, etc.) for a cash drawer during the shift.
      * @type {Array<CashDrawerShiftEvent>}

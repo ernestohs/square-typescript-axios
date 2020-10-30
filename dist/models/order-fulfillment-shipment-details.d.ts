@@ -13,9 +13,9 @@ import { OrderFulfillmentRecipient } from './order-fulfillment-recipient';
 /**
  * Contains details necessary to fulfill a shipment order.
  * @export
- * @interface OrderFulfillmentShipmentDetails
+ * @class OrderFulfillmentShipmentDetails
  */
-export interface OrderFulfillmentShipmentDetails {
+export declare class OrderFulfillmentShipmentDetails {
     /**
      *
      * @type {OrderFulfillmentRecipient}

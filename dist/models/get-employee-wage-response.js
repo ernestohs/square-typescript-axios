@@ -12,4 +12,38 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEmployeeWageResponse = void 0;
+var employee_wage_1 = require("./employee-wage");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * A response to a request to get an `EmployeeWage`. Contains the requested `EmployeeWage` objects. May contain a set of `Error` objects if the request resulted in errors.
+ * @export
+ * @class GetEmployeeWageResponse
+ */
+var GetEmployeeWageResponse = /** @class */ (function () {
+    function GetEmployeeWageResponse() {
+    }
+    __decorate([
+        graphql_1.Field(function () { return employee_wage_1.EmployeeWage; }),
+        __metadata("design:type", employee_wage_1.EmployeeWage)
+    ], GetEmployeeWageResponse.prototype, "employee_wage", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Array)
+    ], GetEmployeeWageResponse.prototype, "errors", void 0);
+    GetEmployeeWageResponse = __decorate([
+        graphql_1.ObjectType()
+    ], GetEmployeeWageResponse);
+    return GetEmployeeWageResponse;
+}());
+exports.GetEmployeeWageResponse = GetEmployeeWageResponse;

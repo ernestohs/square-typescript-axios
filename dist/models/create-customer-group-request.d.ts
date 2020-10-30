@@ -13,9 +13,9 @@ import { CustomerGroup } from './customer-group';
 /**
  * Defines the body parameters that can be provided in a request to the [CreateCustomerGroup](#endpoint-createcustomegroup) endpoint.
  * @export
- * @interface CreateCustomerGroupRequest
+ * @class CreateCustomerGroupRequest
  */
-export interface CreateCustomerGroupRequest {
+export declare class CreateCustomerGroupRequest {
     /**
      * The idempotency key for the request. See the [Idempotency](https://developer.squareup.com/docs/basics/api101/idempotency) guide for more information.
      * @type {string}

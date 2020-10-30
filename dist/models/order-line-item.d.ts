@@ -17,9 +17,9 @@ import { OrderQuantityUnit } from './order-quantity-unit';
 /**
  * Represents a line item in an order. Each line item describes a different product to purchase, with its own quantity and price details.
  * @export
- * @interface OrderLineItem
+ * @class OrderLineItem
  */
-export interface OrderLineItem {
+export declare class OrderLineItem {
     /**
      * Unique ID that identifies the line item only within this order.
      * @type {string}

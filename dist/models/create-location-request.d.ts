@@ -13,9 +13,9 @@ import { Location } from './location';
 /**
  * Request object for the [CreateLocation](#endpoint-createlocation) endpoint.
  * @export
- * @interface CreateLocationRequest
+ * @class CreateLocationRequest
  */
-export interface CreateLocationRequest {
+export declare class CreateLocationRequest {
     /**
      *
      * @type {Location}

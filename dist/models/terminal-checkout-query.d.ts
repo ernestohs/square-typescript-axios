@@ -14,9 +14,9 @@ import { TerminalCheckoutQuerySort } from './terminal-checkout-query-sort';
 /**
  *
  * @export
- * @interface TerminalCheckoutQuery
+ * @class TerminalCheckoutQuery
  */
-export interface TerminalCheckoutQuery {
+export declare class TerminalCheckoutQuery {
     /**
      *
      * @type {TerminalCheckoutQueryFilter}

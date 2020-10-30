@@ -13,9 +13,9 @@ import { TerminalRefund } from './terminal-refund';
 /**
  *
  * @export
- * @interface CancelTerminalRefundResponse
+ * @class CancelTerminalRefundResponse
  */
-export interface CancelTerminalRefundResponse {
+export declare class CancelTerminalRefundResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

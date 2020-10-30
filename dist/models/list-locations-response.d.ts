@@ -13,9 +13,9 @@ import { Location } from './location';
 /**
  * Defines the fields that are included in the response body of a request to the __ListLocations__ endpoint.  One of `errors` or `locations` is present in a given response (never both).
  * @export
- * @interface ListLocationsResponse
+ * @class ListLocationsResponse
  */
-export interface ListLocationsResponse {
+export declare class ListLocationsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

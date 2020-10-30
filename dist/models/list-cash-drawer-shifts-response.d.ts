@@ -13,9 +13,9 @@ import { CashDrawerShiftSummary } from './cash-drawer-shift-summary';
 /**
  *
  * @export
- * @interface ListCashDrawerShiftsResponse
+ * @class ListCashDrawerShiftsResponse
  */
-export interface ListCashDrawerShiftsResponse {
+export declare class ListCashDrawerShiftsResponse {
     /**
      * A collection of CashDrawerShiftSummary objects for shifts that match the query.
      * @type {Array<CashDrawerShiftSummary>}

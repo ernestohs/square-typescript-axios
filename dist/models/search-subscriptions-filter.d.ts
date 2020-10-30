@@ -12,9 +12,9 @@
 /**
  * Represents a set of SearchSubscriptionsQuery filters used to limit the set of Subscriptions returned by SearchSubscriptions.
  * @export
- * @interface SearchSubscriptionsFilter
+ * @class SearchSubscriptionsFilter
  */
-export interface SearchSubscriptionsFilter {
+export declare class SearchSubscriptionsFilter {
     /**
      * A filter to select subscriptions based on the customer.
      * @type {Array<string>}

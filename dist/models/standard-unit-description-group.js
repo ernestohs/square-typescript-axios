@@ -12,4 +12,38 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.StandardUnitDescriptionGroup = void 0;
+var standard_unit_description_1 = require("./standard-unit-description");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * Group of standard measurement units.
+ * @export
+ * @class StandardUnitDescriptionGroup
+ */
+var StandardUnitDescriptionGroup = /** @class */ (function () {
+    function StandardUnitDescriptionGroup() {
+    }
+    __decorate([
+        graphql_1.Field(function () { return [standard_unit_description_1.StandardUnitDescription]; }),
+        __metadata("design:type", Array)
+    ], StandardUnitDescriptionGroup.prototype, "standard_unit_descriptions", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], StandardUnitDescriptionGroup.prototype, "language_code", void 0);
+    StandardUnitDescriptionGroup = __decorate([
+        graphql_1.ObjectType()
+    ], StandardUnitDescriptionGroup);
+    return StandardUnitDescriptionGroup;
+}());
+exports.StandardUnitDescriptionGroup = StandardUnitDescriptionGroup;

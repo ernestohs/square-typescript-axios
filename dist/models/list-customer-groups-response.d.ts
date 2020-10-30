@@ -13,9 +13,9 @@ import { CustomerGroup } from './customer-group';
 /**
  * Defines the fields that are included in the response body of a request to the [ListCustomerGroups](#endpoint-listcustomergroups) endpoint.  One of `errors` or `groups` is present in a given response (never both).
  * @export
- * @interface ListCustomerGroupsResponse
+ * @class ListCustomerGroupsResponse
  */
-export interface ListCustomerGroupsResponse {
+export declare class ListCustomerGroupsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

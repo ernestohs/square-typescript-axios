@@ -13,9 +13,9 @@ import { LoyaltyEventFilter } from './loyalty-event-filter';
 /**
  * Represents a query used to search for loyalty events.
  * @export
- * @interface LoyaltyEventQuery
+ * @class LoyaltyEventQuery
  */
-export interface LoyaltyEventQuery {
+export declare class LoyaltyEventQuery {
     /**
      *
      * @type {LoyaltyEventFilter}

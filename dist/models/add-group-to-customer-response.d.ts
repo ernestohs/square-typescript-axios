@@ -12,9 +12,9 @@
 /**
  * Defines the fields that are included in the response body of a request to the [AddGroupToCustomer](#endpoint-addgrouptocustomer) endpoint.
  * @export
- * @interface AddGroupToCustomerResponse
+ * @class AddGroupToCustomerResponse
  */
-export interface AddGroupToCustomerResponse {
+export declare class AddGroupToCustomerResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

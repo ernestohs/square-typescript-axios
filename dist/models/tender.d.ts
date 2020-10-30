@@ -16,9 +16,9 @@ import { TenderCashDetails } from './tender-cash-details';
 /**
  * Represents a tender (i.e., a method of payment) used in a Square transaction.
  * @export
- * @interface Tender
+ * @class Tender
  */
-export interface Tender {
+export declare class Tender {
     /**
      * The tender\'s unique ID.
      * @type {string}

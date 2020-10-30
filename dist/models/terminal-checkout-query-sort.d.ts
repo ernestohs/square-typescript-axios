@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface TerminalCheckoutQuerySort
+ * @class TerminalCheckoutQuerySort
  */
-export interface TerminalCheckoutQuerySort {
+export declare class TerminalCheckoutQuerySort {
     /**
      * The order in which results are listed. - `ASC` - oldest to newest - `DESC` - newest to oldest (default).
      * @type {string}

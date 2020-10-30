@@ -13,9 +13,9 @@ import { V1TimecardEvent } from './v1-timecard-event';
 /**
  *
  * @export
- * @interface V1ListTimecardEventsResponse
+ * @class V1ListTimecardEventsResponse
  */
-export interface V1ListTimecardEventsResponse {
+export declare class V1ListTimecardEventsResponse {
     /**
      *
      * @type {Array<V1TimecardEvent>}

@@ -12,9 +12,9 @@
 /**
  * A request for a filtered set of `BreakType` objects
  * @export
- * @interface ListBreakTypesRequest
+ * @class ListBreakTypesRequest
  */
-export interface ListBreakTypesRequest {
+export declare class ListBreakTypesRequest {
     /**
      * Filter Break Types returned to only those that are associated with the specified location.
      * @type {string}

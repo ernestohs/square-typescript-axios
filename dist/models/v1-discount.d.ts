@@ -13,9 +13,9 @@ import { V1Money } from './v1-money';
 /**
  * V1Discount
  * @export
- * @interface V1Discount
+ * @class V1Discount
  */
-export interface V1Discount {
+export declare class V1Discount {
     /**
      * The discount\'s unique ID.
      * @type {string}

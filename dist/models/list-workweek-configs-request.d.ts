@@ -12,9 +12,9 @@
 /**
  * A request for a set of `WorkweekConfig` objects
  * @export
- * @interface ListWorkweekConfigsRequest
+ * @class ListWorkweekConfigsRequest
  */
-export interface ListWorkweekConfigsRequest {
+export declare class ListWorkweekConfigsRequest {
     /**
      * Maximum number of Workweek Configs to return per page.
      * @type {number}

@@ -12,9 +12,9 @@
 /**
  * An employee object that is used by the external API.
  * @export
- * @interface Employee
+ * @class Employee
  */
-export interface Employee {
+export declare class Employee {
     /**
      * UUID for this object.
      * @type {string}

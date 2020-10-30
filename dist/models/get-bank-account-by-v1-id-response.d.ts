@@ -13,9 +13,9 @@ import { BankAccount } from './bank-account';
 /**
  * Response object returned by GetBankAccountByV1Id.
  * @export
- * @interface GetBankAccountByV1IdResponse
+ * @class GetBankAccountByV1IdResponse
  */
-export interface GetBankAccountByV1IdResponse {
+export declare class GetBankAccountByV1IdResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

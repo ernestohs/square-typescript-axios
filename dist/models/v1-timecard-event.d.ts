@@ -12,9 +12,9 @@
 /**
  * V1TimecardEvent
  * @export
- * @interface V1TimecardEvent
+ * @class V1TimecardEvent
  */
-export interface V1TimecardEvent {
+export declare class V1TimecardEvent {
     /**
      * The event\'s unique ID.
      * @type {string}

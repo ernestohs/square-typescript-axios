@@ -13,9 +13,9 @@ import { MeasurementUnit } from './measurement-unit';
 /**
  * Represents the unit used to measure a `CatalogItemVariation` and specifies the precision for decimal quantities.
  * @export
- * @interface CatalogMeasurementUnit
+ * @class CatalogMeasurementUnit
  */
-export interface CatalogMeasurementUnit {
+export declare class CatalogMeasurementUnit {
     /**
      *
      * @type {MeasurementUnit}

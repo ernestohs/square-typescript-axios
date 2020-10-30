@@ -14,9 +14,9 @@ import { InvoiceSort } from './invoice-sort';
 /**
  * Describes query criteria for searching invoices.
  * @export
- * @interface InvoiceQuery
+ * @class InvoiceQuery
  */
-export interface InvoiceQuery {
+export declare class InvoiceQuery {
     /**
      *
      * @type {InvoiceFilter}

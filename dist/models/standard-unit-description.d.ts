@@ -13,9 +13,9 @@ import { MeasurementUnit } from './measurement-unit';
 /**
  * Contains the name and abbreviation for standard measurement unit.
  * @export
- * @interface StandardUnitDescription
+ * @class StandardUnitDescription
  */
-export interface StandardUnitDescription {
+export declare class StandardUnitDescription {
     /**
      *
      * @type {MeasurementUnit}

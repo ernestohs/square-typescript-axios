@@ -13,9 +13,9 @@ import { Subscription } from './subscription';
 /**
  * Defines the fields that are included in the response from the [SearchSubscriptions](#endpoint-subscriptions-searchsubscriptions) endpoint.
  * @export
- * @interface SearchSubscriptionsResponse
+ * @class SearchSubscriptionsResponse
  */
-export interface SearchSubscriptionsResponse {
+export declare class SearchSubscriptionsResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

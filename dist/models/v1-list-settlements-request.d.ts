@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1ListSettlementsRequest
+ * @class V1ListSettlementsRequest
  */
-export interface V1ListSettlementsRequest {
+export declare class V1ListSettlementsRequest {
     /**
      * The order in which settlements are listed in the response. See [SortOrder](#type-sortorder) for possible values
      * @type {string}

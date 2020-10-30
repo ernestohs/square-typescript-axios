@@ -12,4 +12,75 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TerminalCheckout = void 0;
+var device_checkout_options_1 = require("./device-checkout-options");
+var money_1 = require("./money");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ *
+ * @export
+ * @class TerminalCheckout
+ */
+var TerminalCheckout = /** @class */ (function () {
+    function TerminalCheckout() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], TerminalCheckout.prototype, "id", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], TerminalCheckout.prototype, "amount_money", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], TerminalCheckout.prototype, "reference_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], TerminalCheckout.prototype, "note", void 0);
+    __decorate([
+        graphql_1.Field(function () { return device_checkout_options_1.DeviceCheckoutOptions; }),
+        __metadata("design:type", device_checkout_options_1.DeviceCheckoutOptions)
+    ], TerminalCheckout.prototype, "device_options", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], TerminalCheckout.prototype, "deadline_duration", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], TerminalCheckout.prototype, "status", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], TerminalCheckout.prototype, "cancel_reason", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Array)
+    ], TerminalCheckout.prototype, "payment_ids", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], TerminalCheckout.prototype, "created_at", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], TerminalCheckout.prototype, "updated_at", void 0);
+    TerminalCheckout = __decorate([
+        graphql_1.ObjectType()
+    ], TerminalCheckout);
+    return TerminalCheckout;
+}());
+exports.TerminalCheckout = TerminalCheckout;

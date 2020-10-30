@@ -15,9 +15,9 @@ import { Money } from './money';
 /**
  * Defines the parameters that can be included in the body of a request to the [Charge](#endpoint-charge) endpoint.  Deprecated - recommend using [CreatePayment](#endpoint-payments-createpayment)
  * @export
- * @interface ChargeRequest
+ * @class ChargeRequest
  */
-export interface ChargeRequest {
+export declare class ChargeRequest {
     /**
      * A value you specify that uniquely identifies this transaction among transactions you\'ve created.  If you\'re unsure whether a particular transaction succeeded, you can reattempt it with the same idempotency key without worrying about double-charging the buyer.  See [Idempotency keys](#idempotencykeys) for more information.
      * @type {string}

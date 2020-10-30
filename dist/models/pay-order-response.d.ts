@@ -13,9 +13,9 @@ import { Order } from './order';
 /**
  * Defines the fields that are included in the response body of a request to the [PayOrder](#endpoint-payorder) endpoint.
  * @export
- * @interface PayOrderResponse
+ * @class PayOrderResponse
  */
-export interface PayOrderResponse {
+export declare class PayOrderResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

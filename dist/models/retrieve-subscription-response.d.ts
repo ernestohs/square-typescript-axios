@@ -13,9 +13,9 @@ import { Subscription } from './subscription';
 /**
  * Defines the fields that are included in the response from the [RetrieveSubscription](#endpoint-subscriptions-retrievesubscription) endpoint.
  * @export
- * @interface RetrieveSubscriptionResponse
+ * @class RetrieveSubscriptionResponse
  */
-export interface RetrieveSubscriptionResponse {
+export declare class RetrieveSubscriptionResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

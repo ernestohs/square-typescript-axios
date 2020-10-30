@@ -12,4 +12,46 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRefundRequest = void 0;
+var money_1 = require("./money");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * Defines the body parameters that can be included in a request to the [CreateRefund](#endpoint-createrefund) endpoint.  Deprecated - recommend using [RefundPayment](#endpoint-refunds-refundpayment)
+ * @export
+ * @class CreateRefundRequest
+ */
+var CreateRefundRequest = /** @class */ (function () {
+    function CreateRefundRequest() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CreateRefundRequest.prototype, "idempotency_key", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CreateRefundRequest.prototype, "tender_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CreateRefundRequest.prototype, "reason", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CreateRefundRequest.prototype, "amount_money", void 0);
+    CreateRefundRequest = __decorate([
+        graphql_1.ObjectType()
+    ], CreateRefundRequest);
+    return CreateRefundRequest;
+}());
+exports.CreateRefundRequest = CreateRefundRequest;

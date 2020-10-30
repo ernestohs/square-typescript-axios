@@ -12,9 +12,9 @@
 /**
  * A named selection for this `SELECTION`-type custom attribute definition.
  * @export
- * @interface CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection
+ * @class CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection
  */
-export interface CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection {
+export declare class CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection {
     /**
      * Unique ID set by Square.
      * @type {string}

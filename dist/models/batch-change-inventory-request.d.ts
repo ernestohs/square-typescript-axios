@@ -13,9 +13,9 @@ import { InventoryChange } from './inventory-change';
 /**
  *
  * @export
- * @interface BatchChangeInventoryRequest
+ * @class BatchChangeInventoryRequest
  */
-export interface BatchChangeInventoryRequest {
+export declare class BatchChangeInventoryRequest {
     /**
      * A client-supplied, universally unique identifier (UUID) for the request.  See [Idempotency](https://developer.squareup.com/docs/basics/api101/idempotency) in the [API Development 101](https://developer.squareup.com/docs/basics/api101/overview) section for more information.
      * @type {string}

@@ -13,9 +13,9 @@ import { V1Item } from './v1-item';
 /**
  *
  * @export
- * @interface V1CreateItemRequest
+ * @class V1CreateItemRequest
  */
-export interface V1CreateItemRequest {
+export declare class V1CreateItemRequest {
     /**
      *
      * @type {V1Item}

@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * The hourly wage rate used to compensate an employee for this shift.
  * @export
- * @interface ShiftWage
+ * @class ShiftWage
  */
-export interface ShiftWage {
+export declare class ShiftWage {
     /**
      * The name of the job performed during this shift. Square labor-reporting UIs may group shifts together by title.
      * @type {string}

@@ -14,9 +14,9 @@ import { OrderLineItemAppliedTax } from './order-line-item-applied-tax';
 /**
  * Represents the service charge applied to the original order.
  * @export
- * @interface OrderReturnServiceCharge
+ * @class OrderReturnServiceCharge
  */
-export interface OrderReturnServiceCharge {
+export declare class OrderReturnServiceCharge {
     /**
      * Unique ID that identifies the return service charge only within this order.
      * @type {string}

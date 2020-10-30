@@ -14,9 +14,9 @@ import { TerminalRefundQuerySort } from './terminal-refund-query-sort';
 /**
  *
  * @export
- * @interface TerminalRefundQuery
+ * @class TerminalRefundQuery
  */
-export interface TerminalRefundQuery {
+export declare class TerminalRefundQuery {
     /**
      *
      * @type {TerminalRefundQueryFilter}

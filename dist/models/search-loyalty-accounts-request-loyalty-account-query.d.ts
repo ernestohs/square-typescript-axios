@@ -13,9 +13,9 @@ import { LoyaltyAccountMapping } from './loyalty-account-mapping';
 /**
  * The search criteria for the loyalty accounts.
  * @export
- * @interface SearchLoyaltyAccountsRequestLoyaltyAccountQuery
+ * @class SearchLoyaltyAccountsRequestLoyaltyAccountQuery
  */
-export interface SearchLoyaltyAccountsRequestLoyaltyAccountQuery {
+export declare class SearchLoyaltyAccountsRequestLoyaltyAccountQuery {
     /**
      * The set of mappings to use in the loyalty account search.    This cannot be combined with `customer_ids`.    Max: 30 mappings
      * @type {Array<LoyaltyAccountMapping>}

@@ -13,9 +13,9 @@ import { BreakType } from './break-type';
 /**
  * The response to a request for a set of `BreakTypes`. Contains the requested `BreakType` objects. May contain a set of `Error` objects if the request resulted in errors.
  * @export
- * @interface ListBreakTypesResponse
+ * @class ListBreakTypesResponse
  */
-export interface ListBreakTypesResponse {
+export declare class ListBreakTypesResponse {
     /**
      *  A page of `BreakType` results.
      * @type {Array<BreakType>}

@@ -19,9 +19,9 @@ import { LoyaltyEventRedeemReward } from './loyalty-event-redeem-reward';
 /**
  * Provides information about a loyalty event.  For more information, see [Loyalty events](/docs/loyalty-api/overview/#loyalty-events).
  * @export
- * @interface LoyaltyEvent
+ * @class LoyaltyEvent
  */
-export interface LoyaltyEvent {
+export declare class LoyaltyEvent {
     /**
      * The Square-assigned ID of the loyalty event.
      * @type {string}

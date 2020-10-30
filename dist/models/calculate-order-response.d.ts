@@ -13,9 +13,9 @@ import { Order } from './order';
 /**
  *
  * @export
- * @interface CalculateOrderResponse
+ * @class CalculateOrderResponse
  */
-export interface CalculateOrderResponse {
+export declare class CalculateOrderResponse {
     /**
      *
      * @type {Order}

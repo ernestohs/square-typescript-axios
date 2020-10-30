@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface ListCatalogRequest
+ * @class ListCatalogRequest
  */
-export interface ListCatalogRequest {
+export declare class ListCatalogRequest {
     /**
      * The pagination cursor returned in the previous response. Leave unset for an initial request. See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
      * @type {string}

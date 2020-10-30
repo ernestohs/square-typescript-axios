@@ -12,9 +12,9 @@
 /**
  * Provides metadata when the event `type` is `ACCUMULATE_POINTS`.
  * @export
- * @interface LoyaltyEventAccumulatePoints
+ * @class LoyaltyEventAccumulatePoints
  */
-export interface LoyaltyEventAccumulatePoints {
+export declare class LoyaltyEventAccumulatePoints {
     /**
      * The ID of the `loyalty program`.
      * @type {string}

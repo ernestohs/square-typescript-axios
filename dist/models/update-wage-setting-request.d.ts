@@ -13,9 +13,9 @@ import { WageSetting } from './wage-setting';
 /**
  * Represents an update request for the `WageSetting` object describing a `TeamMember`.
  * @export
- * @interface UpdateWageSettingRequest
+ * @class UpdateWageSettingRequest
  */
-export interface UpdateWageSettingRequest {
+export declare class UpdateWageSettingRequest {
     /**
      *
      * @type {WageSetting}

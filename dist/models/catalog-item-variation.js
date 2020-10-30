@@ -12,4 +12,92 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatalogItemVariation = void 0;
+var catalog_item_option_value_for_item_variation_1 = require("./catalog-item-option-value-for-item-variation");
+var item_variation_location_overrides_1 = require("./item-variation-location-overrides");
+var money_1 = require("./money");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * An item variation (i.e., product) in the Catalog object model. Each item may have a maximum of 250 item variations.
+ * @export
+ * @class CatalogItemVariation
+ */
+var CatalogItemVariation = /** @class */ (function () {
+    function CatalogItemVariation() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItemVariation.prototype, "item_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItemVariation.prototype, "name", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItemVariation.prototype, "sku", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItemVariation.prototype, "upc", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Number)
+    ], CatalogItemVariation.prototype, "ordinal", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItemVariation.prototype, "pricing_type", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], CatalogItemVariation.prototype, "price_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [item_variation_location_overrides_1.ItemVariationLocationOverrides]; }),
+        __metadata("design:type", Array)
+    ], CatalogItemVariation.prototype, "location_overrides", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], CatalogItemVariation.prototype, "track_inventory", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItemVariation.prototype, "inventory_alert_type", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Number)
+    ], CatalogItemVariation.prototype, "inventory_alert_threshold", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItemVariation.prototype, "user_data", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Number)
+    ], CatalogItemVariation.prototype, "service_duration", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [catalog_item_option_value_for_item_variation_1.CatalogItemOptionValueForItemVariation]; }),
+        __metadata("design:type", Array)
+    ], CatalogItemVariation.prototype, "item_option_values", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItemVariation.prototype, "measurement_unit_id", void 0);
+    CatalogItemVariation = __decorate([
+        graphql_1.ObjectType()
+    ], CatalogItemVariation);
+    return CatalogItemVariation;
+}());
+exports.CatalogItemVariation = CatalogItemVariation;

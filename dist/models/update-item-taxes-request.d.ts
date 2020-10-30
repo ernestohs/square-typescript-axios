@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface UpdateItemTaxesRequest
+ * @class UpdateItemTaxesRequest
  */
-export interface UpdateItemTaxesRequest {
+export declare class UpdateItemTaxesRequest {
     /**
      * IDs for the CatalogItems associated with the CatalogTax objects being updated.
      * @type {Array<string>}

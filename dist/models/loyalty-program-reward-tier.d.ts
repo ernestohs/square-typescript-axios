@@ -13,9 +13,9 @@ import { LoyaltyProgramRewardDefinition } from './loyalty-program-reward-definit
 /**
  * Describes a loyalty program reward tier.
  * @export
- * @interface LoyaltyProgramRewardTier
+ * @class LoyaltyProgramRewardTier
  */
-export interface LoyaltyProgramRewardTier {
+export declare class LoyaltyProgramRewardTier {
     /**
      * The Square-assigned ID of the reward tier.
      * @type {string}

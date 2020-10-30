@@ -12,9 +12,9 @@
 /**
  * Provides metadata when the event `type` is `DELETE_REWARD`.
  * @export
- * @interface LoyaltyEventDeleteReward
+ * @class LoyaltyEventDeleteReward
  */
-export interface LoyaltyEventDeleteReward {
+export declare class LoyaltyEventDeleteReward {
     /**
      * The ID of the `loyalty program`.
      * @type {string}

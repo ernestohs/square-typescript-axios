@@ -12,9 +12,9 @@
 /**
  * V1BankAccount
  * @export
- * @interface V1BankAccount
+ * @class V1BankAccount
  */
-export interface V1BankAccount {
+export declare class V1BankAccount {
     /**
      * The bank account\'s Square-issued ID.
      * @type {string}

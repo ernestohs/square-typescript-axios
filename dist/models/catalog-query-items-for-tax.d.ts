@@ -12,9 +12,9 @@
 /**
  * The query filter to return the items containing the specified tax IDs.
  * @export
- * @interface CatalogQueryItemsForTax
+ * @class CatalogQueryItemsForTax
  */
-export interface CatalogQueryItemsForTax {
+export declare class CatalogQueryItemsForTax {
     /**
      * A set of `CatalogTax` IDs to be used to find associated `CatalogItem`s.
      * @type {Array<string>}

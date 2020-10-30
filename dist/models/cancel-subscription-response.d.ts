@@ -13,9 +13,9 @@ import { Subscription } from './subscription';
 /**
  * Defines fields that are included in a  [CancelSubscription](#endpoint-subscriptions-cancelsubscription) response.
  * @export
- * @interface CancelSubscriptionResponse
+ * @class CancelSubscriptionResponse
  */
-export interface CancelSubscriptionResponse {
+export declare class CancelSubscriptionResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

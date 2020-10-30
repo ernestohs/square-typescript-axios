@@ -17,9 +17,9 @@ import { LoyaltyEventTypeFilter } from './loyalty-event-type-filter';
 /**
  * The filtering criteria. If the request specifies multiple filters,  the endpoint uses a logical AND to evaluate them.
  * @export
- * @interface LoyaltyEventFilter
+ * @class LoyaltyEventFilter
  */
-export interface LoyaltyEventFilter {
+export declare class LoyaltyEventFilter {
     /**
      *
      * @type {LoyaltyEventLoyaltyAccountFilter}

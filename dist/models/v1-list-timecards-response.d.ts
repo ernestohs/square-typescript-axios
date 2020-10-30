@@ -13,9 +13,9 @@ import { V1Timecard } from './v1-timecard';
 /**
  *
  * @export
- * @interface V1ListTimecardsResponse
+ * @class V1ListTimecardsResponse
  */
-export interface V1ListTimecardsResponse {
+export declare class V1ListTimecardsResponse {
     /**
      *
      * @type {Array<V1Timecard>}

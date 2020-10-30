@@ -13,9 +13,9 @@ import { Shift } from './shift';
 /**
  * A request to update a `Shift` object.
  * @export
- * @interface UpdateShiftRequest
+ * @class UpdateShiftRequest
  */
-export interface UpdateShiftRequest {
+export declare class UpdateShiftRequest {
     /**
      *
      * @type {Shift}

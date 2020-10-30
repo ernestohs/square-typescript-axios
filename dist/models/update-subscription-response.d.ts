@@ -13,9 +13,9 @@ import { Subscription } from './subscription';
 /**
  * Defines the fields that are included in the response from the [UpdateSubscription](#endpoint-subscriptions-updatesubscription) endpoint.
  * @export
- * @interface UpdateSubscriptionResponse
+ * @class UpdateSubscriptionResponse
  */
-export interface UpdateSubscriptionResponse {
+export declare class UpdateSubscriptionResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

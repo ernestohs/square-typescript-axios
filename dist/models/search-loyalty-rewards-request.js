@@ -12,4 +12,42 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchLoyaltyRewardsRequest = void 0;
+var search_loyalty_rewards_request_loyalty_reward_query_1 = require("./search-loyalty-rewards-request-loyalty-reward-query");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * A request to search for loyalty rewards.
+ * @export
+ * @class SearchLoyaltyRewardsRequest
+ */
+var SearchLoyaltyRewardsRequest = /** @class */ (function () {
+    function SearchLoyaltyRewardsRequest() {
+    }
+    __decorate([
+        graphql_1.Field(function () { return search_loyalty_rewards_request_loyalty_reward_query_1.SearchLoyaltyRewardsRequestLoyaltyRewardQuery; }),
+        __metadata("design:type", search_loyalty_rewards_request_loyalty_reward_query_1.SearchLoyaltyRewardsRequestLoyaltyRewardQuery)
+    ], SearchLoyaltyRewardsRequest.prototype, "query", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Number)
+    ], SearchLoyaltyRewardsRequest.prototype, "limit", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], SearchLoyaltyRewardsRequest.prototype, "cursor", void 0);
+    SearchLoyaltyRewardsRequest = __decorate([
+        graphql_1.ObjectType()
+    ], SearchLoyaltyRewardsRequest);
+    return SearchLoyaltyRewardsRequest;
+}());
+exports.SearchLoyaltyRewardsRequest = SearchLoyaltyRewardsRequest;

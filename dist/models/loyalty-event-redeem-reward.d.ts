@@ -12,9 +12,9 @@
 /**
  * Provides metadata when the event `type` is `REDEEM_REWARD`.
  * @export
- * @interface LoyaltyEventRedeemReward
+ * @class LoyaltyEventRedeemReward
  */
-export interface LoyaltyEventRedeemReward {
+export declare class LoyaltyEventRedeemReward {
     /**
      * The ID of the `loyalty program`.
      * @type {string}

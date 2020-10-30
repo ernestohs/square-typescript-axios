@@ -15,9 +15,9 @@ import { V1PaymentTax } from './v1-payment-tax';
 /**
  * V1Refund
  * @export
- * @interface V1Refund
+ * @class V1Refund
  */
-export interface V1Refund {
+export declare class V1Refund {
     /**
      * The type of refund See [V1RefundType](#type-v1refundtype) for possible values
      * @type {string}

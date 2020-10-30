@@ -12,9 +12,9 @@
 /**
  * Represents communication preferences for the customer profile.
  * @export
- * @interface CustomerPreferences
+ * @class CustomerPreferences
  */
-export interface CustomerPreferences {
+export declare class CustomerPreferences {
     /**
      * The customer has unsubscribed from receiving marketing campaign emails.
      * @type {boolean}

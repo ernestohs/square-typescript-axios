@@ -12,9 +12,9 @@
 /**
  * Reflects the current status of a balance payment.
  * @export
- * @interface BalancePaymentDetails
+ * @class BalancePaymentDetails
  */
-export interface BalancePaymentDetails {
+export declare class BalancePaymentDetails {
     /**
      * ID for the account used to fund the payment.
      * @type {string}

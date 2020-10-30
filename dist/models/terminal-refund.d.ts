@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  *
  * @export
- * @interface TerminalRefund
+ * @class TerminalRefund
  */
-export interface TerminalRefund {
+export declare class TerminalRefund {
     /**
      * A unique ID for this `TerminalRefund`
      * @type {string}

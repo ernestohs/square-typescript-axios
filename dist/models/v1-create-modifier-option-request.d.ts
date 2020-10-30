@@ -13,9 +13,9 @@ import { V1ModifierOption } from './v1-modifier-option';
 /**
  *
  * @export
- * @interface V1CreateModifierOptionRequest
+ * @class V1CreateModifierOptionRequest
  */
-export interface V1CreateModifierOptionRequest {
+export declare class V1CreateModifierOptionRequest {
     /**
      *
      * @type {V1ModifierOption}

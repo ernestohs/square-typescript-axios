@@ -18,9 +18,9 @@ import { OrderRoundingAdjustment } from './order-rounding-adjustment';
 /**
  * The set of line items, service charges, taxes, discounts, tips, etc. being returned in an Order.
  * @export
- * @interface OrderReturn
+ * @class OrderReturn
  */
-export interface OrderReturn {
+export declare class OrderReturn {
     /**
      * Unique ID that identifies the return only within this order.
      * @type {string}

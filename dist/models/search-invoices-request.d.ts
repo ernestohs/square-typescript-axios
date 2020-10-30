@@ -13,9 +13,9 @@ import { InvoiceQuery } from './invoice-query';
 /**
  * Describes a `SearchInvoices` request.
  * @export
- * @interface SearchInvoicesRequest
+ * @class SearchInvoicesRequest
  */
-export interface SearchInvoicesRequest {
+export declare class SearchInvoicesRequest {
     /**
      *
      * @type {InvoiceQuery}

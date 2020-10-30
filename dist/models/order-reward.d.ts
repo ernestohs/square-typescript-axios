@@ -12,9 +12,9 @@
 /**
  * Represents a reward that may be applied to an order if the necessary reward tier criteria are met. Rewards are created through the Loyalty API.
  * @export
- * @interface OrderReward
+ * @class OrderReward
  */
-export interface OrderReward {
+export declare class OrderReward {
     /**
      * The identifier of the reward.
      * @type {string}

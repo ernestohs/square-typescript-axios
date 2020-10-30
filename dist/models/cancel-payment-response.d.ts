@@ -13,9 +13,9 @@ import { Payment } from './payment';
 /**
  * The return value from the [CancelPayment](#endpoint-payments-cancelpayment) endpoint.
  * @export
- * @interface CancelPaymentResponse
+ * @class CancelPaymentResponse
  */
-export interface CancelPaymentResponse {
+export declare class CancelPaymentResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

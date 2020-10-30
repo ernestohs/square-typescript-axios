@@ -13,9 +13,9 @@ import { Checkout } from './checkout';
 /**
  * Defines the fields that are included in the response body of a request to the __CreateCheckout__ endpoint.
  * @export
- * @interface CreateCheckoutResponse
+ * @class CreateCheckoutResponse
  */
-export interface CreateCheckoutResponse {
+export declare class CreateCheckoutResponse {
     /**
      *
      * @type {Checkout}

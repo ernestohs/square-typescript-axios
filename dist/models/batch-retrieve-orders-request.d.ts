@@ -12,9 +12,9 @@
 /**
  * Defines the fields that are included in requests to the BatchRetrieveOrders endpoint.
  * @export
- * @interface BatchRetrieveOrdersRequest
+ * @class BatchRetrieveOrdersRequest
  */
-export interface BatchRetrieveOrdersRequest {
+export declare class BatchRetrieveOrdersRequest {
     /**
      * The ID of the location for these orders. This field is optional: omit it to retrieve orders within the scope of the current authorization\'s merchant ID.
      * @type {string}

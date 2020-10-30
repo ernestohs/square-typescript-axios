@@ -12,9 +12,9 @@
 /**
  * The response to a request to delete a `BreakType`. May contain a set  of `Error` objects if the request resulted in errors.
  * @export
- * @interface DeleteBreakTypeResponse
+ * @class DeleteBreakTypeResponse
  */
-export interface DeleteBreakTypeResponse {
+export declare class DeleteBreakTypeResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

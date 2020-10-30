@@ -13,9 +13,9 @@ import { CatalogObject } from './catalog-object';
 /**
  * A group of variations for a `CatalogItem`.
  * @export
- * @interface CatalogItemOption
+ * @class CatalogItemOption
  */
-export interface CatalogItemOption {
+export declare class CatalogItemOption {
     /**
      * The item option\'s display name for the seller. Must be unique across all item options. This is a searchable attribute for use in applicable query filters.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  * Retrieves a list of payments taken by the account making the request.  The maximum results per page is 100.
  * @export
- * @interface ListPaymentsRequest
+ * @class ListPaymentsRequest
  */
-export interface ListPaymentsRequest {
+export declare class ListPaymentsRequest {
     /**
      * The timestamp for the beginning of the reporting period, in RFC 3339 format. Inclusive. Default: The current time minus one year.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface RenewTokenResponse
+ * @class RenewTokenResponse
  */
-export interface RenewTokenResponse {
+export declare class RenewTokenResponse {
     /**
      * The renewed access token. This value might be different from the `access_token` you provided in your request. You provide this token in a header with every request to Connect API endpoints. See [Request and response headers](https://developer.squareup.com/docs/api/connect/v2/#requestandresponseheaders) for the format of this header.
      * @type {string}

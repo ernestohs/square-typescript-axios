@@ -12,9 +12,9 @@
 /**
  * A response that includes the points that the buyer can earn from  a specified purchase.
  * @export
- * @interface CalculateLoyaltyPointsResponse
+ * @class CalculateLoyaltyPointsResponse
  */
-export interface CalculateLoyaltyPointsResponse {
+export declare class CalculateLoyaltyPointsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

@@ -12,9 +12,9 @@
 /**
  * Describes query filters to apply.
  * @export
- * @interface InvoiceFilter
+ * @class InvoiceFilter
  */
-export interface InvoiceFilter {
+export declare class InvoiceFilter {
     /**
      * Limits the search to the specified locations. A location is required.  In the current implementation, only one location can be specified.
      * @type {Array<string>}

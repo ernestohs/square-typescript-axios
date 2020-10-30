@@ -13,9 +13,9 @@ import { WorkweekConfig } from './workweek-config';
 /**
  * A request to update a `WorkweekConfig` object
  * @export
- * @interface UpdateWorkweekConfigRequest
+ * @class UpdateWorkweekConfigRequest
  */
-export interface UpdateWorkweekConfigRequest {
+export declare class UpdateWorkweekConfigRequest {
     /**
      *
      * @type {WorkweekConfig}

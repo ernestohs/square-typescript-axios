@@ -13,9 +13,9 @@ import { Payment } from './payment';
 /**
  * Defines the fields that are included in the response body of a request to the [ListPayments](#endpoint-payments-listpayments) endpoint.
  * @export
- * @interface ListPaymentsResponse
+ * @class ListPaymentsResponse
  */
-export interface ListPaymentsResponse {
+export declare class ListPaymentsResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

@@ -12,9 +12,9 @@
 /**
  * Represents a Square seller.
  * @export
- * @interface Merchant
+ * @class Merchant
  */
-export interface Merchant {
+export declare class Merchant {
     /**
      * The Square-issued ID of the merchant.
      * @type {string}

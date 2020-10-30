@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface CatalogInfoResponseLimits
+ * @class CatalogInfoResponseLimits
  */
-export interface CatalogInfoResponseLimits {
+export declare class CatalogInfoResponseLimits {
     /**
      * The maximum number of objects that may appear within a single batch in a `/v2/catalog/batch-upsert` request.
      * @type {number}

@@ -13,9 +13,9 @@ import { BankAccount } from './bank-account';
 /**
  * Response object returned by ListBankAccounts.
  * @export
- * @interface ListBankAccountsResponse
+ * @class ListBankAccountsResponse
  */
-export interface ListBankAccountsResponse {
+export declare class ListBankAccountsResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

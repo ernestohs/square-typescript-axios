@@ -13,9 +13,9 @@ import { MeasurementUnit } from './measurement-unit';
 /**
  * Contains the measurement unit for a quantity and a precision which specifies the number of digits after the decimal point for decimal quantities.
  * @export
- * @interface OrderQuantityUnit
+ * @class OrderQuantityUnit
  */
-export interface OrderQuantityUnit {
+export declare class OrderQuantityUnit {
     /**
      *
      * @type {MeasurementUnit}

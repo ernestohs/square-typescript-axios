@@ -12,9 +12,9 @@
 /**
  * The range of a number value between the specified lower and upper bounds.
  * @export
- * @interface Range
+ * @class Range
  */
-export interface Range {
+export declare class Range {
     /**
      * The lower bound of the number range.
      * @type {string}

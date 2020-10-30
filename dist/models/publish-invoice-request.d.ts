@@ -12,9 +12,9 @@
 /**
  * Describes a `PublishInvoice` request.
  * @export
- * @interface PublishInvoiceRequest
+ * @class PublishInvoiceRequest
  */
-export interface PublishInvoiceRequest {
+export declare class PublishInvoiceRequest {
     /**
      * The version of the `Invoice` to publish. This must match the current version of the invoice, otherwise the request is rejected.
      * @type {number}

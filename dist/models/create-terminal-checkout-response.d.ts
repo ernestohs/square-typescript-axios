@@ -13,9 +13,9 @@ import { TerminalCheckout } from './terminal-checkout';
 /**
  *
  * @export
- * @interface CreateTerminalCheckoutResponse
+ * @class CreateTerminalCheckoutResponse
  */
-export interface CreateTerminalCheckoutResponse {
+export declare class CreateTerminalCheckoutResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

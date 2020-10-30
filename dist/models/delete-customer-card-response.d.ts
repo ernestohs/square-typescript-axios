@@ -12,9 +12,9 @@
 /**
  * Defines the fields that are included in the response body of a request to the DeleteCustomerCard endpoint.
  * @export
- * @interface DeleteCustomerCardResponse
+ * @class DeleteCustomerCardResponse
  */
-export interface DeleteCustomerCardResponse {
+export declare class DeleteCustomerCardResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

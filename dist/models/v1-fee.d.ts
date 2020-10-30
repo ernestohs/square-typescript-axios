@@ -12,9 +12,9 @@
 /**
  * V1Fee
  * @export
- * @interface V1Fee
+ * @class V1Fee
  */
-export interface V1Fee {
+export declare class V1Fee {
     /**
      * The fee\'s unique ID.
      * @type {string}

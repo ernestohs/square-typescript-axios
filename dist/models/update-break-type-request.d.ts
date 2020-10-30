@@ -13,9 +13,9 @@ import { BreakType } from './break-type';
 /**
  * A request to update a `BreakType`
  * @export
- * @interface UpdateBreakTypeRequest
+ * @class UpdateBreakTypeRequest
  */
-export interface UpdateBreakTypeRequest {
+export declare class UpdateBreakTypeRequest {
     /**
      *
      * @type {BreakType}

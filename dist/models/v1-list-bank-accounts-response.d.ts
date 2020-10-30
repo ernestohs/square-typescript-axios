@@ -13,9 +13,9 @@ import { V1BankAccount } from './v1-bank-account';
 /**
  *
  * @export
- * @interface V1ListBankAccountsResponse
+ * @class V1ListBankAccountsResponse
  */
-export interface V1ListBankAccountsResponse {
+export declare class V1ListBankAccountsResponse {
     /**
      *
      * @type {Array<V1BankAccount>}

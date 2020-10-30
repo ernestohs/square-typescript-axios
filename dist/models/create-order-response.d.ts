@@ -13,9 +13,9 @@ import { Order } from './order';
 /**
  * Defines the fields that are included in the response body of a request to the CreateOrder endpoint.  One of `errors` or `order` is present in a given response (never both).
  * @export
- * @interface CreateOrderResponse
+ * @class CreateOrderResponse
  */
-export interface CreateOrderResponse {
+export declare class CreateOrderResponse {
     /**
      *
      * @type {Order}

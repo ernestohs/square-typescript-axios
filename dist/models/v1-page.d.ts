@@ -13,9 +13,9 @@ import { V1PageCell } from './v1-page-cell';
 /**
  * V1Page
  * @export
- * @interface V1Page
+ * @class V1Page
  */
-export interface V1Page {
+export declare class V1Page {
     /**
      * The page\'s unique identifier.
      * @type {string}

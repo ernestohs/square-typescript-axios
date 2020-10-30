@@ -13,9 +13,9 @@ import { Card } from './card';
 /**
  * Represents additional details of a tender with `type` `CARD` or `SQUARE_GIFT_CARD`
  * @export
- * @interface TenderCardDetails
+ * @class TenderCardDetails
  */
-export interface TenderCardDetails {
+export declare class TenderCardDetails {
     /**
      * The credit card payment\'s current state (such as `AUTHORIZED` or `CAPTURED`). See `TenderCardDetailsStatus` for possible values. See [TenderCardDetailsStatus](#type-tendercarddetailsstatus) for possible values
      * @type {string}

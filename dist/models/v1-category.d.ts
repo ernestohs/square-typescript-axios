@@ -12,9 +12,9 @@
 /**
  * V1Category
  * @export
- * @interface V1Category
+ * @class V1Category
  */
-export interface V1Category {
+export declare class V1Category {
     /**
      * The category\'s unique ID.
      * @type {string}

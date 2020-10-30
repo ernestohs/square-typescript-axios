@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1ListEmployeeRolesRequest
+ * @class V1ListEmployeeRolesRequest
  */
-export interface V1ListEmployeeRolesRequest {
+export declare class V1ListEmployeeRolesRequest {
     /**
      * The order in which employees are listed in the response, based on their created_at field.Default value: ASC See [SortOrder](#type-sortorder) for possible values
      * @type {string}

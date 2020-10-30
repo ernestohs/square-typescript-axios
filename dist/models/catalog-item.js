@@ -12,4 +12,88 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatalogItem = void 0;
+var catalog_item_modifier_list_info_1 = require("./catalog-item-modifier-list-info");
+var catalog_item_option_for_item_1 = require("./catalog-item-option-for-item");
+var catalog_object_1 = require("./catalog-object");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * An [CatalogObject](#type-CatalogObject) instance of the `ITEM` type, also referred to as an item, in the catalog.
+ * @export
+ * @class CatalogItem
+ */
+var CatalogItem = /** @class */ (function () {
+    function CatalogItem() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItem.prototype, "name", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItem.prototype, "description", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItem.prototype, "abbreviation", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItem.prototype, "label_color", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], CatalogItem.prototype, "available_online", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], CatalogItem.prototype, "available_for_pickup", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], CatalogItem.prototype, "available_electronically", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItem.prototype, "category_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Array)
+    ], CatalogItem.prototype, "tax_ids", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [catalog_item_modifier_list_info_1.CatalogItemModifierListInfo]; }),
+        __metadata("design:type", Array)
+    ], CatalogItem.prototype, "modifier_list_info", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [catalog_object_1.CatalogObject]; }),
+        __metadata("design:type", Array)
+    ], CatalogItem.prototype, "variations", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogItem.prototype, "product_type", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], CatalogItem.prototype, "skip_modifier_screen", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [catalog_item_option_for_item_1.CatalogItemOptionForItem]; }),
+        __metadata("design:type", Array)
+    ], CatalogItem.prototype, "item_options", void 0);
+    CatalogItem = __decorate([
+        graphql_1.ObjectType()
+    ], CatalogItem);
+    return CatalogItem;
+}());
+exports.CatalogItem = CatalogItem;

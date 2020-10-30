@@ -12,9 +12,9 @@
 /**
  * Sorting criteria for a SearchOrders request. Results can only be sorted by a timestamp field.
  * @export
- * @interface SearchOrdersSort
+ * @class SearchOrdersSort
  */
-export interface SearchOrdersSort {
+export declare class SearchOrdersSort {
     /**
      * The field to sort by.  __Important:__ When using a `DateTimeFilter`, `sort_field` must match the timestamp field that the DateTimeFilter uses to filter. For example, If you set your `sort_field` to `CLOSED_AT` and you use a DateTimeFilter, your DateTimeFilter must filter for orders by their `CLOSED_AT` date. If this field does not match the timestamp field in `DateTimeFilter`, SearchOrders will return an error.  Default: `CREATED_AT`. See [SearchOrdersSortField](#type-searchorderssortfield) for possible values
      * @type {string}

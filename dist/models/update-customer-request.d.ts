@@ -13,9 +13,9 @@ import { Address } from './address';
 /**
  * Defines the body parameters that can be provided in a request to the UpdateCustomer endpoint.
  * @export
- * @interface UpdateCustomerRequest
+ * @class UpdateCustomerRequest
  */
-export interface UpdateCustomerRequest {
+export declare class UpdateCustomerRequest {
     /**
      * The given (i.e., first) name associated with the customer profile.
      * @type {string}

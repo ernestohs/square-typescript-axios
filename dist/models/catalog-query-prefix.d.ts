@@ -12,9 +12,9 @@
 /**
  * The query filter to return the search result whose named attribute values are prefixed by the specified attribute value.
  * @export
- * @interface CatalogQueryPrefix
+ * @class CatalogQueryPrefix
  */
-export interface CatalogQueryPrefix {
+export declare class CatalogQueryPrefix {
     /**
      * The name of the attribute to be searched.
      * @type {string}

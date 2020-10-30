@@ -14,9 +14,9 @@ import { ShiftSort } from './shift-sort';
 /**
  * The parameters of a `Shift` search query. Includes filter and sort options.
  * @export
- * @interface ShiftQuery
+ * @class ShiftQuery
  */
-export interface ShiftQuery {
+export declare class ShiftQuery {
     /**
      *
      * @type {ShiftFilter}

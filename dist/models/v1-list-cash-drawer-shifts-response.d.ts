@@ -13,9 +13,9 @@ import { V1CashDrawerShift } from './v1-cash-drawer-shift';
 /**
  *
  * @export
- * @interface V1ListCashDrawerShiftsResponse
+ * @class V1ListCashDrawerShiftsResponse
  */
-export interface V1ListCashDrawerShiftsResponse {
+export declare class V1ListCashDrawerShiftsResponse {
     /**
      *
      * @type {Array<V1CashDrawerShift>}

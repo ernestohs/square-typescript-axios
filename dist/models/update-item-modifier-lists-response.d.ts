@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface UpdateItemModifierListsResponse
+ * @class UpdateItemModifierListsResponse
  */
-export interface UpdateItemModifierListsResponse {
+export declare class UpdateItemModifierListsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

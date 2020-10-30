@@ -14,9 +14,9 @@ import { CatalogObject } from './catalog-object';
 /**
  *
  * @export
- * @interface UpsertCatalogObjectResponse
+ * @class UpsertCatalogObjectResponse
  */
-export interface UpsertCatalogObjectResponse {
+export declare class UpsertCatalogObjectResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

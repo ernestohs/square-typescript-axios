@@ -13,9 +13,9 @@ import { WorkweekConfig } from './workweek-config';
 /**
  * The response to a request for a set of `WorkweekConfig` objects. Contains the requested `WorkweekConfig` objects. May contain a set of `Error` objects if the request resulted in errors.
  * @export
- * @interface ListWorkweekConfigsResponse
+ * @class ListWorkweekConfigsResponse
  */
-export interface ListWorkweekConfigsResponse {
+export declare class ListWorkweekConfigsResponse {
     /**
      * A page of Employee Wage results.
      * @type {Array<WorkweekConfig>}

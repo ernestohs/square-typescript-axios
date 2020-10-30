@@ -14,9 +14,9 @@ import { SearchOrdersSort } from './search-orders-sort';
 /**
  * Contains query criteria for the search.
  * @export
- * @interface SearchOrdersQuery
+ * @class SearchOrdersQuery
  */
-export interface SearchOrdersQuery {
+export declare class SearchOrdersQuery {
     /**
      *
      * @type {SearchOrdersFilter}

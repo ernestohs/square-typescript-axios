@@ -13,9 +13,9 @@ import { Address } from './address';
 /**
  * Provides customer data that Square uses to deliver an invoice.
  * @export
- * @interface InvoiceRecipient
+ * @class InvoiceRecipient
  */
-export interface InvoiceRecipient {
+export declare class InvoiceRecipient {
     /**
      * The ID of the customer. This is the customer profile ID that  you provide when creating a draft invoice.
      * @type {string}

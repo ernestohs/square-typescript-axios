@@ -12,9 +12,9 @@
 /**
  * An object that represents a team member\'s assignment to locations.
  * @export
- * @interface TeamMemberAssignedLocations
+ * @class TeamMemberAssignedLocations
  */
-export interface TeamMemberAssignedLocations {
+export declare class TeamMemberAssignedLocations {
     /**
      * The current assignment type of the team member. See [TeamMemberAssignedLocationsAssignmentType](#type-teammemberassignedlocationsassignmenttype) for possible values
      * @type {string}

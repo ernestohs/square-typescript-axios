@@ -13,9 +13,9 @@ import { Employee } from './employee';
 /**
  *
  * @export
- * @interface RetrieveEmployeeResponse
+ * @class RetrieveEmployeeResponse
  */
-export interface RetrieveEmployeeResponse {
+export declare class RetrieveEmployeeResponse {
     /**
      *
      * @type {Employee}

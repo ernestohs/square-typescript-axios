@@ -12,9 +12,9 @@
 /**
  * Describes a `DeleteInvoice` request.
  * @export
- * @interface DeleteInvoiceRequest
+ * @class DeleteInvoiceRequest
  */
-export interface DeleteInvoiceRequest {
+export declare class DeleteInvoiceRequest {
     /**
      * The version of the `invoice` to delete. If you do not know the version, you can call `GetInvoice` or  `ListInvoices`.
      * @type {number}

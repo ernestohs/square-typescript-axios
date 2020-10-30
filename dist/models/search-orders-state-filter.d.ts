@@ -12,9 +12,9 @@
 /**
  * Filter by current Order `state`.
  * @export
- * @interface SearchOrdersStateFilter
+ * @class SearchOrdersStateFilter
  */
-export interface SearchOrdersStateFilter {
+export declare class SearchOrdersStateFilter {
     /**
      * States to filter for. See [OrderState](#type-orderstate) for possible values
      * @type {Array<string>}

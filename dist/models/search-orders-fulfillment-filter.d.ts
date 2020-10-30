@@ -12,9 +12,9 @@
 /**
  * Filter based on [Order Fulfillment](#type-orderfulfillment) information.
  * @export
- * @interface SearchOrdersFulfillmentFilter
+ * @class SearchOrdersFulfillmentFilter
  */
-export interface SearchOrdersFulfillmentFilter {
+export declare class SearchOrdersFulfillmentFilter {
     /**
      * List of `fulfillment types` to filter for. Will return orders if any of its fulfillments match any of the fulfillment types listed in this field. See [OrderFulfillmentType](#type-orderfulfillmenttype) for possible values
      * @type {Array<string>}

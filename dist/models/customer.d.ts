@@ -16,9 +16,9 @@ import { CustomerPreferences } from './customer-preferences';
 /**
  * Represents a Square customer profile, which can have one or more cards on file associated with it.
  * @export
- * @interface Customer
+ * @class Customer
  */
-export interface Customer {
+export declare class Customer {
     /**
      * A unique Square-assigned ID for the customer profile.
      * @type {string}

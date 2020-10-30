@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Describes a phase in a subscription plan. For more information, see [Set Up and Manage a Subscription Plan](/docs/subscriptions-api/setup-plan).
  * @export
- * @interface SubscriptionPhase
+ * @class SubscriptionPhase
  */
-export interface SubscriptionPhase {
+export declare class SubscriptionPhase {
     /**
      * The Square-assigned ID of the subscription phase. This field cannot be changed after a `SubscriptionPhase` is created.
      * @type {string}

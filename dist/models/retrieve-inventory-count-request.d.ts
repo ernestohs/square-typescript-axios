@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface RetrieveInventoryCountRequest
+ * @class RetrieveInventoryCountRequest
  */
-export interface RetrieveInventoryCountRequest {
+export declare class RetrieveInventoryCountRequest {
     /**
      * The `Location` IDs to look up as a comma-separated list. An empty list queries all locations.
      * @type {string}

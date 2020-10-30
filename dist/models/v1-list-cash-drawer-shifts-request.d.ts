@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1ListCashDrawerShiftsRequest
+ * @class V1ListCashDrawerShiftsRequest
  */
-export interface V1ListCashDrawerShiftsRequest {
+export declare class V1ListCashDrawerShiftsRequest {
     /**
      * The order in which cash drawer shifts are listed in the response, based on their created_at field. Default value: ASC See [SortOrder](#type-sortorder) for possible values
      * @type {string}

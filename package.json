@@ -6,9 +6,9 @@
   "author": "PLJNS <me@pljns.com>",
   "license": "MIT",
   "scripts": {
-    "generate": "yarn clean; openapi-generator-cli generate -i connect-api-specification/api.json -c config.json -g typescript-axios -t template -o src --skip-validate-spec",
-    "build": "yarn generate; cd ./src/; yarn install; cd ..; rm -rf dist; tsc -p ./src/tsconfig.json --outDir dist/; yarn clean;",
-    "clean": "rm -rf src;",
+    "generate": "yarn clean; openapi-generator-cli generate -i connect-api-specification/api.json -c config.json -g typescript-axios -t template -o src --skip-validate-spec; cd ./src/; yarn install;",
+    "build": "yarn generate; tsc -p ./src/tsconfig.json --outDir dist/;",
+    "clean": "rm -rf src; rm -rf dist;",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {

@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface UpdateItemModifierListsRequest
+ * @class UpdateItemModifierListsRequest
  */
-export interface UpdateItemModifierListsRequest {
+export declare class UpdateItemModifierListsRequest {
     /**
      * The IDs of the catalog items associated with the CatalogModifierList objects being updated.
      * @type {Array<string>}

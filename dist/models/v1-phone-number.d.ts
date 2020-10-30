@@ -12,9 +12,9 @@
 /**
  * Represents a phone number.
  * @export
- * @interface V1PhoneNumber
+ * @class V1PhoneNumber
  */
-export interface V1PhoneNumber {
+export declare class V1PhoneNumber {
     /**
      * The phone number\'s international calling code. For US phone numbers, this value is +1.
      * @type {string}

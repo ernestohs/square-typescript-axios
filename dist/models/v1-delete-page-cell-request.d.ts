@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1DeletePageCellRequest
+ * @class V1DeletePageCellRequest
  */
-export interface V1DeletePageCellRequest {
+export declare class V1DeletePageCellRequest {
     /**
      * The row of the cell to clear. Always an integer between 0 and 4, inclusive. Row 0 is the top row.
      * @type {string}

@@ -13,9 +13,9 @@ import { LoyaltyEvent } from './loyalty-event';
 /**
  * A response containing the resulting loyalty event.
  * @export
- * @interface AccumulateLoyaltyPointsResponse
+ * @class AccumulateLoyaltyPointsResponse
  */
-export interface AccumulateLoyaltyPointsResponse {
+export declare class AccumulateLoyaltyPointsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

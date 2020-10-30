@@ -13,9 +13,9 @@ import { V1Item } from './v1-item';
 /**
  *
  * @export
- * @interface V1ListItemsResponse
+ * @class V1ListItemsResponse
  */
-export interface V1ListItemsResponse {
+export declare class V1ListItemsResponse {
     /**
      *
      * @type {Array<V1Item>}

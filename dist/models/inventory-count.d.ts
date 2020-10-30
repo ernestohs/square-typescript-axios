@@ -12,9 +12,9 @@
 /**
  * Represents Square\'s estimated quantity of items in a particular state at a particular location based on the known history of physical counts and inventory adjustments.
  * @export
- * @interface InventoryCount
+ * @class InventoryCount
  */
-export interface InventoryCount {
+export declare class InventoryCount {
     /**
      * The Square generated ID of the `CatalogObject` being tracked.
      * @type {string}

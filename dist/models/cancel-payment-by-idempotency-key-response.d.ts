@@ -12,9 +12,9 @@
 /**
  * The return value from the [CancelPaymentByIdempotencyKey](#endpoint-payments-cancelpaymentbyidempotencykey) endpoint. On success, `errors` is empty.
  * @export
- * @interface CancelPaymentByIdempotencyKeyResponse
+ * @class CancelPaymentByIdempotencyKeyResponse
  */
-export interface CancelPaymentByIdempotencyKeyResponse {
+export declare class CancelPaymentByIdempotencyKeyResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

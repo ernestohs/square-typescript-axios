@@ -14,9 +14,9 @@ import { Money } from './money';
 /**
  * Represents a refund processed for a Square transaction.
  * @export
- * @interface Refund
+ * @class Refund
  */
-export interface Refund {
+export declare class Refund {
     /**
      * The refund\'s unique ID.
      * @type {string}

@@ -13,9 +13,9 @@ import { SubscriptionEvent } from './subscription-event';
 /**
  * Defines the fields that are included in the response from the [ListSubscriptionEvents](#endpoint-subscriptions-listsubscriptionevents) endpoint.
  * @export
- * @interface ListSubscriptionEventsResponse
+ * @class ListSubscriptionEventsResponse
  */
-export interface ListSubscriptionEventsResponse {
+export declare class ListSubscriptionEventsResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

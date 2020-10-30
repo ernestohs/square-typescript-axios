@@ -13,9 +13,9 @@ import { V1EmployeeRole } from './v1-employee-role';
 /**
  *
  * @export
- * @interface V1CreateEmployeeRoleRequest
+ * @class V1CreateEmployeeRoleRequest
  */
-export interface V1CreateEmployeeRoleRequest {
+export declare class V1CreateEmployeeRoleRequest {
     /**
      *
      * @type {V1EmployeeRole}

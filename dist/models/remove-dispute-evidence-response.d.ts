@@ -12,9 +12,9 @@
 /**
  * Defines fields in a RemoveDisputeEvidence response.
  * @export
- * @interface RemoveDisputeEvidenceResponse
+ * @class RemoveDisputeEvidenceResponse
  */
-export interface RemoveDisputeEvidenceResponse {
+export declare class RemoveDisputeEvidenceResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

@@ -13,9 +13,9 @@ import { BusinessHoursPeriod } from './business-hours-period';
 /**
  * Represents the hours of operation for a business location.
  * @export
- * @interface BusinessHours
+ * @class BusinessHours
  */
-export interface BusinessHours {
+export declare class BusinessHours {
     /**
      * The list of time periods during which the business is open. There may be at most 10 periods per day.
      * @type {Array<BusinessHoursPeriod>}

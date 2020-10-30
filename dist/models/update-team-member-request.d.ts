@@ -13,9 +13,9 @@ import { TeamMember } from './team-member';
 /**
  * Represents an update request for a `TeamMember` object.
  * @export
- * @interface UpdateTeamMemberRequest
+ * @class UpdateTeamMemberRequest
  */
-export interface UpdateTeamMemberRequest {
+export declare class UpdateTeamMemberRequest {
     /**
      *
      * @type {TeamMember}

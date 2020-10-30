@@ -12,9 +12,9 @@
 /**
  * V1ItemImage
  * @export
- * @interface V1ItemImage
+ * @class V1ItemImage
  */
-export interface V1ItemImage {
+export declare class V1ItemImage {
     /**
      * The image\'s unique ID.
      * @type {string}

@@ -12,4 +12,38 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RetrieveCustomerSegmentResponse = void 0;
+var customer_segment_1 = require("./customer-segment");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * Defines the fields included in the response body for requests to __RetrieveCustomerSegment__.  One of `errors` or `segment` is present in a given response (never both).
+ * @export
+ * @class RetrieveCustomerSegmentResponse
+ */
+var RetrieveCustomerSegmentResponse = /** @class */ (function () {
+    function RetrieveCustomerSegmentResponse() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Array)
+    ], RetrieveCustomerSegmentResponse.prototype, "errors", void 0);
+    __decorate([
+        graphql_1.Field(function () { return customer_segment_1.CustomerSegment; }),
+        __metadata("design:type", customer_segment_1.CustomerSegment)
+    ], RetrieveCustomerSegmentResponse.prototype, "segment", void 0);
+    RetrieveCustomerSegmentResponse = __decorate([
+        graphql_1.ObjectType()
+    ], RetrieveCustomerSegmentResponse);
+    return RetrieveCustomerSegmentResponse;
+}());
+exports.RetrieveCustomerSegmentResponse = RetrieveCustomerSegmentResponse;

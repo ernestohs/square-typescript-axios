@@ -13,9 +13,9 @@ import { Shift } from './shift';
 /**
  * The response to the request to create a `Shift`. Contains the created `Shift` object. May contain a set of `Error` objects if the request resulted in errors.
  * @export
- * @interface CreateShiftResponse
+ * @class CreateShiftResponse
  */
-export interface CreateShiftResponse {
+export declare class CreateShiftResponse {
     /**
      *
      * @type {Shift}

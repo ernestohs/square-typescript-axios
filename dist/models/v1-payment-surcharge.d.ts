@@ -14,9 +14,9 @@ import { V1PaymentTax } from './v1-payment-tax';
 /**
  * V1PaymentSurcharge
  * @export
- * @interface V1PaymentSurcharge
+ * @class V1PaymentSurcharge
  */
-export interface V1PaymentSurcharge {
+export declare class V1PaymentSurcharge {
     /**
      * The name of the surcharge.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  * A request for a set of `TeamMemberWage` objects
  * @export
- * @interface ListTeamMemberWagesRequest
+ * @class ListTeamMemberWagesRequest
  */
-export interface ListTeamMemberWagesRequest {
+export declare class ListTeamMemberWagesRequest {
     /**
      * Filter wages returned to only those that are associated with the specified team member.
      * @type {string}

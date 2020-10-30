@@ -13,9 +13,9 @@ import { TeamMember } from './team-member';
 /**
  * Represents a response from an update request, containing the updated `TeamMember` object or error messages.
  * @export
- * @interface UpdateTeamMemberResponse
+ * @class UpdateTeamMemberResponse
  */
-export interface UpdateTeamMemberResponse {
+export declare class UpdateTeamMemberResponse {
     /**
      *
      * @type {TeamMember}

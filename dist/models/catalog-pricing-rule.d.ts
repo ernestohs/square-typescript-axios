@@ -12,9 +12,9 @@
 /**
  * Defines how discounts are automatically applied to a set of items that match the pricing rule during the active time period.
  * @export
- * @interface CatalogPricingRule
+ * @class CatalogPricingRule
  */
-export interface CatalogPricingRule {
+export declare class CatalogPricingRule {
     /**
      * User-defined name for the pricing rule. For example, \"Buy one get one free\" or \"10% off\".
      * @type {string}

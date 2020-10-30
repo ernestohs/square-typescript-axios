@@ -13,9 +13,9 @@ import { V1Money } from './v1-money';
 /**
  * V1CreateRefundRequest
  * @export
- * @interface V1CreateRefundRequest
+ * @class V1CreateRefundRequest
  */
-export interface V1CreateRefundRequest {
+export declare class V1CreateRefundRequest {
     /**
      * The ID of the payment to refund. If you are creating a `PARTIAL` refund for a split tender payment, instead provide the id of the particular tender you want to refund.
      * @type {string}

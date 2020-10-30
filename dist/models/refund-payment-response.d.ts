@@ -13,9 +13,9 @@ import { PaymentRefund } from './payment-refund';
 /**
  * Defines the fields that are included in the response body of a request to the [RefundPayment](#endpoint-refunds-refundpayment) endpoint.  Note: if there are errors processing the request, the refund field may not be present, or it may be present in a FAILED state.
  * @export
- * @interface RefundPaymentResponse
+ * @class RefundPaymentResponse
  */
-export interface RefundPaymentResponse {
+export declare class RefundPaymentResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

@@ -16,9 +16,9 @@ import { SourceApplication } from './source-application';
 /**
  * Contains information defining a custom attribute. Custom attributes are intended to store additional information about a catalog object or to associate a catalog object with an entity in another system. Do not use custom attributes to store any sensitive information (personally identifiable information, card details, etc.). [Read more about custom attributes](/catalog-api/add-custom-attributes)
  * @export
- * @interface CatalogCustomAttributeDefinition
+ * @class CatalogCustomAttributeDefinition
  */
-export interface CatalogCustomAttributeDefinition {
+export declare class CatalogCustomAttributeDefinition {
     /**
      * The type of this custom attribute. Cannot be modified after creation. Required. See [CatalogCustomAttributeDefinitionType](#type-catalogcustomattributedefinitiontype) for possible values
      * @type {string}

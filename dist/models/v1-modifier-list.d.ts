@@ -13,9 +13,9 @@ import { V1ModifierOption } from './v1-modifier-option';
 /**
  * V1ModifierList
  * @export
- * @interface V1ModifierList
+ * @class V1ModifierList
  */
-export interface V1ModifierList {
+export declare class V1ModifierList {
     /**
      * The modifier list\'s unique ID.
      * @type {string}

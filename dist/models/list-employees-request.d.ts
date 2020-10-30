@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface ListEmployeesRequest
+ * @class ListEmployeesRequest
  */
-export interface ListEmployeesRequest {
+export declare class ListEmployeesRequest {
     /**
      *
      * @type {string}

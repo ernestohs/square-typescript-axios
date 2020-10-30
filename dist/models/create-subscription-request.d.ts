@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Defines parameters in a  [CreateSubscription](#endpoint-subscriptions-createsubscription) endpoint request.
  * @export
- * @interface CreateSubscriptionRequest
+ * @class CreateSubscriptionRequest
  */
-export interface CreateSubscriptionRequest {
+export declare class CreateSubscriptionRequest {
     /**
      * A unique string that identifies this `CreateSubscription` request. If you do not provide a unique string (or provide an empty string as the value), the endpoint treats each request as independent.  For more information, see [Idempotency keys](https://developer.squareup.com/docs/docs/working-with-apis/idempotency).
      * @type {string}

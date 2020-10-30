@@ -16,9 +16,9 @@ import { LoyaltyProgramTerminology } from './loyalty-program-terminology';
 /**
  *
  * @export
- * @interface LoyaltyProgram
+ * @class LoyaltyProgram
  */
-export interface LoyaltyProgram {
+export declare class LoyaltyProgram {
     /**
      * The Square-assigned ID of the loyalty program. Updates to  the loyalty program do not modify the identifier.
      * @type {string}

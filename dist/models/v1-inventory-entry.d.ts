@@ -12,9 +12,9 @@
 /**
  * V1InventoryEntry
  * @export
- * @interface V1InventoryEntry
+ * @class V1InventoryEntry
  */
-export interface V1InventoryEntry {
+export declare class V1InventoryEntry {
     /**
      * The variation that the entry corresponds to.
      * @type {string}

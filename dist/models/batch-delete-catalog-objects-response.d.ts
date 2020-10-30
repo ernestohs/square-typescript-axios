@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface BatchDeleteCatalogObjectsResponse
+ * @class BatchDeleteCatalogObjectsResponse
  */
-export interface BatchDeleteCatalogObjectsResponse {
+export declare class BatchDeleteCatalogObjectsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

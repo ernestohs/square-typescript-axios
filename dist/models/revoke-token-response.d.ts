@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface RevokeTokenResponse
+ * @class RevokeTokenResponse
  */
-export interface RevokeTokenResponse {
+export declare class RevokeTokenResponse {
     /**
      * If the request is successful, this is true.
      * @type {boolean}

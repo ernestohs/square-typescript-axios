@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface LoyaltyReward
+ * @class LoyaltyReward
  */
-export interface LoyaltyReward {
+export declare class LoyaltyReward {
     /**
      * The Square-assigned ID of the loyalty reward.
      * @type {string}

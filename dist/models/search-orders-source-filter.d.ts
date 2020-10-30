@@ -12,9 +12,9 @@
 /**
  * Filter based on order `source` information.
  * @export
- * @interface SearchOrdersSourceFilter
+ * @class SearchOrdersSourceFilter
  */
-export interface SearchOrdersSourceFilter {
+export declare class SearchOrdersSourceFilter {
     /**
      * Filters by `Source` `name`. Will return any orders with with a `source.name` that matches any of the listed source names.  Max: 10 source names.
      * @type {Array<string>}

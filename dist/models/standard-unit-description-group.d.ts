@@ -13,9 +13,9 @@ import { StandardUnitDescription } from './standard-unit-description';
 /**
  * Group of standard measurement units.
  * @export
- * @interface StandardUnitDescriptionGroup
+ * @class StandardUnitDescriptionGroup
  */
-export interface StandardUnitDescriptionGroup {
+export declare class StandardUnitDescriptionGroup {
     /**
      * List of standard (non-custom) measurement units in this description group.
      * @type {Array<StandardUnitDescription>}

@@ -13,9 +13,9 @@ import { Invoice } from './invoice';
 /**
  * The response returned by the `CreateInvoice` request.
  * @export
- * @interface CreateInvoiceResponse
+ * @class CreateInvoiceResponse
  */
-export interface CreateInvoiceResponse {
+export declare class CreateInvoiceResponse {
     /**
      *
      * @type {Invoice}

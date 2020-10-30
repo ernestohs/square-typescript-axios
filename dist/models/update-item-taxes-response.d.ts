@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface UpdateItemTaxesResponse
+ * @class UpdateItemTaxesResponse
  */
-export interface UpdateItemTaxesResponse {
+export declare class UpdateItemTaxesResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

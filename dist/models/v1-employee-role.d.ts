@@ -12,9 +12,9 @@
 /**
  * V1EmployeeRole
  * @export
- * @interface V1EmployeeRole
+ * @class V1EmployeeRole
  */
-export interface V1EmployeeRole {
+export declare class V1EmployeeRole {
     /**
      * The role\'s unique ID, Can only be set by Square.
      * @type {string}

@@ -12,4 +12,79 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatalogQuery = void 0;
+var catalog_query_exact_1 = require("./catalog-query-exact");
+var catalog_query_item_variations_for_item_option_values_1 = require("./catalog-query-item-variations-for-item-option-values");
+var catalog_query_items_for_item_options_1 = require("./catalog-query-items-for-item-options");
+var catalog_query_items_for_modifier_list_1 = require("./catalog-query-items-for-modifier-list");
+var catalog_query_items_for_tax_1 = require("./catalog-query-items-for-tax");
+var catalog_query_prefix_1 = require("./catalog-query-prefix");
+var catalog_query_range_1 = require("./catalog-query-range");
+var catalog_query_set_1 = require("./catalog-query-set");
+var catalog_query_sorted_attribute_1 = require("./catalog-query-sorted-attribute");
+var catalog_query_text_1 = require("./catalog-query-text");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * A query composed of one or more different types of filters to narrow the scope of targeted objects when calling the `SearchCatalogObjects` endpoint.  Although a query can have multiple filters, only one query is allowed per call to [SearchCatalogObjects](#endpoint-Catalog-SearchCatalogObjects).  When a query filter is based on an attribute, the attribute must be searchable. Searchable attributes are listed as follows, along their parent types that can be searched for with applicable query filters.  * Searchable attribute and objects queryable by searchable attributes ** - `name`:  `CatalogItem`, `CatalogItemVariation`, `CatelogCatogry`, `CatalogTax`, `CatalogDiscount`, `CatalogModifier`, \'CatalogModifierList`, `CatalogItemOption`, `CatalogItemOptionValue` - `description`: `CatalogItem`, `CatalogItemOptionValue` - `abbreviation`: `CatalogItem` - `upc`: `CatalogItemVariation` - `sku`: `CatalogItemVariation` - `caption`: `CatalogImage` - `display_name`: `CatalogItemOption`  For example, to search for [CatalogItem](#type-CatalogItem) objects by searchable attributes, you can use the `\"name\"`, `\"description\"`, or `\"abbreviation\"` attribute in an applicable query filter.
+ * @export
+ * @class CatalogQuery
+ */
+var CatalogQuery = /** @class */ (function () {
+    function CatalogQuery() {
+    }
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_sorted_attribute_1.CatalogQuerySortedAttribute; }),
+        __metadata("design:type", catalog_query_sorted_attribute_1.CatalogQuerySortedAttribute)
+    ], CatalogQuery.prototype, "sorted_attribute_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_exact_1.CatalogQueryExact; }),
+        __metadata("design:type", catalog_query_exact_1.CatalogQueryExact)
+    ], CatalogQuery.prototype, "exact_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_set_1.CatalogQuerySet; }),
+        __metadata("design:type", catalog_query_set_1.CatalogQuerySet)
+    ], CatalogQuery.prototype, "set_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_prefix_1.CatalogQueryPrefix; }),
+        __metadata("design:type", catalog_query_prefix_1.CatalogQueryPrefix)
+    ], CatalogQuery.prototype, "prefix_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_range_1.CatalogQueryRange; }),
+        __metadata("design:type", catalog_query_range_1.CatalogQueryRange)
+    ], CatalogQuery.prototype, "range_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_text_1.CatalogQueryText; }),
+        __metadata("design:type", catalog_query_text_1.CatalogQueryText)
+    ], CatalogQuery.prototype, "text_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_items_for_tax_1.CatalogQueryItemsForTax; }),
+        __metadata("design:type", catalog_query_items_for_tax_1.CatalogQueryItemsForTax)
+    ], CatalogQuery.prototype, "items_for_tax_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_items_for_modifier_list_1.CatalogQueryItemsForModifierList; }),
+        __metadata("design:type", catalog_query_items_for_modifier_list_1.CatalogQueryItemsForModifierList)
+    ], CatalogQuery.prototype, "items_for_modifier_list_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_items_for_item_options_1.CatalogQueryItemsForItemOptions; }),
+        __metadata("design:type", catalog_query_items_for_item_options_1.CatalogQueryItemsForItemOptions)
+    ], CatalogQuery.prototype, "items_for_item_options_query", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_query_item_variations_for_item_option_values_1.CatalogQueryItemVariationsForItemOptionValues; }),
+        __metadata("design:type", catalog_query_item_variations_for_item_option_values_1.CatalogQueryItemVariationsForItemOptionValues)
+    ], CatalogQuery.prototype, "item_variations_for_item_option_values_query", void 0);
+    CatalogQuery = __decorate([
+        graphql_1.ObjectType()
+    ], CatalogQuery);
+    return CatalogQuery;
+}());
+exports.CatalogQuery = CatalogQuery;

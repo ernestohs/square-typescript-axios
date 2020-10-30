@@ -12,9 +12,9 @@
 /**
  * The query filter to return the items containing the specified modifier list IDs.
  * @export
- * @interface CatalogQueryItemsForModifierList
+ * @class CatalogQueryItemsForModifierList
  */
-export interface CatalogQueryItemsForModifierList {
+export declare class CatalogQueryItemsForModifierList {
     /**
      * A set of `CatalogModifierList` IDs to be used to find associated `CatalogItem`s.
      * @type {Array<string>}

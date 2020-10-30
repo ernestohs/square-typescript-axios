@@ -13,9 +13,9 @@ import { CatalogObject } from './catalog-object';
 /**
  *
  * @export
- * @interface CreateCatalogImageRequest
+ * @class CreateCatalogImageRequest
  */
-export interface CreateCatalogImageRequest {
+export declare class CreateCatalogImageRequest {
     /**
      * A unique string that identifies this CreateCatalogImage request. Keys can be any valid string but must be unique for every CreateCatalogImage request.  See [Idempotency keys](https://developer.squareup.com/docs/basics/api101/idempotency) for more information.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1Money
+ * @class V1Money
  */
-export interface V1Money {
+export declare class V1Money {
     /**
      * Amount in the lowest denominated value of this Currency. E.g. in USD these are cents, in JPY they are Yen (which do not have a \'cent\' concept).
      * @type {number}

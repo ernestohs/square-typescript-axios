@@ -12,4 +12,78 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.InventoryTransfer = void 0;
+var source_application_1 = require("./source-application");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * Represents the transfer of a quantity of product inventory at a particular time from one location to another.
+ * @export
+ * @class InventoryTransfer
+ */
+var InventoryTransfer = /** @class */ (function () {
+    function InventoryTransfer() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "reference_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "state", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "from_location_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "to_location_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "catalog_object_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "catalog_object_type", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "quantity", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "occurred_at", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "created_at", void 0);
+    __decorate([
+        graphql_1.Field(function () { return source_application_1.SourceApplication; }),
+        __metadata("design:type", source_application_1.SourceApplication)
+    ], InventoryTransfer.prototype, "source", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], InventoryTransfer.prototype, "employee_id", void 0);
+    InventoryTransfer = __decorate([
+        graphql_1.ObjectType()
+    ], InventoryTransfer);
+    return InventoryTransfer;
+}());
+exports.InventoryTransfer = InventoryTransfer;

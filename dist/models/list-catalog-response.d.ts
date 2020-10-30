@@ -13,9 +13,9 @@ import { CatalogObject } from './catalog-object';
 /**
  *
  * @export
- * @interface ListCatalogResponse
+ * @class ListCatalogResponse
  */
-export interface ListCatalogResponse {
+export declare class ListCatalogResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents a discount being returned that applies to one or more return line items in an order.  Fixed-amount, order-scoped discounts are distributed across all non-zero return line item totals. The amount distributed to each return line item is relative to that item’s contribution to the order subtotal.
  * @export
- * @interface OrderReturnDiscount
+ * @class OrderReturnDiscount
  */
-export interface OrderReturnDiscount {
+export declare class OrderReturnDiscount {
     /**
      * Unique ID that identifies the return discount only within this order.
      * @type {string}

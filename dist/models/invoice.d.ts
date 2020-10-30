@@ -15,9 +15,9 @@ import { Money } from './money';
 /**
  * Stores information about an invoice. You use the Invoices API to create and process invoices. For more information, see [Manage Invoices Using the Invoices API](/docs/invoices-api/overview).
  * @export
- * @interface Invoice
+ * @class Invoice
  */
-export interface Invoice {
+export declare class Invoice {
     /**
      * The Square-assigned ID of the invoice.
      * @type {string}

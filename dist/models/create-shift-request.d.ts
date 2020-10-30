@@ -13,9 +13,9 @@ import { Shift } from './shift';
 /**
  * Represents a request to create a `Shift`
  * @export
- * @interface CreateShiftRequest
+ * @class CreateShiftRequest
  */
-export interface CreateShiftRequest {
+export declare class CreateShiftRequest {
     /**
      * Unique string value to insure the idempotency of the operation.
      * @type {string}

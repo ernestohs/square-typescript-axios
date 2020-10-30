@@ -12,9 +12,9 @@
 /**
  * A request to redeem a loyalty reward.
  * @export
- * @interface RedeemLoyaltyRewardRequest
+ * @class RedeemLoyaltyRewardRequest
  */
-export interface RedeemLoyaltyRewardRequest {
+export declare class RedeemLoyaltyRewardRequest {
     /**
      * A unique string that identifies this `RedeemLoyaltyReward` request.  Keys can be any valid string, but must be unique for every request.
      * @type {string}

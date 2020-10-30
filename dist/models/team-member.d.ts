@@ -13,9 +13,9 @@ import { TeamMemberAssignedLocations } from './team-member-assigned-locations';
 /**
  * A record representing an individual team member for a business.
  * @export
- * @interface TeamMember
+ * @class TeamMember
  */
-export interface TeamMember {
+export declare class TeamMember {
     /**
      * The unique ID for the team member.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  * V1OrderHistoryEntry
  * @export
- * @interface V1OrderHistoryEntry
+ * @class V1OrderHistoryEntry
  */
-export interface V1OrderHistoryEntry {
+export declare class V1OrderHistoryEntry {
     /**
      * The type of action performed on the order. See [V1OrderHistoryEntryAction](#type-v1orderhistoryentryaction) for possible values
      * @type {string}

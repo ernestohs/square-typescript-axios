@@ -12,9 +12,9 @@
 /**
  * Additional information for a single-location account specified by its associated business account, if it has one.
  * @export
- * @interface V1MerchantLocationDetails
+ * @class V1MerchantLocationDetails
  */
-export interface V1MerchantLocationDetails {
+export declare class V1MerchantLocationDetails {
     /**
      * The nickname assigned to the single-location account by the parent business. This value appears in the parent business\'s multi-location dashboard.
      * @type {string}

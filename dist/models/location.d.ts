@@ -15,9 +15,9 @@ import { Coordinates } from './coordinates';
 /**
  *
  * @export
- * @interface Location
+ * @class Location
  */
-export interface Location {
+export declare class Location {
     /**
      * The Square-issued ID of the location.
      * @type {string}

@@ -13,9 +13,9 @@ import { TerminalRefund } from './terminal-refund';
 /**
  *
  * @export
- * @interface CreateTerminalRefundRequest
+ * @class CreateTerminalRefundRequest
  */
-export interface CreateTerminalRefundRequest {
+export declare class CreateTerminalRefundRequest {
     /**
      * A unique string that identifies this `CreateRefund` request. Keys can be any valid string but must be unique for every `CreateRefund` request.  See [Idempotency keys](https://developer.squareup.com/docs/basics/api101/idempotency) for more information.
      * @type {string}

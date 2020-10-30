@@ -12,9 +12,9 @@
 /**
  * Provides information about the application used to generate a change.
  * @export
- * @interface SourceApplication
+ * @class SourceApplication
  */
-export interface SourceApplication {
+export declare class SourceApplication {
     /**
      * Read-only `Product` type for the application. See [Product](#type-product) for possible values
      * @type {string}

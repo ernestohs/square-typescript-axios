@@ -12,9 +12,9 @@
 /**
  * V1UpdateOrderRequest
  * @export
- * @interface V1UpdateOrderRequest
+ * @class V1UpdateOrderRequest
  */
-export interface V1UpdateOrderRequest {
+export declare class V1UpdateOrderRequest {
     /**
      * The action to perform on the order (COMPLETE, CANCEL, or REFUND). See [V1UpdateOrderRequestAction](#type-v1updateorderrequestaction) for possible values
      * @type {string}

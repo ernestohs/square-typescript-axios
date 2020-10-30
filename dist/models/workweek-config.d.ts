@@ -12,9 +12,9 @@
 /**
  * Sets the Day of the week and hour of the day that a business starts a work week. Used for the calculation of overtime pay.
  * @export
- * @interface WorkweekConfig
+ * @class WorkweekConfig
  */
-export interface WorkweekConfig {
+export declare class WorkweekConfig {
     /**
      * UUID for this object
      * @type {string}

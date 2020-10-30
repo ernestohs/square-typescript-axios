@@ -14,9 +14,9 @@ import { TimeRange } from './time-range';
 /**
  * Defines a filter used in a search for `Shift` records. `AND` logic is used by Square\'s servers to apply each filter property specified.
  * @export
- * @interface ShiftFilter
+ * @class ShiftFilter
  */
-export interface ShiftFilter {
+export declare class ShiftFilter {
     /**
      * Fetch shifts for the specified location.
      * @type {Array<string>}

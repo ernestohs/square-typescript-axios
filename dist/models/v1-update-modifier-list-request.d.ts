@@ -12,9 +12,9 @@
 /**
  * V1UpdateModifierListRequest
  * @export
- * @interface V1UpdateModifierListRequest
+ * @class V1UpdateModifierListRequest
  */
-export interface V1UpdateModifierListRequest {
+export declare class V1UpdateModifierListRequest {
     /**
      * The modifier list\'s name.
      * @type {string}

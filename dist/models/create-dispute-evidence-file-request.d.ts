@@ -12,9 +12,9 @@
 /**
  * Defines parameters for a CreateDisputeEvidenceFile request.
  * @export
- * @interface CreateDisputeEvidenceFileRequest
+ * @class CreateDisputeEvidenceFileRequest
  */
-export interface CreateDisputeEvidenceFileRequest {
+export declare class CreateDisputeEvidenceFileRequest {
     /**
      * Unique ID. For more information, see [Idempotency](https://developer.squareup.com/docs/docs/working-with-apis/idempotency).
      * @type {string}

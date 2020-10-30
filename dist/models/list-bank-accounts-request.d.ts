@@ -12,9 +12,9 @@
 /**
  * Request object for fetching all `BankAccount` objects linked to a account.
  * @export
- * @interface ListBankAccountsRequest
+ * @class ListBankAccountsRequest
  */
-export interface ListBankAccountsRequest {
+export declare class ListBankAccountsRequest {
     /**
      * The pagination cursor returned by a previous call to this endpoint. Use it in the next `ListBankAccounts` request to retrieve the next set  of results.  See the [Pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination) guide for more information.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  * A response returned by the API call.
  * @export
- * @interface DeleteLoyaltyRewardResponse
+ * @class DeleteLoyaltyRewardResponse
  */
-export interface DeleteLoyaltyRewardResponse {
+export declare class DeleteLoyaltyRewardResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

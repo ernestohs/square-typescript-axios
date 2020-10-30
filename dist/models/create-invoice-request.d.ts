@@ -13,9 +13,9 @@ import { Invoice } from './invoice';
 /**
  * Describes a `CreateInvoice` request.
  * @export
- * @interface CreateInvoiceRequest
+ * @class CreateInvoiceRequest
  */
-export interface CreateInvoiceRequest {
+export declare class CreateInvoiceRequest {
     /**
      *
      * @type {Invoice}

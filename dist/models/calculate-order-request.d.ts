@@ -14,9 +14,9 @@ import { OrderReward } from './order-reward';
 /**
  *
  * @export
- * @interface CalculateOrderRequest
+ * @class CalculateOrderRequest
  */
-export interface CalculateOrderRequest {
+export declare class CalculateOrderRequest {
     /**
      *
      * @type {Order}

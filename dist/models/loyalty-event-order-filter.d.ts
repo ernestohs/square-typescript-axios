@@ -12,9 +12,9 @@
 /**
  * Filter events by the order associated with the event.
  * @export
- * @interface LoyaltyEventOrderFilter
+ * @class LoyaltyEventOrderFilter
  */
-export interface LoyaltyEventOrderFilter {
+export declare class LoyaltyEventOrderFilter {
     /**
      * The ID of the `order` associated with the event.
      * @type {string}

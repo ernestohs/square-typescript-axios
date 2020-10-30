@@ -13,9 +13,9 @@ import { Order } from './order';
 /**
  *
  * @export
- * @interface CreateOrderRequest
+ * @class CreateOrderRequest
  */
-export interface CreateOrderRequest {
+export declare class CreateOrderRequest {
     /**
      *
      * @type {Order}

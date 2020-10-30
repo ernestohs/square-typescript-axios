@@ -13,9 +13,9 @@ import { LoyaltyProgram } from './loyalty-program';
 /**
  * A response that contains all loyalty programs.
  * @export
- * @interface ListLoyaltyProgramsResponse
+ * @class ListLoyaltyProgramsResponse
  */
-export interface ListLoyaltyProgramsResponse {
+export declare class ListLoyaltyProgramsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Provides details about the loyalty program reward tier definition.
  * @export
- * @interface LoyaltyProgramRewardDefinition
+ * @class LoyaltyProgramRewardDefinition
  */
-export interface LoyaltyProgramRewardDefinition {
+export declare class LoyaltyProgramRewardDefinition {
     /**
      * Indicates the scope of the reward tier. See [LoyaltyProgramRewardDefinitionScope](#type-loyaltyprogramrewarddefinitionscope) for possible values
      * @type {string}

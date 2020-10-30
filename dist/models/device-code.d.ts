@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface DeviceCode
+ * @class DeviceCode
  */
-export interface DeviceCode {
+export declare class DeviceCode {
     /**
      * The unique id for this device code.
      * @type {string}

@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * An object describing a job that a team member is assigned to.
  * @export
- * @interface JobAssignment
+ * @class JobAssignment
  */
-export interface JobAssignment {
+export declare class JobAssignment {
     /**
      * The title of the job.
      * @type {string}

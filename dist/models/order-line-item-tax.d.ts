@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents a tax that applies to one or more line item in the order.  Fixed-amount, order-scoped taxes are distributed across all non-zero line item totals. The amount distributed to each line item is relative to the amount the item contributes to the order subtotal.
  * @export
- * @interface OrderLineItemTax
+ * @class OrderLineItemTax
  */
-export interface OrderLineItemTax {
+export declare class OrderLineItemTax {
     /**
      * Unique ID that identifies the tax only within this order.
      * @type {string}

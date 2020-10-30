@@ -13,9 +13,9 @@ import { Merchant } from './merchant';
 /**
  * The response object returned by the [ListMerchant](#endpoint-listmerchant) endpoint.
  * @export
- * @interface ListMerchantsResponse
+ * @class ListMerchantsResponse
  */
-export interface ListMerchantsResponse {
+export declare class ListMerchantsResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

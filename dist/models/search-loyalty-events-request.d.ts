@@ -13,9 +13,9 @@ import { LoyaltyEventQuery } from './loyalty-event-query';
 /**
  * A request to search for loyalty events.
  * @export
- * @interface SearchLoyaltyEventsRequest
+ * @class SearchLoyaltyEventsRequest
  */
-export interface SearchLoyaltyEventsRequest {
+export declare class SearchLoyaltyEventsRequest {
     /**
      *
      * @type {LoyaltyEventQuery}

@@ -13,9 +13,9 @@ import { TeamMember } from './team-member';
 /**
  * Represents a response from a search request, containing a filtered list of `TeamMember` objects.
  * @export
- * @interface SearchTeamMembersResponse
+ * @class SearchTeamMembersResponse
  */
-export interface SearchTeamMembersResponse {
+export declare class SearchTeamMembersResponse {
     /**
      * The filtered list of `TeamMember` objects.
      * @type {Array<TeamMember>}

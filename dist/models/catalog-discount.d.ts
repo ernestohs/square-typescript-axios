@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * A discount applicable to items.
  * @export
- * @interface CatalogDiscount
+ * @class CatalogDiscount
  */
-export interface CatalogDiscount {
+export declare class CatalogDiscount {
     /**
      * The discount name. This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
      * @type {string}

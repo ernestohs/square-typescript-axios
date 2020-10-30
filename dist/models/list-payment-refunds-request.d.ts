@@ -12,9 +12,9 @@
 /**
  * Retrieves a list of refunds for the account making the request.  Max results per page: 100
  * @export
- * @interface ListPaymentRefundsRequest
+ * @class ListPaymentRefundsRequest
  */
-export interface ListPaymentRefundsRequest {
+export declare class ListPaymentRefundsRequest {
     /**
      * Timestamp for the beginning of the requested reporting period, in RFC 3339 format.  Default: The current time minus one year.
      * @type {string}

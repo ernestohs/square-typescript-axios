@@ -13,9 +13,9 @@ import { CreateTeamMemberResponse } from './create-team-member-response';
 /**
  * Represents a response from a bulk create request, containing the created `TeamMember` objects or error messages.
  * @export
- * @interface BulkCreateTeamMembersResponse
+ * @class BulkCreateTeamMembersResponse
  */
-export interface BulkCreateTeamMembersResponse {
+export declare class BulkCreateTeamMembersResponse {
     /**
      * The successfully created `TeamMember` objects. Each key is the `idempotency_key` that maps to the `CreateTeamMemberRequest`.
      * @type {{ [key: string]: CreateTeamMemberResponse; }}

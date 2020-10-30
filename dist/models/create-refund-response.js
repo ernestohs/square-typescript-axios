@@ -12,4 +12,38 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRefundResponse = void 0;
+var refund_1 = require("./refund");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * Defines the fields that are included in the response body of a request to the [CreateRefund](#endpoint-createrefund) endpoint.  One of `errors` or `refund` is present in a given response (never both).
+ * @export
+ * @class CreateRefundResponse
+ */
+var CreateRefundResponse = /** @class */ (function () {
+    function CreateRefundResponse() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Array)
+    ], CreateRefundResponse.prototype, "errors", void 0);
+    __decorate([
+        graphql_1.Field(function () { return refund_1.Refund; }),
+        __metadata("design:type", refund_1.Refund)
+    ], CreateRefundResponse.prototype, "refund", void 0);
+    CreateRefundResponse = __decorate([
+        graphql_1.ObjectType()
+    ], CreateRefundResponse);
+    return CreateRefundResponse;
+}());
+exports.CreateRefundResponse = CreateRefundResponse;

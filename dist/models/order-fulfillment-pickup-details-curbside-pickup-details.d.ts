@@ -12,9 +12,9 @@
 /**
  * Specific details for curbside pickup.
  * @export
- * @interface OrderFulfillmentPickupDetailsCurbsidePickupDetails
+ * @class OrderFulfillmentPickupDetailsCurbsidePickupDetails
  */
-export interface OrderFulfillmentPickupDetailsCurbsidePickupDetails {
+export declare class OrderFulfillmentPickupDetailsCurbsidePickupDetails {
     /**
      * Specific details for curbside pickup, such as parking number, vehicle model, etc.
      * @type {string}

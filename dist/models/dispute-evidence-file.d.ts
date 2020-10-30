@@ -12,9 +12,9 @@
 /**
  * A file to be uploaded as dispute evidence.
  * @export
- * @interface DisputeEvidenceFile
+ * @class DisputeEvidenceFile
  */
-export interface DisputeEvidenceFile {
+export declare class DisputeEvidenceFile {
     /**
      * The file name including the file extension. For example: \"receipt.tiff\".
      * @type {string}

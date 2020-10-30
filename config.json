@@ -1,8 +1,8 @@
 {
-    "npmName": "square-typescript-axios",
-    "useSingleRequestParameter": false,
-    "typescriptThreePlus": true,
-    "withSeparateModelsAndApi": true,
-    "apiPackage": "api",
-    "modelPackage": "models" 
-  }
+  "npmName": "square-typescript-axios",
+  "useSingleRequestParameter": false,
+  "typescriptThreePlus": true,
+  "withSeparateModelsAndApi": true,
+  "apiPackage": "api",
+  "modelPackage": "models"
+}

@@ -12,9 +12,9 @@
 /**
  * A record of an employee\'s break during a shift.
  * @export
- * @interface Break
+ * @class Break
  */
-export interface Break {
+export declare class Break {
     /**
      * UUID for this object
      * @type {string}

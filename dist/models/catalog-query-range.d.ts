@@ -12,9 +12,9 @@
 /**
  * The query filter to return the search result whose named attribute values fall between the specified range.
  * @export
- * @interface CatalogQueryRange
+ * @class CatalogQueryRange
  */
-export interface CatalogQueryRange {
+export declare class CatalogQueryRange {
     /**
      * The name of the attribute to be searched.
      * @type {string}

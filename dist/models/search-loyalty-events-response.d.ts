@@ -13,9 +13,9 @@ import { LoyaltyEvent } from './loyalty-event';
 /**
  * A response that contains loyalty events that satisfy the search  criteria, in order by the `created_at` date.
  * @export
- * @interface SearchLoyaltyEventsResponse
+ * @class SearchLoyaltyEventsResponse
  */
-export interface SearchLoyaltyEventsResponse {
+export declare class SearchLoyaltyEventsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

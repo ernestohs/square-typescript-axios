@@ -12,9 +12,9 @@
 /**
  * Associates a loyalty account with the buyer\'s phone number. For more information, see  [Loyalty Overview](/docs/loyalty/overview).
  * @export
- * @interface LoyaltyAccountMapping
+ * @class LoyaltyAccountMapping
  */
-export interface LoyaltyAccountMapping {
+export declare class LoyaltyAccountMapping {
     /**
      * The Square-assigned ID of the mapping.
      * @type {string}

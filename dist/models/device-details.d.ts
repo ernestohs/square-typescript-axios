@@ -12,9 +12,9 @@
 /**
  * Details about the device that took the payment.
  * @export
- * @interface DeviceDetails
+ * @class DeviceDetails
  */
-export interface DeviceDetails {
+export declare class DeviceDetails {
     /**
      * Square-issued ID of the device.
      * @type {string}

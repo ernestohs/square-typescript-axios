@@ -12,9 +12,9 @@
 /**
  * Defines parameters in a  [ListSubscriptionEvents](#endpoint-subscriptions-listsubscriptionevents) endpoint request.
  * @export
- * @interface ListSubscriptionEventsRequest
+ * @class ListSubscriptionEventsRequest
  */
-export interface ListSubscriptionEventsRequest {
+export declare class ListSubscriptionEventsRequest {
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for the original query.  For more information, see [Pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination).
      * @type {string}

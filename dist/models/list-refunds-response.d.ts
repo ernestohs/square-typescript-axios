@@ -13,9 +13,9 @@ import { Refund } from './refund';
 /**
  * Defines the fields that are included in the response body of a request to the [ListRefunds](#endpoint-listrefunds) endpoint.  One of `errors` or `refunds` is present in a given response (never both).
  * @export
- * @interface ListRefundsResponse
+ * @class ListRefundsResponse
  */
-export interface ListRefundsResponse {
+export declare class ListRefundsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

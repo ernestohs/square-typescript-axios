@@ -25,11 +25,14 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RequiredError = exports.BaseAPI = exports.COLLECTION_FORMATS = exports.BASE_PATH = void 0;
 // Some imports not used depending on template conditions
 // @ts-ignore
-var axios_1 = require("axios");
+var axios_1 = __importDefault(require("axios"));
 exports.BASE_PATH = "https://connect.squareup.com".replace(/\/+$/, "");
 /**
  *

@@ -12,9 +12,9 @@
 /**
  * A defined break template that sets an expectation for possible `Break` instances on a `Shift`.
  * @export
- * @interface BreakType
+ * @class BreakType
  */
-export interface BreakType {
+export declare class BreakType {
     /**
      * UUID for this object.
      * @type {string}

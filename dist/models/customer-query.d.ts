@@ -14,9 +14,9 @@ import { CustomerSort } from './customer-sort';
 /**
  * Represents a query (including filtering criteria, sorting criteria, or both) used to search for customer profiles.
  * @export
- * @interface CustomerQuery
+ * @class CustomerQuery
  */
-export interface CustomerQuery {
+export declare class CustomerQuery {
     /**
      *
      * @type {CustomerFilter}

@@ -14,9 +14,9 @@ import { DeviceDetails } from './device-details';
 /**
  * Reflects the current status of a card payment.
  * @export
- * @interface CardPaymentDetails
+ * @class CardPaymentDetails
  */
-export interface CardPaymentDetails {
+export declare class CardPaymentDetails {
     /**
      * The card payment\'s current state. It can be one of: `AUTHORIZED`, `CAPTURED`, `VOIDED`, `FAILED`.
      * @type {string}

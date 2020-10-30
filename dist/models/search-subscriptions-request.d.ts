@@ -13,9 +13,9 @@ import { SearchSubscriptionsQuery } from './search-subscriptions-query';
 /**
  * Defines parameters in a [SearchSubscriptions](#endpoint-subscriptions-searchsubscriptions) endpoint  request.
  * @export
- * @interface SearchSubscriptionsRequest
+ * @class SearchSubscriptionsRequest
  */
-export interface SearchSubscriptionsRequest {
+export declare class SearchSubscriptionsRequest {
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for the original query.  For more information, see [Pagination](https://developer.squareup.com/docs/docs/working-with-apis/pagination).
      * @type {string}

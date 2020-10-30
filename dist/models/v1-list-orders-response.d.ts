@@ -13,9 +13,9 @@ import { V1Order } from './v1-order';
 /**
  *
  * @export
- * @interface V1ListOrdersResponse
+ * @class V1ListOrdersResponse
  */
-export interface V1ListOrdersResponse {
+export declare class V1ListOrdersResponse {
     /**
      *
      * @type {Array<V1Order>}

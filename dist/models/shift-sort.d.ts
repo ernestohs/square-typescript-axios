@@ -12,9 +12,9 @@
 /**
  * Sets the sort order of search results.
  * @export
- * @interface ShiftSort
+ * @class ShiftSort
  */
-export interface ShiftSort {
+export declare class ShiftSort {
     /**
      * The field to sort on. See [ShiftSortField](#type-shiftsortfield) for possible values
      * @type {string}

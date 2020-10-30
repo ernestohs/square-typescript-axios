@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface RevokeTokenRequest
+ * @class RevokeTokenRequest
  */
-export interface RevokeTokenRequest {
+export declare class RevokeTokenRequest {
     /**
      * The Square issued ID for your application, available from the [application dashboard](https://connect.squareup.com/apps).
      * @type {string}

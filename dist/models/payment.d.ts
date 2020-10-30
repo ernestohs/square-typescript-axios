@@ -16,9 +16,9 @@ import { ProcessingFee } from './processing-fee';
 /**
  * Represents a payment processed by the Square API.
  * @export
- * @interface Payment
+ * @class Payment
  */
-export interface Payment {
+export declare class Payment {
     /**
      * Unique ID for the payment.
      * @type {string}

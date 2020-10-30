@@ -13,9 +13,9 @@ import { V1Money } from './v1-money';
 /**
  * V1CashDrawerEvent
  * @export
- * @interface V1CashDrawerEvent
+ * @class V1CashDrawerEvent
  */
-export interface V1CashDrawerEvent {
+export declare class V1CashDrawerEvent {
     /**
      * The event\'s unique ID.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  * A filter to select resources based on an exact field value. For any given value, the value can only be in one property. Depending on the field, either all properties can be set or only a subset will be available.  Refer to the documentation of the field.
  * @export
- * @interface FilterValue
+ * @class FilterValue
  */
-export interface FilterValue {
+export declare class FilterValue {
     /**
      * A list of terms that must be present on the field of the resource.
      * @type {Array<string>}

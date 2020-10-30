@@ -13,9 +13,9 @@ import { Shift } from './shift';
 /**
  * The response to a request for `Shift` objects. Contains the requested `Shift` objects. May contain a set of `Error` objects if the request resulted in errors.
  * @export
- * @interface SearchShiftsResponse
+ * @class SearchShiftsResponse
  */
-export interface SearchShiftsResponse {
+export declare class SearchShiftsResponse {
     /**
      * Shifts
      * @type {Array<Shift>}

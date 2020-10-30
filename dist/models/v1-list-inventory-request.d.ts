@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1ListInventoryRequest
+ * @class V1ListInventoryRequest
  */
-export interface V1ListInventoryRequest {
+export declare class V1ListInventoryRequest {
     /**
      * The maximum number of inventory entries to return in a single response. This value cannot exceed 1000.
      * @type {number}

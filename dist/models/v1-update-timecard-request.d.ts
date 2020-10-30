@@ -13,9 +13,9 @@ import { V1Timecard } from './v1-timecard';
 /**
  *
  * @export
- * @interface V1UpdateTimecardRequest
+ * @class V1UpdateTimecardRequest
  */
-export interface V1UpdateTimecardRequest {
+export declare class V1UpdateTimecardRequest {
     /**
      *
      * @type {V1Timecard}

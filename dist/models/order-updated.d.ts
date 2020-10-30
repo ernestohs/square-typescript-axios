@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface OrderUpdated
+ * @class OrderUpdated
  */
-export interface OrderUpdated {
+export declare class OrderUpdated {
     /**
      * The order\'s unique ID.
      * @type {string}

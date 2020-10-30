@@ -15,9 +15,9 @@ import { CatalogObject } from './catalog-object';
 /**
  * An [CatalogObject](#type-CatalogObject) instance of the `ITEM` type, also referred to as an item, in the catalog.
  * @export
- * @interface CatalogItem
+ * @class CatalogItem
  */
-export interface CatalogItem {
+export declare class CatalogItem {
     /**
      * The item\'s name. This is a searchable attribute for use in applicable query filters, its value must not be empty, and the length is of Unicode code points.
      * @type {string}

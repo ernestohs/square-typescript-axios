@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Refunds a payment.
  * @export
- * @interface RefundPaymentRequest
+ * @class RefundPaymentRequest
  */
-export interface RefundPaymentRequest {
+export declare class RefundPaymentRequest {
     /**
      *  A unique string that identifies this RefundPayment request. Key can be any valid string but must be unique for every RefundPayment request.  For more information, see [Idempotency keys](https://developer.squareup.com/docs/working-with-apis/idempotency).
      * @type {string}

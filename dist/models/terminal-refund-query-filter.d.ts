@@ -13,9 +13,9 @@ import { TimeRange } from './time-range';
 /**
  *
  * @export
- * @interface TerminalRefundQueryFilter
+ * @class TerminalRefundQueryFilter
  */
-export interface TerminalRefundQueryFilter {
+export declare class TerminalRefundQueryFilter {
     /**
      * `TerminalRefund`s associated with a specific device. If no device is specified then all `TerminalRefund`s for the signed in account will be displayed.
      * @type {string}

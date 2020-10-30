@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * The hourly wage rate that a team member will earn on a `Shift` for doing the job specified by the `title` property of this object.
  * @export
- * @interface TeamMemberWage
+ * @class TeamMemberWage
  */
-export interface TeamMemberWage {
+export declare class TeamMemberWage {
     /**
      * UUID for this object.
      * @type {string}

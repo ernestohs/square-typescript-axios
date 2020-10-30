@@ -13,9 +13,9 @@ import { LoyaltyEvent } from './loyalty-event';
 /**
  * A response that includes the loyalty event that  resulted from the successful API call.
  * @export
- * @interface AdjustLoyaltyPointsResponse
+ * @class AdjustLoyaltyPointsResponse
  */
-export interface AdjustLoyaltyPointsResponse {
+export declare class AdjustLoyaltyPointsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

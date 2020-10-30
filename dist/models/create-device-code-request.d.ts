@@ -13,9 +13,9 @@ import { DeviceCode } from './device-code';
 /**
  *
  * @export
- * @interface CreateDeviceCodeRequest
+ * @class CreateDeviceCodeRequest
  */
-export interface CreateDeviceCodeRequest {
+export declare class CreateDeviceCodeRequest {
     /**
      * A unique string that identifies this CreateCheckout request. Keys can be any valid string but must be unique for every CreateCheckout request.  See [Idempotency keys](https://developer.squareup.com/docs/basics/api101/idempotency) for more information.
      * @type {string}

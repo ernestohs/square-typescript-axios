@@ -13,9 +13,9 @@ import { OrderFulfillmentUpdatedUpdate } from './order-fulfillment-updated-updat
 /**
  *
  * @export
- * @interface OrderFulfillmentUpdated
+ * @class OrderFulfillmentUpdated
  */
-export interface OrderFulfillmentUpdated {
+export declare class OrderFulfillmentUpdated {
     /**
      * The order\'s unique ID.
      * @type {string}

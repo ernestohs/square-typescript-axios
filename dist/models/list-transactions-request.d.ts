@@ -12,9 +12,9 @@
 /**
  * Defines the query parameters that can be included in a request to the [ListTransactions](#endpoint-listtransactions) endpoint.  Deprecated - recommend using [SearchOrders](#endpoint-orders-searchorders)
  * @export
- * @interface ListTransactionsRequest
+ * @class ListTransactionsRequest
  */
-export interface ListTransactionsRequest {
+export declare class ListTransactionsRequest {
     /**
      * The beginning of the requested reporting period, in RFC 3339 format.  See [Date ranges](#dateranges) for details on date inclusivity/exclusivity.  Default value: The current time minus one year.
      * @type {string}

@@ -13,9 +13,9 @@ import { TeamMember } from './team-member';
 /**
  * Represents a response from a create request, containing the created `TeamMember` object or error messages.
  * @export
- * @interface CreateTeamMemberResponse
+ * @class CreateTeamMemberResponse
  */
-export interface CreateTeamMemberResponse {
+export declare class CreateTeamMemberResponse {
     /**
      *
      * @type {TeamMember}

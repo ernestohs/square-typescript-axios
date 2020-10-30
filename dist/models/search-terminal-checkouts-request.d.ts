@@ -13,9 +13,9 @@ import { TerminalCheckoutQuery } from './terminal-checkout-query';
 /**
  *
  * @export
- * @interface SearchTerminalCheckoutsRequest
+ * @class SearchTerminalCheckoutsRequest
  */
-export interface SearchTerminalCheckoutsRequest {
+export declare class SearchTerminalCheckoutsRequest {
     /**
      *
      * @type {TerminalCheckoutQuery}

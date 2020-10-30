@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents an additional recipient (other than the merchant) receiving a portion of this tender.
  * @export
- * @interface AdditionalRecipient
+ * @class AdditionalRecipient
  */
-export interface AdditionalRecipient {
+export declare class AdditionalRecipient {
     /**
      * The location ID for a recipient (other than the merchant) receiving a portion of this tender.
      * @type {string}

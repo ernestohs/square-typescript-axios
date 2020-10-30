@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * A collection of various money amounts.
  * @export
- * @interface OrderMoneyAmounts
+ * @class OrderMoneyAmounts
  */
-export interface OrderMoneyAmounts {
+export declare class OrderMoneyAmounts {
     /**
      *
      * @type {Money}

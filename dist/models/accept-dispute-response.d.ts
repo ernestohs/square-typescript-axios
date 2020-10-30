@@ -13,9 +13,9 @@ import { Dispute } from './dispute';
 /**
  * Defines fields in a AcceptDispute response.
  * @export
- * @interface AcceptDisputeResponse
+ * @class AcceptDisputeResponse
  */
-export interface AcceptDisputeResponse {
+export declare class AcceptDisputeResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

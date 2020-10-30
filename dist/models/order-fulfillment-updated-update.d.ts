@@ -12,9 +12,9 @@
 /**
  * Information about fulfillment updates.
  * @export
- * @interface OrderFulfillmentUpdatedUpdate
+ * @class OrderFulfillmentUpdatedUpdate
  */
-export interface OrderFulfillmentUpdatedUpdate {
+export declare class OrderFulfillmentUpdatedUpdate {
     /**
      * Unique ID that identifies the fulfillment only within this order.
      * @type {string}

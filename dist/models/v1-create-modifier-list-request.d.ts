@@ -13,9 +13,9 @@ import { V1ModifierList } from './v1-modifier-list';
 /**
  *
  * @export
- * @interface V1CreateModifierListRequest
+ * @class V1CreateModifierListRequest
  */
-export interface V1CreateModifierListRequest {
+export declare class V1CreateModifierListRequest {
     /**
      *
      * @type {V1ModifierList}

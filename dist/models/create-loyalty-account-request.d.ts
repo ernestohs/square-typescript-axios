@@ -13,9 +13,9 @@ import { LoyaltyAccount } from './loyalty-account';
 /**
  * A request to create a new loyalty account.
  * @export
- * @interface CreateLoyaltyAccountRequest
+ * @class CreateLoyaltyAccountRequest
  */
-export interface CreateLoyaltyAccountRequest {
+export declare class CreateLoyaltyAccountRequest {
     /**
      *
      * @type {LoyaltyAccount}

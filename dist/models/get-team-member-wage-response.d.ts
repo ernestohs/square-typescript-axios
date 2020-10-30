@@ -13,9 +13,9 @@ import { TeamMemberWage } from './team-member-wage';
 /**
  * A response to a request to get a `TeamMemberWage`. Contains the requested `TeamMemberWage` objects. May contain a set of `Error` objects if the request resulted in errors.
  * @export
- * @interface GetTeamMemberWageResponse
+ * @class GetTeamMemberWageResponse
  */
-export interface GetTeamMemberWageResponse {
+export declare class GetTeamMemberWageResponse {
     /**
      *
      * @type {TeamMemberWage}

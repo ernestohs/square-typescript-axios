@@ -13,9 +13,9 @@ import { TeamMemberWage } from './team-member-wage';
 /**
  * The response to a request for a set of `TeamMemberWage` objects. Contains a set of `TeamMemberWage`.
  * @export
- * @interface ListTeamMemberWagesResponse
+ * @class ListTeamMemberWagesResponse
  */
-export interface ListTeamMemberWagesResponse {
+export declare class ListTeamMemberWagesResponse {
     /**
      * A page of Team Member Wage results.
      * @type {Array<TeamMemberWage>}

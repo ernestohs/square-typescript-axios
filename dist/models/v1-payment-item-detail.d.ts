@@ -12,9 +12,9 @@
 /**
  * V1PaymentItemDetail
  * @export
- * @interface V1PaymentItemDetail
+ * @class V1PaymentItemDetail
  */
-export interface V1PaymentItemDetail {
+export declare class V1PaymentItemDetail {
     /**
      * The name of the item\'s merchant-defined category, if any.
      * @type {string}

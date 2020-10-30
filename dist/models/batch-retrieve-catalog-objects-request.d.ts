@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface BatchRetrieveCatalogObjectsRequest
+ * @class BatchRetrieveCatalogObjectsRequest
  */
-export interface BatchRetrieveCatalogObjectsRequest {
+export declare class BatchRetrieveCatalogObjectsRequest {
     /**
      * The IDs of the CatalogObjects to be retrieved.
      * @type {Array<string>}

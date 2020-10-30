@@ -13,9 +13,9 @@ import { V1InventoryEntry } from './v1-inventory-entry';
 /**
  *
  * @export
- * @interface V1ListInventoryResponse
+ * @class V1ListInventoryResponse
  */
-export interface V1ListInventoryResponse {
+export declare class V1ListInventoryResponse {
     /**
      *
      * @type {Array<V1InventoryEntry>}

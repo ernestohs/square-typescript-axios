@@ -12,9 +12,9 @@
 /**
  * Latitude and longitude coordinates.
  * @export
- * @interface Coordinates
+ * @class Coordinates
  */
-export interface Coordinates {
+export declare class Coordinates {
     /**
      * The latitude of the coordinate expressed in degrees.
      * @type {number}

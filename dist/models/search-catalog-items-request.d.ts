@@ -13,9 +13,9 @@ import { CustomAttributeFilter } from './custom-attribute-filter';
 /**
  * Defines the request body for the [SearchCatalogItems](#endpoint-Catalog-SearchCatalogItems) endpoint.
  * @export
- * @interface SearchCatalogItemsRequest
+ * @class SearchCatalogItemsRequest
  */
-export interface SearchCatalogItemsRequest {
+export declare class SearchCatalogItemsRequest {
     /**
      * The text filter expression to return items or item variations containing specified text in the `name`, `description`, or `abbreviation` attribute value of an item, or in the `name`, `sku`, or `upc` attribute value of an item variation.
      * @type {string}

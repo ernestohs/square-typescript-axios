@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface RetrieveCashDrawerShiftRequest
+ * @class RetrieveCashDrawerShiftRequest
  */
-export interface RetrieveCashDrawerShiftRequest {
+export declare class RetrieveCashDrawerShiftRequest {
     /**
      * The ID of the location to retrieve cash drawer shifts from.
      * @type {string}

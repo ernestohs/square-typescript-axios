@@ -13,9 +13,9 @@ import { WageSetting } from './wage-setting';
 /**
  * Represents a response from an update request, containing the updated `WageSetting` object or error messages.
  * @export
- * @interface UpdateWageSettingResponse
+ * @class UpdateWageSettingResponse
  */
-export interface UpdateWageSettingResponse {
+export declare class UpdateWageSettingResponse {
     /**
      *
      * @type {WageSetting}

@@ -15,9 +15,9 @@ import { Money } from './money';
 /**
  * An item variation (i.e., product) in the Catalog object model. Each item may have a maximum of 250 item variations.
  * @export
- * @interface CatalogItemVariation
+ * @class CatalogItemVariation
  */
-export interface CatalogItemVariation {
+export declare class CatalogItemVariation {
     /**
      * The ID of the `CatalogItem` associated with this item variation.
      * @type {string}

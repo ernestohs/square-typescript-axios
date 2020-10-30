@@ -13,9 +13,9 @@ import { SearchLoyaltyAccountsRequestLoyaltyAccountQuery } from './search-loyalt
 /**
  * A request to search for loyalty accounts.
  * @export
- * @interface SearchLoyaltyAccountsRequest
+ * @class SearchLoyaltyAccountsRequest
  */
-export interface SearchLoyaltyAccountsRequest {
+export declare class SearchLoyaltyAccountsRequest {
     /**
      *
      * @type {SearchLoyaltyAccountsRequestLoyaltyAccountQuery}

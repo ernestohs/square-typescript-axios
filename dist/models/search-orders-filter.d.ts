@@ -17,9 +17,9 @@ import { SearchOrdersStateFilter } from './search-orders-state-filter';
 /**
  * Filtering criteria to use for a SearchOrders request. Multiple filters will be ANDed together.
  * @export
- * @interface SearchOrdersFilter
+ * @class SearchOrdersFilter
  */
-export interface SearchOrdersFilter {
+export declare class SearchOrdersFilter {
     /**
      *
      * @type {SearchOrdersStateFilter}

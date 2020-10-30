@@ -13,9 +13,9 @@ import { LoyaltyReward } from './loyalty-reward';
 /**
  * A response that includes the loyalty reward.
  * @export
- * @interface RetrieveLoyaltyRewardResponse
+ * @class RetrieveLoyaltyRewardResponse
  */
-export interface RetrieveLoyaltyRewardResponse {
+export declare class RetrieveLoyaltyRewardResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

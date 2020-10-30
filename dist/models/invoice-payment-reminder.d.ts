@@ -12,9 +12,9 @@
 /**
  * Describes a payment request reminder (automatic notification) that Square sends to the customer. You configure a reminder relative to the payment request `due_date`.
  * @export
- * @interface InvoicePaymentReminder
+ * @class InvoicePaymentReminder
  */
-export interface InvoicePaymentReminder {
+export declare class InvoicePaymentReminder {
     /**
      * A Square-assigned ID that uniquely identifies the reminder within the `InvoicePaymentRequest`.
      * @type {string}

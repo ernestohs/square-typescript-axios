@@ -13,9 +13,9 @@ import { CatalogObject } from './catalog-object';
 /**
  * Defines the response body returned from the [SearchCatalogItems](#endpoint-Catalog-SearchCatalogItems) endpoint.
  * @export
- * @interface SearchCatalogItemsResponse
+ * @class SearchCatalogItemsResponse
  */
-export interface SearchCatalogItemsResponse {
+export declare class SearchCatalogItemsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

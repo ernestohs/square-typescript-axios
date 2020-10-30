@@ -13,9 +13,9 @@ import { CatalogQuery } from './catalog-query';
 /**
  *
  * @export
- * @interface SearchCatalogObjectsRequest
+ * @class SearchCatalogObjectsRequest
  */
-export interface SearchCatalogObjectsRequest {
+export declare class SearchCatalogObjectsRequest {
     /**
      * The pagination cursor returned in the previous response. Leave unset for an initial request. See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
      * @type {string}

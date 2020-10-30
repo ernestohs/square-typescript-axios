@@ -12,9 +12,9 @@
 /**
  * Filter events by location.
  * @export
- * @interface LoyaltyEventLocationFilter
+ * @class LoyaltyEventLocationFilter
  */
-export interface LoyaltyEventLocationFilter {
+export declare class LoyaltyEventLocationFilter {
     /**
      * The `location` IDs for loyalty events to query. If multiple values are specified, the endpoint uses  a logical OR to combine them.
      * @type {Array<string>}

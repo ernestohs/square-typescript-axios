@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface Device
+ * @class Device
  */
-export interface Device {
+export declare class Device {
     /**
      * The device\'s Square-issued ID.
      * @type {string}

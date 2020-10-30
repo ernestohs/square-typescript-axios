@@ -13,9 +13,9 @@ import { V1Money } from './v1-money';
 /**
  * V1PaymentModifier
  * @export
- * @interface V1PaymentModifier
+ * @class V1PaymentModifier
  */
-export interface V1PaymentModifier {
+export declare class V1PaymentModifier {
     /**
      * The modifier option\'s name.
      * @type {string}

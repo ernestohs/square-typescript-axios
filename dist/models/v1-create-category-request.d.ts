@@ -13,9 +13,9 @@ import { V1Category } from './v1-category';
 /**
  *
  * @export
- * @interface V1CreateCategoryRequest
+ * @class V1CreateCategoryRequest
  */
-export interface V1CreateCategoryRequest {
+export declare class V1CreateCategoryRequest {
     /**
      *
      * @type {V1Category}

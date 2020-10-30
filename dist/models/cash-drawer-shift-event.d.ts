@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  *
  * @export
- * @interface CashDrawerShiftEvent
+ * @class CashDrawerShiftEvent
  */
-export interface CashDrawerShiftEvent {
+export declare class CashDrawerShiftEvent {
     /**
      * The unique ID of the event.
      * @type {string}

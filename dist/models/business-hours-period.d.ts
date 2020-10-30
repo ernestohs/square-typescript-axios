@@ -12,9 +12,9 @@
 /**
  * Represents a period of time during which a business location is open.
  * @export
- * @interface BusinessHoursPeriod
+ * @class BusinessHoursPeriod
  */
-export interface BusinessHoursPeriod {
+export declare class BusinessHoursPeriod {
     /**
      * The day of week for this time period. See [DayOfWeek](#type-dayofweek) for possible values
      * @type {string}

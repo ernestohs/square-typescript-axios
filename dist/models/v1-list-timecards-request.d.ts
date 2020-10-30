@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1ListTimecardsRequest
+ * @class V1ListTimecardsRequest
  */
-export interface V1ListTimecardsRequest {
+export declare class V1ListTimecardsRequest {
     /**
      * The order in which timecards are listed in the response, based on their created_at field. See [SortOrder](#type-sortorder) for possible values
      * @type {string}

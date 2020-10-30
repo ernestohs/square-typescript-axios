@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * A modifier applicable to items at the time of sale.
  * @export
- * @interface CatalogModifier
+ * @class CatalogModifier
  */
-export interface CatalogModifier {
+export declare class CatalogModifier {
     /**
      * The modifier name.  This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
      * @type {string}

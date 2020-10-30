@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface CashDrawerDevice
+ * @class CashDrawerDevice
  */
-export interface CashDrawerDevice {
+export declare class CashDrawerDevice {
     /**
      * The device Square-issued ID
      * @type {string}

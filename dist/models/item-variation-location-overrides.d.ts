@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Price and inventory alerting overrides for a `CatalogItemVariation` at a specific `Location`.
  * @export
- * @interface ItemVariationLocationOverrides
+ * @class ItemVariationLocationOverrides
  */
-export interface ItemVariationLocationOverrides {
+export declare class ItemVariationLocationOverrides {
     /**
      * The ID of the `Location`.
      * @type {string}

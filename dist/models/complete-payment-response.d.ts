@@ -13,9 +13,9 @@ import { Payment } from './payment';
 /**
  * The return value from a [CompletePayment](#endpoint-payments-completepayment) call.
  * @export
- * @interface CompletePaymentResponse
+ * @class CompletePaymentResponse
  */
-export interface CompletePaymentResponse {
+export declare class CompletePaymentResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

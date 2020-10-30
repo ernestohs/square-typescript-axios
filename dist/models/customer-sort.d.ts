@@ -12,9 +12,9 @@
 /**
  * Specifies how searched customers profiles are sorted, including the sort key and sort order.
  * @export
- * @interface CustomerSort
+ * @class CustomerSort
  */
-export interface CustomerSort {
+export declare class CustomerSort {
     /**
      *  Use one or more customer attributes as the sort key to sort searched customer profiles.  For example, use creation date (`created_at`) of customers or default attributes as the sort key.   Default: `DEFAULT`. See [CustomerSortField](#type-customersortfield) for possible values
      * @type {string}

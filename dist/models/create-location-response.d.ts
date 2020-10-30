@@ -13,9 +13,9 @@ import { Location } from './location';
 /**
  * Response object returned by the [CreateLocation](#endpoint-createlocation) endpoint.
  * @export
- * @interface CreateLocationResponse
+ * @class CreateLocationResponse
  */
-export interface CreateLocationResponse {
+export declare class CreateLocationResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

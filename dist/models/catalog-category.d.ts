@@ -12,9 +12,9 @@
 /**
  * A category to which a `CatalogItem` instance belongs.
  * @export
- * @interface CatalogCategory
+ * @class CatalogCategory
  */
-export interface CatalogCategory {
+export declare class CatalogCategory {
     /**
      * The category name. This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
      * @type {string}

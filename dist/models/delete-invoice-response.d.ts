@@ -12,9 +12,9 @@
 /**
  * Describes a `DeleteInvoice` response.
  * @export
- * @interface DeleteInvoiceResponse
+ * @class DeleteInvoiceResponse
  */
-export interface DeleteInvoiceResponse {
+export declare class DeleteInvoiceResponse {
     /**
      * Information about errors encountered during the request.
      * @type {Array<Error>}

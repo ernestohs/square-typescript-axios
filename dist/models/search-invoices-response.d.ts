@@ -13,9 +13,9 @@ import { Invoice } from './invoice';
 /**
  * Describes a `SearchInvoices` response.
  * @export
- * @interface SearchInvoicesResponse
+ * @class SearchInvoicesResponse
  */
-export interface SearchInvoicesResponse {
+export declare class SearchInvoicesResponse {
     /**
      * The list of invoices returned by the search.
      * @type {Array<Invoice>}

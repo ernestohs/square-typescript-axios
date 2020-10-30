@@ -16,9 +16,9 @@ import { TimeRange } from './time-range';
 /**
  * Represents a set of `CustomerQuery` filters used to limit the set of `Customers` returned by `SearchCustomers`.
  * @export
- * @interface CustomerFilter
+ * @class CustomerFilter
  */
-export interface CustomerFilter {
+export declare class CustomerFilter {
     /**
      *
      * @type {CustomerCreationSourceFilter}

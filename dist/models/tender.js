@@ -12,4 +12,89 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tender = void 0;
+var additional_recipient_1 = require("./additional-recipient");
+var money_1 = require("./money");
+var tender_card_details_1 = require("./tender-card-details");
+var tender_cash_details_1 = require("./tender-cash-details");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * Represents a tender (i.e., a method of payment) used in a Square transaction.
+ * @export
+ * @class Tender
+ */
+var Tender = /** @class */ (function () {
+    function Tender() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], Tender.prototype, "id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], Tender.prototype, "location_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], Tender.prototype, "transaction_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], Tender.prototype, "created_at", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], Tender.prototype, "note", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], Tender.prototype, "amount_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], Tender.prototype, "tip_money", void 0);
+    __decorate([
+        graphql_1.Field(function () { return money_1.Money; }),
+        __metadata("design:type", money_1.Money)
+    ], Tender.prototype, "processing_fee_money", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], Tender.prototype, "customer_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], Tender.prototype, "type", void 0);
+    __decorate([
+        graphql_1.Field(function () { return tender_card_details_1.TenderCardDetails; }),
+        __metadata("design:type", tender_card_details_1.TenderCardDetails)
+    ], Tender.prototype, "card_details", void 0);
+    __decorate([
+        graphql_1.Field(function () { return tender_cash_details_1.TenderCashDetails; }),
+        __metadata("design:type", tender_cash_details_1.TenderCashDetails)
+    ], Tender.prototype, "cash_details", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [additional_recipient_1.AdditionalRecipient]; }),
+        __metadata("design:type", Array)
+    ], Tender.prototype, "additional_recipients", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], Tender.prototype, "payment_id", void 0);
+    Tender = __decorate([
+        graphql_1.ObjectType()
+    ], Tender);
+    return Tender;
+}());
+exports.Tender = Tender;

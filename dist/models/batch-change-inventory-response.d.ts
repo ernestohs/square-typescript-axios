@@ -13,9 +13,9 @@ import { InventoryCount } from './inventory-count';
 /**
  *
  * @export
- * @interface BatchChangeInventoryResponse
+ * @class BatchChangeInventoryResponse
  */
-export interface BatchChangeInventoryResponse {
+export declare class BatchChangeInventoryResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

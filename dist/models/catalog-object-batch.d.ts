@@ -13,9 +13,9 @@ import { CatalogObject } from './catalog-object';
 /**
  * A batch of catalog objects.
  * @export
- * @interface CatalogObjectBatch
+ * @class CatalogObjectBatch
  */
-export interface CatalogObjectBatch {
+export declare class CatalogObjectBatch {
     /**
      * A list of CatalogObjects belonging to this batch.
      * @type {Array<CatalogObject>}

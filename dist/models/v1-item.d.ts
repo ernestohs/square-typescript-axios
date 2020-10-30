@@ -17,9 +17,9 @@ import { V1Variation } from './v1-variation';
 /**
  * V1Item
  * @export
- * @interface V1Item
+ * @class V1Item
  */
-export interface V1Item {
+export declare class V1Item {
     /**
      * The item\'s ID. Must be unique among all entity IDs ever provided on behalf of the merchant. You can never reuse an ID. This value can include alphanumeric characters, dashes (-), and underscores (_).
      * @type {string}

@@ -13,9 +13,9 @@ import { LoyaltyEventAdjustPoints } from './loyalty-event-adjust-points';
 /**
  * A request to adjust (add or subtract) points manually.
  * @export
- * @interface AdjustLoyaltyPointsRequest
+ * @class AdjustLoyaltyPointsRequest
  */
-export interface AdjustLoyaltyPointsRequest {
+export declare class AdjustLoyaltyPointsRequest {
     /**
      * A unique string that identifies this `AdjustLoyaltyPoints` request.  Keys can be any valid string, but must be unique for every request.
      * @type {string}

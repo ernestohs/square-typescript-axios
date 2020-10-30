@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents the details of a tender with `type` `CASH`.
  * @export
- * @interface TenderCashDetails
+ * @class TenderCashDetails
  */
-export interface TenderCashDetails {
+export declare class TenderCashDetails {
     /**
      *
      * @type {Money}

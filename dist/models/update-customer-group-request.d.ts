@@ -13,9 +13,9 @@ import { CustomerGroup } from './customer-group';
 /**
  * Defines the body parameters that can be provided in a request to the [UpdateCustomerGroup](#endpoint-updatecustomergroup) endpoint.
  * @export
- * @interface UpdateCustomerGroupRequest
+ * @class UpdateCustomerGroupRequest
  */
-export interface UpdateCustomerGroupRequest {
+export declare class UpdateCustomerGroupRequest {
     /**
      *
      * @type {CustomerGroup}

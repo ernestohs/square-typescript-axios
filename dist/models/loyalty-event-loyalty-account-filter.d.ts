@@ -12,9 +12,9 @@
 /**
  * Filter events by loyalty account.
  * @export
- * @interface LoyaltyEventLoyaltyAccountFilter
+ * @class LoyaltyEventLoyaltyAccountFilter
  */
-export interface LoyaltyEventLoyaltyAccountFilter {
+export declare class LoyaltyEventLoyaltyAccountFilter {
     /**
      * The ID of the `loyalty account` associated with loyalty events.
      * @type {string}

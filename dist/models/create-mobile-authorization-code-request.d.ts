@@ -12,9 +12,9 @@
 /**
  * Defines the body parameters that can be provided in a request to the __CreateMobileAuthorizationCode__ endpoint.
  * @export
- * @interface CreateMobileAuthorizationCodeRequest
+ * @class CreateMobileAuthorizationCodeRequest
  */
-export interface CreateMobileAuthorizationCodeRequest {
+export declare class CreateMobileAuthorizationCodeRequest {
     /**
      * The Square location ID the authorization code should be tied to.
      * @type {string}

@@ -13,9 +13,9 @@ import { CashDrawerShift } from './cash-drawer-shift';
 /**
  *
  * @export
- * @interface RetrieveCashDrawerShiftResponse
+ * @class RetrieveCashDrawerShiftResponse
  */
-export interface RetrieveCashDrawerShiftResponse {
+export declare class RetrieveCashDrawerShiftResponse {
     /**
      *
      * @type {CashDrawerShift}

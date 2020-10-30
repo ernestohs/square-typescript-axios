@@ -13,9 +13,9 @@ import { V1Settlement } from './v1-settlement';
 /**
  *
  * @export
- * @interface V1ListSettlementsResponse
+ * @class V1ListSettlementsResponse
  */
-export interface V1ListSettlementsResponse {
+export declare class V1ListSettlementsResponse {
     /**
      *
      * @type {Array<V1Settlement>}

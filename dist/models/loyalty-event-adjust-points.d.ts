@@ -12,9 +12,9 @@
 /**
  * Provides metadata when the event `type` is `ADJUST_POINTS`.
  * @export
- * @interface LoyaltyEventAdjustPoints
+ * @class LoyaltyEventAdjustPoints
  */
-export interface LoyaltyEventAdjustPoints {
+export declare class LoyaltyEventAdjustPoints {
     /**
      * The Square-assigned ID of the `loyalty program`.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1ListItemsRequest
+ * @class V1ListItemsRequest
  */
-export interface V1ListItemsRequest {
+export declare class V1ListItemsRequest {
     /**
      * A pagination cursor to retrieve the next set of results for your original query to the endpoint.
      * @type {string}

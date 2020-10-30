@@ -12,9 +12,9 @@
 /**
  * An instance of a custom attribute. Custom attributes can be defined and added to `ITEM` and `ITEM_VARIATION` type catalog objects. [Read more about custom attributes](/catalog-api/add-custom-attributes).
  * @export
- * @interface CatalogCustomAttributeValue
+ * @class CatalogCustomAttributeValue
  */
-export interface CatalogCustomAttributeValue {
+export declare class CatalogCustomAttributeValue {
     /**
      * The name of the custom attribute.
      * @type {string}

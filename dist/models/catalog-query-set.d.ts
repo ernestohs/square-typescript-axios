@@ -12,9 +12,9 @@
 /**
  * The query filter to return the search result(s) by exact match of the specified `attribute_name` and any of the `attribute_values`.
  * @export
- * @interface CatalogQuerySet
+ * @class CatalogQuerySet
  */
-export interface CatalogQuerySet {
+export declare class CatalogQuerySet {
     /**
      * The name of the attribute to be searched. Matching of the attribute name is exact.
      * @type {string}

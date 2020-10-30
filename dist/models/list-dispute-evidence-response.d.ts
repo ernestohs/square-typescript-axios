@@ -13,9 +13,9 @@ import { DisputeEvidence } from './dispute-evidence';
 /**
  * Defines fields in a ListDisputeEvidence response.
  * @export
- * @interface ListDisputeEvidenceResponse
+ * @class ListDisputeEvidenceResponse
  */
-export interface ListDisputeEvidenceResponse {
+export declare class ListDisputeEvidenceResponse {
     /**
      * The list of evidence previously uploaded to the specified dispute.
      * @type {Array<DisputeEvidence>}

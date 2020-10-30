@@ -12,9 +12,9 @@
 /**
  * The query expression to specify the key to sort search results.
  * @export
- * @interface CatalogQuerySortedAttribute
+ * @class CatalogQuerySortedAttribute
  */
-export interface CatalogQuerySortedAttribute {
+export declare class CatalogQuerySortedAttribute {
     /**
      * The attribute whose value is used as the sort key.
      * @type {string}

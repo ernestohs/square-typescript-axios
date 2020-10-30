@@ -13,9 +13,9 @@ import { LoyaltyReward } from './loyalty-reward';
 /**
  * A request to create a loyalty reward.
  * @export
- * @interface CreateLoyaltyRewardRequest
+ * @class CreateLoyaltyRewardRequest
  */
-export interface CreateLoyaltyRewardRequest {
+export declare class CreateLoyaltyRewardRequest {
     /**
      *
      * @type {LoyaltyReward}

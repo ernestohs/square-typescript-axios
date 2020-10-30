@@ -13,9 +13,9 @@ import { Order } from './order';
 /**
  * Defines the fields that are included in the response body of a request to the BatchRetrieveOrders endpoint.
  * @export
- * @interface BatchRetrieveOrdersResponse
+ * @class BatchRetrieveOrdersResponse
  */
-export interface BatchRetrieveOrdersResponse {
+export declare class BatchRetrieveOrdersResponse {
     /**
      * The requested orders. This will omit any requested orders that do not exist.
      * @type {Array<Order>}

@@ -14,9 +14,9 @@ import { StandardUnitDescriptionGroup } from './standard-unit-description-group'
 /**
  *
  * @export
- * @interface CatalogInfoResponse
+ * @class CatalogInfoResponse
  */
-export interface CatalogInfoResponse {
+export declare class CatalogInfoResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

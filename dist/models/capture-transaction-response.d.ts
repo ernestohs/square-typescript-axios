@@ -12,9 +12,9 @@
 /**
  * Defines the fields that are included in the response body of a request to the [CaptureTransaction](#endpoint-capturetransaction) endpoint.
  * @export
- * @interface CaptureTransactionResponse
+ * @class CaptureTransactionResponse
  */
-export interface CaptureTransactionResponse {
+export declare class CaptureTransactionResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

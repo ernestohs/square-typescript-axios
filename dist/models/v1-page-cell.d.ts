@@ -12,9 +12,9 @@
 /**
  * V1PageCell
  * @export
- * @interface V1PageCell
+ * @class V1PageCell
  */
-export interface V1PageCell {
+export declare class V1PageCell {
     /**
      * The unique identifier of the page the cell is included on.
      * @type {string}

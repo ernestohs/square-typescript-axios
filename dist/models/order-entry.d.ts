@@ -12,9 +12,9 @@
 /**
  * A lightweight description of an [Order](#type-order) that is returned when `returned_entries` is true on a [SearchOrderRequest](#type-searchorderrequest)
  * @export
- * @interface OrderEntry
+ * @class OrderEntry
  */
-export interface OrderEntry {
+export declare class OrderEntry {
     /**
      * The id of the Order
      * @type {string}

@@ -16,9 +16,9 @@ import { V1Tender } from './v1-tender';
 /**
  * V1Order
  * @export
- * @interface V1Order
+ * @class V1Order
  */
-export interface V1Order {
+export declare class V1Order {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

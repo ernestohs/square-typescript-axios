@@ -15,9 +15,9 @@ import { V1Money } from './v1-money';
 /**
  * Contains details for a single cash drawer shift.
  * @export
- * @interface V1CashDrawerShift
+ * @class V1CashDrawerShift
  */
-export interface V1CashDrawerShift {
+export declare class V1CashDrawerShift {
     /**
      * The shift\'s unique ID.
      * @type {string}

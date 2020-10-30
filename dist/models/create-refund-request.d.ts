@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Defines the body parameters that can be included in a request to the [CreateRefund](#endpoint-createrefund) endpoint.  Deprecated - recommend using [RefundPayment](#endpoint-refunds-refundpayment)
  * @export
- * @interface CreateRefundRequest
+ * @class CreateRefundRequest
  */
-export interface CreateRefundRequest {
+export declare class CreateRefundRequest {
     /**
      * A value you specify that uniquely identifies this refund among refunds you\'ve created for the tender.  If you\'re unsure whether a particular refund succeeded, you can reattempt it with the same idempotency key without worrying about duplicating the refund.  See [Idempotency keys](#idempotencykeys) for more information.
      * @type {string}

@@ -13,9 +13,9 @@ import { UpdateTeamMemberRequest } from './update-team-member-request';
 /**
  * Represents a bulk update request for `TeamMember` objects.
  * @export
- * @interface BulkUpdateTeamMembersRequest
+ * @class BulkUpdateTeamMembersRequest
  */
-export interface BulkUpdateTeamMembersRequest {
+export declare class BulkUpdateTeamMembersRequest {
     /**
      * The data which will be used to update the `TeamMember` objects. Each key is the `team_member_id` that maps to the `UpdateTeamMemberRequest`.
      * @type {{ [key: string]: UpdateTeamMemberRequest; }}

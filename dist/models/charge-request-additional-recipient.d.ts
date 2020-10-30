@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents an additional recipient (other than the merchant) entitled to a portion of the tender. Support is currently limited to USD, CAD and GBP currencies
  * @export
- * @interface ChargeRequestAdditionalRecipient
+ * @class ChargeRequestAdditionalRecipient
  */
-export interface ChargeRequestAdditionalRecipient {
+export declare class ChargeRequestAdditionalRecipient {
     /**
      * The location ID for a recipient (other than the merchant) receiving a portion of the tender.
      * @type {string}

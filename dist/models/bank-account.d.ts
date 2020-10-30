@@ -12,9 +12,9 @@
 /**
  * Represents a bank account. For more information about  linking a bank account to a Square account, see  [Bank Accounts API](/docs/bank-accounts-api).
  * @export
- * @interface BankAccount
+ * @class BankAccount
  */
-export interface BankAccount {
+export declare class BankAccount {
     /**
      * The unique, Square-issued identifier for the bank account.
      * @type {string}

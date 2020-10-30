@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface ObtainTokenRequest
+ * @class ObtainTokenRequest
  */
-export interface ObtainTokenRequest {
+export declare class ObtainTokenRequest {
     /**
      * The Square-issued ID of your application, available from the [application dashboard](https://connect.squareup.com/apps).
      * @type {string}

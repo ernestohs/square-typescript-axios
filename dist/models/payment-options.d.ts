@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface PaymentOptions
+ * @class PaymentOptions
  */
-export interface PaymentOptions {
+export declare class PaymentOptions {
     /**
      * Indicates whether the Payment objects created from this `TerminalCheckout` will automatically be `COMPLETED` or left in an `APPROVED` state for later modification.
      * @type {boolean}

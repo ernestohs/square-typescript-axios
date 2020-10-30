@@ -12,9 +12,9 @@
 /**
  * Defines the fields that are included in the response body of a request to the [RemoveGroupFromCustomer](#endpoint-removegroupfromcustomer) endpoint.
  * @export
- * @interface RemoveGroupFromCustomerResponse
+ * @class RemoveGroupFromCustomerResponse
  */
-export interface RemoveGroupFromCustomerResponse {
+export declare class RemoveGroupFromCustomerResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

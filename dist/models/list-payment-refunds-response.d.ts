@@ -13,9 +13,9 @@ import { PaymentRefund } from './payment-refund';
 /**
  * Defines the fields that are included in the response body of a request to the [ListPaymentRefunds](#endpoint-refunds-listpaymentrefunds) endpoint.  One of `errors` or `refunds` is present in a given response (never both).
  * @export
- * @interface ListPaymentRefundsResponse
+ * @class ListPaymentRefundsResponse
  */
-export interface ListPaymentRefundsResponse {
+export declare class ListPaymentRefundsResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

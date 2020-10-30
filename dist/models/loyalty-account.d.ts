@@ -13,9 +13,9 @@ import { LoyaltyAccountMapping } from './loyalty-account-mapping';
 /**
  * Describes a loyalty account. For more information, see  [Loyalty Overview](/docs/loyalty/overview).
  * @export
- * @interface LoyaltyAccount
+ * @class LoyaltyAccount
  */
-export interface LoyaltyAccount {
+export declare class LoyaltyAccount {
     /**
      * The Square-assigned ID of the loyalty account.
      * @type {string}

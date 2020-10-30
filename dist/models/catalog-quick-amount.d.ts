@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents a Quick Amount in the Catalog.
  * @export
- * @interface CatalogQuickAmount
+ * @class CatalogQuickAmount
  */
-export interface CatalogQuickAmount {
+export declare class CatalogQuickAmount {
     /**
      * Represents the type of the Quick Amount. See [CatalogQuickAmountType](#type-catalogquickamounttype) for possible values
      * @type {string}

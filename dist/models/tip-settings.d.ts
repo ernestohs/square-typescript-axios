@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface TipSettings
+ * @class TipSettings
  */
-export interface TipSettings {
+export declare class TipSettings {
     /**
      * Indicates whether tipping is enabled for this checkout. Defaults to false.
      * @type {boolean}

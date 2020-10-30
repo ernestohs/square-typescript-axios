@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface ListDeviceCodesRequest
+ * @class ListDeviceCodesRequest
  */
-export interface ListDeviceCodesRequest {
+export declare class ListDeviceCodesRequest {
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for your original query.  See [Paginating results](#paginatingresults) for more information.
      * @type {string}

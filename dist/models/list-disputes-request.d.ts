@@ -12,9 +12,9 @@
 /**
  * Defines request parameters for the ListDisputes endpoint.
  * @export
- * @interface ListDisputesRequest
+ * @class ListDisputesRequest
  */
-export interface ListDisputesRequest {
+export declare class ListDisputesRequest {
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for the original query. For more information, see [Paginating](https://developer.squareup.com/docs/basics/api101/pagination).
      * @type {string}

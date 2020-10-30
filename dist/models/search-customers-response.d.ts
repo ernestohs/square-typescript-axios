@@ -13,9 +13,9 @@ import { Customer } from './customer';
 /**
  * Defines the fields that are included in the response body of a request to the SearchCustomers endpoint.  One of `errors` or `customers` is present in a given response (never both).
  * @export
- * @interface SearchCustomersResponse
+ * @class SearchCustomersResponse
  */
-export interface SearchCustomersResponse {
+export declare class SearchCustomersResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

@@ -12,9 +12,9 @@
 /**
  * Represents a physical address.
  * @export
- * @interface Address
+ * @class Address
  */
-export interface Address {
+export declare class Address {
     /**
      * The first line of the address.  Fields that start with `address_line` provide the address\'s most specific details, like street number, street name, and building name. They do *not* provide less specific details like city, state/province, or country (these details are provided in other fields).
      * @type {string}

@@ -1,9 +1,12 @@
+import { Field, ObjectType } from '@nestjs/graphql';
+
 /**
  * {{{description}}}
  * @export
- * @interface {{classname}}
+ * @class {{classname}}
  */
-export interface {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{
+@ObjectType()
+export class {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{
 {{#additionalPropertiesType}}
     [key: string]: {{{additionalPropertiesType}}}{{#hasVars}} | any{{/hasVars}};
 
@@ -17,6 +20,7 @@ export interface {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{
      * @deprecated
     {{/deprecated}}
      */
+    @Field({{^isPrimitiveType}}{{#isListContainer}}() => [{{{complexType}}}]{{/isListContainer}}{{^isListContainer}}{{^isMapContainer}}() => {{{dataType}}}{{/isMapContainer}}{{/isListContainer}}{{/isPrimitiveType}}) 
     {{name}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}};
 {{/vars}}
 }{{#hasEnums}}

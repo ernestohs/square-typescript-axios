@@ -13,9 +13,9 @@ import { WageSetting } from './wage-setting';
 /**
  * Represents a response from a retrieve request, containing the specified `WageSetting` object or error messages.
  * @export
- * @interface RetrieveWageSettingResponse
+ * @class RetrieveWageSettingResponse
  */
-export interface RetrieveWageSettingResponse {
+export declare class RetrieveWageSettingResponse {
     /**
      *
      * @type {WageSetting}

@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents Square processing fee.
  * @export
- * @interface ProcessingFee
+ * @class ProcessingFee
  */
-export interface ProcessingFee {
+export declare class ProcessingFee {
     /**
      * Timestamp of when the fee takes effect, in RFC 3339 format.
      * @type {string}

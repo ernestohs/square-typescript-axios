@@ -13,9 +13,9 @@ import { TeamMember } from './team-member';
 /**
  * Represents a response from a retrieve request, containing a `TeamMember` object or error messages.
  * @export
- * @interface RetrieveTeamMemberResponse
+ * @class RetrieveTeamMemberResponse
  */
-export interface RetrieveTeamMemberResponse {
+export declare class RetrieveTeamMemberResponse {
     /**
      *
      * @type {TeamMember}

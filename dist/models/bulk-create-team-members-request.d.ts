@@ -13,9 +13,9 @@ import { CreateTeamMemberRequest } from './create-team-member-request';
 /**
  * Represents a bulk create request for `TeamMember` objects.
  * @export
- * @interface BulkCreateTeamMembersRequest
+ * @class BulkCreateTeamMembersRequest
  */
-export interface BulkCreateTeamMembersRequest {
+export declare class BulkCreateTeamMembersRequest {
     /**
      * The data which will be used to create the `TeamMember` objects. Each key is the `idempotency_key` that maps to the `CreateTeamMemberRequest`.
      * @type {{ [key: string]: CreateTeamMemberRequest; }}

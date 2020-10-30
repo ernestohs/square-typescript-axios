@@ -12,9 +12,9 @@
 /**
  * Contains some brief information about a Customer Group with its identifier included.
  * @export
- * @interface CustomerGroupInfo
+ * @class CustomerGroupInfo
  */
-export interface CustomerGroupInfo {
+export declare class CustomerGroupInfo {
     /**
      * The ID of the Customer Group.
      * @type {string}

@@ -13,9 +13,9 @@ import { SearchTeamMembersQuery } from './search-team-members-query';
 /**
  * Represents a search request for a filtered list of `TeamMember` objects.
  * @export
- * @interface SearchTeamMembersRequest
+ * @class SearchTeamMembersRequest
  */
-export interface SearchTeamMembersRequest {
+export declare class SearchTeamMembersRequest {
     /**
      *
      * @type {SearchTeamMembersQuery}

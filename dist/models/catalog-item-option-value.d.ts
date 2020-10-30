@@ -12,9 +12,9 @@
 /**
  * An enumerated value that can link a `CatalogItemVariation` to an item option as one of its item option values.
  * @export
- * @interface CatalogItemOptionValue
+ * @class CatalogItemOptionValue
  */
-export interface CatalogItemOptionValue {
+export declare class CatalogItemOptionValue {
     /**
      * Unique ID of the associated item option.
      * @type {string}

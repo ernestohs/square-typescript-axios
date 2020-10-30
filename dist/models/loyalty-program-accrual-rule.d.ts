@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Defines an accrual rule, which is how buyers can earn points.
  * @export
- * @interface LoyaltyProgramAccrualRule
+ * @class LoyaltyProgramAccrualRule
  */
-export interface LoyaltyProgramAccrualRule {
+export declare class LoyaltyProgramAccrualRule {
     /**
      * The type of the accrual rule that defines how buyers can earn points. See [LoyaltyProgramAccrualRuleType](#type-loyaltyprogramaccrualruletype) for possible values
      * @type {string}

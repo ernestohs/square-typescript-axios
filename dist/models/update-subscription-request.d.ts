@@ -13,9 +13,9 @@ import { Subscription } from './subscription';
 /**
  * Defines parameters in a [UpdateSubscription](#endpoint-subscriptions-updatesubscription) endpoint  request.
  * @export
- * @interface UpdateSubscriptionRequest
+ * @class UpdateSubscriptionRequest
  */
-export interface UpdateSubscriptionRequest {
+export declare class UpdateSubscriptionRequest {
     /**
      *
      * @type {Subscription}

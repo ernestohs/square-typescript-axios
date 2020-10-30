@@ -12,9 +12,9 @@
 /**
  * A reference to a Catalog object at a specific version. In general this is used as an entry point into a graph of catalog objects, where the objects exist at a specific version.
  * @export
- * @interface VersionedCatalogObject
+ * @class VersionedCatalogObject
  */
-export interface VersionedCatalogObject {
+export declare class VersionedCatalogObject {
     /**
      * The ID of the referenced object.
      * @type {string}

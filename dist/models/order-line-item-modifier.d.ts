@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * A [CatalogModifier](#type-catalogmodifier).
  * @export
- * @interface OrderLineItemModifier
+ * @class OrderLineItemModifier
  */
-export interface OrderLineItemModifier {
+export declare class OrderLineItemModifier {
     /**
      * Unique ID that identifies the modifier only within this order.
      * @type {string}

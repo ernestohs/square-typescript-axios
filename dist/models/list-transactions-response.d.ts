@@ -13,9 +13,9 @@ import { Transaction } from './transaction';
 /**
  * Defines the fields that are included in the response body of a request to the [ListTransactions](#endpoint-listtransactions) endpoint.  One of `errors` or `transactions` is present in a given response (never both).
  * @export
- * @interface ListTransactionsResponse
+ * @class ListTransactionsResponse
  */
-export interface ListTransactionsResponse {
+export declare class ListTransactionsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

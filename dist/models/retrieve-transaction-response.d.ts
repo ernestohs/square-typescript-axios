@@ -13,9 +13,9 @@ import { Transaction } from './transaction';
 /**
  * Defines the fields that are included in the response body of a request to the [RetrieveTransaction](#endpont-retrievetransaction) endpoint.  One of `errors` or `transaction` is present in a given response (never both).
  * @export
- * @interface RetrieveTransactionResponse
+ * @class RetrieveTransactionResponse
  */
-export interface RetrieveTransactionResponse {
+export declare class RetrieveTransactionResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

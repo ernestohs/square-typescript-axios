@@ -13,9 +13,9 @@ import { LoyaltyEventAccumulatePoints } from './loyalty-event-accumulate-points'
 /**
  * A request to accumulate points for a purchase.
  * @export
- * @interface AccumulateLoyaltyPointsRequest
+ * @class AccumulateLoyaltyPointsRequest
  */
-export interface AccumulateLoyaltyPointsRequest {
+export declare class AccumulateLoyaltyPointsRequest {
     /**
      *
      * @type {LoyaltyEventAccumulatePoints}

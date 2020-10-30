@@ -14,9 +14,9 @@ import { V1SettlementEntry } from './v1-settlement-entry';
 /**
  * V1Settlement
  * @export
- * @interface V1Settlement
+ * @class V1Settlement
  */
-export interface V1Settlement {
+export declare class V1Settlement {
     /**
      * The settlement\'s unique identifier.
      * @type {string}

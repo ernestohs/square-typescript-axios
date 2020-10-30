@@ -13,9 +13,9 @@ import { Customer } from './customer';
 /**
  * Defines the fields that are included in the response body of a request to the ListCustomers endpoint.  One of `errors` or `customers` is present in a given response (never both).
  * @export
- * @interface ListCustomersResponse
+ * @class ListCustomersResponse
  */
-export interface ListCustomersResponse {
+export declare class ListCustomersResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

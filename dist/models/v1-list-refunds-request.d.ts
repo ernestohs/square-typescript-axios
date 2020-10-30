@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface V1ListRefundsRequest
+ * @class V1ListRefundsRequest
  */
-export interface V1ListRefundsRequest {
+export declare class V1ListRefundsRequest {
     /**
      * TThe order in which payments are listed in the response. See [SortOrder](#type-sortorder) for possible values
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  * An image file to use in Square catalogs. It can be associated with catalog items, item variations, and categories.
  * @export
- * @interface CatalogImage
+ * @class CatalogImage
  */
-export interface CatalogImage {
+export declare class CatalogImage {
     /**
      * The internal name to identify this image in calls to the Square API.
      * @type {string}

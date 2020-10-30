@@ -12,9 +12,9 @@
 /**
  * Represents one of a business\'s employees.
  * @export
- * @interface V1Employee
+ * @class V1Employee
  */
-export interface V1Employee {
+export declare class V1Employee {
     /**
      * The employee\'s unique ID.
      * @type {string}

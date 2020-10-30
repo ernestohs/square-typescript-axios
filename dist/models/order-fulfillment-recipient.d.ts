@@ -13,9 +13,9 @@ import { Address } from './address';
 /**
  * Contains information on the recipient of a fulfillment.
  * @export
- * @interface OrderFulfillmentRecipient
+ * @class OrderFulfillmentRecipient
  */
-export interface OrderFulfillmentRecipient {
+export declare class OrderFulfillmentRecipient {
     /**
      * The Customer ID of the customer associated with the fulfillment.  If `customer_id` is provided, the fulfillment recipient\'s `display_name`, `email_address`, and `phone_number` are automatically populated from the targeted customer profile. If these fields are set in the request, the request values will override the information from the customer profile. If the targeted customer profile does not contain the necessary information and these fields are left unset, the request will result in an error.
      * @type {string}

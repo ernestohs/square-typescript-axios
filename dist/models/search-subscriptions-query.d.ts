@@ -13,9 +13,9 @@ import { SearchSubscriptionsFilter } from './search-subscriptions-filter';
 /**
  * Represents a query (including filtering criteria) used to search for subscriptions.
  * @export
- * @interface SearchSubscriptionsQuery
+ * @class SearchSubscriptionsQuery
  */
-export interface SearchSubscriptionsQuery {
+export declare class SearchSubscriptionsQuery {
     /**
      *
      * @type {SearchSubscriptionsFilter}

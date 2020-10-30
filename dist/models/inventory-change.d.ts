@@ -15,9 +15,9 @@ import { InventoryTransfer } from './inventory-transfer';
 /**
  * Represents a single physical count, inventory, adjustment, or transfer that is part of the history of inventory changes for a particular `CatalogObject`.
  * @export
- * @interface InventoryChange
+ * @class InventoryChange
  */
-export interface InventoryChange {
+export declare class InventoryChange {
     /**
      * Indicates how the inventory change was applied. See `InventoryChangeType` for all possible values. See [InventoryChangeType](#type-inventorychangetype) for possible values
      * @type {string}

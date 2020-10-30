@@ -12,9 +12,9 @@
 /**
  * Provides metadata when the event `type` is `EXPIRE_POINTS`.
  * @export
- * @interface LoyaltyEventExpirePoints
+ * @class LoyaltyEventExpirePoints
  */
-export interface LoyaltyEventExpirePoints {
+export declare class LoyaltyEventExpirePoints {
     /**
      * The Square-assigned ID of the `loyalty program`.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  * Describes a `CancelInvoice` request.
  * @export
- * @interface CancelInvoiceRequest
+ * @class CancelInvoiceRequest
  */
-export interface CancelInvoiceRequest {
+export declare class CancelInvoiceRequest {
     /**
      * The version of the `invoice` to cancel. If you do not know the version, you can call  `GetInvoice](#endpoint-Invoices-GetInvoice) or [ListInvoices`.
      * @type {number}

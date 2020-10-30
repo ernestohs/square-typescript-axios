@@ -15,9 +15,9 @@ import { Tender } from './tender';
 /**
  * Represents a transaction processed with Square, either with the Connect API or with Square Point of Sale.  The `tenders` field of this object lists all methods of payment used to pay in the transaction.
  * @export
- * @interface Transaction
+ * @class Transaction
  */
-export interface Transaction {
+export declare class Transaction {
     /**
      * The transaction\'s unique ID, issued by Square payments servers.
      * @type {string}

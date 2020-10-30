@@ -13,9 +13,9 @@ import { TimeRange } from './time-range';
 /**
  * Filter events by date time range.
  * @export
- * @interface LoyaltyEventDateTimeFilter
+ * @class LoyaltyEventDateTimeFilter
  */
-export interface LoyaltyEventDateTimeFilter {
+export declare class LoyaltyEventDateTimeFilter {
     /**
      *
      * @type {TimeRange}

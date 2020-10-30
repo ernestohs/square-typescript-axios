@@ -13,9 +13,9 @@ import { SearchOrdersQuery } from './search-orders-query';
 /**
  * The request does not have any required fields. When given no query criteria, SearchOrders will return all results for all of the merchant’s locations. When fetching additional pages using a `cursor`, the `query` must be equal to the `query` used to fetch the first page of results.
  * @export
- * @interface SearchOrdersRequest
+ * @class SearchOrdersRequest
  */
-export interface SearchOrdersRequest {
+export declare class SearchOrdersRequest {
     /**
      * The location IDs for the orders to query. All locations must belong to the same merchant.  Min: 1 location IDs.  Max: 10 location IDs.
      * @type {Array<string>}

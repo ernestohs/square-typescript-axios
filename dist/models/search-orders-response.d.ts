@@ -14,9 +14,9 @@ import { OrderEntry } from './order-entry';
 /**
  * Only one of `order_entries` or `orders` fields will be set, depending on whether `return_entries` was set on the [SearchOrdersRequest](#type-searchorderrequest).
  * @export
- * @interface SearchOrdersResponse
+ * @class SearchOrdersResponse
  */
-export interface SearchOrdersResponse {
+export declare class SearchOrdersResponse {
     /**
      * List of `OrderEntries` that fit the query conditions. Populated only if `return_entries` was set to `true` in the request.
      * @type {Array<OrderEntry>}

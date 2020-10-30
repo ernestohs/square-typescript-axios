@@ -13,9 +13,9 @@ import { Address } from './address';
 /**
  * Defines the body parameters that can be provided in a request to the CreateCustomer endpoint.
  * @export
- * @interface CreateCustomerRequest
+ * @class CreateCustomerRequest
  */
-export interface CreateCustomerRequest {
+export declare class CreateCustomerRequest {
     /**
      * The idempotency key for the request. See the [Idempotency](https://developer.squareup.com/docs/working-with-apis/idempotency) guide for more information.
      * @type {string}

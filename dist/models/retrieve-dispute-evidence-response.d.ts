@@ -13,9 +13,9 @@ import { DisputeEvidence } from './dispute-evidence';
 /**
  * Defines fields in a RetrieveDisputeEvidence response.
  * @export
- * @interface RetrieveDisputeEvidenceResponse
+ * @class RetrieveDisputeEvidenceResponse
  */
-export interface RetrieveDisputeEvidenceResponse {
+export declare class RetrieveDisputeEvidenceResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

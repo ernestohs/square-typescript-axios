@@ -15,9 +15,9 @@ import { V1PhoneNumber } from './v1-phone-number';
 /**
  * Defines the fields that are included in the response body of a request to the **RetrieveBusiness** endpoint.
  * @export
- * @interface V1Merchant
+ * @class V1Merchant
  */
-export interface V1Merchant {
+export declare class V1Merchant {
     /**
      * The merchant account\'s unique identifier.
      * @type {string}

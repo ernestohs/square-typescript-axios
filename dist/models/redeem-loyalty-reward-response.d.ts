@@ -13,9 +13,9 @@ import { LoyaltyEvent } from './loyalty-event';
 /**
  * A response that includes the `LoyaltyEvent` published for redeeming the reward.
  * @export
- * @interface RedeemLoyaltyRewardResponse
+ * @class RedeemLoyaltyRewardResponse
  */
-export interface RedeemLoyaltyRewardResponse {
+export declare class RedeemLoyaltyRewardResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

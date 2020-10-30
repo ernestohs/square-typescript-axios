@@ -12,4 +12,102 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.V1Item = void 0;
+var v1_category_1 = require("./v1-category");
+var v1_fee_1 = require("./v1-fee");
+var v1_item_image_1 = require("./v1-item-image");
+var v1_modifier_list_1 = require("./v1-modifier-list");
+var v1_variation_1 = require("./v1-variation");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * V1Item
+ * @export
+ * @class V1Item
+ */
+var V1Item = /** @class */ (function () {
+    function V1Item() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "name", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "description", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "type", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "color", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "abbreviation", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "visibility", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], V1Item.prototype, "available_online", void 0);
+    __decorate([
+        graphql_1.Field(function () { return v1_item_image_1.V1ItemImage; }),
+        __metadata("design:type", v1_item_image_1.V1ItemImage)
+    ], V1Item.prototype, "master_image", void 0);
+    __decorate([
+        graphql_1.Field(function () { return v1_category_1.V1Category; }),
+        __metadata("design:type", v1_category_1.V1Category)
+    ], V1Item.prototype, "category", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [v1_variation_1.V1Variation]; }),
+        __metadata("design:type", Array)
+    ], V1Item.prototype, "variations", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [v1_modifier_list_1.V1ModifierList]; }),
+        __metadata("design:type", Array)
+    ], V1Item.prototype, "modifier_lists", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [v1_fee_1.V1Fee]; }),
+        __metadata("design:type", Array)
+    ], V1Item.prototype, "fees", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], V1Item.prototype, "taxable", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "category_id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], V1Item.prototype, "available_for_pickup", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], V1Item.prototype, "v2_id", void 0);
+    V1Item = __decorate([
+        graphql_1.ObjectType()
+    ], V1Item);
+    return V1Item;
+}());
+exports.V1Item = V1Item;

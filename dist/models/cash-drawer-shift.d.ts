@@ -14,9 +14,9 @@ import { Money } from './money';
 /**
  * This model gives the details of a cash drawer shift. The cash_payment_money, cash_refund_money, cash_paid_in_money, and cash_paid_out_money fields are all computed by summing their respective event types.
  * @export
- * @interface CashDrawerShift
+ * @class CashDrawerShift
  */
-export interface CashDrawerShift {
+export declare class CashDrawerShift {
     /**
      * The shift unique ID.
      * @type {string}

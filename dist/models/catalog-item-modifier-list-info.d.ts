@@ -13,9 +13,9 @@ import { CatalogModifierOverride } from './catalog-modifier-override';
 /**
  * Options to control the properties of a `CatalogModifierList` applied to a `CatalogItem` instance.
  * @export
- * @interface CatalogItemModifierListInfo
+ * @class CatalogItemModifierListInfo
  */
-export interface CatalogItemModifierListInfo {
+export declare class CatalogItemModifierListInfo {
     /**
      * The ID of the `CatalogModifierList` controlled by this `CatalogModifierListInfo`.
      * @type {string}

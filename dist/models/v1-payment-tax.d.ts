@@ -13,9 +13,9 @@ import { V1Money } from './v1-money';
 /**
  * V1PaymentTax
  * @export
- * @interface V1PaymentTax
+ * @class V1PaymentTax
  */
-export interface V1PaymentTax {
+export declare class V1PaymentTax {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

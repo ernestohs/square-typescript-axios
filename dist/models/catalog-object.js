@@ -12,4 +12,159 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatalogObject = void 0;
+var catalog_category_1 = require("./catalog-category");
+var catalog_custom_attribute_definition_1 = require("./catalog-custom-attribute-definition");
+var catalog_discount_1 = require("./catalog-discount");
+var catalog_image_1 = require("./catalog-image");
+var catalog_item_1 = require("./catalog-item");
+var catalog_item_option_1 = require("./catalog-item-option");
+var catalog_item_option_value_1 = require("./catalog-item-option-value");
+var catalog_item_variation_1 = require("./catalog-item-variation");
+var catalog_measurement_unit_1 = require("./catalog-measurement-unit");
+var catalog_modifier_1 = require("./catalog-modifier");
+var catalog_modifier_list_1 = require("./catalog-modifier-list");
+var catalog_pricing_rule_1 = require("./catalog-pricing-rule");
+var catalog_product_set_1 = require("./catalog-product-set");
+var catalog_quick_amounts_settings_1 = require("./catalog-quick-amounts-settings");
+var catalog_subscription_plan_1 = require("./catalog-subscription-plan");
+var catalog_tax_1 = require("./catalog-tax");
+var catalog_time_period_1 = require("./catalog-time-period");
+var catalog_v1_id_1 = require("./catalog-v1-id");
+var graphql_1 = require("@nestjs/graphql");
+/**
+ * The wrapper object for the Catalog entries of a given object type.  The type of a particular `CatalogObject` is determined by the value of the `type` attribute and only the corresponding data attribute can be set on the `CatalogObject` instance. For example, the following list shows some instances of `CatalogObject` of a given `type` and their corresponding data atrribute that can be set: - For a `CatalogObject` of the `ITEM` type, set the `item_data` attribute to yield the `CatalogItem` object. - For a `CatalogObject` of the `ITEM_VARIATION` type, set the `item_variation_data` attribute to yield the `CatalogItemVariation` object. - For a `CatalogObject` of the `MODIFIER` type, set the `modifier_data` attribute to yield the `CatalogModifier` object. - For a `CatalogObject` of the `MODIFIER_LIST` type, set the `modifier_list_data` attribute to yield the `CatalogModifierList` object. - For a `CatalogObject` of the `CATEGORY` type, set the `category_data` attribute to yield the `CatalogCategory` object. - For a `CatalogObject` of the `DISCOUNT` type, set the `discount_data` attribute to yield the `CatalogDiscount` object. - For a `CatalogObject` of the `TAX` type, set the `tax_data` attribute to yield the `CatalogTax` object. - For a `CatalogObject` of the `IMAGE` type, set the `image_data` attribute to yield the `CatalogImageData`  object. - For a `CatalogObject` of the `QUICK_AMOUNTS_SETTINGS` type, set the `quick_amounts_settings_data` attribute to yield the `CatalogQuickAmountsSettings` object. - For a `CatalogObject` of the `PRICING_RULE` type, set the `pricing_rule_data` attribute to yield the `CatalogPricingRule` object. - For a `CatalogObject` of the `TIME_PERIOD` type, set the `time_period_data` attribute to yield the `CatalogTimePeriod` object. - For a `CatalogObject` of the `PRODUCT_SET` type, set the `product_set_data` attribute to yield the `CatalogProductSet`  object. - For a `CatalogObject` of the `SUBSCRIPTION_PLAN` type, set the `subscription_plan_data` attribute to yield the `CatalogSubscriptionPlan` object.   For a more detailed discussion of the Catalog data model, please see the [Design a Catalog](/catalog-api/design-a-catalog) guide.
+ * @export
+ * @class CatalogObject
+ */
+var CatalogObject = /** @class */ (function () {
+    function CatalogObject() {
+    }
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogObject.prototype, "type", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogObject.prototype, "id", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogObject.prototype, "updated_at", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Number)
+    ], CatalogObject.prototype, "version", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], CatalogObject.prototype, "is_deleted", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Object)
+    ], CatalogObject.prototype, "custom_attribute_values", void 0);
+    __decorate([
+        graphql_1.Field(function () { return [catalog_v1_id_1.CatalogV1Id]; }),
+        __metadata("design:type", Array)
+    ], CatalogObject.prototype, "catalog_v1_ids", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Boolean)
+    ], CatalogObject.prototype, "present_at_all_locations", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Array)
+    ], CatalogObject.prototype, "present_at_location_ids", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", Array)
+    ], CatalogObject.prototype, "absent_at_location_ids", void 0);
+    __decorate([
+        graphql_1.Field(),
+        __metadata("design:type", String)
+    ], CatalogObject.prototype, "image_id", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_item_1.CatalogItem; }),
+        __metadata("design:type", catalog_item_1.CatalogItem)
+    ], CatalogObject.prototype, "item_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_category_1.CatalogCategory; }),
+        __metadata("design:type", catalog_category_1.CatalogCategory)
+    ], CatalogObject.prototype, "category_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_item_variation_1.CatalogItemVariation; }),
+        __metadata("design:type", catalog_item_variation_1.CatalogItemVariation)
+    ], CatalogObject.prototype, "item_variation_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_tax_1.CatalogTax; }),
+        __metadata("design:type", catalog_tax_1.CatalogTax)
+    ], CatalogObject.prototype, "tax_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_discount_1.CatalogDiscount; }),
+        __metadata("design:type", catalog_discount_1.CatalogDiscount)
+    ], CatalogObject.prototype, "discount_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_modifier_list_1.CatalogModifierList; }),
+        __metadata("design:type", catalog_modifier_list_1.CatalogModifierList)
+    ], CatalogObject.prototype, "modifier_list_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_modifier_1.CatalogModifier; }),
+        __metadata("design:type", catalog_modifier_1.CatalogModifier)
+    ], CatalogObject.prototype, "modifier_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_time_period_1.CatalogTimePeriod; }),
+        __metadata("design:type", catalog_time_period_1.CatalogTimePeriod)
+    ], CatalogObject.prototype, "time_period_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_product_set_1.CatalogProductSet; }),
+        __metadata("design:type", catalog_product_set_1.CatalogProductSet)
+    ], CatalogObject.prototype, "product_set_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_pricing_rule_1.CatalogPricingRule; }),
+        __metadata("design:type", catalog_pricing_rule_1.CatalogPricingRule)
+    ], CatalogObject.prototype, "pricing_rule_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_image_1.CatalogImage; }),
+        __metadata("design:type", catalog_image_1.CatalogImage)
+    ], CatalogObject.prototype, "image_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_measurement_unit_1.CatalogMeasurementUnit; }),
+        __metadata("design:type", catalog_measurement_unit_1.CatalogMeasurementUnit)
+    ], CatalogObject.prototype, "measurement_unit_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_subscription_plan_1.CatalogSubscriptionPlan; }),
+        __metadata("design:type", catalog_subscription_plan_1.CatalogSubscriptionPlan)
+    ], CatalogObject.prototype, "subscription_plan_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_item_option_1.CatalogItemOption; }),
+        __metadata("design:type", catalog_item_option_1.CatalogItemOption)
+    ], CatalogObject.prototype, "item_option_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_item_option_value_1.CatalogItemOptionValue; }),
+        __metadata("design:type", catalog_item_option_value_1.CatalogItemOptionValue)
+    ], CatalogObject.prototype, "item_option_value_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_custom_attribute_definition_1.CatalogCustomAttributeDefinition; }),
+        __metadata("design:type", catalog_custom_attribute_definition_1.CatalogCustomAttributeDefinition)
+    ], CatalogObject.prototype, "custom_attribute_definition_data", void 0);
+    __decorate([
+        graphql_1.Field(function () { return catalog_quick_amounts_settings_1.CatalogQuickAmountsSettings; }),
+        __metadata("design:type", catalog_quick_amounts_settings_1.CatalogQuickAmountsSettings)
+    ], CatalogObject.prototype, "quick_amounts_settings_data", void 0);
+    CatalogObject = __decorate([
+        graphql_1.ObjectType()
+    ], CatalogObject);
+    return CatalogObject;
+}());
+exports.CatalogObject = CatalogObject;

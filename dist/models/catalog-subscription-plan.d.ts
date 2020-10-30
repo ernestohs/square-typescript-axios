@@ -13,9 +13,9 @@ import { SubscriptionPhase } from './subscription-phase';
 /**
  * Describes a subscription plan. For more information, see [Set Up and Manage a Subscription Plan](/docs/subscriptions-api/setup-plan).
  * @export
- * @interface CatalogSubscriptionPlan
+ * @class CatalogSubscriptionPlan
  */
-export interface CatalogSubscriptionPlan {
+export declare class CatalogSubscriptionPlan {
     /**
      * The name of the plan.
      * @type {string}

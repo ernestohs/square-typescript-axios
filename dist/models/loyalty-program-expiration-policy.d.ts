@@ -12,9 +12,9 @@
 /**
  * Describes when the loyalty program expires.
  * @export
- * @interface LoyaltyProgramExpirationPolicy
+ * @class LoyaltyProgramExpirationPolicy
  */
-export interface LoyaltyProgramExpirationPolicy {
+export declare class LoyaltyProgramExpirationPolicy {
     /**
      * The duration of time before points expire, in RFC 3339 format.
      * @type {string}

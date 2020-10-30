@@ -13,9 +13,9 @@ import { V1PageCell } from './v1-page-cell';
 /**
  *
  * @export
- * @interface V1UpdatePageCellRequest
+ * @class V1UpdatePageCellRequest
  */
-export interface V1UpdatePageCellRequest {
+export declare class V1UpdatePageCellRequest {
     /**
      *
      * @type {V1PageCell}

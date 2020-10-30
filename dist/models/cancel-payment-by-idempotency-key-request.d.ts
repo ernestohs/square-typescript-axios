@@ -12,9 +12,9 @@
 /**
  * Specifies the idempotency key of a payment to cancel.
  * @export
- * @interface CancelPaymentByIdempotencyKeyRequest
+ * @class CancelPaymentByIdempotencyKeyRequest
  */
-export interface CancelPaymentByIdempotencyKeyRequest {
+export declare class CancelPaymentByIdempotencyKeyRequest {
     /**
      * The `idempotency_key` identifying the payment to be canceled.
      * @type {string}

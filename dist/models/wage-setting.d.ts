@@ -13,9 +13,9 @@ import { JobAssignment } from './job-assignment';
 /**
  * An object representing a team member\'s wage information.
  * @export
- * @interface WageSetting
+ * @class WageSetting
  */
-export interface WageSetting {
+export declare class WageSetting {
     /**
      * The unique ID of the `TeamMember` whom this wage setting describes.
      * @type {string}

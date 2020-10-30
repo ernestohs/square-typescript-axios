@@ -13,9 +13,9 @@ import { InventoryChange } from './inventory-change';
 /**
  *
  * @export
- * @interface BatchRetrieveInventoryChangesResponse
+ * @class BatchRetrieveInventoryChangesResponse
  */
-export interface BatchRetrieveInventoryChangesResponse {
+export declare class BatchRetrieveInventoryChangesResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

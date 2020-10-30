@@ -12,9 +12,9 @@
 /**
  * Describes a `ListInvoice` request.
  * @export
- * @interface ListInvoicesRequest
+ * @class ListInvoicesRequest
  */
-export interface ListInvoicesRequest {
+export declare class ListInvoicesRequest {
     /**
      * The ID of the location for which to list invoices.
      * @type {string}

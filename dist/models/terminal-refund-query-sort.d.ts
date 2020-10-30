@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface TerminalRefundQuerySort
+ * @class TerminalRefundQuerySort
  */
-export interface TerminalRefundQuerySort {
+export declare class TerminalRefundQuerySort {
     /**
      * The order in which results are listed. - `ASC` - oldest to newest - `DESC` - newest to oldest (default).
      * @type {string}

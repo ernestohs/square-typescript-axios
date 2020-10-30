@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents a customer subscription to a subscription plan. For an overview of the `Subscription` type, see  [Subscription object](/docs/subscriptions-api/overview#subscription-object-overview).
  * @export
- * @interface Subscription
+ * @class Subscription
  */
-export interface Subscription {
+export declare class Subscription {
     /**
      * The Square-assigned ID of the subscription.
      * @type {string}

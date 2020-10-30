@@ -13,9 +13,9 @@ import { CustomerSegment } from './customer-segment';
 /**
  * Defines the fields included in the response body for requests to __RetrieveCustomerSegment__.  One of `errors` or `segment` is present in a given response (never both).
  * @export
- * @interface RetrieveCustomerSegmentResponse
+ * @class RetrieveCustomerSegmentResponse
  */
-export interface RetrieveCustomerSegmentResponse {
+export declare class RetrieveCustomerSegmentResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

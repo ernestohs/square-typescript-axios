@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * A request to calculate the points that a buyer can earn from  a specified purchase.
  * @export
- * @interface CalculateLoyaltyPointsRequest
+ * @class CalculateLoyaltyPointsRequest
  */
-export interface CalculateLoyaltyPointsRequest {
+export declare class CalculateLoyaltyPointsRequest {
     /**
      * The `order` ID for which to calculate the points. Specify this field if your application uses the Orders API to process orders. Otherwise, specify the `transaction_amount`.
      * @type {string}

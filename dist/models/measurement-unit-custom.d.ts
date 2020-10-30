@@ -12,9 +12,9 @@
 /**
  * The information needed to define a custom unit, provided by the seller.
  * @export
- * @interface MeasurementUnitCustom
+ * @class MeasurementUnitCustom
  */
-export interface MeasurementUnitCustom {
+export declare class MeasurementUnitCustom {
     /**
      * The name of the custom unit, for example \"bushel\".
      * @type {string}

@@ -17,9 +17,9 @@ import { OrderReturnLineItemModifier } from './order-return-line-item-modifier';
 /**
  * The line item being returned in an Order.
  * @export
- * @interface OrderReturnLineItem
+ * @class OrderReturnLineItem
  */
-export interface OrderReturnLineItem {
+export declare class OrderReturnLineItem {
     /**
      * Unique identifier for this return line item entry.
      * @type {string}

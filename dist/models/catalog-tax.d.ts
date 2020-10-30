@@ -12,9 +12,9 @@
 /**
  * A tax applicable to an item.
  * @export
- * @interface CatalogTax
+ * @class CatalogTax
  */
-export interface CatalogTax {
+export declare class CatalogTax {
     /**
      * The tax\'s name. This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
      * @type {string}

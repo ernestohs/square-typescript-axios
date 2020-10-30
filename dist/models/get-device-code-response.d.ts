@@ -13,9 +13,9 @@ import { DeviceCode } from './device-code';
 /**
  *
  * @export
- * @interface GetDeviceCodeResponse
+ * @class GetDeviceCodeResponse
  */
-export interface GetDeviceCodeResponse {
+export declare class GetDeviceCodeResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

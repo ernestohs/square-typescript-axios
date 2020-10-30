@@ -13,9 +13,9 @@ import { Dispute } from './dispute';
 /**
  * Defines fields in a SubmitEvidence response.
  * @export
- * @interface SubmitEvidenceResponse
+ * @class SubmitEvidenceResponse
  */
-export interface SubmitEvidenceResponse {
+export declare class SubmitEvidenceResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}

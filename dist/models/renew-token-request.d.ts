@@ -12,9 +12,9 @@
 /**
  *
  * @export
- * @interface RenewTokenRequest
+ * @class RenewTokenRequest
  */
-export interface RenewTokenRequest {
+export declare class RenewTokenRequest {
     /**
      * The token you want to renew.
      * @type {string}

@@ -12,9 +12,9 @@
 /**
  * Identifies the  sort field and sort order.
  * @export
- * @interface InvoiceSort
+ * @class InvoiceSort
  */
-export interface InvoiceSort {
+export declare class InvoiceSort {
     /**
      * The field to sort on. See [InvoiceSortField](#type-invoicesortfield) for possible values
      * @type {string}

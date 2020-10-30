@@ -13,9 +13,9 @@ import { Money } from './money';
 /**
  * Represents a discount that applies to one or more line items in an order.  Fixed-amount, order-scoped discounts are distributed across all non-zero line item totals. The amount distributed to each line item is relative to the amount contributed by the item to the order subtotal.
  * @export
- * @interface OrderLineItemDiscount
+ * @class OrderLineItemDiscount
  */
-export interface OrderLineItemDiscount {
+export declare class OrderLineItemDiscount {
     /**
      * Unique ID that identifies the discount only within this order.
      * @type {string}

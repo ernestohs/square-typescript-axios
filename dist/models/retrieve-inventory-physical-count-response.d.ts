@@ -13,9 +13,9 @@ import { InventoryPhysicalCount } from './inventory-physical-count';
 /**
  *
  * @export
- * @interface RetrieveInventoryPhysicalCountResponse
+ * @class RetrieveInventoryPhysicalCountResponse
  */
-export interface RetrieveInventoryPhysicalCountResponse {
+export declare class RetrieveInventoryPhysicalCountResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

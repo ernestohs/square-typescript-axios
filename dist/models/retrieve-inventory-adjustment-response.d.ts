@@ -13,9 +13,9 @@ import { InventoryAdjustment } from './inventory-adjustment';
 /**
  *
  * @export
- * @interface RetrieveInventoryAdjustmentResponse
+ * @class RetrieveInventoryAdjustmentResponse
  */
-export interface RetrieveInventoryAdjustmentResponse {
+export declare class RetrieveInventoryAdjustmentResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

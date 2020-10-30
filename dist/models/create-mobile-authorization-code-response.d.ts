@@ -12,9 +12,9 @@
 /**
  * Defines the fields that are included in the response body of a request to the __CreateMobileAuthorizationCode__ endpoint.
  * @export
- * @interface CreateMobileAuthorizationCodeResponse
+ * @class CreateMobileAuthorizationCodeResponse
  */
-export interface CreateMobileAuthorizationCodeResponse {
+export declare class CreateMobileAuthorizationCodeResponse {
     /**
      * Generated authorization code that connects a mobile application instance to a Square account.
      * @type {string}

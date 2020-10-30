@@ -12,9 +12,9 @@
 /**
  * Provides metadata when the event `type` is `OTHER`.
  * @export
- * @interface LoyaltyEventOther
+ * @class LoyaltyEventOther
  */
-export interface LoyaltyEventOther {
+export declare class LoyaltyEventOther {
     /**
      * The Square-assigned ID of the `loyalty program`.
      * @type {string}

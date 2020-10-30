@@ -13,9 +13,9 @@ import { LoyaltyAccount } from './loyalty-account';
 /**
  * A response that includes loyalty accounts that satisfy the search criteria.
  * @export
- * @interface SearchLoyaltyAccountsResponse
+ * @class SearchLoyaltyAccountsResponse
  */
-export interface SearchLoyaltyAccountsResponse {
+export declare class SearchLoyaltyAccountsResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

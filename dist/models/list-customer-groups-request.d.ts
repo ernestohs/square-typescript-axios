@@ -12,9 +12,9 @@
 /**
  * Defines the query parameters that can be provided in a request to the [ListCustomerGroups](#endpoint-listcustomergroups) endpoint.
  * @export
- * @interface ListCustomerGroupsRequest
+ * @class ListCustomerGroupsRequest
  */
-export interface ListCustomerGroupsRequest {
+export declare class ListCustomerGroupsRequest {
     /**
      * A pagination cursor returned by a previous call to this endpoint. Provide this to retrieve the next set of results for your original query.  See the [Pagination guide](https://developer.squareup.com/docs/working-with-apis/pagination) for more information.
      * @type {string}

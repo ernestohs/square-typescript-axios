@@ -13,9 +13,9 @@ import { Card } from './card';
 /**
  * Defines the fields that are included in the response body of a request to the CreateCustomerCard endpoint.  One of `errors` or `card` is present in a given response (never both).
  * @export
- * @interface CreateCustomerCardResponse
+ * @class CreateCustomerCardResponse
  */
-export interface CreateCustomerCardResponse {
+export declare class CreateCustomerCardResponse {
     /**
      * Any errors that occurred during the request.
      * @type {Array<Error>}

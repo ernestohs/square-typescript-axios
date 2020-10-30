@@ -12,9 +12,9 @@
 /**
  * The set of search requirements.
  * @export
- * @interface SearchLoyaltyRewardsRequestLoyaltyRewardQuery
+ * @class SearchLoyaltyRewardsRequestLoyaltyRewardQuery
  */
-export interface SearchLoyaltyRewardsRequestLoyaltyRewardQuery {
+export declare class SearchLoyaltyRewardsRequestLoyaltyRewardQuery {
     /**
      * The ID of the `loyalty account` to which the loyalty reward belongs.
      * @type {string}

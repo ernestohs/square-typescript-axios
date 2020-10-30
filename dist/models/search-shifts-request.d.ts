@@ -13,9 +13,9 @@ import { ShiftQuery } from './shift-query';
 /**
  * A request for a filtered and sorted set of `Shift` objects.
  * @export
- * @interface SearchShiftsRequest
+ * @class SearchShiftsRequest
  */
-export interface SearchShiftsRequest {
+export declare class SearchShiftsRequest {
     /**
      *
      * @type {ShiftQuery}

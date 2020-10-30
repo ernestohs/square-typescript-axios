@@ -13,9 +13,9 @@ import { Location } from './location';
 /**
  * Defines the fields that the [RetrieveLocation](#endpoint-retrievelocation) endpoint returns in a response.
  * @export
- * @interface RetrieveLocationResponse
+ * @class RetrieveLocationResponse
  */
-export interface RetrieveLocationResponse {
+export declare class RetrieveLocationResponse {
     /**
      * Information on errors encountered during the request.
      * @type {Array<Error>}
