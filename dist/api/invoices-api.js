@@ -1,5 +1,6 @@
 "use strict";
-// tslint:disable
+/* tslint:disable */
+/* eslint-disable */
 /**
  * Square Connect API
  * Client library for accessing the Square Connect APIs
@@ -73,7 +74,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InvoicesApi = exports.InvoicesApiFactory = exports.InvoicesApiFp = exports.InvoicesApiAxiosParamCreator = void 0;
-var globalImportUrl = require("url");
 var axios_1 = require("axios");
 // Some imports not used depending on template conditions
 // @ts-ignore
@@ -96,45 +96,60 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
         cancelInvoice: function (invoiceId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'invoiceId' is not null or undefined
-                    if (invoiceId === null || invoiceId === undefined) {
-                        throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling cancelInvoice.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'invoiceId' is not null or undefined
+                            if (invoiceId === null || invoiceId === undefined) {
+                                throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling cancelInvoice.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling cancelInvoice.');
+                            }
+                            localVarPath = "/v2/invoices/{invoice_id}/cancel"
+                                .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling cancelInvoice.');
-                    }
-                    localVarPath = "/v2/invoices/{invoice_id}/cancel"
-                        .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -148,40 +163,55 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
         createInvoice: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createInvoice.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createInvoice.');
+                            }
+                            localVarPath = "/v2/invoices";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/invoices";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -196,41 +226,56 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
         deleteInvoice: function (invoiceId, version, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'invoiceId' is not null or undefined
-                    if (invoiceId === null || invoiceId === undefined) {
-                        throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling deleteInvoice.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'invoiceId' is not null or undefined
+                            if (invoiceId === null || invoiceId === undefined) {
+                                throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling deleteInvoice.');
+                            }
+                            localVarPath = "/v2/invoices/{invoice_id}"
+                                .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            if (version !== undefined) {
+                                localVarQueryParameter['version'] = version;
+                            }
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/invoices/{invoice_id}"
-                        .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    if (version !== undefined) {
-                        localVarQueryParameter['version'] = version;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -244,38 +289,53 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
         getInvoice: function (invoiceId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'invoiceId' is not null or undefined
-                    if (invoiceId === null || invoiceId === undefined) {
-                        throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling getInvoice.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'invoiceId' is not null or undefined
+                            if (invoiceId === null || invoiceId === undefined) {
+                                throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling getInvoice.');
+                            }
+                            localVarPath = "/v2/invoices/{invoice_id}"
+                                .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["INVOICES_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/invoices/{invoice_id}"
-                        .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["INVOICES_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -291,46 +351,61 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
         listInvoices: function (locationId, cursor, limit, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listInvoices.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listInvoices.');
+                            }
+                            localVarPath = "/v2/invoices";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["INVOICES_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            if (locationId !== undefined) {
+                                localVarQueryParameter['location_id'] = locationId;
+                            }
+                            if (cursor !== undefined) {
+                                localVarQueryParameter['cursor'] = cursor;
+                            }
+                            if (limit !== undefined) {
+                                localVarQueryParameter['limit'] = limit;
+                            }
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/invoices";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["INVOICES_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    if (locationId !== undefined) {
-                        localVarQueryParameter['location_id'] = locationId;
-                    }
-                    if (cursor !== undefined) {
-                        localVarQueryParameter['cursor'] = cursor;
-                    }
-                    if (limit !== undefined) {
-                        localVarQueryParameter['limit'] = limit;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -345,45 +420,60 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
         publishInvoice: function (invoiceId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'invoiceId' is not null or undefined
-                    if (invoiceId === null || invoiceId === undefined) {
-                        throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling publishInvoice.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'invoiceId' is not null or undefined
+                            if (invoiceId === null || invoiceId === undefined) {
+                                throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling publishInvoice.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling publishInvoice.');
+                            }
+                            localVarPath = "/v2/invoices/{invoice_id}/publish"
+                                .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling publishInvoice.');
-                    }
-                    localVarPath = "/v2/invoices/{invoice_id}/publish"
-                        .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -397,40 +487,55 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
         searchInvoices: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchInvoices.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchInvoices.');
+                            }
+                            localVarPath = "/v2/invoices/search";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["INVOICES_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/invoices/search";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["INVOICES_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -445,45 +550,60 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
         updateInvoice: function (invoiceId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'invoiceId' is not null or undefined
-                    if (invoiceId === null || invoiceId === undefined) {
-                        throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling updateInvoice.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'invoiceId' is not null or undefined
+                            if (invoiceId === null || invoiceId === undefined) {
+                                throw new base_1.RequiredError('invoiceId', 'Required parameter invoiceId was null or undefined when calling updateInvoice.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateInvoice.');
+                            }
+                            localVarPath = "/v2/invoices/{invoice_id}"
+                                .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateInvoice.');
-                    }
-                    localVarPath = "/v2/invoices/{invoice_id}"
-                        .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ORDERS_WRITE", "INVOICES_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },

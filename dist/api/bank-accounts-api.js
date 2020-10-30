@@ -1,5 +1,6 @@
 "use strict";
-// tslint:disable
+/* tslint:disable */
+/* eslint-disable */
 /**
  * Square Connect API
  * Client library for accessing the Square Connect APIs
@@ -73,7 +74,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BankAccountsApi = exports.BankAccountsApiFactory = exports.BankAccountsApiFp = exports.BankAccountsApiAxiosParamCreator = void 0;
-var globalImportUrl = require("url");
 var axios_1 = require("axios");
 // Some imports not used depending on template conditions
 // @ts-ignore
@@ -95,38 +95,53 @@ exports.BankAccountsApiAxiosParamCreator = function (configuration) {
         getBankAccount: function (bankAccountId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'bankAccountId' is not null or undefined
-                    if (bankAccountId === null || bankAccountId === undefined) {
-                        throw new base_1.RequiredError('bankAccountId', 'Required parameter bankAccountId was null or undefined when calling getBankAccount.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'bankAccountId' is not null or undefined
+                            if (bankAccountId === null || bankAccountId === undefined) {
+                                throw new base_1.RequiredError('bankAccountId', 'Required parameter bankAccountId was null or undefined when calling getBankAccount.');
+                            }
+                            localVarPath = "/v2/bank-accounts/{bank_account_id}"
+                                .replace("{" + "bank_account_id" + "}", encodeURIComponent(String(bankAccountId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["BANK_ACCOUNTS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/bank-accounts/{bank_account_id}"
-                        .replace("{" + "bank_account_id" + "}", encodeURIComponent(String(bankAccountId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["BANK_ACCOUNTS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -140,38 +155,53 @@ exports.BankAccountsApiAxiosParamCreator = function (configuration) {
         getBankAccountByV1Id: function (v1BankAccountId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'v1BankAccountId' is not null or undefined
-                    if (v1BankAccountId === null || v1BankAccountId === undefined) {
-                        throw new base_1.RequiredError('v1BankAccountId', 'Required parameter v1BankAccountId was null or undefined when calling getBankAccountByV1Id.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'v1BankAccountId' is not null or undefined
+                            if (v1BankAccountId === null || v1BankAccountId === undefined) {
+                                throw new base_1.RequiredError('v1BankAccountId', 'Required parameter v1BankAccountId was null or undefined when calling getBankAccountByV1Id.');
+                            }
+                            localVarPath = "/v2/bank-accounts/by-v1-id/{v1_bank_account_id}"
+                                .replace("{" + "v1_bank_account_id" + "}", encodeURIComponent(String(v1BankAccountId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["BANK_ACCOUNTS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/bank-accounts/by-v1-id/{v1_bank_account_id}"
-                        .replace("{" + "v1_bank_account_id" + "}", encodeURIComponent(String(v1BankAccountId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["BANK_ACCOUNTS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -187,42 +217,57 @@ exports.BankAccountsApiAxiosParamCreator = function (configuration) {
         listBankAccounts: function (cursor, limit, locationId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    localVarPath = "/v2/bank-accounts";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            localVarPath = "/v2/bank-accounts";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["BANK_ACCOUNTS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            if (cursor !== undefined) {
+                                localVarQueryParameter['cursor'] = cursor;
+                            }
+                            if (limit !== undefined) {
+                                localVarQueryParameter['limit'] = limit;
+                            }
+                            if (locationId !== undefined) {
+                                localVarQueryParameter['location_id'] = locationId;
+                            }
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["BANK_ACCOUNTS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    if (cursor !== undefined) {
-                        localVarQueryParameter['cursor'] = cursor;
-                    }
-                    if (limit !== undefined) {
-                        localVarQueryParameter['limit'] = limit;
-                    }
-                    if (locationId !== undefined) {
-                        localVarQueryParameter['location_id'] = locationId;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },

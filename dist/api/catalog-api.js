@@ -1,5 +1,6 @@
 "use strict";
-// tslint:disable
+/* tslint:disable */
+/* eslint-disable */
 /**
  * Square Connect API
  * Client library for accessing the Square Connect APIs
@@ -73,7 +74,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatalogApi = exports.CatalogApiFactory = exports.CatalogApiFp = exports.CatalogApiAxiosParamCreator = void 0;
-var globalImportUrl = require("url");
 var axios_1 = require("axios");
 // Some imports not used depending on template conditions
 // @ts-ignore
@@ -95,40 +95,55 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         batchDeleteCatalogObjects: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchDeleteCatalogObjects.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchDeleteCatalogObjects.');
+                            }
+                            localVarPath = "/v2/catalog/batch-delete";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/batch-delete";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -142,40 +157,55 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         batchRetrieveCatalogObjects: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchRetrieveCatalogObjects.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchRetrieveCatalogObjects.');
+                            }
+                            localVarPath = "/v2/catalog/batch-retrieve";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/batch-retrieve";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -189,40 +219,55 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         batchUpsertCatalogObjects: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchUpsertCatalogObjects.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchUpsertCatalogObjects.');
+                            }
+                            localVarPath = "/v2/catalog/batch-upsert";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/batch-upsert";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -235,33 +280,48 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         catalogInfo: function (options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    localVarPath = "/v2/catalog/info";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            localVarPath = "/v2/catalog/info";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -275,38 +335,53 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         deleteCatalogObject: function (objectId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'objectId' is not null or undefined
-                    if (objectId === null || objectId === undefined) {
-                        throw new base_1.RequiredError('objectId', 'Required parameter objectId was null or undefined when calling deleteCatalogObject.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'objectId' is not null or undefined
+                            if (objectId === null || objectId === undefined) {
+                                throw new base_1.RequiredError('objectId', 'Required parameter objectId was null or undefined when calling deleteCatalogObject.');
+                            }
+                            localVarPath = "/v2/catalog/object/{object_id}"
+                                .replace("{" + "object_id" + "}", encodeURIComponent(String(objectId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/object/{object_id}"
-                        .replace("{" + "object_id" + "}", encodeURIComponent(String(objectId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -321,39 +396,54 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         listCatalog: function (cursor, types, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    localVarPath = "/v2/catalog/list";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            localVarPath = "/v2/catalog/list";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            if (cursor !== undefined) {
+                                localVarQueryParameter['cursor'] = cursor;
+                            }
+                            if (types !== undefined) {
+                                localVarQueryParameter['types'] = types;
+                            }
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    if (cursor !== undefined) {
-                        localVarQueryParameter['cursor'] = cursor;
-                    }
-                    if (types !== undefined) {
-                        localVarQueryParameter['types'] = types;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -368,41 +458,56 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         retrieveCatalogObject: function (objectId, includeRelatedObjects, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'objectId' is not null or undefined
-                    if (objectId === null || objectId === undefined) {
-                        throw new base_1.RequiredError('objectId', 'Required parameter objectId was null or undefined when calling retrieveCatalogObject.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'objectId' is not null or undefined
+                            if (objectId === null || objectId === undefined) {
+                                throw new base_1.RequiredError('objectId', 'Required parameter objectId was null or undefined when calling retrieveCatalogObject.');
+                            }
+                            localVarPath = "/v2/catalog/object/{object_id}"
+                                .replace("{" + "object_id" + "}", encodeURIComponent(String(objectId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            if (includeRelatedObjects !== undefined) {
+                                localVarQueryParameter['include_related_objects'] = includeRelatedObjects;
+                            }
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/object/{object_id}"
-                        .replace("{" + "object_id" + "}", encodeURIComponent(String(objectId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    if (includeRelatedObjects !== undefined) {
-                        localVarQueryParameter['include_related_objects'] = includeRelatedObjects;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -416,40 +521,55 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         searchCatalogItems: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchCatalogItems.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchCatalogItems.');
+                            }
+                            localVarPath = "/v2/catalog/search-catalog-items";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/search-catalog-items";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -463,40 +583,55 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         searchCatalogObjects: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchCatalogObjects.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchCatalogObjects.');
+                            }
+                            localVarPath = "/v2/catalog/search";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/search";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -510,40 +645,55 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         updateItemModifierLists: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateItemModifierLists.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateItemModifierLists.');
+                            }
+                            localVarPath = "/v2/catalog/update-item-modifier-lists";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/update-item-modifier-lists";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -557,40 +707,55 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         updateItemTaxes: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateItemTaxes.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateItemTaxes.');
+                            }
+                            localVarPath = "/v2/catalog/update-item-taxes";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/update-item-taxes";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -604,40 +769,55 @@ exports.CatalogApiAxiosParamCreator = function (configuration) {
         upsertCatalogObject: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling upsertCatalogObject.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling upsertCatalogObject.');
+                            }
+                            localVarPath = "/v2/catalog/object";
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v2/catalog/object";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },

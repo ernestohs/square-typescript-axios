@@ -1,5 +1,6 @@
 "use strict";
-// tslint:disable
+/* tslint:disable */
+/* eslint-disable */
 /**
  * Square Connect API
  * Client library for accessing the Square Connect APIs
@@ -73,7 +74,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.V1ItemsApi = exports.V1ItemsApiFactory = exports.V1ItemsApiFp = exports.V1ItemsApiAxiosParamCreator = void 0;
-var globalImportUrl = require("url");
 var axios_1 = require("axios");
 // Some imports not used depending on template conditions
 // @ts-ignore
@@ -97,50 +97,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         adjustInventory: function (locationId, variationId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling adjustInventory.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling adjustInventory.');
+                            }
+                            // verify required parameter 'variationId' is not null or undefined
+                            if (variationId === null || variationId === undefined) {
+                                throw new base_1.RequiredError('variationId', 'Required parameter variationId was null or undefined when calling adjustInventory.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling adjustInventory.');
+                            }
+                            localVarPath = "/v1/{location_id}/inventory/{variation_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'variationId' is not null or undefined
-                    if (variationId === null || variationId === undefined) {
-                        throw new base_1.RequiredError('variationId', 'Required parameter variationId was null or undefined when calling adjustInventory.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling adjustInventory.');
-                    }
-                    localVarPath = "/v1/{location_id}/inventory/{variation_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -156,48 +171,63 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         applyFee: function (locationId, itemId, feeId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling applyFee.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling applyFee.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling applyFee.');
+                            }
+                            // verify required parameter 'feeId' is not null or undefined
+                            if (feeId === null || feeId === undefined) {
+                                throw new base_1.RequiredError('feeId', 'Required parameter feeId was null or undefined when calling applyFee.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}/fees/{fee_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
+                                .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling applyFee.');
-                    }
-                    // verify required parameter 'feeId' is not null or undefined
-                    if (feeId === null || feeId === undefined) {
-                        throw new base_1.RequiredError('feeId', 'Required parameter feeId was null or undefined when calling applyFee.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}/fees/{fee_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
-                        .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -213,48 +243,63 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         applyModifierList: function (locationId, modifierListId, itemId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling applyModifierList.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling applyModifierList.');
+                            }
+                            // verify required parameter 'modifierListId' is not null or undefined
+                            if (modifierListId === null || modifierListId === undefined) {
+                                throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling applyModifierList.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling applyModifierList.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}/modifier-lists/{modifier_list_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'modifierListId' is not null or undefined
-                    if (modifierListId === null || modifierListId === undefined) {
-                        throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling applyModifierList.');
-                    }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling applyModifierList.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}/modifier-lists/{modifier_list_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -269,45 +314,60 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         createCategory: function (locationId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createCategory.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createCategory.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createCategory.');
+                            }
+                            localVarPath = "/v1/{location_id}/categories"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createCategory.');
-                    }
-                    localVarPath = "/v1/{location_id}/categories"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -322,45 +382,60 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         createDiscount: function (locationId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createDiscount.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createDiscount.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createDiscount.');
+                            }
+                            localVarPath = "/v1/{location_id}/discounts"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createDiscount.');
-                    }
-                    localVarPath = "/v1/{location_id}/discounts"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -375,45 +450,60 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         createFee: function (locationId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createFee.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createFee.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createFee.');
+                            }
+                            localVarPath = "/v1/{location_id}/fees"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createFee.');
-                    }
-                    localVarPath = "/v1/{location_id}/fees"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -428,45 +518,60 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         createItem: function (locationId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createItem.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createItem.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createItem.');
+                            }
+                            localVarPath = "/v1/{location_id}/items"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createItem.');
-                    }
-                    localVarPath = "/v1/{location_id}/items"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -481,45 +586,60 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         createModifierList: function (locationId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createModifierList.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createModifierList.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createModifierList.');
+                            }
+                            localVarPath = "/v1/{location_id}/modifier-lists"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createModifierList.');
-                    }
-                    localVarPath = "/v1/{location_id}/modifier-lists"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -535,50 +655,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         createModifierOption: function (locationId, modifierListId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createModifierOption.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createModifierOption.');
+                            }
+                            // verify required parameter 'modifierListId' is not null or undefined
+                            if (modifierListId === null || modifierListId === undefined) {
+                                throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling createModifierOption.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createModifierOption.');
+                            }
+                            localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}/modifier-options"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'modifierListId' is not null or undefined
-                    if (modifierListId === null || modifierListId === undefined) {
-                        throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling createModifierOption.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createModifierOption.');
-                    }
-                    localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}/modifier-options"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -593,45 +728,60 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         createPage: function (locationId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createPage.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createPage.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createPage.');
+                            }
+                            localVarPath = "/v1/{location_id}/pages"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createPage.');
-                    }
-                    localVarPath = "/v1/{location_id}/pages"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -647,50 +797,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         createVariation: function (locationId, itemId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createVariation.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling createVariation.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling createVariation.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createVariation.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}/variations"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling createVariation.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createVariation.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}/variations"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -705,43 +870,58 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deleteCategory: function (locationId, categoryId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteCategory.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteCategory.');
+                            }
+                            // verify required parameter 'categoryId' is not null or undefined
+                            if (categoryId === null || categoryId === undefined) {
+                                throw new base_1.RequiredError('categoryId', 'Required parameter categoryId was null or undefined when calling deleteCategory.');
+                            }
+                            localVarPath = "/v1/{location_id}/categories/{category_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "category_id" + "}", encodeURIComponent(String(categoryId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'categoryId' is not null or undefined
-                    if (categoryId === null || categoryId === undefined) {
-                        throw new base_1.RequiredError('categoryId', 'Required parameter categoryId was null or undefined when calling deleteCategory.');
-                    }
-                    localVarPath = "/v1/{location_id}/categories/{category_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "category_id" + "}", encodeURIComponent(String(categoryId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -756,43 +936,58 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deleteDiscount: function (locationId, discountId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteDiscount.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteDiscount.');
+                            }
+                            // verify required parameter 'discountId' is not null or undefined
+                            if (discountId === null || discountId === undefined) {
+                                throw new base_1.RequiredError('discountId', 'Required parameter discountId was null or undefined when calling deleteDiscount.');
+                            }
+                            localVarPath = "/v1/{location_id}/discounts/{discount_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "discount_id" + "}", encodeURIComponent(String(discountId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'discountId' is not null or undefined
-                    if (discountId === null || discountId === undefined) {
-                        throw new base_1.RequiredError('discountId', 'Required parameter discountId was null or undefined when calling deleteDiscount.');
-                    }
-                    localVarPath = "/v1/{location_id}/discounts/{discount_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "discount_id" + "}", encodeURIComponent(String(discountId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -807,43 +1002,58 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deleteFee: function (locationId, feeId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteFee.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteFee.');
+                            }
+                            // verify required parameter 'feeId' is not null or undefined
+                            if (feeId === null || feeId === undefined) {
+                                throw new base_1.RequiredError('feeId', 'Required parameter feeId was null or undefined when calling deleteFee.');
+                            }
+                            localVarPath = "/v1/{location_id}/fees/{fee_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'feeId' is not null or undefined
-                    if (feeId === null || feeId === undefined) {
-                        throw new base_1.RequiredError('feeId', 'Required parameter feeId was null or undefined when calling deleteFee.');
-                    }
-                    localVarPath = "/v1/{location_id}/fees/{fee_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -858,43 +1068,58 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deleteItem: function (locationId, itemId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteItem.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteItem.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling deleteItem.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling deleteItem.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -909,43 +1134,58 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deleteModifierList: function (locationId, modifierListId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteModifierList.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteModifierList.');
+                            }
+                            // verify required parameter 'modifierListId' is not null or undefined
+                            if (modifierListId === null || modifierListId === undefined) {
+                                throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling deleteModifierList.');
+                            }
+                            localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'modifierListId' is not null or undefined
-                    if (modifierListId === null || modifierListId === undefined) {
-                        throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling deleteModifierList.');
-                    }
-                    localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -961,48 +1201,63 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deleteModifierOption: function (locationId, modifierListId, modifierOptionId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteModifierOption.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteModifierOption.');
+                            }
+                            // verify required parameter 'modifierListId' is not null or undefined
+                            if (modifierListId === null || modifierListId === undefined) {
+                                throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling deleteModifierOption.');
+                            }
+                            // verify required parameter 'modifierOptionId' is not null or undefined
+                            if (modifierOptionId === null || modifierOptionId === undefined) {
+                                throw new base_1.RequiredError('modifierOptionId', 'Required parameter modifierOptionId was null or undefined when calling deleteModifierOption.');
+                            }
+                            localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}/modifier-options/{modifier_option_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
+                                .replace("{" + "modifier_option_id" + "}", encodeURIComponent(String(modifierOptionId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'modifierListId' is not null or undefined
-                    if (modifierListId === null || modifierListId === undefined) {
-                        throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling deleteModifierOption.');
-                    }
-                    // verify required parameter 'modifierOptionId' is not null or undefined
-                    if (modifierOptionId === null || modifierOptionId === undefined) {
-                        throw new base_1.RequiredError('modifierOptionId', 'Required parameter modifierOptionId was null or undefined when calling deleteModifierOption.');
-                    }
-                    localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}/modifier-options/{modifier_option_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
-                        .replace("{" + "modifier_option_id" + "}", encodeURIComponent(String(modifierOptionId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1017,43 +1272,58 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deletePage: function (locationId, pageId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deletePage.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deletePage.');
+                            }
+                            // verify required parameter 'pageId' is not null or undefined
+                            if (pageId === null || pageId === undefined) {
+                                throw new base_1.RequiredError('pageId', 'Required parameter pageId was null or undefined when calling deletePage.');
+                            }
+                            localVarPath = "/v1/{location_id}/pages/{page_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'pageId' is not null or undefined
-                    if (pageId === null || pageId === undefined) {
-                        throw new base_1.RequiredError('pageId', 'Required parameter pageId was null or undefined when calling deletePage.');
-                    }
-                    localVarPath = "/v1/{location_id}/pages/{page_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1070,49 +1340,64 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deletePageCell: function (locationId, pageId, row, column, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deletePageCell.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deletePageCell.');
+                            }
+                            // verify required parameter 'pageId' is not null or undefined
+                            if (pageId === null || pageId === undefined) {
+                                throw new base_1.RequiredError('pageId', 'Required parameter pageId was null or undefined when calling deletePageCell.');
+                            }
+                            localVarPath = "/v1/{location_id}/pages/{page_id}/cells"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            if (row !== undefined) {
+                                localVarQueryParameter['row'] = row;
+                            }
+                            if (column !== undefined) {
+                                localVarQueryParameter['column'] = column;
+                            }
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'pageId' is not null or undefined
-                    if (pageId === null || pageId === undefined) {
-                        throw new base_1.RequiredError('pageId', 'Required parameter pageId was null or undefined when calling deletePageCell.');
-                    }
-                    localVarPath = "/v1/{location_id}/pages/{page_id}/cells"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    if (row !== undefined) {
-                        localVarQueryParameter['row'] = row;
-                    }
-                    if (column !== undefined) {
-                        localVarQueryParameter['column'] = column;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1128,48 +1413,63 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         deleteVariation: function (locationId, itemId, variationId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteVariation.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling deleteVariation.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling deleteVariation.');
+                            }
+                            // verify required parameter 'variationId' is not null or undefined
+                            if (variationId === null || variationId === undefined) {
+                                throw new base_1.RequiredError('variationId', 'Required parameter variationId was null or undefined when calling deleteVariation.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}/variations/{variation_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
+                                .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling deleteVariation.');
-                    }
-                    // verify required parameter 'variationId' is not null or undefined
-                    if (variationId === null || variationId === undefined) {
-                        throw new base_1.RequiredError('variationId', 'Required parameter variationId was null or undefined when calling deleteVariation.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}/variations/{variation_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
-                        .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1183,38 +1483,53 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         listCategories: function (locationId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listCategories.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listCategories.');
+                            }
+                            localVarPath = "/v1/{location_id}/categories"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v1/{location_id}/categories"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1228,38 +1543,53 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         listDiscounts: function (locationId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listDiscounts.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listDiscounts.');
+                            }
+                            localVarPath = "/v1/{location_id}/discounts"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v1/{location_id}/discounts"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1273,38 +1603,53 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         listFees: function (locationId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listFees.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listFees.');
+                            }
+                            localVarPath = "/v1/{location_id}/fees"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v1/{location_id}/fees"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1320,44 +1665,59 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         listInventory: function (locationId, limit, batchToken, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listInventory.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listInventory.');
+                            }
+                            localVarPath = "/v1/{location_id}/inventory"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            if (limit !== undefined) {
+                                localVarQueryParameter['limit'] = limit;
+                            }
+                            if (batchToken !== undefined) {
+                                localVarQueryParameter['batch_token'] = batchToken;
+                            }
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v1/{location_id}/inventory"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    if (limit !== undefined) {
-                        localVarQueryParameter['limit'] = limit;
-                    }
-                    if (batchToken !== undefined) {
-                        localVarQueryParameter['batch_token'] = batchToken;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1372,41 +1732,56 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         listItems: function (locationId, batchToken, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listItems.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listItems.');
+                            }
+                            localVarPath = "/v1/{location_id}/items"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            if (batchToken !== undefined) {
+                                localVarQueryParameter['batch_token'] = batchToken;
+                            }
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v1/{location_id}/items"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    if (batchToken !== undefined) {
-                        localVarQueryParameter['batch_token'] = batchToken;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1420,38 +1795,53 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         listModifierLists: function (locationId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listModifierLists.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listModifierLists.');
+                            }
+                            localVarPath = "/v1/{location_id}/modifier-lists"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v1/{location_id}/modifier-lists"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1465,38 +1855,53 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         listPages: function (locationId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listPages.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listPages.');
+                            }
+                            localVarPath = "/v1/{location_id}/pages"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    localVarPath = "/v1/{location_id}/pages"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1512,48 +1917,63 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         removeFee: function (locationId, itemId, feeId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling removeFee.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling removeFee.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling removeFee.');
+                            }
+                            // verify required parameter 'feeId' is not null or undefined
+                            if (feeId === null || feeId === undefined) {
+                                throw new base_1.RequiredError('feeId', 'Required parameter feeId was null or undefined when calling removeFee.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}/fees/{fee_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
+                                .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling removeFee.');
-                    }
-                    // verify required parameter 'feeId' is not null or undefined
-                    if (feeId === null || feeId === undefined) {
-                        throw new base_1.RequiredError('feeId', 'Required parameter feeId was null or undefined when calling removeFee.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}/fees/{fee_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
-                        .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1569,48 +1989,63 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         removeModifierList: function (locationId, modifierListId, itemId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling removeModifierList.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling removeModifierList.');
+                            }
+                            // verify required parameter 'modifierListId' is not null or undefined
+                            if (modifierListId === null || modifierListId === undefined) {
+                                throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling removeModifierList.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling removeModifierList.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}/modifier-lists/{modifier_list_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'modifierListId' is not null or undefined
-                    if (modifierListId === null || modifierListId === undefined) {
-                        throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling removeModifierList.');
-                    }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling removeModifierList.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}/modifier-lists/{modifier_list_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'DELETE' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1625,43 +2060,58 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         retrieveItem: function (locationId, itemId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling retrieveItem.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling retrieveItem.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling retrieveItem.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling retrieveItem.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1676,43 +2126,58 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         retrieveModifierList: function (locationId, modifierListId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling retrieveModifierList.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling retrieveModifierList.');
+                            }
+                            // verify required parameter 'modifierListId' is not null or undefined
+                            if (modifierListId === null || modifierListId === undefined) {
+                                throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling retrieveModifierList.');
+                            }
+                            localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_READ"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'modifierListId' is not null or undefined
-                    if (modifierListId === null || modifierListId === undefined) {
-                        throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling retrieveModifierList.');
-                    }
-                    localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_READ"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1728,50 +2193,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updateCategory: function (locationId, categoryId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateCategory.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateCategory.');
+                            }
+                            // verify required parameter 'categoryId' is not null or undefined
+                            if (categoryId === null || categoryId === undefined) {
+                                throw new base_1.RequiredError('categoryId', 'Required parameter categoryId was null or undefined when calling updateCategory.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateCategory.');
+                            }
+                            localVarPath = "/v1/{location_id}/categories/{category_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "category_id" + "}", encodeURIComponent(String(categoryId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'categoryId' is not null or undefined
-                    if (categoryId === null || categoryId === undefined) {
-                        throw new base_1.RequiredError('categoryId', 'Required parameter categoryId was null or undefined when calling updateCategory.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateCategory.');
-                    }
-                    localVarPath = "/v1/{location_id}/categories/{category_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "category_id" + "}", encodeURIComponent(String(categoryId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1787,50 +2267,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updateDiscount: function (locationId, discountId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateDiscount.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateDiscount.');
+                            }
+                            // verify required parameter 'discountId' is not null or undefined
+                            if (discountId === null || discountId === undefined) {
+                                throw new base_1.RequiredError('discountId', 'Required parameter discountId was null or undefined when calling updateDiscount.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateDiscount.');
+                            }
+                            localVarPath = "/v1/{location_id}/discounts/{discount_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "discount_id" + "}", encodeURIComponent(String(discountId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'discountId' is not null or undefined
-                    if (discountId === null || discountId === undefined) {
-                        throw new base_1.RequiredError('discountId', 'Required parameter discountId was null or undefined when calling updateDiscount.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateDiscount.');
-                    }
-                    localVarPath = "/v1/{location_id}/discounts/{discount_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "discount_id" + "}", encodeURIComponent(String(discountId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1846,50 +2341,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updateFee: function (locationId, feeId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateFee.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateFee.');
+                            }
+                            // verify required parameter 'feeId' is not null or undefined
+                            if (feeId === null || feeId === undefined) {
+                                throw new base_1.RequiredError('feeId', 'Required parameter feeId was null or undefined when calling updateFee.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateFee.');
+                            }
+                            localVarPath = "/v1/{location_id}/fees/{fee_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'feeId' is not null or undefined
-                    if (feeId === null || feeId === undefined) {
-                        throw new base_1.RequiredError('feeId', 'Required parameter feeId was null or undefined when calling updateFee.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateFee.');
-                    }
-                    localVarPath = "/v1/{location_id}/fees/{fee_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1905,50 +2415,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updateItem: function (locationId, itemId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateItem.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateItem.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling updateItem.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateItem.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling updateItem.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateItem.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -1964,50 +2489,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updateModifierList: function (locationId, modifierListId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateModifierList.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateModifierList.');
+                            }
+                            // verify required parameter 'modifierListId' is not null or undefined
+                            if (modifierListId === null || modifierListId === undefined) {
+                                throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling updateModifierList.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateModifierList.');
+                            }
+                            localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'modifierListId' is not null or undefined
-                    if (modifierListId === null || modifierListId === undefined) {
-                        throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling updateModifierList.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateModifierList.');
-                    }
-                    localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -2024,55 +2564,70 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updateModifierOption: function (locationId, modifierListId, modifierOptionId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateModifierOption.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateModifierOption.');
+                            }
+                            // verify required parameter 'modifierListId' is not null or undefined
+                            if (modifierListId === null || modifierListId === undefined) {
+                                throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling updateModifierOption.');
+                            }
+                            // verify required parameter 'modifierOptionId' is not null or undefined
+                            if (modifierOptionId === null || modifierOptionId === undefined) {
+                                throw new base_1.RequiredError('modifierOptionId', 'Required parameter modifierOptionId was null or undefined when calling updateModifierOption.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateModifierOption.');
+                            }
+                            localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}/modifier-options/{modifier_option_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
+                                .replace("{" + "modifier_option_id" + "}", encodeURIComponent(String(modifierOptionId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'modifierListId' is not null or undefined
-                    if (modifierListId === null || modifierListId === undefined) {
-                        throw new base_1.RequiredError('modifierListId', 'Required parameter modifierListId was null or undefined when calling updateModifierOption.');
-                    }
-                    // verify required parameter 'modifierOptionId' is not null or undefined
-                    if (modifierOptionId === null || modifierOptionId === undefined) {
-                        throw new base_1.RequiredError('modifierOptionId', 'Required parameter modifierOptionId was null or undefined when calling updateModifierOption.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateModifierOption.');
-                    }
-                    localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}/modifier-options/{modifier_option_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
-                        .replace("{" + "modifier_option_id" + "}", encodeURIComponent(String(modifierOptionId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -2088,50 +2643,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updatePage: function (locationId, pageId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updatePage.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updatePage.');
+                            }
+                            // verify required parameter 'pageId' is not null or undefined
+                            if (pageId === null || pageId === undefined) {
+                                throw new base_1.RequiredError('pageId', 'Required parameter pageId was null or undefined when calling updatePage.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updatePage.');
+                            }
+                            localVarPath = "/v1/{location_id}/pages/{page_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'pageId' is not null or undefined
-                    if (pageId === null || pageId === undefined) {
-                        throw new base_1.RequiredError('pageId', 'Required parameter pageId was null or undefined when calling updatePage.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updatePage.');
-                    }
-                    localVarPath = "/v1/{location_id}/pages/{page_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -2147,50 +2717,65 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updatePageCell: function (locationId, pageId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updatePageCell.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updatePageCell.');
+                            }
+                            // verify required parameter 'pageId' is not null or undefined
+                            if (pageId === null || pageId === undefined) {
+                                throw new base_1.RequiredError('pageId', 'Required parameter pageId was null or undefined when calling updatePageCell.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updatePageCell.');
+                            }
+                            localVarPath = "/v1/{location_id}/pages/{page_id}/cells"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'pageId' is not null or undefined
-                    if (pageId === null || pageId === undefined) {
-                        throw new base_1.RequiredError('pageId', 'Required parameter pageId was null or undefined when calling updatePageCell.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updatePageCell.');
-                    }
-                    localVarPath = "/v1/{location_id}/pages/{page_id}/cells"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },
@@ -2207,55 +2792,70 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
         updateVariation: function (locationId, itemId, variationId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, headersFromBaseOptions, needsSerialization;
-                return __generator(this, function (_a) {
-                    // verify required parameter 'locationId' is not null or undefined
-                    if (locationId === null || locationId === undefined) {
-                        throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateVariation.');
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarAccessTokenValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            // verify required parameter 'locationId' is not null or undefined
+                            if (locationId === null || locationId === undefined) {
+                                throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling updateVariation.');
+                            }
+                            // verify required parameter 'itemId' is not null or undefined
+                            if (itemId === null || itemId === undefined) {
+                                throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling updateVariation.');
+                            }
+                            // verify required parameter 'variationId' is not null or undefined
+                            if (variationId === null || variationId === undefined) {
+                                throw new base_1.RequiredError('variationId', 'Required parameter variationId was null or undefined when calling updateVariation.');
+                            }
+                            // verify required parameter 'body' is not null or undefined
+                            if (body === null || body === undefined) {
+                                throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateVariation.');
+                            }
+                            localVarPath = "/v1/{location_id}/items/{item_id}/variations/{variation_id}"
+                                .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
+                                .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
+                                .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            if (configuration) {
+                                baseOptions = configuration.baseOptions;
+                            }
+                            localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                            localVarHeaderParameter = {};
+                            localVarQueryParameter = {};
+                            if (!(configuration && configuration.accessToken)) return [3 /*break*/, 5];
+                            if (!(typeof configuration.accessToken === 'function')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, configuration.accessToken("oauth2", ["ITEMS_WRITE"])];
+                        case 1:
+                            _a = _b.sent();
+                            return [3 /*break*/, 4];
+                        case 2: return [4 /*yield*/, configuration.accessToken];
+                        case 3:
+                            _a = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            localVarAccessTokenValue = _a;
+                            localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                            _b.label = 5;
+                        case 5:
+                            localVarHeaderParameter['Content-Type'] = 'application/json';
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+                            headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                            localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
+                            localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+                            return [2 /*return*/, {
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                                    options: localVarRequestOptions,
+                                }];
                     }
-                    // verify required parameter 'itemId' is not null or undefined
-                    if (itemId === null || itemId === undefined) {
-                        throw new base_1.RequiredError('itemId', 'Required parameter itemId was null or undefined when calling updateVariation.');
-                    }
-                    // verify required parameter 'variationId' is not null or undefined
-                    if (variationId === null || variationId === undefined) {
-                        throw new base_1.RequiredError('variationId', 'Required parameter variationId was null or undefined when calling updateVariation.');
-                    }
-                    // verify required parameter 'body' is not null or undefined
-                    if (body === null || body === undefined) {
-                        throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling updateVariation.');
-                    }
-                    localVarPath = "/v1/{location_id}/items/{item_id}/variations/{variation_id}"
-                        .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
-                        .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
-                        .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    // authentication oauth2 required
-                    // oauth required
-                    if (configuration && configuration.accessToken) {
-                        localVarAccessTokenValue = typeof configuration.accessToken === 'function'
-                            ? configuration.accessToken("oauth2", ["ITEMS_WRITE"])
-                            : configuration.accessToken;
-                        localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
-                    }
-                    localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-                    localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-                    return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
                 });
             });
         },

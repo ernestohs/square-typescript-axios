@@ -1,5 +1,6 @@
 "use strict";
-// tslint:disable
+/* tslint:disable */
+/* eslint-disable */
 /**
  * Square Connect API
  * Client library for accessing the Square Connect APIs
@@ -73,7 +74,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OAuthApi = exports.OAuthApiFactory = exports.OAuthApiFp = exports.OAuthApiAxiosParamCreator = void 0;
-var globalImportUrl = require("url");
 var axios_1 = require("axios");
 // Some imports not used depending on template conditions
 // @ts-ignore
@@ -95,14 +95,14 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
         obtainToken: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions, needsSerialization;
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
                 return __generator(this, function (_a) {
                     // verify required parameter 'body' is not null or undefined
                     if (body === null || body === undefined) {
                         throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling obtainToken.');
                     }
                     localVarPath = "/oauth2/token";
-                    localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+                    localVarUrlObj = new URL(localVarPath, 'https://example.com');
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
                     }
@@ -110,15 +110,20 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
                     localVarHeaderParameter = {};
                     localVarQueryParameter = {};
                     localVarHeaderParameter['Content-Type'] = 'application/json';
-                    localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                    // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                    delete localVarUrlObj.search;
+                    queryParameters = new URLSearchParams(localVarUrlObj.search);
+                    for (key in localVarQueryParameter) {
+                        queryParameters.set(key, localVarQueryParameter[key]);
+                    }
+                    for (key in options.query) {
+                        queryParameters.set(key, options.query[key]);
+                    }
+                    localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
                     headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
                     localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+                    needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
                     localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
                     return [2 /*return*/, {
-                            url: globalImportUrl.format(localVarUrlObj),
+                            url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
                             options: localVarRequestOptions,
                         }];
                 });
@@ -135,7 +140,7 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
         renewToken: function (clientId, body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarApiKeyValue, _a, headersFromBaseOptions, needsSerialization;
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarApiKeyValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
                 return __generator(this, function (_b) {
                     switch (_b.label) {
                         case 0:
@@ -149,7 +154,7 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/oauth2/clients/{client_id}/access-token/renew"
                                 .replace("{" + "client_id" + "}", encodeURIComponent(String(clientId)));
-                            localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -172,15 +177,20 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
                             _b.label = 5;
                         case 5:
                             localVarHeaderParameter['Content-Type'] = 'application/json';
-                            localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                            delete localVarUrlObj.search;
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
                             headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
                             localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                            needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
                             localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
                             return [2 /*return*/, {
-                                    url: globalImportUrl.format(localVarUrlObj),
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
                                     options: localVarRequestOptions,
                                 }];
                     }
@@ -197,7 +207,7 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
         revokeToken: function (body, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarApiKeyValue, _a, headersFromBaseOptions, needsSerialization;
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, localVarApiKeyValue, _a, queryParameters, key, key, headersFromBaseOptions, needsSerialization;
                 return __generator(this, function (_b) {
                     switch (_b.label) {
                         case 0:
@@ -206,7 +216,7 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling revokeToken.');
                             }
                             localVarPath = "/oauth2/revoke";
-                            localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -229,15 +239,20 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
                             _b.label = 5;
                         case 5:
                             localVarHeaderParameter['Content-Type'] = 'application/json';
-                            localVarUrlObj.query = __assign(__assign(__assign({}, localVarUrlObj.query), localVarQueryParameter), options.query);
-                            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-                            delete localVarUrlObj.search;
+                            queryParameters = new URLSearchParams(localVarUrlObj.search);
+                            for (key in localVarQueryParameter) {
+                                queryParameters.set(key, localVarQueryParameter[key]);
+                            }
+                            for (key in options.query) {
+                                queryParameters.set(key, options.query[key]);
+                            }
+                            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
                             headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
                             localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                            needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+                            needsSerialization = (typeof body !== "string") && configuration.isJsonMime(localVarRequestOptions.headers['Content-Type']);
                             localVarRequestOptions.data = needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
                             return [2 /*return*/, {
-                                    url: globalImportUrl.format(localVarUrlObj),
+                                    url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
                                     options: localVarRequestOptions,
                                 }];
                     }
