@@ -41,7 +41,7 @@ export const EmployeesApiAxiosParamCreator = function (configuration?: Configura
         listEmployees: async (locationId?: string, status?: string, limit?: number, cursor?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v2/employees`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -109,7 +109,7 @@ export const EmployeesApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/v2/employees/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

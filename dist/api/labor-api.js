@@ -107,7 +107,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createBreakType.');
                             }
                             localVarPath = "/v2/labor/break-types";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -169,7 +169,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createShift.');
                             }
                             localVarPath = "/v2/labor/shifts";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -232,7 +232,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/break-types/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -292,7 +292,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/shifts/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -352,7 +352,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/break-types/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -412,7 +412,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/employee-wages/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -472,7 +472,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/shifts/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -532,7 +532,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/team-member-wages/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -589,7 +589,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/labor/break-types";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -655,7 +655,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/labor/employee-wages";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -721,7 +721,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/labor/team-member-wages";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -786,7 +786,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/labor/workweek-configs";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -851,7 +851,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchShifts.');
                             }
                             localVarPath = "/v2/labor/shifts/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -919,7 +919,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/break-types/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -987,7 +987,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/shifts/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1055,7 +1055,7 @@ exports.LaborApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/labor/workweek-configs/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

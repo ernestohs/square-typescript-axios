@@ -119,7 +119,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/inventory/{variation_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -194,7 +194,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
                                 .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -266,7 +266,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -331,7 +331,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/categories"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -399,7 +399,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/discounts"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -467,7 +467,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/fees"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -535,7 +535,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/items"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -603,7 +603,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/modifier-lists"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -677,7 +677,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}/modifier-options"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -745,7 +745,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/pages"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -819,7 +819,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/items/{item_id}/variations"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -888,7 +888,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/categories/{category_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "category_id" + "}", encodeURIComponent(String(categoryId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -954,7 +954,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/discounts/{discount_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "discount_id" + "}", encodeURIComponent(String(discountId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1020,7 +1020,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/fees/{fee_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1086,7 +1086,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/items/{item_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1152,7 +1152,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1224,7 +1224,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
                                 .replace("{" + "modifier_option_id" + "}", encodeURIComponent(String(modifierOptionId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1290,7 +1290,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/pages/{page_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1358,7 +1358,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/pages/{page_id}/cells"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1436,7 +1436,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
                                 .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1496,7 +1496,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/categories"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1556,7 +1556,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/discounts"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1616,7 +1616,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/fees"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1678,7 +1678,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/inventory"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1745,7 +1745,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/items"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1808,7 +1808,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/modifier-lists"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1868,7 +1868,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v1/{location_id}/pages"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -1940,7 +1940,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
                                 .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2012,7 +2012,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2078,7 +2078,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/items/{item_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2144,7 +2144,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2215,7 +2215,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/categories/{category_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "category_id" + "}", encodeURIComponent(String(categoryId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2289,7 +2289,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/discounts/{discount_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "discount_id" + "}", encodeURIComponent(String(discountId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2363,7 +2363,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/fees/{fee_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "fee_id" + "}", encodeURIComponent(String(feeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2437,7 +2437,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/items/{item_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2511,7 +2511,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/modifier-lists/{modifier_list_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2591,7 +2591,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "modifier_list_id" + "}", encodeURIComponent(String(modifierListId)))
                                 .replace("{" + "modifier_option_id" + "}", encodeURIComponent(String(modifierOptionId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2665,7 +2665,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/pages/{page_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2739,7 +2739,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v1/{location_id}/pages/{page_id}/cells"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "page_id" + "}", encodeURIComponent(String(pageId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -2819,7 +2819,7 @@ exports.V1ItemsApiAxiosParamCreator = function (configuration) {
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)))
                                 .replace("{" + "item_id" + "}", encodeURIComponent(String(itemId)))
                                 .replace("{" + "variation_id" + "}", encodeURIComponent(String(variationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

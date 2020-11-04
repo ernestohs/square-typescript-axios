@@ -108,7 +108,7 @@ exports.PaymentsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/payments/{payment_id}/cancel"
                                 .replace("{" + "payment_id" + "}", encodeURIComponent(String(paymentId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -167,7 +167,7 @@ exports.PaymentsApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling cancelPaymentByIdempotencyKey.');
                             }
                             localVarPath = "/v2/payments/cancel";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -230,7 +230,7 @@ exports.PaymentsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/payments/{payment_id}/complete"
                                 .replace("{" + "payment_id" + "}", encodeURIComponent(String(paymentId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -289,7 +289,7 @@ exports.PaymentsApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createPayment.');
                             }
                             localVarPath = "/v2/payments";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -352,7 +352,7 @@ exports.PaymentsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/payments/{payment_id}"
                                 .replace("{" + "payment_id" + "}", encodeURIComponent(String(paymentId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -415,7 +415,7 @@ exports.PaymentsApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/payments";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

@@ -48,7 +48,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             }
             const localVarPath = `/v1/me/employees`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -103,7 +103,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             }
             const localVarPath = `/v1/me/roles`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -158,7 +158,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             }
             const localVarPath = `/v1/me/timecards`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -214,7 +214,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/me/timecards/{timecard_id}`
                 .replace(`{${"timecard_id"}}`, encodeURIComponent(String(timecardId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -269,7 +269,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/{location_id}/cash-drawer-shifts`
                 .replace(`{${"location_id"}}`, encodeURIComponent(String(locationId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -330,7 +330,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
         listEmployeeRoles: async (order?: string, limit?: number, batchToken?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v1/me/roles`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -397,7 +397,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
         listEmployees: async (order?: string, beginUpdatedAt?: string, endUpdatedAt?: string, beginCreatedAt?: string, endCreatedAt?: string, status?: string, externalId?: string, limit?: number, batchToken?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v1/me/employees`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -485,7 +485,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/me/timecards/{timecard_id}/events`
                 .replace(`{${"timecard_id"}}`, encodeURIComponent(String(timecardId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -542,7 +542,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
         listTimecards: async (order?: string, employeeId?: string, beginClockinTime?: string, endClockinTime?: string, beginClockoutTime?: string, endClockoutTime?: string, beginUpdatedAt?: string, endUpdatedAt?: string, deleted?: boolean, limit?: number, batchToken?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v1/me/timecards`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -644,7 +644,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
                 .replace(`{${"location_id"}}`, encodeURIComponent(String(locationId)))
                 .replace(`{${"shift_id"}}`, encodeURIComponent(String(shiftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -696,7 +696,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/me/employees/{employee_id}`
                 .replace(`{${"employee_id"}}`, encodeURIComponent(String(employeeId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -748,7 +748,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/me/roles/{role_id}`
                 .replace(`{${"role_id"}}`, encodeURIComponent(String(roleId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -800,7 +800,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/me/timecards/{timecard_id}`
                 .replace(`{${"timecard_id"}}`, encodeURIComponent(String(timecardId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -857,7 +857,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/me/employees/{employee_id}`
                 .replace(`{${"employee_id"}}`, encodeURIComponent(String(employeeId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -918,7 +918,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/me/roles/{role_id}`
                 .replace(`{${"role_id"}}`, encodeURIComponent(String(roleId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -979,7 +979,7 @@ export const V1EmployeesApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v1/me/timecards/{timecard_id}`
                 .replace(`{${"timecard_id"}}`, encodeURIComponent(String(timecardId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

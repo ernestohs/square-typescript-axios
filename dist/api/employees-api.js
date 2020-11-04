@@ -106,7 +106,7 @@ exports.EmployeesApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/employees";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -178,7 +178,7 @@ exports.EmployeesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/employees/{id}"
                                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

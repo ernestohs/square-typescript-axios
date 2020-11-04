@@ -52,7 +52,7 @@ export const CashDrawersApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v2/cash-drawers/shifts/{shift_id}/events`
                 .replace(`{${"shift_id"}}`, encodeURIComponent(String(shiftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -120,7 +120,7 @@ export const CashDrawersApiAxiosParamCreator = function (configuration?: Configu
             }
             const localVarPath = `/v2/cash-drawers/shifts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -201,7 +201,7 @@ export const CashDrawersApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/v2/cash-drawers/shifts/{shift_id}`
                 .replace(`{${"shift_id"}}`, encodeURIComponent(String(shiftId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

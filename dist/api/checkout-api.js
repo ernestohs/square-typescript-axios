@@ -113,7 +113,7 @@ exports.CheckoutApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/locations/{location_id}/checkouts"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

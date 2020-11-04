@@ -50,7 +50,7 @@ export const OAuthApiAxiosParamCreator = function (configuration?: Configuration
             }
             const localVarPath = `/oauth2/token`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -102,7 +102,7 @@ export const OAuthApiAxiosParamCreator = function (configuration?: Configuration
             const localVarPath = `/oauth2/clients/{client_id}/access-token/renew`
                 .replace(`{${"client_id"}}`, encodeURIComponent(String(clientId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -156,7 +156,7 @@ export const OAuthApiAxiosParamCreator = function (configuration?: Configuration
             }
             const localVarPath = `/oauth2/revoke`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

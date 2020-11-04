@@ -42,7 +42,7 @@ export const ApplePayApiAxiosParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v2/apple-pay/domains`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

@@ -42,7 +42,7 @@ export const MobileAuthorizationApiAxiosParamCreator = function (configuration?:
             }
             const localVarPath = `/mobile/authorization-code`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

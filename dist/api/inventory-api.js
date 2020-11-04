@@ -107,7 +107,7 @@ exports.InventoryApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchChangeInventory.');
                             }
                             localVarPath = "/v2/inventory/batch-change";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -169,7 +169,7 @@ exports.InventoryApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchRetrieveInventoryChanges.');
                             }
                             localVarPath = "/v2/inventory/batch-retrieve-changes";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -231,7 +231,7 @@ exports.InventoryApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchRetrieveInventoryCounts.');
                             }
                             localVarPath = "/v2/inventory/batch-retrieve-counts";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -294,7 +294,7 @@ exports.InventoryApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/inventory/adjustment/{adjustment_id}"
                                 .replace("{" + "adjustment_id" + "}", encodeURIComponent(String(adjustmentId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -356,7 +356,7 @@ exports.InventoryApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/inventory/{catalog_object_id}/changes"
                                 .replace("{" + "catalog_object_id" + "}", encodeURIComponent(String(catalogObjectId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -424,7 +424,7 @@ exports.InventoryApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/inventory/{catalog_object_id}"
                                 .replace("{" + "catalog_object_id" + "}", encodeURIComponent(String(catalogObjectId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -490,7 +490,7 @@ exports.InventoryApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/inventory/physical-count/{physical_count_id}"
                                 .replace("{" + "physical_count_id" + "}", encodeURIComponent(String(physicalCountId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

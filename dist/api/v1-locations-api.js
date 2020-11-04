@@ -102,7 +102,7 @@ exports.V1LocationsApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v1/me/locations";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -156,7 +156,7 @@ exports.V1LocationsApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v1/me";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

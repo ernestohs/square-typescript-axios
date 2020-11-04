@@ -38,7 +38,7 @@ export const CustomerSegmentsApiAxiosParamCreator = function (configuration?: Co
         listCustomerSegments: async (cursor?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v2/customers/segments`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -94,7 +94,7 @@ export const CustomerSegmentsApiAxiosParamCreator = function (configuration?: Co
             const localVarPath = `/v2/customers/segments/{segment_id}`
                 .replace(`{${"segment_id"}}`, encodeURIComponent(String(segmentId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

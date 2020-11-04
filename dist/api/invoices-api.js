@@ -113,7 +113,7 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/invoices/{invoice_id}/cancel"
                                 .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -175,7 +175,7 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createInvoice.');
                             }
                             localVarPath = "/v2/invoices";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -239,7 +239,7 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/invoices/{invoice_id}"
                                 .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -302,7 +302,7 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/invoices/{invoice_id}"
                                 .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -363,7 +363,7 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listInvoices.');
                             }
                             localVarPath = "/v2/invoices";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -437,7 +437,7 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/invoices/{invoice_id}/publish"
                                 .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -499,7 +499,7 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchInvoices.');
                             }
                             localVarPath = "/v2/invoices/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -567,7 +567,7 @@ exports.InvoicesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/invoices/{invoice_id}"
                                 .replace("{" + "invoice_id" + "}", encodeURIComponent(String(invoiceId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

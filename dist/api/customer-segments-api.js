@@ -103,7 +103,7 @@ exports.CustomerSegmentsApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/customers/segments";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -166,7 +166,7 @@ exports.CustomerSegmentsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/customers/segments/{segment_id}"
                                 .replace("{" + "segment_id" + "}", encodeURIComponent(String(segmentId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

@@ -107,7 +107,7 @@ exports.CustomerGroupsApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createCustomerGroup.');
                             }
                             localVarPath = "/v2/customers/groups";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -170,7 +170,7 @@ exports.CustomerGroupsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/customers/groups/{group_id}"
                                 .replace("{" + "group_id" + "}", encodeURIComponent(String(groupId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -225,7 +225,7 @@ exports.CustomerGroupsApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/customers/groups";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -288,7 +288,7 @@ exports.CustomerGroupsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/customers/groups/{group_id}"
                                 .replace("{" + "group_id" + "}", encodeURIComponent(String(groupId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -353,7 +353,7 @@ exports.CustomerGroupsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/customers/groups/{group_id}"
                                 .replace("{" + "group_id" + "}", encodeURIComponent(String(groupId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

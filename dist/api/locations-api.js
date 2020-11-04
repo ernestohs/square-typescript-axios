@@ -107,7 +107,7 @@ exports.LocationsApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createLocation.');
                             }
                             localVarPath = "/v2/locations";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -164,7 +164,7 @@ exports.LocationsApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/locations";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -224,7 +224,7 @@ exports.LocationsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/locations/{location_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -289,7 +289,7 @@ exports.LocationsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/locations/{location_id}"
                                 .replace("{" + "location_id" + "}", encodeURIComponent(String(locationId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

@@ -52,7 +52,7 @@ export const CustomerGroupsApiAxiosParamCreator = function (configuration?: Conf
             }
             const localVarPath = `/v2/customers/groups`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -108,7 +108,7 @@ export const CustomerGroupsApiAxiosParamCreator = function (configuration?: Conf
             const localVarPath = `/v2/customers/groups/{group_id}`
                 .replace(`{${"group_id"}}`, encodeURIComponent(String(groupId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -155,7 +155,7 @@ export const CustomerGroupsApiAxiosParamCreator = function (configuration?: Conf
         listCustomerGroups: async (cursor?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v2/customers/groups`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -211,7 +211,7 @@ export const CustomerGroupsApiAxiosParamCreator = function (configuration?: Conf
             const localVarPath = `/v2/customers/groups/{group_id}`
                 .replace(`{${"group_id"}}`, encodeURIComponent(String(groupId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -268,7 +268,7 @@ export const CustomerGroupsApiAxiosParamCreator = function (configuration?: Conf
             const localVarPath = `/v2/customers/groups/{group_id}`
                 .replace(`{${"group_id"}}`, encodeURIComponent(String(groupId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

@@ -108,7 +108,7 @@ exports.DisputesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/disputes/{dispute_id}/accept"
                                 .replace("{" + "dispute_id" + "}", encodeURIComponent(String(disputeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -173,7 +173,7 @@ exports.DisputesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/disputes/{dispute_id}/evidence_text"
                                 .replace("{" + "dispute_id" + "}", encodeURIComponent(String(disputeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -236,7 +236,7 @@ exports.DisputesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/disputes/{dispute_id}/evidence"
                                 .replace("{" + "dispute_id" + "}", encodeURIComponent(String(disputeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -293,7 +293,7 @@ exports.DisputesApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/disputes";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -368,7 +368,7 @@ exports.DisputesApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v2/disputes/{dispute_id}/evidence/{evidence_id}"
                                 .replace("{" + "dispute_id" + "}", encodeURIComponent(String(disputeId)))
                                 .replace("{" + "evidence_id" + "}", encodeURIComponent(String(evidenceId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -428,7 +428,7 @@ exports.DisputesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/disputes/{dispute_id}"
                                 .replace("{" + "dispute_id" + "}", encodeURIComponent(String(disputeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -494,7 +494,7 @@ exports.DisputesApiAxiosParamCreator = function (configuration) {
                             localVarPath = "/v2/disputes/{dispute_id}/evidence/{evidence_id}"
                                 .replace("{" + "dispute_id" + "}", encodeURIComponent(String(disputeId)))
                                 .replace("{" + "evidence_id" + "}", encodeURIComponent(String(evidenceId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -554,7 +554,7 @@ exports.DisputesApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/disputes/{dispute_id}/submit-evidence"
                                 .replace("{" + "dispute_id" + "}", encodeURIComponent(String(disputeId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

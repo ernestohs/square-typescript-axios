@@ -115,7 +115,7 @@ exports.CashDrawersApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/cash-drawers/shifts/{shift_id}/events"
                                 .replace("{" + "shift_id" + "}", encodeURIComponent(String(shiftId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -188,7 +188,7 @@ exports.CashDrawersApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('locationId', 'Required parameter locationId was null or undefined when calling listCashDrawerShifts.');
                             }
                             localVarPath = "/v2/cash-drawers/shifts";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -271,7 +271,7 @@ exports.CashDrawersApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/cash-drawers/shifts/{shift_id}"
                                 .replace("{" + "shift_id" + "}", encodeURIComponent(String(shiftId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

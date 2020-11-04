@@ -113,7 +113,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/loyalty/accounts/{account_id}/accumulate"
                                 .replace("{" + "account_id" + "}", encodeURIComponent(String(accountId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -181,7 +181,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/loyalty/accounts/{account_id}/adjust"
                                 .replace("{" + "account_id" + "}", encodeURIComponent(String(accountId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -249,7 +249,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/loyalty/programs/{program_id}/calculate"
                                 .replace("{" + "program_id" + "}", encodeURIComponent(String(programId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -311,7 +311,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createLoyaltyAccount.');
                             }
                             localVarPath = "/v2/loyalty/accounts";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -373,7 +373,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createLoyaltyReward.');
                             }
                             localVarPath = "/v2/loyalty/rewards";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -436,7 +436,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/loyalty/rewards/{reward_id}"
                                 .replace("{" + "reward_id" + "}", encodeURIComponent(String(rewardId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -490,7 +490,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/loyalty/programs";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -555,7 +555,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/loyalty/rewards/{reward_id}/redeem"
                                 .replace("{" + "reward_id" + "}", encodeURIComponent(String(rewardId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -618,7 +618,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/loyalty/accounts/{account_id}"
                                 .replace("{" + "account_id" + "}", encodeURIComponent(String(accountId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -678,7 +678,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/loyalty/rewards/{reward_id}"
                                 .replace("{" + "reward_id" + "}", encodeURIComponent(String(rewardId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -737,7 +737,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchLoyaltyAccounts.');
                             }
                             localVarPath = "/v2/loyalty/accounts/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -799,7 +799,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchLoyaltyEvents.');
                             }
                             localVarPath = "/v2/loyalty/events/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -861,7 +861,7 @@ exports.LoyaltyApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchLoyaltyRewards.');
                             }
                             localVarPath = "/v2/loyalty/rewards/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

@@ -46,7 +46,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v2/devices/codes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -102,7 +102,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/v2/devices/codes/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -152,7 +152,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
         listDeviceCodes: async (cursor?: string, locationId?: string, productType?: string, status?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v2/devices/codes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

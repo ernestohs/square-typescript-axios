@@ -64,7 +64,7 @@ export const OrdersApiAxiosParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v2/orders/batch-retrieve`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -119,7 +119,7 @@ export const OrdersApiAxiosParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v2/orders/calculate`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -174,7 +174,7 @@ export const OrdersApiAxiosParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v2/orders`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -235,7 +235,7 @@ export const OrdersApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/v2/orders/{order_id}/pay`
                 .replace(`{${"order_id"}}`, encodeURIComponent(String(orderId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -291,7 +291,7 @@ export const OrdersApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/v2/orders/{order_id}`
                 .replace(`{${"order_id"}}`, encodeURIComponent(String(orderId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -342,7 +342,7 @@ export const OrdersApiAxiosParamCreator = function (configuration?: Configuratio
             }
             const localVarPath = `/v2/orders/search`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -403,7 +403,7 @@ export const OrdersApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/v2/orders/{order_id}`
                 .replace(`{${"order_id"}}`, encodeURIComponent(String(orderId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

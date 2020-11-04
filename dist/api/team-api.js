@@ -107,7 +107,7 @@ exports.TeamApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling bulkCreateTeamMembers.');
                             }
                             localVarPath = "/v2/team-members/bulk-create";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -169,7 +169,7 @@ exports.TeamApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling bulkUpdateTeamMembers.');
                             }
                             localVarPath = "/v2/team-members/bulk-update";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -231,7 +231,7 @@ exports.TeamApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createTeamMember.');
                             }
                             localVarPath = "/v2/team-members";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -294,7 +294,7 @@ exports.TeamApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/team-members/{team_member_id}"
                                 .replace("{" + "team_member_id" + "}", encodeURIComponent(String(teamMemberId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -354,7 +354,7 @@ exports.TeamApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/team-members/{team_member_id}/wage-setting"
                                 .replace("{" + "team_member_id" + "}", encodeURIComponent(String(teamMemberId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -413,7 +413,7 @@ exports.TeamApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchTeamMembers.');
                             }
                             localVarPath = "/v2/team-members/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -481,7 +481,7 @@ exports.TeamApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/team-members/{team_member_id}"
                                 .replace("{" + "team_member_id" + "}", encodeURIComponent(String(teamMemberId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -549,7 +549,7 @@ exports.TeamApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/team-members/{team_member_id}/wage-setting"
                                 .replace("{" + "team_member_id" + "}", encodeURIComponent(String(teamMemberId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

@@ -103,7 +103,7 @@ exports.MerchantsApiAxiosParamCreator = function (configuration) {
                     switch (_b.label) {
                         case 0:
                             localVarPath = "/v2/merchants";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -166,7 +166,7 @@ exports.MerchantsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/merchants/{merchant_id}"
                                 .replace("{" + "merchant_id" + "}", encodeURIComponent(String(merchantId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

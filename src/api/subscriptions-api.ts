@@ -57,7 +57,7 @@ export const SubscriptionsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/v2/subscriptions/{subscription_id}/cancel`
                 .replace(`{${"subscription_id"}}`, encodeURIComponent(String(subscriptionId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -108,7 +108,7 @@ export const SubscriptionsApiAxiosParamCreator = function (configuration?: Confi
             }
             const localVarPath = `/v2/subscriptions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -166,7 +166,7 @@ export const SubscriptionsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/v2/subscriptions/{subscription_id}/events`
                 .replace(`{${"subscription_id"}}`, encodeURIComponent(String(subscriptionId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -226,7 +226,7 @@ export const SubscriptionsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/v2/subscriptions/{subscription_id}`
                 .replace(`{${"subscription_id"}}`, encodeURIComponent(String(subscriptionId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -277,7 +277,7 @@ export const SubscriptionsApiAxiosParamCreator = function (configuration?: Confi
             }
             const localVarPath = `/v2/subscriptions/search`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -338,7 +338,7 @@ export const SubscriptionsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/v2/subscriptions/{subscription_id}`
                 .replace(`{${"subscription_id"}}`, encodeURIComponent(String(subscriptionId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

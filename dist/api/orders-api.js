@@ -107,7 +107,7 @@ exports.OrdersApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling batchRetrieveOrders.');
                             }
                             localVarPath = "/v2/orders/batch-retrieve";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -169,7 +169,7 @@ exports.OrdersApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling calculateOrder.');
                             }
                             localVarPath = "/v2/orders/calculate";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -231,7 +231,7 @@ exports.OrdersApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createOrder.');
                             }
                             localVarPath = "/v2/orders";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -299,7 +299,7 @@ exports.OrdersApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/orders/{order_id}/pay"
                                 .replace("{" + "order_id" + "}", encodeURIComponent(String(orderId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -362,7 +362,7 @@ exports.OrdersApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/orders/{order_id}"
                                 .replace("{" + "order_id" + "}", encodeURIComponent(String(orderId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -421,7 +421,7 @@ exports.OrdersApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchOrders.');
                             }
                             localVarPath = "/v2/orders/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -489,7 +489,7 @@ exports.OrdersApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/orders/{order_id}"
                                 .replace("{" + "order_id" + "}", encodeURIComponent(String(orderId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

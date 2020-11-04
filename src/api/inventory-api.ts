@@ -58,7 +58,7 @@ export const InventoryApiAxiosParamCreator = function (configuration?: Configura
             }
             const localVarPath = `/v2/inventory/batch-change`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -113,7 +113,7 @@ export const InventoryApiAxiosParamCreator = function (configuration?: Configura
             }
             const localVarPath = `/v2/inventory/batch-retrieve-changes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -168,7 +168,7 @@ export const InventoryApiAxiosParamCreator = function (configuration?: Configura
             }
             const localVarPath = `/v2/inventory/batch-retrieve-counts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -224,7 +224,7 @@ export const InventoryApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/v2/inventory/adjustment/{adjustment_id}`
                 .replace(`{${"adjustment_id"}}`, encodeURIComponent(String(adjustmentId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -278,7 +278,7 @@ export const InventoryApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/v2/inventory/{catalog_object_id}/changes`
                 .replace(`{${"catalog_object_id"}}`, encodeURIComponent(String(catalogObjectId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -340,7 +340,7 @@ export const InventoryApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/v2/inventory/{catalog_object_id}`
                 .replace(`{${"catalog_object_id"}}`, encodeURIComponent(String(catalogObjectId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -400,7 +400,7 @@ export const InventoryApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/v2/inventory/physical-count/{physical_count_id}`
                 .replace(`{${"physical_count_id"}}`, encodeURIComponent(String(physicalCountId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

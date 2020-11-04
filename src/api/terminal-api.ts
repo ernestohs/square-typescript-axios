@@ -63,7 +63,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/terminals/checkouts/{checkout_id}/cancel`
                 .replace(`{${"checkout_id"}}`, encodeURIComponent(String(checkoutId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -115,7 +115,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/terminals/refunds/{terminal_refund_id}/cancel`
                 .replace(`{${"terminal_refund_id"}}`, encodeURIComponent(String(terminalRefundId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -166,7 +166,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v2/terminals/checkouts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -221,7 +221,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v2/terminals/refunds`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -277,7 +277,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/terminals/checkouts/{checkout_id}`
                 .replace(`{${"checkout_id"}}`, encodeURIComponent(String(checkoutId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -329,7 +329,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/terminals/refunds/{terminal_refund_id}`
                 .replace(`{${"terminal_refund_id"}}`, encodeURIComponent(String(terminalRefundId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -380,7 +380,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v2/terminals/checkouts/search`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -435,7 +435,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v2/terminals/refunds/search`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

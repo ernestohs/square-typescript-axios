@@ -105,7 +105,7 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
                         throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling obtainToken.');
                     }
                     localVarPath = "/oauth2/token";
-                    localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                    localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
                     }
@@ -157,7 +157,7 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/oauth2/clients/{client_id}/access-token/renew"
                                 .replace("{" + "client_id" + "}", encodeURIComponent(String(clientId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -219,7 +219,7 @@ exports.OAuthApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling revokeToken.');
                             }
                             localVarPath = "/oauth2/revoke";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

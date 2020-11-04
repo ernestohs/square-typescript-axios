@@ -88,7 +88,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/v2/loyalty/accounts/{account_id}/accumulate`
                 .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -149,7 +149,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/v2/loyalty/accounts/{account_id}/adjust`
                 .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -210,7 +210,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/v2/loyalty/programs/{program_id}/calculate`
                 .replace(`{${"program_id"}}`, encodeURIComponent(String(programId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -265,7 +265,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v2/loyalty/accounts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -320,7 +320,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v2/loyalty/rewards`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -376,7 +376,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/v2/loyalty/rewards/{reward_id}`
                 .replace(`{${"reward_id"}}`, encodeURIComponent(String(rewardId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -422,7 +422,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
         listLoyaltyPrograms: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v2/loyalty/programs`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -479,7 +479,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/v2/loyalty/rewards/{reward_id}/redeem`
                 .replace(`{${"reward_id"}}`, encodeURIComponent(String(rewardId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -535,7 +535,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/v2/loyalty/accounts/{account_id}`
                 .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -587,7 +587,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/v2/loyalty/rewards/{reward_id}`
                 .replace(`{${"reward_id"}}`, encodeURIComponent(String(rewardId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -638,7 +638,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v2/loyalty/accounts/search`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -693,7 +693,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v2/loyalty/events/search`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -748,7 +748,7 @@ export const LoyaltyApiAxiosParamCreator = function (configuration?: Configurati
             }
             const localVarPath = `/v2/loyalty/rewards/search`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

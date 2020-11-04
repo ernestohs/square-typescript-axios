@@ -108,7 +108,7 @@ exports.SubscriptionsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/subscriptions/{subscription_id}/cancel"
                                 .replace("{" + "subscription_id" + "}", encodeURIComponent(String(subscriptionId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -167,7 +167,7 @@ exports.SubscriptionsApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createSubscription.');
                             }
                             localVarPath = "/v2/subscriptions";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -232,7 +232,7 @@ exports.SubscriptionsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/subscriptions/{subscription_id}/events"
                                 .replace("{" + "subscription_id" + "}", encodeURIComponent(String(subscriptionId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -298,7 +298,7 @@ exports.SubscriptionsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/subscriptions/{subscription_id}"
                                 .replace("{" + "subscription_id" + "}", encodeURIComponent(String(subscriptionId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -357,7 +357,7 @@ exports.SubscriptionsApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchSubscriptions.');
                             }
                             localVarPath = "/v2/subscriptions/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -425,7 +425,7 @@ exports.SubscriptionsApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/subscriptions/{subscription_id}"
                                 .replace("{" + "subscription_id" + "}", encodeURIComponent(String(subscriptionId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

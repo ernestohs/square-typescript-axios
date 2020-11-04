@@ -108,7 +108,7 @@ exports.TerminalApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/terminals/checkouts/{checkout_id}/cancel"
                                 .replace("{" + "checkout_id" + "}", encodeURIComponent(String(checkoutId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -168,7 +168,7 @@ exports.TerminalApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/terminals/refunds/{terminal_refund_id}/cancel"
                                 .replace("{" + "terminal_refund_id" + "}", encodeURIComponent(String(terminalRefundId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -227,7 +227,7 @@ exports.TerminalApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createTerminalCheckout.');
                             }
                             localVarPath = "/v2/terminals/checkouts";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -289,7 +289,7 @@ exports.TerminalApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling createTerminalRefund.');
                             }
                             localVarPath = "/v2/terminals/refunds";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -352,7 +352,7 @@ exports.TerminalApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/terminals/checkouts/{checkout_id}"
                                 .replace("{" + "checkout_id" + "}", encodeURIComponent(String(checkoutId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -412,7 +412,7 @@ exports.TerminalApiAxiosParamCreator = function (configuration) {
                             }
                             localVarPath = "/v2/terminals/refunds/{terminal_refund_id}"
                                 .replace("{" + "terminal_refund_id" + "}", encodeURIComponent(String(terminalRefundId)));
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -471,7 +471,7 @@ exports.TerminalApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchTerminalCheckouts.');
                             }
                             localVarPath = "/v2/terminals/checkouts/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }
@@ -533,7 +533,7 @@ exports.TerminalApiAxiosParamCreator = function (configuration) {
                                 throw new base_1.RequiredError('body', 'Required parameter body was null or undefined when calling searchTerminalRefunds.');
                             }
                             localVarPath = "/v2/terminals/refunds/search";
-                            localVarUrlObj = new URL(localVarPath, 'https://example.com');
+                            localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
                             if (configuration) {
                                 baseOptions = configuration.baseOptions;
                             }

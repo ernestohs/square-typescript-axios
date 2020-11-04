@@ -70,7 +70,7 @@ export const InvoicesApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/invoices/{invoice_id}/cancel`
                 .replace(`{${"invoice_id"}}`, encodeURIComponent(String(invoiceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -125,7 +125,7 @@ export const InvoicesApiAxiosParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v2/invoices`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -182,7 +182,7 @@ export const InvoicesApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/invoices/{invoice_id}`
                 .replace(`{${"invoice_id"}}`, encodeURIComponent(String(invoiceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -238,7 +238,7 @@ export const InvoicesApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/invoices/{invoice_id}`
                 .replace(`{${"invoice_id"}}`, encodeURIComponent(String(invoiceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -291,7 +291,7 @@ export const InvoicesApiAxiosParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v2/invoices`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -360,7 +360,7 @@ export const InvoicesApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/invoices/{invoice_id}/publish`
                 .replace(`{${"invoice_id"}}`, encodeURIComponent(String(invoiceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -415,7 +415,7 @@ export const InvoicesApiAxiosParamCreator = function (configuration?: Configurat
             }
             const localVarPath = `/v2/invoices/search`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -476,7 +476,7 @@ export const InvoicesApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/v2/invoices/{invoice_id}`
                 .replace(`{${"invoice_id"}}`, encodeURIComponent(String(invoiceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

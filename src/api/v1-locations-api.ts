@@ -35,7 +35,7 @@ export const V1LocationsApiAxiosParamCreator = function (configuration?: Configu
         listLocations: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v1/me/locations`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -81,7 +81,7 @@ export const V1LocationsApiAxiosParamCreator = function (configuration?: Configu
         retrieveBusiness: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v1/me`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

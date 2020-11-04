@@ -38,7 +38,7 @@ export const MerchantsApiAxiosParamCreator = function (configuration?: Configura
         listMerchants: async (cursor?: number, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/v2/merchants`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -94,7 +94,7 @@ export const MerchantsApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/v2/merchants/{merchant_id}`
                 .replace(`{${"merchant_id"}}`, encodeURIComponent(String(merchantId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            const localVarUrlObj = new URL(localVarPath, 'https://connect.squareupsandbox.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
