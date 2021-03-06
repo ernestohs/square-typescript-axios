@@ -79,7 +79,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
                 const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
                     ? await configuration.accessToken("oauth2", ["PAYMENTS_WRITE"])
                     : await configuration.accessToken;
-                localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                localVarHeaderParameter["Authorization"] = `Bearer ${localVarAccessTokenValue}`;
             }
 
 
@@ -96,7 +96,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                url: `${localVarUrlObj.pathname}${localVarUrlObj.search}${localVarUrlObj.hash}`,
                 options: localVarRequestOptions,
             };
         },
@@ -131,7 +131,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
                 const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
                     ? await configuration.accessToken("oauth2", ["PAYMENTS_WRITE"])
                     : await configuration.accessToken;
-                localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                localVarHeaderParameter["Authorization"] = `Bearer ${localVarAccessTokenValue}`;
             }
 
 
@@ -148,7 +148,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                url: `${localVarUrlObj.pathname}${localVarUrlObj.search}${localVarUrlObj.hash}`,
                 options: localVarRequestOptions,
             };
         },
@@ -182,10 +182,8 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
                 const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
                     ? await configuration.accessToken("oauth2", ["PAYMENTS_WRITE"])
                     : await configuration.accessToken;
-                localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                localVarHeaderParameter["Authorization"] = `Bearer ${localVarAccessTokenValue}`;
             }
-
-
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
@@ -203,7 +201,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
 
             return {
-                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                url: `${localVarUrlObj.pathname}${localVarUrlObj.search}${localVarUrlObj.hash}`,
                 options: localVarRequestOptions,
             };
         },
@@ -237,10 +235,8 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
                 const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
                     ? await configuration.accessToken("oauth2", ["PAYMENTS_WRITE"])
                     : await configuration.accessToken;
-                localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                localVarHeaderParameter["Authorization"] = `Bearer ${localVarAccessTokenValue}`;
             }
-
-
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
@@ -258,7 +254,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
 
             return {
-                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                url: `${localVarUrlObj.pathname}${localVarUrlObj.search}${localVarUrlObj.hash}`,
                 options: localVarRequestOptions,
             };
         },
@@ -293,7 +289,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
                 const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
                     ? await configuration.accessToken("oauth2", ["PAYMENTS_READ"])
                     : await configuration.accessToken;
-                localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
+                localVarHeaderParameter["Authorization"] = `Bearer ${localVarAccessTokenValue}`;
             }
 
 
@@ -310,7 +306,7 @@ export const TerminalApiAxiosParamCreator = function (configuration?: Configurat
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                url: `${localVarUrlObj.pathname}${localVarUrlObj.search}${localVarUrlObj.hash}`,
                 options: localVarRequestOptions,
             };
         },
